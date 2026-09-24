@@ -1,0 +1,192 @@
+package io.papermc.paper.plugin.provider.source;
+
+import com.mojang.logging.LogUtils;
+import io.papermc.paper.SparksFly;
+import io.papermc.paper.plugin.PluginInitializerManager;
+import io.papermc.paper.plugin.configuration.PluginMeta;
+import io.papermc.paper.plugin.entrypoint.EntrypointHandler;
+import io.papermc.paper.plugin.provider.type.PluginFileType;
+import org.bukkit.plugin.InvalidPluginException;
+import org.jetbrains.annotations.Nullable;
+
+import java.io.IOException;
+import java.nio.file.FileVisitResult;
+import java.nio.file.FileVisitor;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+import java.nio.file.attribute.BasicFileAttributes;
+import java.util.Set;
+import java.util.function.Function;
+import java.util.jar.JarFile;
+import org.slf4j.Logger;
+
+/**
+ * Loads a plugin provider at the given plugin jar file path.
+ */
+public class FileProviderSource implements ProviderSource<Path, Path> {
+
+    private static final Logger LOGGER = LogUtils.getClassLogger();
+    private final Function<Path, String> contextChecker;
+
+    public FileProviderSource(Function<Path, String> contextChecker) {
+        this.contextChecker = contextChecker;
+    }
+
+    @Override
+    public Path prepareContext(Path context) throws IOException {
+        String source = this.contextChecker.apply(context);
+
+        if (Files.notExists(context)) {
+            throw new IllegalArgumentException(source + " 不存在，无法从中加载插件！");
+        }
+
+        if (!Files.isRegularFile(context)) {
+            throw new IllegalArgumentException(source + " 不是一个文件，无法从中加载插件！");
+        }
+
+        if (!context.getFileName().toString().endsWith(".jar")) {
+            throw new IllegalArgumentException(source + " 不是一个 jar 文件，无法从中加载插件！");
+        }
+
+        try {
+            context = this.checkUpdate(context);
+        } catch (Exception exception) {
+            throw new RuntimeException(source + " 更新失败！", exception);
+        }
+        return context;
+    }
+
+    @Override
+    public void registerProviders(EntrypointHandler entrypointHandler, Path context) throws Exception {
+        String source = this.contextChecker.apply(context);
+
+        JarFile file = new JarFile(context.toFile(), true, JarFile.OPEN_READ, JarFile.runtimeVersion());
+        PluginFileType<?, ?> type = PluginFileType.guessType(file);
+        if (type == null) {
+            // Throw IAE wrapped in RE to prevent callers from considering this a "invalid parameter" as caller ignores IAE.
+            // TODO: This needs some heavy rework, using illegal argument exception to signal an actual failure is less than ideal.
+            if (file.getEntry("META-INF/versions.list") != null) {
+                throw new RuntimeException(new IllegalArgumentException(context + " 看起来是一个服务端 jar！服务端 jar 不应放在插件文件夹中。"));
+            }
+
+            throw new RuntimeException(
+                new IllegalArgumentException(source + " 不包含 " + String.join(" or ", PluginFileType.getConfigTypes()) + "！无法确定插件类型，无法从中加载插件！")
+            );
+        }
+
+        final PluginMeta config = type.getConfig(file);
+        if ((config.getName().equals("spark") && config.getMainClass().equals("me.lucko.spark.bukkit.BukkitSparkPlugin")) && !SparksFly.isPluginPreferred()) {
+            LOGGER.info("此服务端已内置 spark 剖析器，因此不会加载 spark 插件。");
+            return;
+        }
+
+        type.register(entrypointHandler, file, context);
+    }
+
+    /**
+     * Replaces a plugin with a plugin of the same plugin name in the update folder.
+     *
+     * @param file The plugin jar file to look for updates for.
+     */
+    private Path checkUpdate(Path file) throws InvalidPluginException {
+        PluginInitializerManager pluginSystem = PluginInitializerManager.instance();
+        Path updateDirectory = pluginSystem.pluginUpdatePath();
+        if (updateDirectory == null || !Files.isDirectory(updateDirectory)) {
+            return file;
+        }
+
+        try {
+            String pluginName = this.getPluginName(file);
+            UpdateFileVisitor visitor = new UpdateFileVisitor(pluginName);
+            Files.walkFileTree(updateDirectory, Set.of(), 1, visitor);
+            if (visitor.getValidPlugin() != null) {
+                Path updateLocation = visitor.getValidPlugin();
+
+                try {
+                    Files.copy(updateLocation, file, StandardCopyOption.REPLACE_EXISTING);
+                } catch (IOException exception) {
+                    throw new RuntimeException("无法复制 '" + updateLocation + "' 到 '" + file + "'（在插件更新过程中）", exception);
+                }
+
+                // Rename the plugin file to the update file's name.
+                final Path renamedFile = file.resolveSibling(updateLocation.getFileName());
+                try {
+                    Files.move(file, renamedFile, StandardCopyOption.REPLACE_EXISTING);
+                } catch (IOException exception) {
+                    throw new RuntimeException("无法重命名 '" + file + "' 到 '" + renamedFile + "'（在插件更新过程中）", exception);
+                }
+
+                // Delete the file from the update folder now that it's copied over successfully
+                try {
+                    Files.delete(updateLocation);
+                } catch (IOException exception) {
+                    throw new RuntimeException("无法删除 '" + updateLocation + "'（在插件更新过程中，从更新文件夹）", exception);
+                }
+
+                return renamedFile;
+            }
+        } catch (Exception e) {
+            throw new InvalidPluginException(e);
+        }
+        return file;
+    }
+
+    private String getPluginName(Path path) throws Exception {
+        try (JarFile file = new JarFile(path.toFile())) {
+            PluginFileType<?, ?> type = PluginFileType.guessType(file);
+            if (type == null) {
+                throw new IllegalArgumentException(path + " 不包含 " + String.join(" or ", PluginFileType.getConfigTypes()) + "！无法确定插件类型，无法从中加载插件！");
+            }
+
+            return type.getConfig(file).getName();
+        }
+    }
+
+    private class UpdateFileVisitor implements FileVisitor<Path> {
+
+        private final String targetName;
+        @Nullable
+        private Path validPlugin;
+
+        private UpdateFileVisitor(String targetName) {
+            this.targetName = targetName;
+        }
+
+        @Override
+        public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
+            return FileVisitResult.CONTINUE;
+        }
+
+        @Override
+        public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+            try {
+                String updatePluginName = FileProviderSource.this.getPluginName(file);
+                if (this.targetName.equals(updatePluginName)) {
+                    this.validPlugin = file;
+                    return FileVisitResult.TERMINATE;
+                }
+            } catch (Exception e) {
+                // We failed to load this data for some reason, so, we'll skip over this
+            }
+
+
+            return FileVisitResult.CONTINUE;
+        }
+
+        @Override
+        public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
+            return FileVisitResult.CONTINUE;
+        }
+
+        @Override
+        public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
+            return FileVisitResult.CONTINUE;
+        }
+
+        @Nullable
+        public Path getValidPlugin() {
+            return validPlugin;
+        }
+    }
+}
