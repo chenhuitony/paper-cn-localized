@@ -29,8 +29,7 @@ public class CraftCrashReport implements CrashReportDetail<Object> {
                 boolean legacy = CraftMagicNumbers.isLegacy(description);
                 value.append(' ').append(description.getFullName()).append(legacy ? "*" : "").append(' ').append(description.getMain()).append(' ').append(Arrays.toString(description.getAuthors().toArray())).append(',');
             }
-            value.append("}
-   警告： ").append(Bukkit.getWarningState().name());
+            value.append("}\n   警告： ").append(Bukkit.getWarningState().name());
             value.append("\n   Reload Count: ").append(String.valueOf(MinecraftServer.getServer().server.reloadCount));
             value.append("\n   Threads: {");
             for (Map.Entry<Thread, ? extends Object[]> entry : Thread.getAllStackTraces().entrySet()) {

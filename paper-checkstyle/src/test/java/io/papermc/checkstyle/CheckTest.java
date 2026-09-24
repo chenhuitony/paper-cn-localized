@@ -88,13 +88,11 @@ public @interface CheckTest {
                 final StringBuilder sb = new StringBuilder();
                 sb.append("违规项不匹配：").append(filePath).append("\n");
                 if (!extraViolations.isEmpty()) {
-                    sb.append("测试中未计入的违规项：
-");
+                    sb.append("测试中未计入的违规项：\n");
                     extraViolations.forEach(v -> sb.append("  ").append(v).append("\n"));
                 }
                 if (!missingViolations.isEmpty()) {
-                    sb.append("不存在的测试中的违规项：
-");
+                    sb.append("不存在的测试中的违规项：\n");
                     missingViolations.forEach(v -> sb.append("  ").append(v).append("\n"));
                 }
                 throw new AssertionError(sb.toString());

@@ -578,12 +578,9 @@ public class Metrics {
 
                 // Inform the server owners about bStats
                 config.options().header(
-                        "bStats 会为插件作者收集一些数据，例如有多少台服务端正在使用他们的插件。
-" +
-                                "为尊重他们的工作，你不应禁用它。
-" +
-                                "这对服务端性能几乎没有影响！
-" +
+                        "bStats 会为插件作者收集一些数据，例如有多少台服务端正在使用他们的插件。\n" +
+                                "为尊重他们的工作，你不应禁用它。\n" +
+                                "这对服务端性能几乎没有影响！\n" +
                                 "访问 https://bStats.org/ 了解更多 :)"
                 ).copyDefaults(true);
                 try {

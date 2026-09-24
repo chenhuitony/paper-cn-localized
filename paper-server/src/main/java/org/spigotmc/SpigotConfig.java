@@ -168,7 +168,7 @@ public class SpigotConfig {
         }
 
         SpigotConfig.whitelistMessage = SpigotConfig.transform(SpigotConfig.getString("messages.whitelist", "你未被加入此服务端的白名单！"));
-        SpigotConfig.unknownCommandMessage = SpigotConfig.transform(SpigotConfig.getString("messages.unknown-command", "未知命令。输入 "/help" 获取帮助。"));
+        SpigotConfig.unknownCommandMessage = SpigotConfig.transform(SpigotConfig.getString("messages.unknown-command", "未知命令。输入 \"/help\" 获取帮助。"));
         SpigotConfig.serverFullMessage = SpigotConfig.transform(SpigotConfig.getString("messages.server-full", "服务端已满！"));
         SpigotConfig.outdatedClientMessage = SpigotConfig.transform(SpigotConfig.getString("messages.outdated-client", SpigotConfig.outdatedClientMessage));
         SpigotConfig.outdatedServerMessage = SpigotConfig.transform(SpigotConfig.getString("messages.outdated-server", SpigotConfig.outdatedServerMessage));

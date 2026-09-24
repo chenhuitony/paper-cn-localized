@@ -219,7 +219,8 @@ public final class MobcapsCommand implements PaperSubcommand {
                             Component.text("/", NamedTextColor.GRAY),
                             Component.text('a')
                         )
-                        .hoverEvent(Component.text("该类别不会自然生成。"));
+                        .hoverEvent(Component.text("该类别不会自然生成。"))
+                    );
                 }
                 return builder;
             })

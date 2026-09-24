@@ -1412,7 +1412,7 @@ public interface LivingEntity extends Attributable, Damageable, ProjectileSource
      * @throws IllegalArgumentException if invalid hand is passed
      */
     default void swingHand(@NotNull org.bukkit.inventory.EquipmentSlot hand) {
-        com.google.common.base.Preconditions.checkArgument(hand != null && hand.isHand(), String.format("期望得到有效的手，却得到 "%s"！", hand));
+        com.google.common.base.Preconditions.checkArgument(hand != null && hand.isHand(), String.format("期望得到有效的手，却得到 \"%s\"！", hand));
         if (hand == org.bukkit.inventory.EquipmentSlot.HAND) {
             this.swingMainHand();
         } else {
