@@ -203,6 +203,7 @@ tasks.withType<Javadoc>().configureEach {
     options.overview = "src/main/javadoc/overview.html"
     options.use()
     options.isDocFilesSubDirs = true
+    options.addStringOption("Xdoclint:none", null)
     options.links(
         "https://guava.dev/releases/33.6.0-jre/api/docs/",
         "https://www.javadocs.dev/org.yaml/snakeyaml/2.2/",

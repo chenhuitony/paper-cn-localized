@@ -1,0 +1,1642 @@
+
+===== ca/spottedleaf/dataconverter/minecraft/MCVersionRegistry.java (4 strings) =====
+  L376: 'Error registering version \\"'
+      ctx: LOGGER.warn("Error registering version \"" + name + "\", version number '" + value + "' is already associated with \"" + VERSION_NAMES.get(value) + "\"");
+  L376: '\' is already associated with \\"'
+      ctx: LOGGER.warn("Error registering version \"" + name + "\", version number '" + value + "' is already associated with \"" + VERSION_NAMES.get(value) + "\"");
+  L449: 'Added too late!'
+      ctx: throw new IllegalStateException("Added too late!");
+  L511: ' is not registered to have dataconverters, yet has a dataconverter'
+      ctx: throw new IllegalStateException("Version " + DataConverter.encodedToString(version) + " is not registered to have dataconverters, yet has a dataconverter");
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/chunk/ConverterFlattenChunk.java (4 strings) =====
+  L439: 'ChunkNibbleArrays should be 2048 bytes not: '
+      ctx: throw new IllegalArgumentException("ChunkNibbleArrays should be 2048 bytes not: " + data.length);
+  L493: 'In chunk: {}x{} found a duplicate block entity at position (ConverterFlattenChunk): [{}, {}, {}]'
+      ctx: LOGGER.warn("In chunk: {}x{} found a duplicate block entity at position (ConverterFlattenChunk): [{}, {}, {}]", this.blockX, this.blockZ, x, y, z);
+  L506: 'In chunk: {}x{} found an invalid chunk section y (ConverterFlattenChunk): {}'
+      ctx: LOGGER.warn("In chunk: {}x{} found an invalid chunk section y (ConverterFlattenChunk): {}", this.blockX, this.blockZ, section.y);
+  L511: 'In chunk: {}x{} found a duplicate chunk section (ConverterFlattenChunk): {}'
+      ctx: LOGGER.warn("In chunk: {}x{} found a duplicate chunk section (ConverterFlattenChunk): {}", this.blockX, this.blockZ, section.y);
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/entity/ConverterEntityToVariant.java (1 strings) =====
+  L35: ' cannot return null value!'
+      ctx: throw new NullPointerException("Conversion " + this.conversion + " cannot return null value!");
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/helpers/HelperBlockFlatteningV1450.java (5 strings) =====
+  L19: 'Already contains mapping for '
+      ctx: throw new RuntimeException("Already contains mapping for " + o);
+  L33: 'Already contains mapping for '
+      ctx: throw new RuntimeException("Already contains mapping for " + o);
+  L57: 'Exception parsing '
+      ctx: throw new RuntimeException("Exception parsing " + blockstate, ex);
+  L64: 'Mapping already exists for id '
+      ctx: throw new RuntimeException("Mapping already exists for id " + id);
+  L79: 'Name does not exist for pre flattenings for id '
+      ctx: throw new RuntimeException("Name does not exist for pre flattenings for id " + id);
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/helpers/HelperItemNameV102.java (3 strings) =====
+  L15: 'Mapping already exists for '
+      ctx: throw new IllegalStateException("Mapping already exists for " + k + ": prev: " + ret + ", new: " + o);
+  L15: ': prev: '
+      ctx: throw new IllegalStateException("Mapping already exists for " + k + ": prev: " + ret + ", new: " + o);
+  L15: ', new: '
+      ctx: throw new IllegalStateException("Mapping already exists for " + k + ": prev: " + ret + ", new: " + o);
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/itemstack/ConverterFlattenItemStack.java (2 strings) =====
+  L443: "Item '"
+      ctx: LOGGER.warn("Item '" + id + "' requires flattening but found no mapping for it! (ConverterFlattenItemStack)");
+  L443: "' requires flattening but found no mapping for it! (ConverterFlattenItemStack)"
+      ctx: LOGGER.warn("Item '" + id + "' requires flattening but found no mapping for it! (ConverterFlattenItemStack)");
+
+===== ca/spottedleaf/dataconverter/minecraft/converters/particle/ConverterParticleToNBT.java (7 strings) =====
+  L24: 'Failed to parse nbt: '
+      ctx: LOGGER.warn("Failed to parse nbt: " + flat, ex);
+  L88: 'Failed to parse block properties: '
+      ctx: LOGGER.warn("Failed to parse block properties: " + input, ex);
+  L141: 'Failed to parse dust particle: '
+      ctx: LOGGER.warn("Failed to parse dust particle: " + data, ex);
+  L161: 'Failed to parse color transition dust particle: '
+      ctx: LOGGER.warn("Failed to parse color transition dust particle: " + data, ex);
+  L173: 'Failed to parse sculk particle: '
+      ctx: LOGGER.warn("Failed to parse sculk particle: " + data, ex);
+  L206: 'Failed to parse vibration particle: '
+      ctx: LOGGER.warn("Failed to parse vibration particle: " + data, ex);
+  L218: 'Failed to parse shriek particle: '
+      ctx: LOGGER.warn("Failed to parse shriek particle: " + data, ex);
+
+===== ca/spottedleaf/dataconverter/minecraft/datatypes/MCTypeRegistry.java (3 strings) =====
+  L65: 'Initialising converters for DataConverter...'
+      ctx: LOGGER.info("Initialising converters for DataConverter...");
+  L71: 'Failed to register data converters'
+      ctx: LOGGER.error(LogUtils.FATAL_MARKER, "Failed to register data converters", thr);
+  L78: 'Finished initialising converters for DataConverter in '
+      ctx: LOGGER.info("Finished initialising converters for DataConverter in " + oneDecimalFormat.format((double)(end - start) / 1.0E6) + "ms");
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V102.java (2 strings) =====
+  L32: 'Unknown legacy integer id (V102) '
+      ctx: LOGGER.warn("Unknown legacy integer id (V102) " + id);
+  L49: 'Unknown legacy integer id (V102) '
+      ctx: LOGGER.warn("Unknown legacy integer id (V102) " + id);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V108.java (1 strings) =====
+  L33: 'Failed to parse UUID for legacy entity (V108): '
+      ctx: LOGGER.warn("Failed to parse UUID for legacy entity (V108): " + uuidString, ex);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V1624.java (1 strings) =====
+  L69: 'Block Entity ({},{},{}) was expected to be a chest (V1624)'
+      ctx: LOGGER.warn("Block Entity ({},{},{}) was expected to be a chest (V1624)", x, y, z);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2523.java (7 strings) =====
+  L16: 'Max Health'
+      ctx: .put("Max Health", "minecraft:generic.max_health")
+  L18: 'Spawn Reinforcements Chance'
+      ctx: .put("Spawn Reinforcements Chance", "minecraft:zombie.spawn_reinforcements")
+  L20: 'Jump Strength'
+      ctx: .put("Jump Strength", "minecraft:horse.jump_strength")
+  L22: 'Follow Range'
+      ctx: .put("Follow Range", "minecraft:generic.follow_range")
+  L24: 'Knockback Resistance'
+      ctx: .put("Knockback Resistance", "minecraft:generic.knockback_resistance")
+  L26: 'Movement Speed'
+      ctx: .put("Movement Speed", "minecraft:generic.movement_speed")
+  L28: 'Flying Speed'
+      ctx: .put("Flying Speed", "minecraft:generic.flying_speed")
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2701.java (1 strings) =====
+  L75: 'Missing path'
+      ctx: throw new IllegalArgumentException("Missing path");
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2832.java (7 strings) =====
+  L209: 'Expected size: '
+      ctx: throw new IllegalStateException("Expected size: " + expectedSize + ", got: " + val.length);
+  L209: ', got: '
+      ctx: throw new IllegalStateException("Expected size: " + expectedSize + ", got: " + val.length);
+  L224: 'Old data storage has values that cannot be moved into new palette (would erase data)!'
+      ctx: throw new IllegalStateException("Old data storage has values that cannot be moved into new palette (would erase data)!");
+  L285: 'Failed to rewrite mismatched palette and data storage for section y: '
+      ctx: LOGGER.error("Failed to rewrite mismatched palette and data storage for section y: " + sectionY
+  L286: ' for chunk ['
+      ctx: + " for chunk [" + chunkX + "," + chunkZ + "], palette entries: " + palette.size() + ", data storage size: "
+  L286: '], palette entries: '
+      ctx: + " for chunk [" + chunkX + "," + chunkZ + "], palette entries: " + palette.size() + ", data storage size: "
+  L286: ', data storage size: '
+      ctx: + " for chunk [" + chunkX + "," + chunkZ + "], palette entries: " + palette.size() + ", data storage size: "
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2833.java (1 strings) =====
+  L21: 'Unable load old custom worlds.'
+      ctx: throw new IllegalStateException("Unable load old custom worlds.");
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2852.java (1 strings) =====
+  L21: 'Unable load old custom worlds.'
+      ctx: throw new IllegalStateException("Unable load old custom worlds.");
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V2970.java (4 strings) =====
+  L141: 'Encountered unknown structure in dataconverter: '
+      ctx: LOGGER.warn("Encountered unknown structure in dataconverter: " + key);
+  L162: 'Encountered unknown structure reference in dataconverter: '
+      ctx: LOGGER.warn("Encountered unknown structure reference in dataconverter: " + key);
+  L201: 'Duplicate biome remap: '
+      ctx: throw new IllegalStateException("Duplicate biome remap: " + biome + " -> " + newBiomeStructure + ", but already mapped to " + biomeToNewStructure.get(biome));
+  L201: ', but already mapped to '
+      ctx: throw new IllegalStateException("Duplicate biome remap: " + biome + " -> " + newBiomeStructure + ", but already mapped to " + biomeToNewStructure.get(biome));
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V3447.java (1 strings) =====
+  L41: 'Duplicate target '
+      ctx: throw new IllegalArgumentException("Duplicate target " + target);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V3945.java (5 strings) =====
+  L67: 'Random spawn bonus'
+      ctx: "Random spawn bonus", "minecraft:random_spawn_bonus",
+  L68: 'Random zombie-spawn bonus'
+      ctx: "Random zombie-spawn bonus", "minecraft:zombie_random_spawn_bonus",
+  L69: 'Leader zombie bonus'
+      ctx: "Leader zombie bonus", "minecraft:leader_zombie_bonus",
+  L70: 'Zombie reinforcement callee charge'
+      ctx: "Zombie reinforcement callee charge", "minecraft:reinforcement_callee_charge",
+  L71: 'Zombie reinforcement caller charge'
+      ctx: "Zombie reinforcement caller charge", "minecraft:reinforcement_caller_charge"
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V4061.java (29 strings) =====
+  L21: '{simultaneous_mobs: 1.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:breeze\\"}}, weight: 1}], ticks_between_spawn: 20, total_mobs: 2.0f, total_mobs_added_per_player: 1.0f}'
+      ctx: addConversion("trial_chamber/breeze", "{simultaneous_mobs: 1.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:breeze\"}}, weight: 1
+  L21: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 2.0f, total_mobs: 4.0f}'
+      ctx: addConversion("trial_chamber/breeze", "{simultaneous_mobs: 1.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:breeze\"}}, weight: 1
+  L22: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:husk\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/melee/husk", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:husk\"}}, weight:
+  L22: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:husk\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/melee/husk", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:husk\"}}, weight:
+  L23: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:spider\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/melee/spider", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:spider\"}}, wei
+  L23: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: addConversion("trial_chamber/melee/spider", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:spider\"}}, wei
+  L24: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:zombie\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/melee/zombie", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:zombie\"}}, wei
+  L24: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:zombie\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/melee/zombie", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:zombie\"}}, wei
+  L25: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/ranged/poison_skeleton", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:bogge
+  L25: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/ranged/poison_skeleton", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:bogge
+  L26: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/ranged/skeleton", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleton\"}}
+  L26: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/ranged/skeleton", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleton\"}}
+  L27: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/ranged/stray", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}}, weig
+  L27: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/ranged/stray", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}}, weig
+  L28: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: addConversion("trial_chamber/slow_ranged/poison_skeleton", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:
+  L28: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/slow_ranged/poison_skeleton", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:
+  L29: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: addConversion("trial_chamber/slow_ranged/skeleton", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleto
+  L29: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/slow_ranged/skeleton", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleto
+  L30: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: addConversion("trial_chamber/slow_ranged/stray", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}},
+  L30: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/slow_ranged/stray", "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}},
+  L31: '{simultaneous_mobs: 2.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \\"minecraft:zombie\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/small_melee/baby_zombie", "{simultaneous_mobs: 2.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \"mi
+  L31: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \\"minecraft:zombie\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: addConversion("trial_chamber/small_melee/baby_zombie", "{simultaneous_mobs: 2.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \"mi
+  L32: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:cave_spider\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/small_melee/cave_spider", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:cave
+  L32: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: addConversion("trial_chamber/small_melee/cave_spider", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:cave
+  L33: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:silverfish\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/small_melee/silverfish", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:silve
+  L33: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: addConversion("trial_chamber/small_melee/silverfish", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:silve
+  L34: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {Size: 1, id: \\"minecraft:slime\\"}}, weight: 3}, {data: {entity: {Size: 2, id: \\"minecraft:slime\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: addConversion("trial_chamber/small_melee/slime", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {Size: 1, id: \"minecraft:s
+  L34: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: addConversion("trial_chamber/small_melee/slime", "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {Size: 1, id: \"minecraft:s
+  L55: 'Failed to parse NBT: '
+      ctx: throw new IllegalArgumentException("Failed to parse NBT: " + sNBT, ex);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V4290.java (10 strings) =====
+  L89: 'Legacy HoverEvent with action=show_item has invalid value, expected string: '
+      ctx: LOGGER.error("Legacy HoverEvent with action=show_item has invalid value, expected string: " + legacyValue);
+  L97: 'Failed to parse SNBT for legacy item HoverEvent: '
+      ctx: LOGGER.error("Failed to parse SNBT for legacy item HoverEvent: " + legacyItemStr, ex);
+  L109: 'Legacy HoverEvent with action=show_entity has invalid value, expected string: '
+      ctx: LOGGER.error("Legacy HoverEvent with action=show_entity has invalid value, expected string: " + legacyValue);
+  L117: 'Failed to parse SNBT for legacy entity HoverEvent: '
+      ctx: LOGGER.error("Failed to parse SNBT for legacy entity HoverEvent: " + legacyEntityStr, ex);
+  L232: 'Wrong type for text component: '
+      ctx: throw new IllegalArgumentException("Wrong type for text component: " + data);
+  L246: 'Unexpected byte[] output from JsonTypeUtil'
+      ctx: case byte[] bt -> throw new IllegalStateException("Unexpected byte[] output from JsonTypeUtil");
+  L247: 'Unexpected int[] output from JsonTypeUtil'
+      ctx: case int[] it -> throw new IllegalStateException("Unexpected int[] output from JsonTypeUtil");
+  L248: 'Unexpected long[] output from JsonTypeUtil'
+      ctx: case long[] lt -> throw new IllegalStateException("Unexpected long[] output from JsonTypeUtil");
+  L250: 'Unknown nbt type: '
+      ctx: default -> throw new IllegalStateException("Unknown nbt type: " + generic);
+  L258: 'Failed to convert json to nbt: '
+      ctx: LOGGER.error("Failed to convert json to nbt: " + unparsedJson, ex);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V704.java (4 strings) =====
+  L30: 'Duplicate item id to tile key: '
+      ctx: LOGGER.error("Duplicate item id to tile key: " + key);
+  L348: '(V704) Failed to find walkers for '
+      ctx: LOGGER.error("(V704) Failed to find walkers for " + oldId);
+  L405: 'Unable to resolve Entity for ItemStack (V704): '
+      ctx: LOGGER.warn("Unable to resolve Entity for ItemStack (V704): " + itemId);
+  L433: 'Unable to resolve BlockEntity for ItemStack (V704): '
+      ctx: LOGGER.warn("Unable to resolve BlockEntity for ItemStack (V704): " + itemId);
+
+===== ca/spottedleaf/dataconverter/minecraft/versions/V99.java (2 strings) =====
+  L293: 'Unable to resolve Entity for ItemStack (V99): '
+      ctx: LOGGER.warn("Unable to resolve Entity for ItemStack (V99): " + data.getGeneric("id"));
+  L320: 'Unable to resolve BlockEntity for ItemStack (V99): '
+      ctx: LOGGER.warn("Unable to resolve BlockEntity for ItemStack (V99): " + data.getGeneric("id"));
+
+===== ca/spottedleaf/dataconverter/types/json/JsonListType.java (1 strings) =====
+  L57: ', compressed='
+      ctx: ", compressed=" + this.compressed +
+
+===== ca/spottedleaf/dataconverter/types/json/JsonMapType.java (1 strings) =====
+  L62: ', compressed='
+      ctx: ", compressed=" + this.compressed +
+
+===== ca/spottedleaf/dataconverter/types/json/JsonTypeUtil.java (6 strings) =====
+  L48: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + number.getClass());
+  L54: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + valueGeneric.getClass());
+  L62: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + valueGeneric);
+  L96: 'Unrecognized type '
+      ctx: throw new IllegalStateException("Unrecognized type " + input);
+  L115: 'Unrecognized type '
+      ctx: throw new IllegalStateException("Unrecognized type " + input);
+  L225: 'Unrecognized type '
+      ctx: throw new IllegalStateException("Unrecognized type " + element);
+
+===== ca/spottedleaf/dataconverter/types/nbt/NBTTypeUtil.java (6 strings) =====
+  L50: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + valueGeneric.getClass());
+  L58: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + valueGeneric);
+  L78: 'Unknown tag: '
+      ctx: default -> throw new IllegalStateException("Unknown tag: " + input);
+  L100: 'Unrecognized type '
+      ctx: default -> throw new IllegalStateException("Unrecognized type " + input);
+  L158: 'Unknown type: '
+      ctx: throw new IllegalStateException("Unknown type: " + id);
+  L187: 'Unknown tag: '
+      ctx: default -> throw new IllegalStateException("Unknown tag: " + nbt);
+
+===== ca/spottedleaf/dataconverter/util/ConvertUtil.java (8 strings) =====
+  L56: 'Not in benchmark mode'
+      ctx: throw new IllegalStateException("Not in benchmark mode");
+  L60: 'No benchmark data recorded.'
+      ctx: LOGGER.info("No benchmark data recorded.");
+  L86: 'Benchmark data for '
+      ctx: "Benchmark data for " + typeName +
+  L87: ': total: '
+      ctx: ": total: " + DecimalFormats.NO_DECIMAL_PLACES.get().format((long)data.allTimes.size()) +
+  L88: ': mean: '
+      ctx: ": mean: " + DecimalFormats.FOUR_DECIMAL_PLACES.get().format(averageMS) + "us" +
+  L89: '. median: '
+      ctx: ". median: " + DecimalFormats.FOUR_DECIMAL_PLACES.get().format(medianMS) + "us"
+  L131: 'Unknown type: '
+      ctx: throw new IllegalArgumentException("Unknown type: " + type);
+  L162: 'Unknown type: '
+      ctx: throw new IllegalArgumentException("Unknown type: " + type);
+
+===== ca/spottedleaf/moonrise/common/misc/NearbyPlayers.java (6 strings) =====
+  L78: 'Already have player '
+      ctx: throw new IllegalStateException("Already have player " + player);
+  L116: "Don't have player "
+      ctx: throw new IllegalStateException("Don't have player " + player);
+  L198: 'Already contains player '
+      ctx: throw new IllegalStateException("Already contains player " + player);
+  L208: 'Does not contain player '
+      ctx: throw new IllegalStateException("Does not contain player " + player);
+  L212: 'Does not contain player '
+      ctx: throw new IllegalStateException("Does not contain player " + player);
+  L257: 'Chunk should exist at '
+      ctx: throw new IllegalStateException("Chunk should exist at " + ChunkPos.unpack(chunkKey));
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/io/MoonriseRegionFileIO.java (36 strings) =====
+  L57: 'Unknown controller type '
+      ctx: throw new IllegalStateException("Unknown controller type " + type);
+  L83: 'Result already exists for type '
+      ctx: throw new IllegalArgumentException("Result already exists for type " + type);
+  L100: 'Result already exists for type '
+      ctx: throw new IllegalArgumentException("Result already exists for type " + type);
+  L130: 'Result does not exist for type '
+      ctx: throw new IllegalArgumentException("Result does not exist for type " + type);
+  L149: 'Result does not exist for type '
+      ctx: throw new IllegalArgumentException("Result does not exist for type " + type);
+  L632: 'Types cannot be null'
+      ctx: throw new NullPointerException("Types cannot be null");
+  L635: 'Types cannot be empty'
+      ctx: throw new IllegalArgumentException("Types cannot be empty");
+  L829: ' synchronously failed to handle chunk data for task '
+      ctx: LOGGER.error("Callback " + ConcurrentUtil.genericToString(onComplete) + " synchronously failed to handle chunk data for task " + ret.toString(), thr);
+  L1066: 'Write completed concurrently, expected this task: '
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1066: ', report this!'
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1069: 'Chunk task mismatch, expected this task: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1069: ', got: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1069: ', report this!'
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1103: 'Failed to read chunk data for task: '
+      ctx: LOGGER.error("Failed to read chunk data for task: " + this.toString(), thr);
+  L1122: 'Unknown state: '
+      ctx: throw new IllegalStateException("Unknown state: " + readData.result());
+  L1153: 'Failed to decompress chunk data for task: '
+      ctx: LOGGER.error("Failed to decompress chunk data for task: " + this.toString(), thr);
+  L1193: 'Write completed concurrently, expected this task: '
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1193: ', report this!'
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1196: 'Chunk task mismatch, expected this task: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1196: ', got: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1196: ', report this!'
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1217: 'Should be writable'
+      ctx: throw new IllegalStateException("Should be writable");
+  L1224: 'Serialization task for chunk data failed: '
+      ctx: LOGGER.error("Serialization task for chunk data failed: " + this.toString(), inProgressWrite.throwable);
+  L1230: 'Failed to write chunk data for task: '
+      ctx: LOGGER.error("Failed to write chunk data for task: " + this.toString(), thr);
+  L1284: 'Failed to write chunk data for task: '
+      ctx: LOGGER.error("Failed to write chunk data for task: " + this.toString(), thr);
+  L1301: 'Write completed concurrently, expected this task: '
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1301: ', report this!'
+      ctx: throw new IllegalStateException("Write completed concurrently, expected this task: " + ChunkIOTask.this.toString() + ", report this!");
+  L1304: 'Chunk task mismatch, expected this task: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1304: ', got: '
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1304: ', report this!'
+      ctx: throw new IllegalStateException("Chunk task mismatch, expected this task: " + ChunkIOTask.this.toString() + ", got: " + valueInMap.toString() + ", report this!");
+  L1325: "Task for world: '"
+      ctx: return "Task for world: '" + WorldUtil.getWorldName(this.world) + "' at (" + this.chunkX + ","
+  L1325: "' at ("
+      ctx: return "Task for world: '" + WorldUtil.getWorldName(this.world) + "' at (" + this.chunkX + ","
+  L1326: ') type: '
+      ctx: + this.chunkZ + ") type: " + this.regionDataController.type.name() + ", hash: " + this.hashCode();
+  L1326: ', hash: '
+      ctx: + this.chunkZ + ") type: " + this.regionDataController.type.name() + ", hash: " + this.hashCode();
+  L1358: ' failed to handle chunk data (read) for task '
+      ctx: LOGGER.error("Callback " + ConcurrentUtil.genericToString(consumer) + " failed to handle chunk data (read) for task " + task.toString(), thr);
+  L1403: ' failed to handle chunk data (write) for task '
+      ctx: LOGGER.error("Callback " + ConcurrentUtil.genericToString(consumer) + " failed to handle chunk data (write) for task " + task.toString(), thr);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/io/datacontroller/EntityDataController.java (2 strings) =====
+  L54: 'Entity chunk coordinate and serialized data do not have matching coordinates, trying to serialize coordinate '
+      ctx: "Entity chunk coordinate and serialized data do not have matching coordinates, trying to serialize coordinate " + pos.toString()
+  L55: ' but compound says coordinate is '
+      ctx: + " but compound says coordinate is " + nbtPos
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/level/entity/ChunkEntitySlices.java (2 strings) =====
+  L141: 'Entity type '
+      ctx: LOGGER.error("Entity type " + entity.getType() + " failed to serialize", ex);
+  L141: ' failed to serialize'
+      ctx: LOGGER.error("Entity type " + entity.getType() + " failed to serialize", ex);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/level/entity/EntityLookup.java (44 strings) =====
+  L133: 'Length must be no greater-than the array length'
+      ctx: throw new IllegalArgumentException("Length must be no greater-than the array length");
+  L240: 'Entity status change must only happen on the main thread'
+      ctx: this.checkThread(entity, "Entity status change must only happen on the main thread");
+  L244: 'Cannot recursively update entity chunk status for entity '
+      ctx: LOGGER.error("Cannot recursively update entity chunk status for entity " + entity, new Throwable());
+  L251: 'Cannot update chunk status for entity '
+      ctx: LOGGER.error("Cannot update chunk status for entity " + entity + " since entity chunk (" + slices.chunkX + "," + slices.chunkZ + ") is receiving update", new Throwable());
+  L251: ' since entity chunk ('
+      ctx: LOGGER.error("Cannot update chunk status for entity " + entity + " since entity chunk (" + slices.chunkX + "," + slices.chunkZ + ") is receiving update", new Throwable());
+  L251: ') is receiving update'
+      ctx: LOGGER.error("Cannot update chunk status for entity " + entity + " since entity chunk (" + slices.chunkX + "," + slices.chunkZ + ") is receiving update", new Throwable());
+  L372: 'Root entity '
+      ctx: LOGGER.warn("Root entity " + entity + " is outside of serialized chunk " + forChunk);
+  L372: ' is outside of serialized chunk '
+      ctx: LOGGER.warn("Root entity " + entity + " is outside of serialized chunk " + forChunk);
+  L413: 'Cannot add entity off-main thread'
+      ctx: this.checkThread(sectionX, sectionZ, "Cannot add entity off-main thread");
+  L416: 'Refusing to add removed entity: '
+      ctx: LOGGER.warn("Refusing to add removed entity: " + entity);
+  L421: ' is currently prevented from being added/removed to world since it is processing section status updates'
+      ctx: LOGGER.warn("Entity " + entity + " is currently prevented from being added/removed to world since it is processing section status updates", new Throwable());
+  L431: 'Entity id already exists: '
+      ctx: LOGGER.warn("Entity id already exists: " + entity.getId() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L431: ', mapped to '
+      ctx: LOGGER.warn("Entity id already exists: " + entity.getId() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L431: ", can't add "
+      ctx: LOGGER.warn("Entity id already exists: " + entity.getId() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L439: 'Entity uuid already exists: '
+      ctx: LOGGER.warn("Entity uuid already exists: " + entity.getUUID() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L439: ', mapped to '
+      ctx: LOGGER.warn("Entity uuid already exists: " + entity.getUUID() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L439: ", can't add "
+      ctx: LOGGER.warn("Entity uuid already exists: " + entity.getUUID() + ", mapped to " + currentlyMapped + ", can't add " + entity);
+  L448: " added to world '"
+      ctx: LOGGER.warn("Entity " + entity + " added to world '" + WorldUtil.getWorldName(this.world) + "', but was already contained in entity chunk (" + sectionX + "," + sectionZ + ")");
+  L448: "', but was already contained in entity chunk ("
+      ctx: LOGGER.warn("Entity " + entity + " added to world '" + WorldUtil.getWorldName(this.world) + "', but was already contained in entity chunk (" + sectionX + "," + sectionZ + ")");
+  L475: 'Cannot remove entity off-main'
+      ctx: this.checkThread(sectionX, sectionZ, "Cannot remove entity off-main");
+  L477: 'Only call Entity#setRemoved to remove an entity'
+      ctx: throw new IllegalStateException("Only call Entity#setRemoved to remove an entity");
+  L482: 'Cannot remove entity '
+      ctx: LOGGER.warn("Cannot remove entity " + entity + " from null entity slices (" + sectionX + "," + sectionZ + ")");
+  L482: ' from null entity slices ('
+      ctx: LOGGER.warn("Cannot remove entity " + entity + " from null entity slices (" + sectionX + "," + sectionZ + ")");
+  L485: 'Attempting to remove entity '
+      ctx: throw new IllegalStateException("Attempting to remove entity " + entity + " from entity slices (" + sectionX + "," + sectionZ + ") that is receiving status updates");
+  L485: ' from entity slices ('
+      ctx: throw new IllegalStateException("Attempting to remove entity " + entity + " from entity slices (" + sectionX + "," + sectionZ + ") that is receiving status updates");
+  L485: ') that is receiving status updates'
+      ctx: throw new IllegalStateException("Attempting to remove entity " + entity + " from entity slices (" + sectionX + "," + sectionZ + ") that is receiving status updates");
+  L488: 'Failed to remove entity '
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " from entity slices (" + sectionX + "," + sectionZ + ")");
+  L488: ' from entity slices ('
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " from entity slices (" + sectionX + "," + sectionZ + ")");
+  L498: 'Failed to remove entity '
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " by id, current entity mapped: " + currentlyMapped);
+  L498: ' by id, current entity mapped: '
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " by id, current entity mapped: " + currentlyMapped);
+  L513: 'Failed to remove entity '
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " by uuid, current entity mapped: " + currentlyMappedArr[0]);
+  L513: ' by uuid, current entity mapped: '
+      ctx: LOGGER.warn("Failed to remove entity " + entity + " by uuid, current entity mapped: " + currentlyMappedArr[0]);
+  L523: 'Cannot move entity off-main'
+      ctx: this.checkThread(entity, "Cannot move entity off-main");
+  L538: 'Cannot move entity off-main'
+      ctx: this.checkThread(newSectionX, newSectionZ, "Cannot move entity off-main");
+  L541: 'Cannot move entity off-main'
+      ctx: this.checkThread(sectionX, sectionZ, "Cannot move entity off-main");
+  L547: 'Could not remove entity '
+      ctx: LOGGER.warn("Could not remove entity " + entity + " from its old chunk section (" + sectionX + "," + sectionY + "," + sectionZ + ") since it was not contained in the section");
+  L547: ' from its old chunk section ('
+      ctx: LOGGER.warn("Could not remove entity " + entity + " from its old chunk section (" + sectionX + "," + sectionY + "," + sectionZ + ") since it was not contained in the section");
+  L547: ') since it was not contained in the section'
+      ctx: LOGGER.warn("Could not remove entity " + entity + " from its old chunk section (" + sectionX + "," + sectionY + "," + sectionZ + ") since it was not contained in the section");
+  L551: 'Could not add entity '
+      ctx: LOGGER.warn("Could not add entity " + entity + " to its new chunk section (" + newSectionX + "," + newSectionY + "," + newSectionZ + ") as it is already contained in the section");
+  L551: ' to its new chunk section ('
+      ctx: LOGGER.warn("Could not add entity " + entity + " to its new chunk section (" + newSectionX + "," + newSectionY + "," + newSectionZ + ") as it is already contained in the section");
+  L551: ') as it is already contained in the section'
+      ctx: LOGGER.warn("Could not add entity " + entity + " to its new chunk section (" + newSectionX + "," + newSectionY + "," + newSectionZ + ") as it is already contained in the section");
+  L858: 'Cannot load in entity section off-main'
+      ctx: this.checkThread(chunkX, chunkZ, "Cannot load in entity section off-main");
+  L874: 'Cannot unload entity section off-main'
+      ctx: this.checkThread(chunkX, chunkZ, "Cannot unload entity section off-main");
+  L987: 'Cannot remove entity off-main'
+      ctx: EntityLookup.this.checkThread(entity, "Cannot remove entity off-main");
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/level/poi/PoiChunk.java (11 strings) =====
+  L46: 'Incorrect length used, expected '
+      ctx: throw new IllegalStateException("Incorrect length used, expected " + (maxSection - minSection + 1) + ", got " + this.sections.length);
+  L46: ', got '
+      ctx: throw new IllegalStateException("Incorrect length used, expected " + (maxSection - minSection + 1) + ", got " + this.sections.length);
+  L51: 'Loading in poi chunk off-main'
+      ctx: TickThread.ensureTickThread(this.world, this.chunkX, this.chunkZ, "Loading in poi chunk off-main");
+  L88: 'chunkY is out of bounds, chunkY: '
+      ctx: throw new IllegalArgumentException("chunkY is out of bounds, chunkY: " + chunkY + " outside [" + this.minSection + "," + this.maxSection + "]");
+  L88: ' outside ['
+      ctx: throw new IllegalArgumentException("chunkY is out of bounds, chunkY: " + chunkY + " outside [" + this.minSection + "," + this.maxSection + "]");
+  L138: 'Failed to serialize poi chunk for world: '
+      ctx: LOGGER.error("Failed to serialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descrip
+  L138: ', chunk: ('
+      ctx: LOGGER.error("Failed to serialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descrip
+  L138: '); description: '
+      ctx: LOGGER.error("Failed to serialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descrip
+  L183: 'Failed to deserialize poi chunk for world: '
+      ctx: LOGGER.error("Failed to deserialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descr
+  L183: ', chunk: ('
+      ctx: LOGGER.error("Failed to deserialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descr
+  L183: '); description: '
+      ctx: LOGGER.error("Failed to deserialize poi chunk for world: " + WorldUtil.getWorldName(world) + ", chunk: (" + chunkX + "," + finalSectionY + "," + chunkZ + "); description: " + descr
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/player/RegionizedPlayerChunkLoader.java (23 strings) =====
+  L188: 'Cannot add player to player chunk loader async'
+      ctx: TickThread.ensureTickThread(player, "Cannot add player to player chunk loader async");
+  L194: 'Player is already added to player chunk loader'
+      ctx: throw new IllegalStateException("Player is already added to player chunk loader");
+  L213: 'Cannot remove player from player chunk loader async'
+      ctx: TickThread.ensureTickThread(player, "Cannot remove player from player chunk loader async");
+  L307: 'Cannot tick player chunk loader async'
+      ctx: TickThread.ensureTickThread("Cannot tick player chunk loader async");
+  L663: 'Cannot tick player chunk loader async'
+      ctx: TickThread.ensureTickThread(this.player, "Cannot tick player chunk loader async");
+  L665: 'Ticking removed player chunk loader'
+      ctx: throw new IllegalStateException("Ticking removed player chunk loader");
+  L692: 'Previous state should be '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_LOADING + ", not " + prev);
+  L692: ', not '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_LOADING + ", not " + prev);
+  L709: 'Previous state should be '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_NONE + ", not " + prev);
+  L709: ', not '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_NONE + ", not " + prev);
+  L762: 'Previous state should be '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_GENERATING + ", not " + prev);
+  L762: ', not '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_GENERATING + ", not " + prev);
+  L796: 'Previous state should be '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_LOADED + ", not " + prev);
+  L796: ', not '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_LOADED + ", not " + prev);
+  L833: 'Previous state should be '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_GENERATED + ", not " + prev);
+  L833: ', not '
+      ctx: throw new IllegalStateException("Previous state should be " + CHUNK_TICKET_STAGE_GENERATED + ", not " + prev);
+  L873: 'Cannot add player asynchronously'
+      ctx: TickThread.ensureTickThread(this.player, "Cannot add player asynchronously");
+  L875: 'Adding removed player chunk loader'
+      ctx: throw new IllegalStateException("Adding removed player chunk loader");
+  L922: 'Cannot update player asynchronously'
+      ctx: TickThread.ensureTickThread(this.player, "Cannot update player asynchronously");
+  L924: 'Updating removed player chunk loader'
+      ctx: throw new IllegalStateException("Updating removed player chunk loader");
+  L1059: 'Unknown stage: '
+      ctx: throw new IllegalStateException("Unknown stage: " + stage);
+  L1074: 'Cannot add player asynchronously'
+      ctx: TickThread.ensureTickThread(this.player, "Cannot add player asynchronously");
+  L1076: 'Removing removed player chunk loader'
+      ctx: throw new IllegalStateException("Removing removed player chunk loader");
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/ChunkHolderManager.java (34 strings) =====
+  L104: 'Duplicate chunkholder in auto save queue'
+      ctx: throw new IllegalStateException("Duplicate chunkholder in auto save queue");
+  L195: 'Closing world off-main'
+      ctx: TickThread.ensureTickThread("Closing world off-main");
+  L197: "Waiting 60s for chunk system to halt for world '"
+      ctx: LOGGER.info("Waiting 60s for chunk system to halt for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L199: "Failed to halt generation/loading tasks for world '"
+      ctx: LOGGER.warn("Failed to halt generation/loading tasks for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L201: "Halted chunk system for world '"
+      ctx: LOGGER.info("Halted chunk system for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L212: "Waiting 60s for chunk I/O to halt for world '"
+      ctx: LOGGER.info("Waiting 60s for chunk I/O to halt for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L214: "Failed to halt I/O tasks for world '"
+      ctx: LOGGER.warn("Failed to halt I/O tasks for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L216: "Halted I/O scheduler for world '"
+      ctx: LOGGER.info("Halted I/O scheduler for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L225: "Failed to close '"
+      ctx: LOGGER.error("Failed to close '" + type.name() + "' regionfile cache for world '" + WorldUtil.getWorldName(this.world) + "'", ex);
+  L225: "' regionfile cache for world '"
+      ctx: LOGGER.error("Failed to close '" + type.name() + "' regionfile cache for world '" + WorldUtil.getWorldName(this.world) + "'", ex);
+  L276: "Emergency saving all chunkholders for world '"
+      ctx: LOGGER.info("Emergency saving all chunkholders for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L278: "Saving all chunkholders for world '"
+      ctx: LOGGER.info("Saving all chunkholders for world '" + WorldUtil.getWorldName(this.world) + "'");
+  L324: 'Failed to save chunk ('
+      ctx: LOGGER.error("Failed to save chunk (" + holder.chunkX + "," + holder.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L324: ") in world '"
+      ctx: LOGGER.error("Failed to save chunk (" + holder.chunkX + "," + holder.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L335: ' block chunks, '
+      ctx: "Saved " + savedChunk + " block chunks, " + savedEntity + " entity chunks, " + savedPoi
+  L335: ' entity chunks, '
+      ctx: "Saved " + savedChunk + " block chunks, " + savedEntity + " entity chunks, " + savedPoi
+  L336: " poi chunks in world '"
+      ctx: + " poi chunks in world '" + WorldUtil.getWorldName(this.world) + "', progress: "
+  L336: "', progress: "
+      ctx: + " poi chunks in world '" + WorldUtil.getWorldName(this.world) + "', progress: "
+  L347: "Exception when flushing regions in world '"
+      ctx: LOGGER.error("Exception when flushing regions in world '" + WorldUtil.getWorldName(this.world) + "'", ex);
+  L352: ' block chunks, '
+      ctx: "Saved " + savedChunk + " block chunks, " + savedEntity + " entity chunks, " + savedPoi
+  L352: ' entity chunks, '
+      ctx: "Saved " + savedChunk + " block chunks, " + savedEntity + " entity chunks, " + savedPoi
+  L353: " poi chunks in world '"
+      ctx: + " poi chunks in world '" + WorldUtil.getWorldName(this.world) + "' in "
+  L353: "' in "
+      ctx: + " poi chunks in world '" + WorldUtil.getWorldName(this.world) + "' in "
+  L404: 'Expected chunk holder to be created'
+      ctx: throw new IllegalStateException("Expected chunk holder to be created");
+  L713: 'Should have been able to add '
+      ctx: throw new IllegalStateException("Should have been able to add " + unknownTicket + " to " + ticketsAtChunk);
+  L961: 'Must hold ticket level update lock!'
+      ctx: throw new IllegalStateException("Must hold ticket level update lock!");
+  L964: 'Must hold scheduler lock!!'
+      ctx: throw new IllegalStateException("Must hold scheduler lock!!");
+  L983: 'Cannot create entity chunk off-main'
+      ctx: TickThread.ensureTickThread(this.world, chunkX, chunkZ, "Cannot create entity chunk off-main");
+  L1064: 'Cannot create poi chunk off-main'
+      ctx: TickThread.ensureTickThread(this.world, chunkX, chunkZ, "Cannot create poi chunk off-main");
+  L1153: 'Cannot unload chunks off-main'
+      ctx: TickThread.ensureTickThread("Cannot unload chunks off-main");
+  L1156: 'Cannot unload chunks recursively'
+      ctx: throw new IllegalStateException("Cannot unload chunks recursively");
+  L1243: ' is not safe to unload but is inside the unload queue?'
+      ctx: LOGGER.error("Chunkholder " + chunkHolder + " is not safe to unload but is inside the unload queue?");
+  L1420: 'Cannot update ticket level while unloading chunks or updating entity manager'
+      ctx: throw new IllegalStateException("Cannot update ticket level while unloading chunks or updating entity manager");
+  L1425: 'Cannot asynchronously process ticket updates'
+      ctx: TickThread.ensureTickThread("Cannot asynchronously process ticket updates");
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/ChunkTaskScheduler.java (31 strings) =====
+  L304: 'Chunk system error at chunk ('
+      ctx: LOGGER.error("Chunk system error at chunk (" + chunkX + "," + chunkZ + "), holder: " + holder + ", exception:", new Throwable(thr));
+  L304: '), holder: '
+      ctx: LOGGER.error("Chunk system error at chunk (" + chunkX + "," + chunkZ + "), holder: " + holder + ", exception:", new Throwable(thr));
+  L304: ', exception:'
+      ctx: LOGGER.error("Chunk system error at chunk (" + chunkX + "," + chunkZ + "), holder: " + holder + ", exception:", new Throwable(thr));
+  L310: 'Chunk system error'
+      ctx: final ReportedException reportedException = thr instanceof ReportedException ? (ReportedException)thr : new ReportedException(new CrashReport("Chunk system error", thr));
+  L312: 'Chunk system details'
+      ctx: CrashReportCategory crashReportCategory = reportedException.getReport().addCategory("Chunk system details");
+  L313: 'Chunk coordinate'
+      ctx: crashReportCategory.setDetail("Chunk coordinate", new ChunkPos(chunkX, chunkZ).toString());
+  L315: 'unrecoverableChunkSystemFailure caller thread'
+      ctx: crashReportCategory.setDetail("unrecoverableChunkSystemFailure caller thread", Thread.currentThread().getName());
+  L317: 'Chunk System Objects of Interest'
+      ctx: crashReportCategory = reportedException.getReport().addCategory("Chunk System Objects of Interest");
+  L327: 'Chunk system crash propagated from unrecoverableChunkSystemFailure'
+      ctx: throw new RuntimeException("Chunk system crash propagated from unrecoverableChunkSystemFailure", reportedException);
+  L333: 'Chunk system crash propagated from unrecoverableChunkSystemFailure'
+      ctx: ((ChunkSystemMinecraftServer)this.world.getServer()).moonrise$setChunkSystemCrash(new RuntimeException("Chunk system crash propagated from unrecoverableChunkSystemFailure", reporte
+  L337: 'Cannot execute main thread task off-main'
+      ctx: TickThread.ensureTickThread("Cannot execute main thread task off-main");
+  L377: 'Cannot schedule chunk load during ticket level update'
+      ctx: throw new IllegalStateException("Cannot schedule chunk load during ticket level update");
+  L380: 'Cannot schedule chunk loading recursively'
+      ctx: throw new IllegalStateException("Cannot schedule chunk loading recursively");
+  L384: 'Cannot wait for INACCESSIBLE status'
+      ctx: throw new IllegalArgumentException("Cannot wait for INACCESSIBLE status");
+  L455: 'Failed to process chunk full status callback'
+      ctx: LOGGER.error("Failed to process chunk full status callback", thr);
+  L542: "Chunk system has shut down, cannot process chunk requests in world '"
+      ctx: "Chunk system has shut down, cannot process chunk requests in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.getWorldName(this.world) + "' at "
+  L542: "' at "
+      ctx: "Chunk system has shut down, cannot process chunk requests in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.getWorldName(this.world) + "' at "
+  L543: ') status: '
+      ctx: + "(" + chunkX + "," + chunkZ + ") status: " + status
+  L565: 'Expected chunk to be loaded for status '
+      ctx: throw new IllegalStateException("Expected chunk to be loaded for status " + status);
+  L581: 'Cannot schedule chunk load during ticket level update'
+      ctx: throw new IllegalStateException("Cannot schedule chunk load during ticket level update");
+  L584: 'Cannot schedule chunk loading recursively'
+      ctx: throw new IllegalStateException("Cannot schedule chunk loading recursively");
+  L659: 'Failed to process chunk status callback'
+      ctx: LOGGER.error("Failed to process chunk status callback", thr);
+  L693: 'Not holding scheduling lock'
+      ctx: throw new IllegalStateException("Not holding scheduling lock");
+  L794: 'Missing chunkholder when required'
+      ctx: throw new IllegalStateException("Missing chunkholder when required");
+  L925: ") in '"
+      ctx: return "[( " + this.chunkX + "," + this.chunkZ + ") in '" + WorldUtil.getWorldName(this.world) + "']";
+  L1036: 'Chunk wait task info below: '
+      ctx: LOGGER.error("Chunk wait task info below: ");
+  L1039: 'Chunk wait: '
+      ctx: LOGGER.error("Chunk wait: " + chunkInfo);
+  L1040: 'Chunk holder: '
+      ctx: LOGGER.error("Chunk holder: " + holder);
+  L1045: 'Writing chunk information dump to '
+      ctx: LOGGER.error("Writing chunk information dump to " + file);
+  L1048: 'Successfully written chunk information!'
+      ctx: LOGGER.error("Successfully written chunk information!");
+  L1050: 'Failed to dump chunk information to file '
+      ctx: LOGGER.error("Failed to dump chunk information to file " + file.toString(), thr);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/NewChunkHolder.java (64 strings) =====
+  L80: 'Cannot sync load entity data off-main'
+      ctx: TickThread.ensureTickThread(this.world, this.chunkX, this.chunkZ, "Cannot sync load entity data off-main");
+  L90: 'Must load entity data from disk before loading in the entity chunk!'
+      ctx: throw new IllegalStateException("Must load entity data from disk before loading in the entity chunk!");
+  L164: 'Unhandled entity data load exception, data data will be lost: '
+      ctx: LOGGER.error("Unhandled entity data load exception, data data will be lost: ", result.right());
+  L218: 'Cannot load entity data, it is already loaded'
+      ctx: throw new IllegalStateException("Cannot load entity data, it is already loaded");
+  L222: 'Must hold scheduling lock'
+      ctx: throw new IllegalStateException("Must hold scheduling lock");
+  L285: 'Unhandled poi load exception, poi data will be lost: '
+      ctx: LOGGER.error("Unhandled poi load exception, poi data will be lost: ", result.right());
+  L338: 'Cannot load poi data, it is already loaded'
+      ctx: throw new IllegalStateException("Cannot load poi data, it is already loaded");
+  L342: 'Must hold scheduling lock'
+      ctx: throw new IllegalStateException("Must hold scheduling lock");
+  L392: 'Double calling schedule()'
+      ctx: throw new IllegalStateException("Double calling schedule()");
+  L415: 'May not be completed here'
+      ctx: throw new IllegalStateException("May not be completed here");
+  L425: 'Cannot be uncompleted at this point'
+      ctx: throw new IllegalStateException("Cannot be uncompleted at this point");
+  L428: 'Result cannot be null (cancelled)'
+      ctx: throw new NullPointerException("Result cannot be null (cancelled)");
+  L695: 'Neighbours using this chunk cannot be negative'
+      ctx: throw new IllegalStateException("Neighbours using this chunk cannot be negative");
+  L811: 'Unknown regionfile type '
+      ctx: throw new IllegalStateException("Unknown regionfile type " + type);
+  L953: 'Corrupt state'
+      ctx: throw new IllegalStateException("Corrupt state");
+  L1199: 'Cannot update full status thread off-main'
+      ctx: TickThread.ensureTickThread(this.world, this.chunkX, this.chunkZ, "Cannot update full status thread off-main");
+  L1302: 'toStatus cannot be null'
+      ctx: throw new NullPointerException("toStatus cannot be null");
+  L1358: 'Failed to process chunk status callback'
+      ctx: LOGGER.error("Failed to process chunk status callback", thr);
+  L1386: 'Failed to process chunk status callback'
+      ctx: LOGGER.error("Failed to process chunk status callback", thr);
+  L1396: 'Cannot have neighbours blocking this gen task'
+      ctx: throw new IllegalStateException("Cannot have neighbours blocking this gen task");
+  L1425: 'Corrupt state'
+      ctx: throw new IllegalStateException("Corrupt state");
+  L1448: 'Corrupt state'
+      ctx: throw new IllegalStateException("Corrupt state");
+  L1482: 'Neighbour is not waiting for us?'
+      ctx: throw new IllegalStateException("Neighbour is not waiting for us?");
+  L1497: 'Neighbour is not waiting for us?'
+      ctx: throw new IllegalStateException("Neighbour is not waiting for us?");
+  L1562: 'Currently generating or provided task is trying to generate to a level we are already at!'
+      ctx: throw new IllegalStateException("Currently generating or provided task is trying to generate to a level we are already at!");
+  L1565: 'Cannot schedule generation task when not requested'
+      ctx: throw new IllegalStateException("Cannot schedule generation task when not requested");
+  L1579: "Cannot complete generation task '"
+      ctx: "Cannot complete generation task '" + generationTask + "' because we are waiting on '" + this.generationTask + "' instead!"
+  L1579: "' because we are waiting on '"
+      ctx: "Cannot complete generation task '" + generationTask + "' because we are waiting on '" + this.generationTask + "' instead!"
+  L1579: "' instead!"
+      ctx: "Cannot complete generation task '" + generationTask + "' because we are waiting on '" + this.generationTask + "' instead!"
+  L1584: 'Ignoring exception for '
+      ctx: LOGGER.warn("Ignoring exception for " + this.toString(), thr);
+  L1595: 'Generation task'
+      ctx: "Generation task", ChunkTaskScheduler.stringIfNull(generationTask),
+  L1596: 'Task to status'
+      ctx: "Task to status", ChunkTaskScheduler.stringIfNull(taskStatus)
+  L1648: 'Cannot save data off-main'
+      ctx: TickThread.ensureTickThread(this.world, this.chunkX, this.chunkZ, "Cannot save data off-main");
+  L1723: 'Failed to save chunk data ('
+      ctx: LOGGER.error("Failed to save chunk data (" + NewChunkHolder.this.chunkX + "," + NewChunkHolder.this.chunkZ + ") in world '" + WorldUtil.getWorldName(NewChunkHolder.this.world) + "'
+  L1723: ") in world '"
+      ctx: LOGGER.error("Failed to save chunk data (" + NewChunkHolder.this.chunkX + "," + NewChunkHolder.this.chunkZ + ") in world '" + WorldUtil.getWorldName(NewChunkHolder.this.world) + "'
+  L1749: 'Failed to save chunk data ('
+      ctx: LOGGER.error("Failed to save chunk data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1749: ") in world '"
+      ctx: LOGGER.error("Failed to save chunk data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1775: 'Cannot merge transient entities for chunk ('
+      ctx: LOGGER.error("Cannot merge transient entities for chunk (" + NewChunkHolder.this.chunkX + "," + NewChunkHolder.this.chunkZ + ") in world '" + WorldUtil.getWorldName(NewChunkHolder.
+  L1775: ") in world '"
+      ctx: LOGGER.error("Cannot merge transient entities for chunk (" + NewChunkHolder.this.chunkX + "," + NewChunkHolder.this.chunkZ + ") in world '" + WorldUtil.getWorldName(NewChunkHolder.
+  L1775: "', data on disk will be replaced"
+      ctx: LOGGER.error("Cannot merge transient entities for chunk (" + NewChunkHolder.this.chunkX + "," + NewChunkHolder.this.chunkZ + ") in world '" + WorldUtil.getWorldName(NewChunkHolder.
+  L1805: 'Failed to save entity data ('
+      ctx: LOGGER.error("Failed to save entity data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1805: ") in world '"
+      ctx: LOGGER.error("Failed to save entity data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1826: 'Failed to save poi data ('
+      ctx: LOGGER.error("Failed to save poi data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1826: ") in world '"
+      ctx: LOGGER.error("Failed to save poi data (" + this.chunkX + "," + this.chunkZ + ") in world '" + WorldUtil.getWorldName(this.world) + "'", thr);
+  L1840: ', chunkX='
+      ctx: ", chunkX=" + this.chunkX +
+  L1841: ', chunkZ='
+      ctx: ", chunkZ=" + this.chunkZ +
+  L1842: ', entityChunkFromDisk='
+      ctx: ", entityChunkFromDisk=" + (entityChunk != null && !entityChunk.isTransient()) +
+  L1843: ', lastChunkCompletion={chunk_class='
+      ctx: ", lastChunkCompletion={chunk_class=" + (lastCompletion == null || lastCompletion.chunk() == null ? "null" : lastCompletion.chunk().getClass().getName()) + ",status=" + (lastComple
+  L1844: ', currentGenStatus='
+      ctx: ", currentGenStatus=" + this.currentGenStatus +
+  L1845: ', requestedGenStatus='
+      ctx: ", requestedGenStatus=" + this.requestedGenStatus +
+  L1846: ', generationTask='
+      ctx: ", generationTask=" + this.generationTask +
+  L1847: ', generationTaskStatus='
+      ctx: ", generationTaskStatus=" + this.generationTaskStatus +
+  L1848: ', priority='
+      ctx: ", priority=" + this.priority +
+  L1849: ', priorityLocked='
+      ctx: ", priorityLocked=" + this.priorityLocked +
+  L1850: ', neighbourRequestedPriority='
+      ctx: ", neighbourRequestedPriority=" + this.neighbourRequestedPriority +
+  L1851: ', effective_priority='
+      ctx: ", effective_priority=" + this.getEffectivePriority(null) +
+  L1852: ', oldTicketLevel='
+      ctx: ", oldTicketLevel=" + this.oldTicketLevel +
+  L1853: ', currentTicketLevel='
+      ctx: ", currentTicketLevel=" + this.currentTicketLevel +
+  L1854: ', totalNeighboursUsingThisChunk='
+      ctx: ", totalNeighboursUsingThisChunk=" + this.totalNeighboursUsingThisChunk +
+  L1855: ', fullNeighbourChunksLoadedBitset='
+      ctx: ", fullNeighbourChunksLoadedBitset=" + this.fullNeighbourChunksLoadedBitset +
+  L1856: ', currentChunkStatus='
+      ctx: ", currentChunkStatus=" + currentFullStatus +
+  L1857: ', pendingChunkStatus='
+      ctx: ", pendingChunkStatus=" + pendingFullStatus +
+  L1858: ', is_unload_safe='
+      ctx: ", is_unload_safe=" + this.isSafeToUnload() +
+  L1859: ', killed='
+      ctx: ", killed=" + this.unloaded +
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/PriorityHolder.java (6 strings) =====
+  L33: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L64: 'schedule() called twice'
+      ctx: throw new IllegalStateException("schedule() called twice");
+  L81: 'schedule() called twice'
+      ctx: throw new IllegalStateException("schedule() called twice");
+  L111: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L144: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L173: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/ThreadedTicketLevelPropagator.java (6 strings) =====
+  L58: 'Race condition while creating new section'
+      ctx: throw new IllegalStateException("Race condition while creating new section");
+  L733: 'levels x='
+      ctx: ret.append("levels x=").append(x).append("\n");
+  L739: 'sources x='
+      ctx: ret.append("sources x=").append(x).append("\n");
+  L774: 'Adjust COORDINATE_BITS'
+      ctx: throw new IllegalStateException("Adjust COORDINATE_BITS");
+  L830: 'Section at '
+      ctx: throw new IllegalStateException("Section at " + coordinate + " should not be null");
+  L830: ' should not be null'
+      ctx: throw new IllegalStateException("Section at " + coordinate + " should not be null");
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/ChunkFullTask.java (5 strings) =====
+  L56: 'Expected poi chunk to be loaded with chunk for task '
+      ctx: LOGGER.error("Expected poi chunk to be loaded with chunk for task " + this.toString());
+  L111: 'Cannot double call schedule()'
+      ctx: throw new IllegalStateException("Cannot double call schedule()");
+  L131: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L139: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L147: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/ChunkLightTask.java (3 strings) =====
+  L31: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L168: 'Failed to light chunk '
+      ctx: "Failed to light chunk " + task.fromChunk.getPos().toString()
+  L169: " in world '"
+      ctx: + " in world '" + WorldUtil.getWorldName(this.lightEngine.getWorld()) + "'", thr
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/ChunkLoadTask.java (21 strings) =====
+  L61: 'Called tryCompleteLoad() too many times'
+      ctx: throw new IllegalStateException("Called tryCompleteLoad() too many times");
+  L91: 'schedule() called twice'
+      ctx: throw new IllegalStateException("schedule() called twice");
+  L247: 'Completed throwable'
+      ctx: "Completed throwable", ChunkTaskScheduler.stringIfNull(this.result.right()),
+  L248: 'CallbackDataLoadTask impl'
+      ctx: "CallbackDataLoadTask impl", this.getClass().getName()
+  L257: 'Already completed'
+      ctx: throw new IllegalStateException("Already completed");
+  L267: 'Completed throwable'
+      ctx: "Completed throwable", ChunkTaskScheduler.stringIfNull(result.right()),
+  L268: 'CallbackDataLoadTask impl'
+      ctx: "CallbackDataLoadTask impl", this.getClass().getName()
+  L333: 'Failed to load chunk data for task: '
+      ctx: LOGGER.error("Failed to load chunk data for task: " + this.toString() + ", chunk data will be lost", throwable);
+  L333: ', chunk data will be lost'
+      ctx: LOGGER.error("Failed to load chunk data for task: " + this.toString() + ", chunk data will be lost", throwable);
+  L351: 'Deserialized chunk for task: '
+      ctx: LOGGER.error("Deserialized chunk for task: " + this.toString() + " produced null, chunk data will be lost?");
+  L351: ' produced null, chunk data will be lost?'
+      ctx: LOGGER.error("Deserialized chunk for task: " + this.toString() + " produced null, chunk data will be lost?");
+  L362: 'Failed to parse chunk data for task: '
+      ctx: LOGGER.error("Failed to parse chunk data for task: " + this.toString() + ", chunk data will be lost", thr2);
+  L362: ', chunk data will be lost'
+      ctx: LOGGER.error("Failed to parse chunk data for task: " + this.toString() + ", chunk data will be lost", thr2);
+  L410: 'Failed to load poi data for task: '
+      ctx: LOGGER.error("Failed to load poi data for task: " + this.toString() + ", poi data will be lost", throwable);
+  L410: ', poi data will be lost'
+      ctx: LOGGER.error("Failed to load poi data for task: " + this.toString() + ", poi data will be lost", throwable);
+  L426: 'Failed to run parse poi data for task: '
+      ctx: LOGGER.error("Failed to run parse poi data for task: " + this.toString() + ", poi data will be lost", thr2);
+  L426: ', poi data will be lost'
+      ctx: LOGGER.error("Failed to run parse poi data for task: " + this.toString() + ", poi data will be lost", thr2);
+  L472: 'Failed to load entity data for task: '
+      ctx: LOGGER.error("Failed to load entity data for task: " + this.toString() + ", entity data will be lost", throwable);
+  L472: ', entity data will be lost'
+      ctx: LOGGER.error("Failed to load entity data for task: " + this.toString() + ", entity data will be lost", throwable);
+  L484: 'Failed to run converters for entity data for task: '
+      ctx: LOGGER.error("Failed to run converters for entity data for task: " + this.toString() + ", entity data will be lost", thr2);
+  L484: ', entity data will be lost'
+      ctx: LOGGER.error("Failed to run converters for entity data for task: " + this.toString() + ", entity data will be lost", thr2);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/ChunkProgressionTask.java (9 strings) =====
+  L66: 'Completed throwable'
+      ctx: "Completed throwable", ChunkTaskScheduler.stringIfNull(this.completedThrowable)
+  L77: 'Completed throwable'
+      ctx: "Completed throwable", ChunkTaskScheduler.stringIfNull(throwable)
+  L84: 'Already completed'
+      ctx: throw new IllegalStateException("Already completed");
+  L97: ', for world: '
+      ctx: return "ChunkProgressionTask{class: " + this.getClass().getName() + ", for world: " + WorldUtil.getWorldName(this.world) +
+  L98: ', chunk: ('
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L98: '), hashcode: '
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L98: ', priority: '
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L99: ', status: '
+      ctx: ", status: " + this.getTargetStatus().toString() + ", scheduled: " + this.isScheduled() + "}";
+  L99: ', scheduled: '
+      ctx: ", status: " + this.getTargetStatus().toString() + ", scheduled: " + this.isScheduled() + "}";
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/ChunkUpgradeGenericStatusTask.java (17 strings) =====
+  L41: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L52: 'Infinite write radius is not supported'
+      ctx: throw new IllegalStateException("Infinite write radius is not supported");
+  L119: 'Target status'
+      ctx: "Target status", ChunkTaskScheduler.stringIfNull(this.toStatus),
+  L120: 'From status'
+      ctx: "From status", ChunkTaskScheduler.stringIfNull(this.fromStatus),
+  L121: 'Generation task'
+      ctx: "Generation task", this
+  L125: 'Failed to complete status for chunk: status:'
+      ctx: "Failed to complete status for chunk: status:" + this.toStatus + ", chunk: (" + this.chunkX +
+  L125: ', chunk: ('
+      ctx: "Failed to complete status for chunk: status:" + this.toStatus + ", chunk: (" + this.chunkX +
+  L126: '), world: '
+      ctx: "," + this.chunkZ + "), world: " + WorldUtil.getWorldName(this.world),
+  L134: 'Future status not complete after scheduling: '
+      ctx: LOGGER.warn("Future status not complete after scheduling: " + this.toStatus.toString() + ", generate: " + generation);
+  L134: ', generate: '
+      ctx: LOGGER.warn("Future status not complete after scheduling: " + this.toStatus.toString() + ", generate: " + generation);
+  L149: 'Chunk for status: '
+      ctx: "Chunk for status: " + ChunkUpgradeGenericStatusTask.this.toStatus.toString()
+  L150: ', generation: '
+      ctx: + ", generation: " + generation + " should not be null! Future: " + completeFuture
+  L150: ' should not be null! Future: '
+      ctx: + ", generation: " + generation + " should not be null! Future: " + completeFuture
+  L170: 'Cannot double call schedule()'
+      ctx: throw new IllegalStateException("Cannot double call schedule()");
+  L196: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L204: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L212: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/scheduling/task/GenericDataLoadTask.java (18 strings) =====
+  L81: 'Illegal class implementation: '
+      ctx: throw new IllegalStateException("Illegal class implementation: " + this.getClass().getName() + ", should be able to schedule at least one task!");
+  L81: ', should be able to schedule at least one task!'
+      ctx: throw new IllegalStateException("Illegal class implementation: " + this.getClass().getName() + ", should be able to schedule at least one task!");
+  L107: ', world: '
+      ctx: return "GenericDataLoadTask{class: " + this.getClass().getName() + ", world: " + WorldUtil.getWorldName(this.world) +
+  L108: ', chunk: ('
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L108: '), hashcode: '
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L108: ', priority: '
+      ctx: ", chunk: (" + this.chunkX + "," + this.chunkZ + "), hashcode: " + System.identityHashCode(this) + ", priority: " + this.getPriority() +
+  L109: ', type: '
+      ctx: ", type: " + this.type.toString() + "}";
+  L232: 'Reference count cannot be zero here'
+      ctx: throw new IllegalStateException("Reference count cannot be zero here");
+  L268: 'Data callback says cancelled, but stage does not?'
+      ctx: LOGGER.error("Data callback says cancelled, but stage does not?");
+  L285: 'Failed I/O callback for task: '
+      ctx: LOGGER.error("Failed I/O callback for task: " + GenericDataLoadTask.this.toString(), thr2);
+  L288: 'Callback throwable'
+      ctx: "Callback throwable", ChunkTaskScheduler.stringIfNull(throwable)
+  L401: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L416: 'Completed throwable'
+      ctx: "Completed throwable", ChunkTaskScheduler.stringIfNull(throwable),
+  L417: 'Regionfile type'
+      ctx: "Regionfile type", ChunkTaskScheduler.stringIfNull(this.type)
+  L432: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L473: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L510: 'Invalid priority '
+      ctx: throw new IllegalArgumentException("Invalid priority " + priority);
+  L570: 'schedule() called twice'
+      ctx: throw new IllegalStateException("schedule() called twice");
+
+===== ca/spottedleaf/moonrise/patches/chunk_system/util/stream/TicketSet.java (1 strings) =====
+  L61: 'Cannot service more than Integer.MAX_VALUE elements!'
+      ctx: throw new IllegalStateException("Cannot service more than Integer.MAX_VALUE elements!");
+
+===== ca/spottedleaf/moonrise/patches/collisions/CollisionUtil.java (9 strings) =====
+  L326: 'Unknown axis: '
+      ctx: throw new IllegalStateException("Unknown axis: " + axis);
+  L387: 'Slice shape mismatch'
+      ctx: throw new IllegalStateException("Slice shape mismatch");
+  L1171: 'Ambiguous operator: (false, false) -> true'
+      ctx: throw new UnsupportedOperationException("Ambiguous operator: (false, false) -> true");
+  L1269: 'Ambiguous operator: (false, false) -> true'
+      ctx: throw new UnsupportedOperationException("Ambiguous operator: (false, false) -> true");
+  L1585: 'size x: '
+      ctx: return "size x: " + cachedShapeData1.sizeX() + " != " + cachedShapeData2.sizeX();
+  L1588: 'size y: '
+      ctx: return "size y: " + cachedShapeData1.sizeY() + " != " + cachedShapeData2.sizeY();
+  L1591: 'size z: '
+      ctx: return "size z: " + cachedShapeData1.sizeZ() + " != " + cachedShapeData2.sizeZ();
+  L1619: '): shape1: '
+      ctx: .append("): shape1: ").append(isFull1).append(", shape2: ").append(isFull2);
+  L1619: ', shape2: '
+      ctx: .append("): shape1: ").append(isFull1).append(", shape2: ").append(isFull2);
+
+===== ca/spottedleaf/moonrise/patches/starlight/light/SWMRNibbleArray.java (3 strings) =====
+  L72: 'Data of wrong length: '
+      ctx: throw new IllegalArgumentException("Data of wrong length: " + bytes.length);
+  L80: 'Data of wrong length: '
+      ctx: throw new IllegalArgumentException("Data of wrong length: " + bytes.length);
+  L83: 'Data cannot be null and have state be initialised'
+      ctx: throw new IllegalArgumentException("Data cannot be null and have state be initialised");
+
+===== ca/spottedleaf/moonrise/patches/starlight/light/StarLightEngine.java (1 strings) =====
+  L204: 'Trying to propagate light update before 1 radius neighbours ready'
+      ctx: throw new IllegalArgumentException("Trying to propagate light update before 1 radius neighbours ready");
+
+===== ca/spottedleaf/moonrise/patches/starlight/util/SaveUtil.java (4 strings) =====
+  L38: 'Failed to inject light data into save data for chunk '
+      ctx: LOGGER.warn("Failed to inject light data into save data for chunk " + chunk.getPos() + ", chunk light will be recalculated on its next load", ex);
+  L38: ', chunk light will be recalculated on its next load'
+      ctx: LOGGER.warn("Failed to inject light data into save data for chunk " + chunk.getPos() + ", chunk light will be recalculated on its next load", ex);
+  L135: 'Failed to load light for chunk '
+      ctx: LOGGER.warn("Failed to load light for chunk " + pos + ", light will be recalculated", ex);
+  L135: ', light will be recalculated'
+      ctx: LOGGER.warn("Failed to load light for chunk " + pos + ", light will be recalculated", ex);
+
+===== net/minecraft/commands/Commands.java (7 strings) =====
+  L370: 'Cannot perform command async'
+      ctx: org.spigotmc.AsyncCatcher.catchOp("Cannot perform command async");
+  L389: 'Command exception: /{}'
+      ctx: LOGGER.error("Command exception: /{}", commandString, e); // Paper - always show execution exception in console log
+  L406: "'/{}' threw an exception"
+      ctx: LOGGER.error("'/{}' threw an exception", commandString, e);
+  L499: 'Paper Async Command Builder Thread Pool - %1$d'
+      ctx: .setNameFormat("Paper Async Command Builder Thread Pool - %1$d")
+  L687: 'Ambiguity between arguments {} and {} with inputs: {}'
+      ctx: "Ambiguity between arguments {} and {} with inputs: {}", dispatcher.getPath(child), dispatcher.getPath(sibling), ambiguities
+  L696: 'Missing type registration for following arguments:\\n {}'
+      ctx: "Missing type registration for following arguments:\n {}", unregisteredTypes.stream().map(arg -> "\t" + arg).collect(Collectors.joining(",\n"))
+  L698: 'Unregistered argument types'
+      ctx: throw new IllegalStateException("Unregistered argument types");
+
+===== net/minecraft/commands/arguments/ComponentArgument.java (2 strings) =====
+  L24: "'hello world'"
+      ctx: private static final Collection<String> EXAMPLES = Arrays.asList("\"hello world\"", "'hello world'", "\"\"", "{text:\"hello world\"}", "[\"\"]");
+  L24: '{text:\\"hello world\\"}'
+      ctx: private static final Collection<String> EXAMPLES = Arrays.asList("\"hello world\"", "'hello world'", "\"\"", "{text:\"hello world\"}", "[\"\"]");
+
+===== net/minecraft/commands/arguments/MessageArgument.java (2 strings) =====
+  L28: 'Hello world!'
+      ctx: private static final Collection<String> EXAMPLES = Arrays.asList("Hello world!", "foo", "@e", "Hello @p :)");
+  L28: 'Hello @p :)'
+      ctx: private static final Collection<String> EXAMPLES = Arrays.asList("Hello world!", "foo", "@e", "Hello @p :)");
+
+===== net/minecraft/commands/arguments/NbtPathArgument.java (1 strings) =====
+  L541: 'Failed to parse path '
+      ctx: return DataResult.error(() -> "Failed to parse path " + string + ": " + e.getMessage());
+
+===== net/minecraft/commands/arguments/StyleArgument.java (2 strings) =====
+  L20: '{bold: true}'
+      ctx: private static final Collection<String> EXAMPLES = List.of("{bold: true}", "{color: 'red'}", "{}");
+  L20: "{color: 'red'}"
+      ctx: private static final Collection<String> EXAMPLES = List.of("{bold: true}", "{color: 'red'}", "{}");
+
+===== net/minecraft/commands/arguments/item/ItemParser.java (1 strings) =====
+  L85: 'Parser gave no item'
+      ctx: Holder<Item> item = Objects.requireNonNull(itemResult.get(), "Parser gave no item");
+
+===== net/minecraft/commands/arguments/selector/EntitySelector.java (1 strings) =====
+  L53: 'Invalid selector component'
+      ctx: return "Invalid selector component"; // Paper - limit selector error message
+
+===== net/minecraft/commands/execution/CustomCommandExecutor.java (1 strings) =====
+  L16: 'This function should not run'
+      ctx: throw new UnsupportedOperationException("This function should not run");
+
+===== net/minecraft/commands/execution/CustomModifierExecutor.java (1 strings) =====
+  L16: 'This function should not run'
+      ctx: throw new UnsupportedOperationException("This function should not run");
+
+===== net/minecraft/commands/execution/ExecutionContext.java (2 strings) =====
+  L94: 'Command execution stopped due to limit (executed {} commands)'
+      ctx: LOGGER.info("Command execution stopped due to limit (executed {} commands)", this.commandLimit);
+  L106: 'Command execution stopped due to command queue overflow (max {})'
+      ctx: LOGGER.error("Command execution stopped due to command queue overflow (max {})", 10000000);
+
+===== net/minecraft/commands/functions/CommandFunction.java (11 strings) =====
+  L43: 'Line continuation at end of file'
+      ctx: throw new IllegalArgumentException("Line continuation at end of file");
+  L64: "Unknown or invalid command '"
+      ctx: "Unknown or invalid command '" + line + "' on line " + lineNumber + " (if you intended to make a comment, use '#' not '//')"
+  L64: "' on line "
+      ctx: "Unknown or invalid command '" + line + "' on line " + lineNumber + " (if you intended to make a comment, use '#' not '//')"
+  L64: " (if you intended to make a comment, use '#' not '//')"
+      ctx: "Unknown or invalid command '" + line + "' on line " + lineNumber + " (if you intended to make a comment, use '#' not '//')"
+  L70: "Unknown or invalid command '"
+      ctx: "Unknown or invalid command '"
+  L72: "' on line "
+      ctx: + "' on line "
+  L74: " (did you mean '"
+      ctx: + " (did you mean '"
+  L76: "'? Do not use a preceding forwards slash.)"
+      ctx: + "'? Do not use a preceding forwards slash.)"
+  L86: 'Whilst parsing command on line '
+      ctx: throw new IllegalArgumentException("Whilst parsing command on line " + lineNumber + ": " + e.getMessage());
+  L98: 'Command too long: '
+      ctx: throw new IllegalStateException("Command too long: " + line.length() + " characters, contents: " + truncated + "...");
+  L98: ' characters, contents: '
+      ctx: throw new IllegalStateException("Command too long: " + line.length() + " characters, contents: " + truncated + "...");
+
+===== net/minecraft/commands/functions/FunctionBuilder.java (1 strings) =====
+  L50: "Can't parse function line "
+      ctx: throw new IllegalArgumentException("Can't parse function line " + line + ": '" + command + "'", e);
+
+===== net/minecraft/commands/functions/StringTemplate.java (3 strings) =====
+  L20: 'Unterminated macro variable'
+      ctx: throw new IllegalArgumentException("Unterminated macro variable");
+  L25: "Invalid macro variable name '"
+      ctx: throw new IllegalArgumentException("Invalid macro variable name '" + variable + "'");
+  L37: 'No variables in macro'
+      ctx: throw new IllegalArgumentException("No variables in macro");
+
+===== net/minecraft/commands/synchronization/ArgumentTypeInfos.java (1 strings) =====
+  L155: 'Unrecognized argument type %s (%s)'
+      ctx: throw new IllegalArgumentException(String.format(Locale.ROOT, "Unrecognized argument type %s (%s)", argumentType, argumentType.getClass()));
+
+===== net/minecraft/commands/synchronization/ArgumentUtils.java (2 strings) =====
+  L79: 'Could not serialize node {} ({})!'
+      ctx: LOGGER.error("Could not serialize node {} ({})!", node, node.getClass());
+  L101: 'Failed to serialize requirement: '
+      ctx: .getOrThrow(error -> new IllegalStateException("Failed to serialize requirement: " + error));
+
+===== net/minecraft/commands/synchronization/SuggestionProviders.java (1 strings) =====
+  L38: "A command suggestion provider is already registered with the name '"
+      ctx: throw new IllegalArgumentException("A command suggestion provider is already registered with the name '" + name + "'");
+
+===== net/minecraft/network/CompressionDecoder.java (6 strings) =====
+  L41: 'Badly compressed packet - size of '
+      ctx: throw new DecoderException("Badly compressed packet - size of " + uncompressedLength + " is below server threshold of " + this.threshold);
+  L41: ' is below server threshold of '
+      ctx: throw new DecoderException("Badly compressed packet - size of " + uncompressedLength + " is below server threshold of " + this.threshold);
+  L45: 'Badly compressed packet - size of '
+      ctx: throw new DecoderException("Badly compressed packet - size of " + uncompressedLength + " is larger than protocol maximum of 8388608");
+  L45: ' is larger than protocol maximum of 8388608'
+      ctx: throw new DecoderException("Badly compressed packet - size of " + uncompressedLength + " is larger than protocol maximum of 8388608");
+  L107: 'Badly compressed packet - actual length of uncompressed payload '
+      ctx: "Badly compressed packet - actual length of uncompressed payload "
+  L109: ' is does not match declared size '
+      ctx: + " is does not match declared size "
+
+===== net/minecraft/network/CompressionEncoder.java (2 strings) =====
+  L35: 'Packet too big (is '
+      ctx: throw new IllegalArgumentException("Packet too big (is " + uncompressedLength + ", should be less than 8388608)");
+  L35: ', should be less than 8388608)'
+      ctx: throw new IllegalArgumentException("Packet too big (is " + uncompressedLength + ", should be less than 8388608)");
+
+===== net/minecraft/network/Connection.java (21 strings) =====
+  L161: 'Skipping packet due to errors'
+      ctx: Connection.LOGGER.debug("Skipping packet due to errors", cause.getCause());
+  L170: 'Skipping packet due to errors'
+      ctx: LOGGER.debug("Skipping packet due to errors", cause.getCause());
+  L181: 'Internal Exception: '
+      ctx: Component reason = Component.translatable("disconnect.genericReason", "Internal Exception: " + cause);
+  L192: 'Failed to sent packet'
+      ctx: LOGGER.debug("Failed to sent packet", cause);
+  L205: 'Double fault'
+      ctx: LOGGER.debug("Double fault", cause);
+  L219: 'Received a packet before the packet listener was initialized'
+      ctx: throw new IllegalStateException("Received a packet before the packet listener was initialized");
+  L261: '{} kicked for packet spamming: {}'
+      ctx: Connection.LOGGER.warn("{} kicked for packet spamming: {}", playerName, deobfedPacketName.substring(deobfedPacketName.lastIndexOf(".") + 1));
+  L278: "Received {} that couldn't be processed"
+      ctx: LOGGER.error("Received {} that couldn't be processed", packet.getClass(), exception);
+  L295: 'Trying to set listener for wrong side: connection is '
+      ctx: throw new IllegalStateException("Trying to set listener for wrong side: connection is " + this.receiving + ", but listener is " + listenerFlow);
+  L295: ', but listener is '
+      ctx: throw new IllegalStateException("Trying to set listener for wrong side: connection is " + this.receiving + ", but listener is " + listenerFlow);
+  L300: 'Listener protocol ('
+      ctx: throw new IllegalStateException("Listener protocol (" + listenerProtocol + ") does not match requested one " + protocol);
+  L300: ') does not match requested one '
+      ctx: throw new IllegalStateException("Listener protocol (" + listenerProtocol + ") does not match requested one " + protocol);
+  L309: 'Connection closed during protocol change'
+      ctx: LOGGER.info("Connection closed during protocol change");
+  L319: 'Invalid inbound protocol: '
+      ctx: throw new IllegalStateException("Invalid inbound protocol: " + protocol.id());
+  L336: 'Invalid outbound protocol: '
+      ctx: throw new IllegalStateException("Invalid outbound protocol: " + protocol.id());
+  L352: 'Listener already set'
+      ctx: throw new IllegalStateException("Listener already set");
+  L358: 'Invalid initial listener'
+      ctx: throw new IllegalStateException("Invalid initial listener");
+  L380: 'Mismatched initial protocols'
+      ctx: throw new IllegalStateException("Mismatched initial protocols");
+  L518: 'NetworkException: {}'
+      ctx: LOGGER.error("NetworkException: {}", player, e);
+  L519: 'Internal Exception: '
+      ctx: Component reason = Component.translatable("disconnect.genericReason", "Internal Exception: " + e.getMessage());
+  L652: 'IP hidden'
+      ctx: return logIPs ? this.address.toString() : "IP hidden";
+
+===== net/minecraft/network/FriendlyByteBuf.java (14 strings) =====
+  L98: 'Failed to decode: '
+      ctx: return codec.parse(ops, tag).getOrThrow(msg -> new DecoderException("Failed to decode: " + msg + " " + tag));
+  L103: 'Failed to encode: '
+      ctx: Tag tag = codec.encodeStart(ops, value).getOrThrow(msg -> new EncoderException("Failed to encode: " + msg + " " + value));
+  L111: 'Failed to decode JSON: '
+      ctx: return result.getOrThrow(error -> new DecoderException("Failed to decode JSON: " + error));
+  L121: 'Failed to encode: '
+      ctx: this.writeUtf(GSON.toJson(result.getOrThrow(error -> new EncoderException("Failed to encode: " + error + " " + value))), maxLength); // Paper - Adventure; add max length parameter
+  L127: ' is larger than limit '
+      ctx: throw new DecoderException("Value " + value + " is larger than limit " + limit);
+  L312: 'ByteArray with size '
+      ctx: throw new DecoderException("ByteArray with size " + size + " is bigger than allowed " + maxSize);
+  L312: ' is bigger than allowed '
+      ctx: throw new DecoderException("ByteArray with size " + size + " is bigger than allowed " + maxSize);
+  L337: 'VarIntArray with size '
+      ctx: throw new DecoderException("VarIntArray with size " + size + " is bigger than allowed " + maxSize);
+  L337: ' is bigger than allowed '
+      ctx: throw new DecoderException("VarIntArray with size " + size + " is bigger than allowed " + maxSize);
+  L382: 'LongArray with size '
+      ctx: throw new DecoderException("LongArray with size " + size + " is bigger than allowed " + maxSize);
+  L382: ' is bigger than allowed '
+      ctx: throw new DecoderException("LongArray with size " + size + " is bigger than allowed " + maxSize);
+  L556: 'Not a compound tag: '
+      ctx: throw new DecoderException("Not a compound tag: " + result);
+  L627: 'Malformed public key bytes'
+      ctx: throw new DecoderException("Malformed public key bytes", e);
+  L677: 'BitSet is larger than expected size ('
+      ctx: throw new EncoderException("BitSet is larger than expected size (" + bitSet.length() + ">" + size + ")");
+
+===== net/minecraft/network/PacketBundlePacker.java (1 strings) =====
+  L44: 'Terminal message received in bundle'
+      ctx: throw new DecoderException("Terminal message received in bundle");
+
+===== net/minecraft/network/PacketDecoder.java (3 strings) =====
+  L47: ') was larger than I expected, found '
+      ctx: + ") was larger than I expected, found "
+  L49: ' bytes extra whilst reading packet '
+      ctx: + " bytes extra whilst reading packet "
+  L58: ' IN: [{}:{}] {} -> {} bytes'
+      ctx: " IN: [{}:{}] {} -> {} bytes",
+
+===== net/minecraft/network/PacketEncoder.java (4 strings) =====
+  L32: 'OUT: [{}:{}] {} -> {} bytes'
+      ctx: "OUT: [{}:{}] {} -> {} bytes",
+  L42: 'Error sending packet {}'
+      ctx: LOGGER.error("Error sending packet {}", packetId, t);
+  L69: 'PacketTooLarge - '
+      ctx: super("PacketTooLarge - " + packet.getClass().getSimpleName() + " is " + packetLength + ". Max is " + MAX_PACKET_SIZE);
+  L69: '. Max is '
+      ctx: super("PacketTooLarge - " + packet.getClass().getSimpleName() + " is " + packetLength + ". Max is " + MAX_PACKET_SIZE);
+
+===== net/minecraft/network/PacketProcessor.java (2 strings) =====
+  L44: 'Server already shutting down'
+      ctx: throw new io.papermc.paper.util.ServerStopRejectedExecutionException("Server already shutting down"); // Paper - do not prematurely disconnect players on stop
+  L106: 'Ignoring packet due to disconnection: {}'
+      ctx: PacketProcessor.LOGGER.debug("Ignoring packet due to disconnection: {}", this.packet);
+
+===== net/minecraft/network/PacketSendListener.java (1 strings) =====
+  L27: 'Failed to deliver packet, sending fallback {}'
+      ctx: LOGGER.warn("Failed to deliver packet, sending fallback {}", newPacket.type(), future.cause());
+
+===== net/minecraft/network/RateKickingConnection.java (1 strings) =====
+  L24: 'Player exceeded rate-limit (sent {} packets per second)'
+      ctx: LOGGER.warn("Player exceeded rate-limit (sent {} packets per second)", averageReceivedPackets);
+
+===== net/minecraft/network/UnconfiguredPipelineHandler.java (2 strings) =====
+  L42: "Pipeline has no inbound protocol configured, can't process packet "
+      ctx: throw new DecoderException("Pipeline has no inbound protocol configured, can't process packet " + msg);
+  L79: "Pipeline has no outbound protocol configured, can't process packet "
+      ctx: throw new EncoderException("Pipeline has no outbound protocol configured, can't process packet " + msg);
+
+===== net/minecraft/network/Utf8String.java (9 strings) =====
+  L15: 'The received encoded string buffer length is longer than maximum allowed ('
+      ctx: "The received encoded string buffer length is longer than maximum allowed (" + bufferLength + " > " + maxEncodedLength + ")"
+  L18: 'The received encoded string buffer length is less than zero! Weird string!'
+      ctx: throw new DecoderException("The received encoded string buffer length is less than zero! Weird string!");
+  L22: 'Not enough bytes in buffer, expected '
+      ctx: throw new DecoderException("Not enough bytes in buffer, expected " + bufferLength + ", but got " + availableBytes);
+  L22: ', but got '
+      ctx: throw new DecoderException("Not enough bytes in buffer, expected " + bufferLength + ", but got " + availableBytes);
+  L27: 'The received string length is longer than maximum allowed ('
+      ctx: throw new DecoderException("The received string length is longer than maximum allowed (" + result.length() + " > " + maxLength + ")");
+  L37: 'String too big (was '
+      ctx: throw new EncoderException("String too big (was " + value.length() + " characters, max " + maxLength + ")");
+  L37: ' characters, max '
+      ctx: throw new EncoderException("String too big (was " + value.length() + " characters, max " + maxLength + ")");
+  L47: 'String too big (was '
+      ctx: throw new EncoderException("String too big (was " + bytesWritten + " bytes encoded, max " + maxAllowedEncodedLength + ")");
+  L47: ' bytes encoded, max '
+      ctx: throw new EncoderException("String too big (was " + bytesWritten + " bytes encoded, max " + maxAllowedEncodedLength + ")");
+
+===== net/minecraft/network/VarInt.java (1 strings) =====
+  L46: 'VarInt too big'
+      ctx: throw new RuntimeException("VarInt too big");
+
+===== net/minecraft/network/VarLong.java (1 strings) =====
+  L34: 'VarLong too big'
+      ctx: throw new RuntimeException("VarLong too big");
+
+===== net/minecraft/network/Varint21FrameDecoder.java (2 strings) =====
+  L38: 'length wider than 21-bit'
+      ctx: throw new CorruptedFrameException("length wider than 21-bit");
+  L56: 'Frame length cannot be zero'
+      ctx: throw new CorruptedFrameException("Frame length cannot be zero");
+
+===== net/minecraft/network/Varint21LengthFieldPrepender.java (2 strings) =====
+  L18: 'Packet too large: size '
+      ctx: throw new EncoderException("Packet too large: size " + bodyLength + " is over 8");
+  L18: ' is over 8'
+      ctx: throw new EncoderException("Packet too large: size " + bodyLength + " is over 8");
+
+===== net/minecraft/network/chat/ChatDecorator.java (1 strings) =====
+  L15: 'Must override this implementation'
+      ctx: throw new UnsupportedOperationException("Must override this implementation");
+
+===== net/minecraft/network/chat/ClickEvent.java (1 strings) =====
+  L61: 'Click event type not allowed: '
+      ctx: ? DataResult.error(() -> "Click event type not allowed: " + action)
+
+===== net/minecraft/network/chat/ComponentSerialization.java (4 strings) =====
+  L50: 'Failed to decode: '
+      ctx: return CODEC.parse(registryOps, tag).getOrThrow(error -> new io.netty.handler.codec.DecoderException("Failed to decode: " + error + " " + tag));
+  L57: 'Failed to encode: '
+      ctx: .encodeStart(registryOps, object).getOrThrow(error -> new io.netty.handler.codec.EncoderException("Failed to encode: " + error + " " + object));
+  L76: 'Component was too large: greater than max size '
+      ctx: ? DataResult.error(() -> "Component was too large: greater than max size " + maxFlatSize)
+  L216: 'No matching codec found'
+      ctx: return DataResult.error(() -> "No matching codec found");
+
+===== net/minecraft/network/chat/FontDescription.java (1 strings) =====
+  L14: 'Unsupported font description type: '
+      ctx: : DataResult.error(() -> "Unsupported font description type: " + fontDescription)
+
+===== net/minecraft/network/chat/HoverEvent.java (1 strings) =====
+  L56: 'Action not allowed: '
+      ctx: return !action.isAllowedFromServer() ? DataResult.error(() -> "Action not allowed: " + action) : DataResult.success(action, Lifecycle.stable());
+
+===== net/minecraft/network/chat/LastSeenMessagesValidator.java (8 strings) =====
+  L36: 'Advanced last seen window by '
+      ctx: throw new LastSeenMessagesValidator.ValidationException("Advanced last seen window by " + offset + " messages, but expected at most " + maxOffset);
+  L36: ' messages, but expected at most '
+      ctx: throw new LastSeenMessagesValidator.ValidationException("Advanced last seen window by " + offset + " messages, but expected at most " + maxOffset);
+  L45: 'Last seen update contained '
+      ctx: "Last seen update contained " + update.acknowledged().length() + " messages, but maximum window size is " + this.lastSeenCount
+  L45: ' messages, but maximum window size is '
+      ctx: "Last seen update contained " + update.acknowledged().length() + " messages, but maximum window size is " + this.lastSeenCount
+  L54: 'Last seen update acknowledged unknown or previously ignored message at index '
+      ctx: throw new LastSeenMessagesValidator.ValidationException("Last seen update acknowledged unknown or previously ignored message at index " + i);
+  L62: 'Last seen update ignored previously acknowledged message at index '
+      ctx: "Last seen update ignored previously acknowledged message at index " + i + " and signature " + message.signature()
+  L62: ' and signature '
+      ctx: "Last seen update ignored previously acknowledged message at index " + i + " and signature " + message.signature()
+  L72: 'Checksum mismatch on last seen update: the client and server must have desynced'
+      ctx: throw new LastSeenMessagesValidator.ValidationException("Checksum mismatch on last seen update: the client and server must have desynced");
+
+===== net/minecraft/network/chat/MessageSignature.java (2 strings) =====
+  L21: 'Invalid message signature size'
+      ctx: Preconditions.checkState(bytes.length == 256, "Invalid message signature size");
+  L58: '<no signature>'
+      ctx: return signature == null ? "<no signature>" : signature.toString();
+
+===== net/minecraft/network/chat/PlayerChatMessage.java (1 strings) =====
+  L182: ', message #'
+      ctx: + ", message #"
+
+===== net/minecraft/network/chat/SignedMessageChain.java (1 strings) =====
+  L65: "Received expired chat: '{}'. Is the client/server system time unsynchronized?"
+      ctx: SignedMessageChain.LOGGER.warn("Received expired chat: '{}'. Is the client/server system time unsynchronized?", body.content());
+
+===== net/minecraft/network/chat/SignedMessageValidator.java (4 strings) =====
+  L14: 'Received chat message from {}, but they have no chat session initialized and secure chat is enforced'
+      ctx: LOGGER.error("Received chat message from {}, but they have no chat session initialized and secure chat is enforced", message.sender());
+  L36: 'Received out-of-order chat message from {}: expected index > {} for session {}, but was {} for session {}'
+      ctx: "Received out-of-order chat message from {}: expected index > {} for session {}, but was {} for session {}",
+  L51: 'Received message with expired profile public key from {} with session {}'
+      ctx: LOGGER.error("Received message with expired profile public key from {} with session {}", message.sender(), message.link().sessionId());
+  L55: 'Received message with invalid signature (is the session wrong, or signature cache out of sync?): {}'
+      ctx: "Received message with invalid signature (is the session wrong, or signature cache out of sync?): {}",
+
+===== net/minecraft/network/chat/TextColor.java (3 strings) =====
+  L118: 'Color value out of range: '
+      ctx: : DataResult.error(() -> "Color value out of range: " + color);
+  L120: 'Invalid color value: '
+      ctx: return DataResult.error(() -> "Invalid color value: " + color);
+  L124: 'Invalid color name: '
+      ctx: return predefinedColor == null ? DataResult.error(() -> "Invalid color name: " + color) : DataResult.success(predefinedColor, Lifecycle.stable());
+
+===== net/minecraft/network/chat/contents/NbtContents.java (3 strings) =====
+  L43: 'Invalid NBT path: '
+      ctx: return "Invalid NBT path: " + original + ": " + exception.getMessage();
+  L57: "'interpret' and 'plain' flags can't be both on"
+      ctx: .validate(v -> v.interpreting && v.plain ? DataResult.error(() -> "'interpret' and 'plain' flags can't be both on") : DataResult.success(v));
+  L82: 'Failed to parse component: {}'
+      ctx: LOGGER.warn("Failed to parse component: {}", tag, e);
+
+===== net/minecraft/network/chat/contents/ScoreContents.java (1 strings) =====
+  L90: "', objective='"
+      ctx: return "score{name='" + this.name + "', objective='" + this.objective + "'}";
+
+===== net/minecraft/network/chat/contents/TranslatableContents.java (5 strings) =====
+  L56: 'This value needs to be parsed as component'
+      ctx: return !isAllowedPrimitiveArgument(result) ? DataResult.error(() -> "This value needs to be parsed as component") : DataResult.success(result);
+  L127: "Unsupported format: '"
+      ctx: throw new TranslatableFormatException(this, "Unsupported format: '" + formatString + "'");
+  L204: 'Too long'
+      ctx: private static final IllegalArgumentException NESTED_TOO_LONG = new IllegalArgumentException("Too long");
+  L260: ", fallback='"
+      ctx: + (this.fallback != null ? ", fallback='" + this.fallback + "'" : "")
+  L261: ', args='
+      ctx: + ", args="
+
+===== net/minecraft/network/chat/contents/TranslatableFormatException.java (3 strings) =====
+  L7: 'Error parsing: %s: %s'
+      ctx: super(String.format(Locale.ROOT, "Error parsing: %s: %s", component, message));
+  L11: 'Invalid index %d requested for %s'
+      ctx: super(String.format(Locale.ROOT, "Invalid index %d requested for %s", index, component));
+  L15: 'Error while parsing: %s'
+      ctx: super(String.format(Locale.ROOT, "Error while parsing: %s", component), t);
+
+===== net/minecraft/network/chat/contents/data/BlockDataSource.java (1 strings) =====
+  L27: 'Invalid coordinates path: '
+      ctx: return "Invalid coordinates path: " + original + ": " + exception.getMessage();
+
+===== net/minecraft/network/chat/contents/objects/PlayerSprite.java (1 strings) =====
+  L24: '[unknown player head]'
+      ctx: return this.player.name().map(name -> "[" + name + " head]").orElse("[unknown player head]");
+
+===== net/minecraft/network/codec/ByteBufCodecs.java (17 strings) =====
+  L297: 'ByteArray with size '
+      ctx: throw new EncoderException("ByteArray with size " + value.length + " is bigger than allowed " + maxSize);
+  L297: ' is bigger than allowed '
+      ctx: throw new EncoderException("ByteArray with size " + value.length + " is bigger than allowed " + maxSize);
+  L345: 'Expected non-null compound tag'
+      ctx: throw new DecoderException("Expected non-null compound tag");
+  L354: 'Expected non-null compound tag'
+      ctx: throw new EncoderException("Expected non-null compound tag");
+  L367: 'Not a compound tag: '
+      ctx: throw new DecoderException("Not a compound tag: " + tag);
+  L385: 'Failed to decode: '
+      ctx: return (V)codec.parse(ops, payload).getOrThrow(msg -> new DecoderException("Failed to decode: " + msg + " " + payload));
+  L390: 'Failed to encode: '
+      ctx: T payload = (T)codec.encodeStart(ops, value).getOrThrow(msg -> new EncoderException("Failed to encode: " + msg + " " + value));
+  L415: 'Failed to decode: '
+      ctx: return codec.parse(ops, tag).getOrThrow(msg -> new DecoderException("Failed to decode: " + msg + " " + tag));
+  L421: 'Failed to encode: '
+      ctx: Tag tag = codec.encodeStart(ops, value).getOrThrow(msg -> new EncoderException("Failed to encode: " + msg + " " + value));
+  L456: 'Too deep'
+      ctx: throw new DecoderException("Too deep");
+  L491: ' elements exceeded max size of: '
+      ctx: throw new DecoderException(count + " elements exceeded max size of: " + maxSize);
+  L499: ' elements exceeded max size of: '
+      ctx: throw new EncoderException(count + " elements exceeded max size of: " + maxSize);
+  L615: 'Buffer size '
+      ctx: throw new DecoderException("Buffer size " + size + " is larger than allowed limit of " + maxSize);
+  L615: ' is larger than allowed limit of '
+      ctx: throw new DecoderException("Buffer size " + size + " is larger than allowed limit of " + maxSize);
+  L632: 'Buffer size '
+      ctx: throw new EncoderException("Buffer size " + size + " is  larger than allowed limit of " + maxSize);
+  L632: ' is  larger than allowed limit of '
+      ctx: throw new EncoderException("Buffer size " + size + " is  larger than allowed limit of " + maxSize);
+  L783: 'Failed to parse JSON'
+      ctx: throw new DecoderException("Failed to parse JSON", e);
+
+===== net/minecraft/network/codec/IdDispatchCodec.java (5 strings) =====
+  L37: "Failed to decode packet '"
+      ctx: throw new DecoderException("Failed to decode packet '" + entry.type + "'", e);
+  L41: 'Received unknown packet id '
+      ctx: throw new DecoderException("Received unknown packet id " + id);
+  L50: "Sending unknown packet '"
+      ctx: throw new EncoderException("Sending unknown packet '" + type + "'");
+  L63: "Failed to encode packet '"
+      ctx: throw new EncoderException("Failed to encode packet '" + type + "'", e);
+  L93: 'Duplicate registration for type '
+      ctx: throw new IllegalStateException("Duplicate registration for type " + entry.type);
+
+===== net/minecraft/network/codec/StreamCodec.java (2 strings) =====
+  L59: "Can't encode '"
+      ctx: throw new IllegalStateException("Can't encode '" + value + "', expected '" + instance + "'");
+  L59: "', expected '"
+      ctx: throw new IllegalStateException("Can't encode '" + value + "', expected '" + instance + "'");
+
+===== net/minecraft/network/protocol/BundleDelimiterPacket.java (1 strings) =====
+  L8: 'This packet should be handled by pipeline'
+      ctx: throw new AssertionError("This packet should be handled by pipeline");
+
+===== net/minecraft/network/protocol/BundlerInfo.java (1 strings) =====
+  L44: 'Too many packets in a bundle'
+      ctx: throw new IllegalStateException("Too many packets in a bundle");
+
+===== net/minecraft/network/protocol/PacketUtils.java (4 strings) =====
+  L33: 'Main thread packet handler'
+      ctx: CrashReport report = CrashReport.forThrowable(cause, "Main thread packet handler");
+  L41: 'Incoming Packet'
+      ctx: CrashReportCategory details = report.addCategory("Incoming Packet");
+  L43: 'Is Terminal'
+      ctx: details.setDetail("Is Terminal", () -> Boolean.toString(packet.isTerminal()));
+  L44: 'Is Skippable'
+      ctx: details.setDetail("Is Skippable", () -> Boolean.toString(packet.isSkippable()));
+
+===== net/minecraft/network/protocol/ProtocolCodecBuilder.java (2 strings) =====
+  L18: 'Invalid packet flow for packet '
+      ctx: throw new IllegalArgumentException("Invalid packet flow for packet " + type + ", expected " + this.flow.name());
+  L18: ', expected '
+      ctx: throw new IllegalArgumentException("Invalid packet flow for packet " + type + ", expected " + this.flow.name());
+
+===== net/minecraft/network/protocol/common/ClientboundResourcePackPushPacket.java (1 strings) =====
+  L33: 'Hash is too long (max 40, was '
+      ctx: throw new IllegalArgumentException("Hash is too long (max 40, was " + hash.length() + ")");
+
+===== net/minecraft/network/protocol/common/custom/DiscardedPayload.java (1 strings) =====
+  L21: 'Payload may not be larger than '
+      ctx: throw new IllegalArgumentException("Payload may not be larger than " + maxPayloadSize + " bytes");
+
+===== net/minecraft/network/protocol/game/ClientboundChunksBiomesPacket.java (2 strings) =====
+  L80: "Didn't fill biome buffer: expected "
+      ctx: throw new IllegalStateException("Didn't fill biome buffer: expected " + buffer.capacity() + " bytes, got " + buffer.writerIndex());
+  L80: ' bytes, got '
+      ctx: throw new IllegalStateException("Didn't fill biome buffer: expected " + buffer.capacity() + " bytes, got " + buffer.writerIndex());
+
+===== net/minecraft/network/protocol/game/ClientboundCommandsPacket.java (2 strings) =====
+  L71: 'Server sent an impossible command tree'
+      ctx: throw new IllegalStateException("Server sent an impossible command tree");
+  L182: 'Unknown node type '
+      ctx: throw new UnsupportedOperationException("Unknown node type " + node);
+
+===== net/minecraft/network/protocol/game/ClientboundLevelChunkPacketData.java (3 strings) =====
+  L82: 'Chunk Packet trying to allocate too much memory on read.'
+      ctx: throw new RuntimeException("Chunk Packet trying to allocate too much memory on read.");
+  L127: "Didn't fill chunk buffer: expected "
+      ctx: throw new IllegalStateException("Didn't fill chunk buffer: expected " + buffer.capacity() + " bytes, got " + buffer.writerIndex());
+  L127: ' bytes, got '
+      ctx: throw new IllegalStateException("Didn't fill chunk buffer: expected " + buffer.capacity() + " bytes, got " + buffer.writerIndex());
+
+===== net/minecraft/network/protocol/game/ClientboundSetPlayerTeamPacket.java (1 strings) =====
+  L90: 'Parameters not present, but method is'
+      ctx: .encode(output, this.parameters.orElseThrow(() -> new IllegalStateException("Parameters not present, but method is" + this.method)));
+
+===== net/minecraft/network/protocol/game/GameProtocols.java (2 strings) =====
+  L46: 'Not in creative mode'
+      ctx: throw new SkipPacketDecoderException("Not in creative mode");
+  L55: 'Not in creative mode'
+      ctx: throw new SkipPacketEncoderException("Not in creative mode");
+
+===== net/minecraft/network/protocol/game/ServerPacketListener.java (1 strings) =====
+  L14: 'Failed to handle packet {}, suppressing error'
+      ctx: LOGGER.error("Failed to handle packet {}, suppressing error", packet, e);
+
+===== net/minecraft/network/protocol/game/ServerboundSelectBundleItemPacket.java (1 strings) =====
+  L17: 'Invalid selectedItemIndex: '
+      ctx: throw new IllegalArgumentException("Invalid selectedItemIndex: " + this.selectedItemIndex);
+
+===== net/minecraft/network/protocol/handshake/ClientIntent.java (1 strings) =====
+  L17: 'Unknown connection intent: '
+      ctx: default -> throw new IllegalArgumentException("Unknown connection intent: " + id);
+
+===== net/minecraft/network/protocol/login/ClientboundCustomQueryPacket.java (1 strings) =====
+  L31: 'Payload may not be larger than 1048576 bytes'
+      ctx: throw new IllegalArgumentException("Payload may not be larger than 1048576 bytes");
+
+===== net/minecraft/network/protocol/login/ServerboundCustomQueryAnswerPacket.java (2 strings) =====
+  L29: 'Payload may not be larger than '
+      ctx: throw new IllegalArgumentException("Payload may not be larger than " + MAX_PAYLOAD_SIZE + " bytes");
+  L42: 'Payload may not be larger than 1048576 bytes'
+      ctx: throw new IllegalArgumentException("Payload may not be larger than 1048576 bytes");
+
+===== net/minecraft/network/protocol/status/ServerStatus.java (2 strings) =====
+  L39: 'Unknown format'
+      ctx: return DataResult.error(() -> "Unknown format");
+  L47: 'Malformed base64 server icon'
+      ctx: return DataResult.error(() -> "Malformed base64 server icon");
+
+===== net/minecraft/network/syncher/EntityDataAccessor.java (1 strings) =====
+  L23: '<entity data: '
+      ctx: return "<entity data: " + this.id + ">";
+
+===== net/minecraft/network/syncher/SynchedEntityData.java (11 strings) =====
+  L34: 'defineId called for: {} from {}'
+      ctx: LOGGER.debug("defineId called for: {} from {}", clazz, aClass, new RuntimeException());
+  L42: 'Data value id is too big with '
+      ctx: throw new IllegalArgumentException("Data value id is too big with " + id + "! (Max is 254)");
+  L42: '! (Max is 254)'
+      ctx: throw new IllegalArgumentException("Data value id is too big with " + id + "! (Max is 254)");
+  L130: 'Invalid entity data item type for field %d on entity %s: old=%s(%s), new=%s(%s)'
+      ctx: "Invalid entity data item type for field %d on entity %s: old=%s(%s), new=%s(%s)",
+  L156: 'Data value id is too big with '
+      ctx: throw new IllegalArgumentException("Data value id is too big with " + id + "! (Max is " + this.itemsById.length + ")");
+  L156: '! (Max is '
+      ctx: throw new IllegalArgumentException("Data value id is too big with " + id + "! (Max is " + this.itemsById.length + ")");
+  L160: 'Duplicate id value for '
+      ctx: throw new IllegalArgumentException("Duplicate id value for " + id + "!");
+  L164: 'Unregistered serializer '
+      ctx: throw new IllegalArgumentException("Unregistered serializer " + accessor.serializer() + " for " + id + "!");
+  L174: ' has not defined synched data value '
+      ctx: throw new IllegalStateException("Entity " + this.entity.getClass() + " has not defined synched data value " + i);
+  L245: 'Unknown serializer type '
+      ctx: throw new EncoderException("Unknown serializer type " + this.serializer);
+  L257: 'Unknown serializer type '
+      ctx: throw new DecoderException("Unknown serializer type " + type);

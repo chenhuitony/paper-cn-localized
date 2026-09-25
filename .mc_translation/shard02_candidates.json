@@ -1,0 +1,1636 @@
+{
+ "net/minecraft/world/attribute/AttributeRange.java": [
+  {
+   "idx": 0,
+   "line": 30,
+   "original": " is not in range [",
+   "context": ": DataResult.error(() -> value + \" is not in range [\" + minValue + \"; \" + maxValue + \"]\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/attribute/AttributeType.java": [
+  {
+   "idx": 1,
+   "line": 70,
+   "original": " is not valid for ",
+   "context": "throw new IllegalArgumentException(\"Modifier \" + modifier + \" is not valid for \" + this);",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 76,
+   "original": " cannot be represented as a float",
+   "context": "throw new IllegalStateException(value + \" cannot be represented as a float\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/attribute/EnvironmentAttribute.java": [
+  {
+   "idx": 0,
+   "line": 110,
+   "original": "Missing default value",
+   "context": "Objects.requireNonNull(this.defaultValue, \"Missing default value\"),",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/attribute/EnvironmentAttributeMap.java": [
+  {
+   "idx": 0,
+   "line": 31,
+   "original": "The following attributes cannot be positional: ",
+   "context": "? DataResult.error(() -> \"The following attributes cannot be positional: \" + illegalAttributes)",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/attribute/EnvironmentAttributeSystem.java": [
+  {
+   "idx": 0,
+   "line": 109,
+   "original": "Position must always be provided for positional attribute ",
+   "context": "throw new IllegalStateException(\"Position must always be provided for positional attribute \" + attribute);",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 158,
+   "original": "Missing attribute ",
+   "context": "throw new IllegalArgumentException(\"Missing attribute \" + attribute);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/clock/ServerClockManager.java": [
+  {
+   "idx": 1,
+   "line": 81,
+   "original": "No clock initialized for definition: ",
+   "context": "throw new IllegalStateException(\"No clock initialized for definition: \" + definition);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/damagesource/DamageSource.java": [
+  {
+   "idx": 0,
+   "line": 50,
+   "original": "Cannot set an event damager when another direct entity is already set (report a bug to Paper)",
+   "context": "throw new IllegalStateException(\"Cannot set an event damager when another direct entity is already set (report a bug to Paper)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 77,
+   "original": "Cannot set a block snapshot when an event block damager is already set (report a bug to Paper)",
+   "context": "throw new IllegalStateException(\"Cannot set a block snapshot when an event block damager is already set (report a bug to Paper)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 112,
+   "original": "DamageSource (",
+   "context": "return \"DamageSource (\" + this.type().msgId() + \")\";",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/effect/MobEffectInstance.java": [
+  {
+   "idx": 1,
+   "line": 135,
+   "original": "This method should only be called for matching effects!",
+   "context": "LOGGER.warn(\"This method should only be called for matching effects!\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 298,
+   "original": ", Duration: ",
+   "context": "result = this.getDescriptionId() + \" x \" + (this.amplifier + 1) + \", Duration: \" + this.describeDuration();",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 300,
+   "original": ", Duration: ",
+   "context": "result = this.getDescriptionId() + \", Duration: \" + this.describeDuration();",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 304,
+   "original": ", Particles: false",
+   "context": "result = result + \", Particles: false\";",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 308,
+   "original": ", Show Icon: false",
+   "context": "result = result + \", Show Icon: false\";",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ContainerUser.java": [
+  {
+   "idx": 0,
+   "line": 15,
+   "original": "A container user must be a LivingEntity",
+   "context": "throw new IllegalStateException(\"A container user must be a LivingEntity\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/Display.java": [
+  {
+   "idx": 64,
+   "line": 785,
+   "original": "Failed to parse display entity text {}",
+   "context": "Display.LOGGER.warn(\"Failed to parse display entity text {}\", text, e);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/DropChances.java": [
+  {
+   "idx": 0,
+   "line": 34,
+   "original": "Tried to set invalid equipment chance ",
+   "context": "throw new IllegalArgumentException(\"Tried to set invalid equipment chance \" + chance + \" for \" + slot);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/Entity.java": [
+  {
+   "idx": 1,
+   "line": 192,
+   "original": "Ignoring setSeed on Entity.SHARED_RANDOM",
+   "context": "LOGGER.error(\"Ignoring setSeed on Entity.SHARED_RANDOM\", new Throwable());",
+   "is_tb": false
+  },
+  {
+   "idx": 19,
+   "line": 646,
+   "original": "Tried to access entity ID before ID assignment",
+   "context": "throw new IllegalStateException(\"Tried to access entity ID before ID assignment\");",
+   "is_tb": false
+  },
+  {
+   "idx": 20,
+   "line": 797,
+   "original": " was caught trying to crash the server with an invalid yaw",
+   "context": "this.level.getCraftServer().getLogger().warning(this.getScoreboardName() + \" was caught trying to crash the server with an invalid yaw\");",
+   "is_tb": false
+  },
+  {
+   "idx": 21,
+   "line": 798,
+   "original": "Infinite yaw (Hacking?)",
+   "context": "((org.bukkit.craftbukkit.entity.CraftPlayer) this.getBukkitEntity()).kickPlayer(\"Infinite yaw (Hacking?)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 22,
+   "line": 810,
+   "original": " was caught trying to crash the server with an invalid pitch",
+   "context": "this.level.getCraftServer().getLogger().warning(this.getScoreboardName() + \" was caught trying to crash the server with an invalid pitch\");",
+   "is_tb": false
+  },
+  {
+   "idx": 23,
+   "line": 811,
+   "original": "Infinite pitch (Hacking?)",
+   "context": "((org.bukkit.craftbukkit.entity.CraftPlayer) this.getBukkitEntity()).kickPlayer(\"Infinite pitch (Hacking?)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 25,
+   "line": 1142,
+   "original": "Cannot move an entity off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(\"Cannot move an entity off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 28,
+   "line": 1874,
+   "original": "Colliding entity with block",
+   "context": "CrashReport report = CrashReport.forThrowable(t, \"Colliding entity with block\");",
+   "is_tb": false
+  },
+  {
+   "idx": 29,
+   "line": 1875,
+   "original": "Block being collided with",
+   "context": "CrashReportCategory category = report.addCategory(\"Block being collided with\");",
+   "is_tb": false
+  },
+  {
+   "idx": 30,
+   "line": 1877,
+   "original": "Entity being checked for collision",
+   "context": "CrashReportCategory entityCategory = report.addCategory(\"Entity being checked for collision\");",
+   "is_tb": false
+  },
+  {
+   "idx": 69,
+   "line": 2778,
+   "original": "Saving entity NBT",
+   "context": "CrashReport report = CrashReport.forThrowable(t, \"Saving entity NBT\");",
+   "is_tb": false
+  },
+  {
+   "idx": 70,
+   "line": 2779,
+   "original": "Entity being saved",
+   "context": "CrashReportCategory category = report.addCategory(\"Entity being saved\");",
+   "is_tb": false
+  },
+  {
+   "idx": 81,
+   "line": 2812,
+   "original": "Entity has invalid position",
+   "context": "throw new IllegalStateException(\"Entity has invalid position\");",
+   "is_tb": false
+  },
+  {
+   "idx": 89,
+   "line": 2830,
+   "original": "Unknown fire override {} for {}",
+   "context": "LOGGER.error(\"Unknown fire override {} for {}\", override, this);",
+   "is_tb": false
+  },
+  {
+   "idx": 93,
+   "line": 2846,
+   "original": "Entity has invalid rotation",
+   "context": "throw new IllegalStateException(\"Entity has invalid rotation\");",
+   "is_tb": false
+  },
+  {
+   "idx": 104,
+   "line": 2879,
+   "original": "Unknown SpawnReason ",
+   "context": "LOGGER.error(\"Unknown SpawnReason \" + spawnReasonName + \" for \" + this);",
+   "is_tb": false
+  },
+  {
+   "idx": 108,
+   "line": 2897,
+   "original": "Loading entity NBT",
+   "context": "CrashReport report = CrashReport.forThrowable(t, \"Loading entity NBT\");",
+   "is_tb": false
+  },
+  {
+   "idx": 109,
+   "line": 2898,
+   "original": "Entity being loaded",
+   "context": "CrashReportCategory category = report.addCategory(\"Entity being loaded\");",
+   "is_tb": false
+  },
+  {
+   "idx": 110,
+   "line": 2919,
+   "original": "Unregistered entity",
+   "context": "ResourceKey<EntityType<?>> typeId = this.typeHolder().unwrapKey().orElseThrow(() -> new IllegalStateException(\"Unregistered entity\"));",
+   "is_tb": false
+  },
+  {
+   "idx": 111,
+   "line": 3428,
+   "original": "Use x.startRiding(y), not y.addPassenger(x)",
+   "context": "throw new IllegalStateException(\"Use x.startRiding(y), not y.addPassenger(x)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 112,
+   "line": 3453,
+   "original": "Use x.stopRiding(y), not y.removePassenger(x)",
+   "context": "throw new IllegalStateException(\"Use x.stopRiding(y), not y.removePassenger(x)\");",
+   "is_tb": false
+  },
+  {
+   "idx": 115,
+   "line": 4022,
+   "original": "%s['%s'/%d, uuid='%s', l='%s', x=%.2f, y=%.2f, z=%.2f, cpos=%s, tl=%d, v=%b, removed=%s]",
+   "context": "\"%s['%s'/%d, uuid='%s', l='%s', x=%.2f, y=%.2f, z=%.2f, cpos=%s, tl=%d, v=%b, removed=%s]\", // Paper - add more info",
+   "is_tb": false
+  },
+  {
+   "idx": 116,
+   "line": 4036,
+   "original": "%s['%s'/%d, uuid='%s', l='%s', x=%.2f, y=%.2f, z=%.2f, cpos=%s, tl=%d, v=%b]",
+   "context": "\"%s['%s'/%d, uuid='%s', l='%s', x=%.2f, y=%.2f, z=%.2f, cpos=%s, tl=%d, v=%b]\", // Paper - add more info",
+   "is_tb": false
+  },
+  {
+   "idx": 117,
+   "line": 4093,
+   "original": "Illegal Entity Teleport {} to {}:{}",
+   "context": "LOGGER.warn(\"Illegal Entity Teleport {} to {}:{}\", this, transition.newLevel(), transition.position(), new Throwable());",
+   "is_tb": false
+  },
+  {
+   "idx": 120,
+   "line": 4358,
+   "original": "Entity Type",
+   "context": "category.setDetail(\"Entity Type\", () -> this.typeHolder().getRegisteredName() + \" (\" + this.getClass().getCanonicalName() + \")\");",
+   "is_tb": false
+  },
+  {
+   "idx": 123,
+   "line": 4359,
+   "original": "Entity ID",
+   "context": "category.setDetail(\"Entity ID\", this.id);",
+   "is_tb": false
+  },
+  {
+   "idx": 124,
+   "line": 4360,
+   "original": "Entity Name",
+   "context": "category.setDetail(\"Entity Name\", () -> this.getPlainTextName());",
+   "is_tb": false
+  },
+  {
+   "idx": 125,
+   "line": 4361,
+   "original": "Entity's Exact location",
+   "context": "category.setDetail(\"Entity's Exact location\", String.format(Locale.ROOT, \"%.2f, %.2f, %.2f\", this.getX(), this.getY(), this.getZ()));",
+   "is_tb": false
+  },
+  {
+   "idx": 127,
+   "line": 4363,
+   "original": "Entity's Block location",
+   "context": "\"Entity's Block location\", CrashReportCategory.formatLocation(this.level(), Mth.floor(this.getX()), Mth.floor(this.getY()), Mth.floor(this.getZ()))",
+   "is_tb": false
+  },
+  {
+   "idx": 128,
+   "line": 4366,
+   "original": "Entity's Momentum",
+   "context": "category.setDetail(\"Entity's Momentum\", String.format(Locale.ROOT, \"%.2f, %.2f, %.2f\", movement.x, movement.y, movement.z));",
+   "is_tb": false
+  },
+  {
+   "idx": 130,
+   "line": 4367,
+   "original": "Entity's Passengers",
+   "context": "category.setDetail(\"Entity's Passengers\", () -> this.getPassengers().toString());",
+   "is_tb": false
+  },
+  {
+   "idx": 131,
+   "line": 4368,
+   "original": "Entity's Vehicle",
+   "context": "category.setDetail(\"Entity's Vehicle\", () -> String.valueOf(this.getVehicle()));",
+   "is_tb": false
+  },
+  {
+   "idx": 132,
+   "line": 5030,
+   "original": "[Entity info unavailable] ",
+   "context": "entityInfo = \"[Entity info unavailable] \";",
+   "is_tb": false
+  },
+  {
+   "idx": 133,
+   "line": 5032,
+   "original": "New entity position is invalid! Tried to set invalid position ({},{},{}) for entity {} located at {}, entity info: {}",
+   "context": "LOGGER.error(\"New entity position is invalid! Tried to set invalid position ({},{},{}) for entity {} located at {}, entity info: {}\", newX, newY, newZ, entity.getClass().getName(), entity.position(), ",
+   "is_tb": false
+  },
+  {
+   "idx": 134,
+   "line": 5040,
+   "original": "Refusing to update position for entity ",
+   "context": "\"Refusing to update position for entity \" + this + \" to position \" + new Vec3(x, y, z)",
+   "is_tb": false
+  },
+  {
+   "idx": 135,
+   "line": 5040,
+   "original": " to position ",
+   "context": "\"Refusing to update position for entity \" + this + \" to position \" + new Vec3(x, y, z)",
+   "is_tb": false
+  },
+  {
+   "idx": 136,
+   "line": 5041,
+   "original": " since it is processing a section status update",
+   "context": "+ \" since it is processing a section status update\", new Throwable()",
+   "is_tb": false
+  },
+  {
+   "idx": 137,
+   "line": 5155,
+   "original": "Invalid entity rotation: ",
+   "context": "Util.logAndPauseIfInIde(\"Invalid entity rotation: \" + yRot + \", discarding.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 138,
+   "line": 5155,
+   "original": ", discarding.",
+   "context": "Util.logAndPauseIfInIde(\"Invalid entity rotation: \" + yRot + \", discarding.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 139,
+   "line": 5167,
+   "original": "Invalid entity rotation: ",
+   "context": "Util.logAndPauseIfInIde(\"Invalid entity rotation: \" + xRot + \", discarding.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 140,
+   "line": 5167,
+   "original": ", discarding.",
+   "context": "Util.logAndPauseIfInIde(\"Invalid entity rotation: \" + xRot + \", discarding.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 142,
+   "line": 5197,
+   "original": " is currently prevented from being removed from the world since it is processing section status updates",
+   "context": "LOGGER.warn(\"Entity \" + this + \" is currently prevented from being removed from the world since it is processing section status updates\", new Throwable());",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/EntityAttachments.java": [
+  {
+   "idx": 0,
+   "line": 47,
+   "original": "Had no attachment point of type: ",
+   "context": "throw new IllegalStateException(\"Had no attachment point of type: \" + attachment + \" for index: \" + index);",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 47,
+   "original": " for index: ",
+   "context": "throw new IllegalStateException(\"Had no attachment point of type: \" + attachment + \" for index: \" + index);",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 64,
+   "original": "No attachment points of type: PASSENGER",
+   "context": "throw new IllegalStateException(\"No attachment points of type: PASSENGER\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 71,
+   "original": "Had no attachment points of type: ",
+   "context": "throw new IllegalStateException(\"Had no attachment points of type: \" + attachment);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/EntityReference.java": [
+  {
+   "idx": 0,
+   "line": 42,
+   "original": "!null -> !null; null -> null",
+   "context": "@Contract(\"!null -> !null; null -> null\")",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/EntityType.java": [
+  {
+   "idx": 1,
+   "line": 175,
+   "original": "Error loading spawn egg NBT",
+   "context": "LOGGER.warn(\"Error loading spawn egg NBT\", t);",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 400,
+   "original": "Skipping Entity with id {}",
+   "context": "LOGGER.warn(\"Skipping Entity with id {}\", input.getStringOr(\"id\", \"[invalid]\"));",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 402,
+   "original": "Skipped entity tag: {}",
+   "context": "LOGGER.warn(\"Skipped entity tag: {}\", tagInput.input);",
+   "is_tb": false
+  },
+  {
+   "idx": 9,
+   "line": 515,
+   "original": "Exception loading entity: ",
+   "context": "LOGGER.warn(\"Exception loading entity: \", e);",
+   "is_tb": false
+  },
+  {
+   "idx": 10,
+   "line": 524,
+   "original": "Exception loading entity: ",
+   "context": "LOGGER.warn(\"Exception loading entity: \", e);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/EquipmentSlot.java": [
+  {
+   "idx": 8,
+   "line": 91,
+   "original": "Invalid slot '",
+   "context": "throw new IllegalArgumentException(\"Invalid slot '\" + name + \"'\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ExperienceOrb.java": [
+  {
+   "idx": 4,
+   "line": 59,
+   "original": "Invalid spawnReason set for experience orb: ",
+   "context": "this.level().getCraftServer().getLogger().warning(\"Invalid spawnReason set for experience orb: \" + e.getMessage() + \" - \" + reason);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/Leashable.java": [
+  {
+   "idx": 4,
+   "line": 409,
+   "original": "Invalid LeashData had no attachment",
+   "context": ": Objects.requireNonNull(data.delayedLeashInfo, \"Invalid LeashData had no attachment\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/LivingEntity.java": [
+  {
+   "idx": 32,
+   "line": 884,
+   "original": "Unknown friction state {} for {}",
+   "context": "LOGGER.error(\"Unknown friction state {} for {}\", frictionState, this);",
+   "is_tb": false
+  },
+  {
+   "idx": 40,
+   "line": 914,
+   "original": "Unable to add mob to team \\\"{}\\\" (that team probably doesn't exist)",
+   "context": "LOGGER.warn(\"Unable to add mob to team \\\"{}\\\" (that team probably doesn't exist)\", teamName);",
+   "is_tb": false
+  },
+  {
+   "idx": 53,
+   "line": 1401,
+   "original": " had NaN health set",
+   "context": "System.err.println(\"[NAN-HEALTH] \" + getScoreboardName() + \" had NaN health set\");",
+   "is_tb": false
+  },
+  {
+   "idx": 54,
+   "line": 1843,
+   "original": "Named entity {} died: {}",
+   "context": "if (org.spigotmc.SpigotConfig.logNamedDeaths) LOGGER.info(\"Named entity {} died: {}\", this, this.getCombatTracker().getDeathMessage().getString()); // Spigot",
+   "is_tb": false
+  },
+  {
+   "idx": 55,
+   "line": 2874,
+   "original": "Invalid hand ",
+   "context": "throw new IllegalArgumentException(\"Invalid hand \" + hand);",
+   "is_tb": false
+  },
+  {
+   "idx": 56,
+   "line": 2883,
+   "original": "Invalid hand ",
+   "context": "throw new IllegalArgumentException(\"Invalid hand \" + hand);",
+   "is_tb": false
+  },
+  {
+   "idx": 65,
+   "line": 4440,
+   "original": "maxDistance must be between 1-120",
+   "context": "throw new IllegalArgumentException(\"maxDistance must be between 1-120\");",
+   "is_tb": false
+  },
+  {
+   "idx": 66,
+   "line": 4453,
+   "original": "maxDistance must be between 1-120",
+   "context": "throw new IllegalArgumentException(\"maxDistance must be between 1-120\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/Marker.java": [
+  {
+   "idx": 0,
+   "line": 38,
+   "original": "Markers should never be sent",
+   "context": "throw new IllegalStateException(\"Markers should never be sent\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 53,
+   "original": "Should never addPassenger without checking couldAcceptPassenger()",
+   "context": "throw new IllegalStateException(\"Should never addPassenger without checking couldAcceptPassenger()\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/Mob.java": [
+  {
+   "idx": 6,
+   "line": 295,
+   "original": "Unknown target reason, please report on the issue tracker",
+   "context": "this.level().getCraftServer().getLogger().log(java.util.logging.Level.WARNING, \"Unknown target reason, please report on the issue tracker\", new Exception());",
+   "is_tb": false
+  },
+  {
+   "idx": 35,
+   "line": 845,
+   "original": "mob tick",
+   "context": "profiler.push(\"mob tick\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/OminousItemSpawner.java": [
+  {
+   "idx": 6,
+   "line": 141,
+   "original": "Should never addPassenger without checking couldAcceptPassenger()",
+   "context": "throw new IllegalStateException(\"Should never addPassenger without checking couldAcceptPassenger()\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/SpawnPlacements.java": [
+  {
+   "idx": 0,
+   "line": 61,
+   "original": "Duplicate registration for type ",
+   "context": "throw new IllegalStateException(\"Duplicate registration for type \" + BuiltInRegistries.ENTITY_TYPE.getKey(type));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/Brain.java": [
+  {
+   "idx": 0,
+   "line": 144,
+   "original": "Unregistered memory fetched: ",
+   "context": "throw new IllegalStateException(\"Unregistered memory fetched: \" + memoryType);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/attributes/AttributeInstance.java": [
+  {
+   "idx": 0,
+   "line": 76,
+   "original": "Modifier is already applied on this attribute!",
+   "context": "throw new IllegalArgumentException(\"Modifier is already applied on this attribute!\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/attributes/AttributeSupplier.java": [
+  {
+   "idx": 0,
+   "line": 20,
+   "original": "Can't find attribute ",
+   "context": "throw new IllegalArgumentException(\"Can't find attribute \" + attribute.getRegisteredName());",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 37,
+   "original": "Can't find modifier ",
+   "context": "throw new IllegalArgumentException(\"Can't find modifier \" + id + \" on attribute \" + attribute.getRegisteredName());",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 37,
+   "original": " on attribute ",
+   "context": "throw new IllegalArgumentException(\"Can't find modifier \" + id + \" on attribute \" + attribute.getRegisteredName());",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 74,
+   "original": "Tried to change value for default attribute instance: ",
+   "context": "throw new UnsupportedOperationException(\"Tried to change value for default attribute instance: \" + attribute.getRegisteredName());",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/attributes/DefaultAttributes.java": [
+  {
+   "idx": 1,
+   "line": 206,
+   "original": " has no attributes",
+   "context": ".forEach(id -> Util.logAndPauseIfInIde(\"Entity \" + id + \" has no attributes\"));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/attributes/RangedAttribute.java": [
+  {
+   "idx": 0,
+   "line": 14,
+   "original": "Minimum value cannot be bigger than maximum value!",
+   "context": "throw new IllegalArgumentException(\"Minimum value cannot be bigger than maximum value!\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 18,
+   "original": "Default value cannot be lower than minimum value!",
+   "context": "throw new IllegalArgumentException(\"Default value cannot be lower than minimum value!\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 22,
+   "original": "Default value cannot be bigger than maximum value!",
+   "context": "throw new IllegalArgumentException(\"Default value cannot be bigger than maximum value!\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/behavior/AcquirePoi.java": [
+  {
+   "idx": 0,
+   "line": 179,
+   "original": "RetryMarker{, previousAttemptAt=",
+   "context": "return \"RetryMarker{, previousAttemptAt=\"",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 181,
+   "original": ", nextScheduledAttemptAt=",
+   "context": "+ \", nextScheduledAttemptAt=\"",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 183,
+   "original": ", currentDelay=",
+   "context": "+ \", currentDelay=\"",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/behavior/BecomePassiveIfMemoryPresent.java": [
+  {
+   "idx": 0,
+   "line": 12,
+   "original": "[BecomePassive if ",
+   "context": "i, i.point(() -> \"[BecomePassive if \" + pacifyingMemory + \" present]\", (attackTarget, pacified, pacifying) -> (level, body, timestamp) -> {",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/behavior/BlockPosTracker.java": [
+  {
+   "idx": 1,
+   "line": 38,
+   "original": ", centerPosition=",
+   "context": "return \"BlockPosTracker{blockPos=\" + this.blockPos + \", centerPosition=\" + this.centerPosition + \"}\";",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/behavior/EntityTracker.java": [
+  {
+   "idx": 0,
+   "line": 56,
+   "original": "EntityTracker for ",
+   "context": "return \"EntityTracker for \" + this.entity;",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/behavior/RandomLookAround.java": [
+  {
+   "idx": 0,
+   "line": 22,
+   "original": "Minimum pitch is larger than maximum pitch! ",
+   "context": "throw new IllegalArgumentException(\"Minimum pitch is larger than maximum pitch! \" + minPitch + \" > \" + maxPitch);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/goal/DoorInteractGoal.java": [
+  {
+   "idx": 0,
+   "line": 22,
+   "original": "Unsupported mob type for DoorInteractGoal",
+   "context": "throw new IllegalArgumentException(\"Unsupported mob type for DoorInteractGoal\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/goal/FollowMobGoal.java": [
+  {
+   "idx": 0,
+   "line": 34,
+   "original": "Unsupported mob type for FollowMobGoal",
+   "context": "throw new IllegalArgumentException(\"Unsupported mob type for FollowMobGoal\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/goal/FollowOwnerGoal.java": [
+  {
+   "idx": 0,
+   "line": 30,
+   "original": "Unsupported mob type for FollowOwnerGoal",
+   "context": "throw new IllegalArgumentException(\"Unsupported mob type for FollowOwnerGoal\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/goal/MoveThroughVillageGoal.java": [
+  {
+   "idx": 0,
+   "line": 44,
+   "original": "Unsupported mob for MoveThroughVillageGoal",
+   "context": "throw new IllegalArgumentException(\"Unsupported mob for MoveThroughVillageGoal\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/goal/RangedAttackGoal.java": [
+  {
+   "idx": 0,
+   "line": 30,
+   "original": "ArrowAttackGoal requires Mob implements RangedAttackMob",
+   "context": "throw new IllegalArgumentException(\"ArrowAttackGoal requires Mob implements RangedAttackMob\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/memory/MemoryMap.java": [
+  {
+   "idx": 0,
+   "line": 17,
+   "original": "Memory module ",
+   "context": ".validate(type -> type.canSerialize() ? DataResult.success(type) : DataResult.error(() -> \"Memory module \" + type + \" cannot be encoded\"));",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 17,
+   "original": " cannot be encoded",
+   "context": ".validate(type -> type.canSerialize() ? DataResult.success(type) : DataResult.error(() -> \"Memory module \" + type + \" cannot be encoded\"));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/util/RandomPos.java": [
+  {
+   "idx": 0,
+   "line": 66,
+   "original": "aboveSolidAmount was ",
+   "context": "throw new IllegalArgumentException(\"aboveSolidAmount was \" + aboveSolidAmount + \", expected >= 0\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 66,
+   "original": ", expected >= 0",
+   "context": "throw new IllegalArgumentException(\"aboveSolidAmount was \" + aboveSolidAmount + \", expected >= 0\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/village/VillageSiege.java": [
+  {
+   "idx": 0,
+   "line": 104,
+   "original": "Failed to create zombie for village siege at {}",
+   "context": "LOGGER.warn(\"Failed to create zombie for village siege at {}\", spawnPos, e);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/village/poi/PoiManager.java": [
+  {
+   "idx": 0,
+   "line": 76,
+   "original": "Accessing poi chunk off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.world, chunkX, chunkZ, \"Accessing poi chunk off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 89,
+   "original": "Accessing poi chunk off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.world, chunkX, chunkZ, \"Accessing poi chunk off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 111,
+   "original": "Accessing poi chunk off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.world, chunkX, chunkZ, \"Accessing poi chunk off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 136,
+   "original": "Unloading poi chunk off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.world, chunkX, chunkZ, \"Unloading poi chunk off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 151,
+   "original": "Loading poi chunk off-main",
+   "context": "ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.world, chunkX, chunkZ, \"Loading poi chunk off-main\");",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 406,
+   "original": "POI never registered at ",
+   "context": ".orElseThrow(() -> Util.pauseInIde(new IllegalStateException(\"POI never registered at \" + pos)));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/village/poi/PoiSection.java": [
+  {
+   "idx": 0,
+   "line": 70,
+   "original": "Added POI of type {} @ {}",
+   "context": "LOGGER.debug(\"Added POI of type {} @ {}\", type.getRegisteredName(), blockPos);",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 88,
+   "original": "POI data mismatch: already registered at ",
+   "context": "Util.logAndPauseIfInIde(\"POI data mismatch: already registered at \" + blockPos);",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 99,
+   "original": "POI data mismatch: never registered at {}",
+   "context": "LOGGER.error(\"POI data mismatch: never registered at {}\", pos);",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 102,
+   "original": "Removed POI of type {} @ {}",
+   "context": "LOGGER.debug(\"Removed POI of type {} @ {}\", LogUtils.defer(poiRecord::getPoiType), LogUtils.defer(poiRecord::getPos));",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 116,
+   "original": "POI never registered at ",
+   "context": "throw (IllegalStateException)Util.pauseInIde(new IllegalStateException(\"POI never registered at \" + pos));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/ai/village/poi/PoiTypes.java": [
+  {
+   "idx": 21,
+   "line": 84,
+   "original": "%s is defined in more than one PoI type",
+   "context": "new IllegalStateException(String.format(Locale.ROOT, \"%s is defined in more than one PoI type\", blockState))",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/animal/equine/AbstractHorse.java": [
+  {
+   "idx": 12,
+   "line": 858,
+   "original": "Incorrect range for an attribute",
+   "context": "throw new IllegalArgumentException(\"Incorrect range for an attribute\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/animal/sheep/SheepColorSpawnRules.java": [
+  {
+   "idx": 0,
+   "line": 64,
+   "original": "List must be non-empty",
+   "context": "throw new IllegalArgumentException(\"List must be non-empty\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/boss/enderdragon/EnderDragon.java": [
+  {
+   "idx": 11,
+   "line": 825,
+   "original": "Failed to find path from {} to {}",
+   "context": "LOGGER.debug(\"Failed to find path from {} to {}\", startIndex, endIndex);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/boss/enderdragon/phases/DragonChargePlayerPhase.java": [
+  {
+   "idx": 0,
+   "line": 23,
+   "original": "Aborting charge player as no target was set.",
+   "context": "LOGGER.warn(\"Aborting charge player as no target was set.\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/boss/enderdragon/phases/DragonStrafePlayerPhase.java": [
+  {
+   "idx": 0,
+   "line": 33,
+   "original": "Skipping player strafe phase because no player was found",
+   "context": "LOGGER.warn(\"Skipping player strafe phase because no player was found\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/boss/enderdragon/phases/EnderDragonPhaseManager.java": [
+  {
+   "idx": 0,
+   "line": 43,
+   "original": "Dragon is now in phase {} on the {}",
+   "context": "LOGGER.debug(\"Dragon is now in phase {} on the {}\", target, this.dragon.level().isClientSide() ? \"client\" : \"server\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/decoration/BlockAttachedEntity.java": [
+  {
+   "idx": 2,
+   "line": 171,
+   "original": "Block-attached entity at invalid position: {}",
+   "context": "LOGGER.error(\"Block-attached entity at invalid position: {}\", storedPos);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/decoration/Mannequin.java": [
+  {
+   "idx": 0,
+   "line": 39,
+   "original": "Invalid pose: ",
+   "context": ".validate(pose -> VALID_POSES.contains(pose) ? DataResult.success(pose) : DataResult.error(() -> \"Invalid pose: \" + pose.getSerializedName()));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/item/FallingBlockEntity.java": [
+  {
+   "idx": 0,
+   "line": 238,
+   "original": "Failed to load block entity from falling block",
+   "context": "LOGGER.error(\"Failed to load block entity from falling block\", e);",
+   "is_tb": false
+  },
+  {
+   "idx": 19,
+   "line": 352,
+   "original": "Immitating BlockState",
+   "context": "category.setDetail(\"Immitating BlockState\", this.blockState.toString());",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/item/ItemEntity.java": [
+  {
+   "idx": 14,
+   "line": 407,
+   "original": "Unknown friction state {} for {}",
+   "context": "com.mojang.logging.LogUtils.getLogger().error(\"Unknown friction state {} for {}\", frictionState, this);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/npc/villager/AbstractVillager.java": [
+  {
+   "idx": 0,
+   "line": 136,
+   "original": "Cannot load Villager offers on the client",
+   "context": "throw new IllegalStateException(\"Cannot load Villager offers on the client\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 267,
+   "original": "Missing expected trade set {}",
+   "context": "LOGGER.debug(\"Missing expected trade set {}\", resourceKey);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/npc/villager/Villager.java": [
+  {
+   "idx": 19,
+   "line": 643,
+   "original": "Villager {} died, message: '{}'",
+   "context": "if (org.spigotmc.SpigotConfig.logVillagerDeaths) LOGGER.info(\"Villager {} died, message: '{}'\", this, source.getLocalizedDeathMessage(this).getString()); // Spigot",
+   "is_tb": false
+  },
+  {
+   "idx": 20,
+   "line": 810,
+   "original": "Villager {} was struck by lightning {}.",
+   "context": "if (org.spigotmc.SpigotConfig.logVillagerDeaths) LOGGER.info(\"Villager {} was struck by lightning {}.\", this, lightningBolt); // Move down",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/player/Inventory.java": [
+  {
+   "idx": 1,
+   "line": 146,
+   "original": "Invalid selected slot",
+   "context": "throw new IllegalArgumentException(\"Invalid selected slot\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 401,
+   "original": "Adding item to inventory",
+   "context": "CrashReport report = CrashReport.forThrowable(t, \"Adding item to inventory\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 402,
+   "original": "Item being added",
+   "context": "CrashReportCategory category = report.addCategory(\"Item being added\");",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 403,
+   "original": "Item ID",
+   "context": "category.setDetail(\"Item ID\", Item.getId(itemStack.getItem()));",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 404,
+   "original": "Item data",
+   "context": "category.setDetail(\"Item data\", itemStack.getDamageValue());",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 405,
+   "original": "Item name",
+   "context": "category.setDetail(\"Item name\", () -> itemStack.getHoverName().getString());",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/player/StackedContents.java": [
+  {
+   "idx": 1,
+   "line": 25,
+   "original": " items, but only had ",
+   "context": "throw new IllegalStateException(\"Took \" + amount + \" items, but only had \" + previous);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/projectile/FishingHook.java": [
+  {
+   "idx": 0,
+   "line": 655,
+   "original": "Failed to recreate fishing hook on client. {} (id: {}) is not a valid owner.",
+   "context": "LOGGER.error(\"Failed to recreate fishing hook on client. {} (id: {}) is not a valid owner.\", this.level().getEntity(ownerId), ownerId);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/projectile/arrow/AbstractArrow.java": [
+  {
+   "idx": 0,
+   "line": 114,
+   "original": "Invalid weapon firing an arrow",
+   "context": "throw new IllegalArgumentException(\"Invalid weapon firing an arrow\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/raid/Raid.java": [
+  {
+   "idx": 22,
+   "line": 380,
+   "original": "Raiders alive: ",
+   "context": ".append(\"Raiders alive: \")",
+   "is_tb": false
+  },
+  {
+   "idx": 27,
+   "line": 386,
+   "original": " Is bonus? ",
+   "context": ".append(\" Is bonus? \")",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/vehicle/ContainerEntity.java": [
+  {
+   "idx": 4,
+   "line": 187,
+   "original": "Implement this method",
+   "context": "throw new UnsupportedOperationException(\"Implement this method\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/entity/vehicle/minecart/AbstractMinecart.java": [
+  {
+   "idx": 5,
+   "line": 534,
+   "original": "Unknown friction state {} for {}",
+   "context": "com.mojang.logging.LogUtils.getLogger().error(\"Unknown friction state {} for {}\", frictionState, this);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/flag/FeatureFlagRegistry.java": [
+  {
+   "idx": 0,
+   "line": 38,
+   "original": "Unknown feature flag: {}",
+   "context": "return this.fromNames(flagIds, flagId -> LOGGER.warn(\"Unknown feature flag: {}\", flagId));",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 74,
+   "original": "Unknown feature ids: ",
+   "context": "return !unknownIds.isEmpty() ? DataResult.error(() -> \"Unknown feature ids: \" + unknownIds, result) : DataResult.success(result);",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 93,
+   "original": "Too many feature flags",
+   "context": "throw new IllegalStateException(\"Too many feature flags\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 98,
+   "original": "Duplicate feature flag ",
+   "context": "throw new IllegalStateException(\"Duplicate feature flag \" + name);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/flag/FeatureFlagSet.java": [
+  {
+   "idx": 0,
+   "line": 44,
+   "original": "Mismatched feature universe, expected '",
+   "context": "throw new IllegalStateException(\"Mismatched feature universe, expected '\" + universe + \"', but got '\" + f.universe + \"'\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 44,
+   "original": "', but got '",
+   "context": "throw new IllegalStateException(\"Mismatched feature universe, expected '\" + universe + \"', but got '\" + f.universe + \"'\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 75,
+   "original": "Mismatched set elements: '",
+   "context": "throw new IllegalArgumentException(\"Mismatched set elements: '\" + this.universe + \"' != '\" + other.universe + \"'\");",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 87,
+   "original": "Mismatched set elements: '",
+   "context": "throw new IllegalArgumentException(\"Mismatched set elements: '\" + this.universe + \"' != '\" + other.universe + \"'\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/inventory/AbstractContainerMenu.java": [
+  {
+   "idx": 0,
+   "line": 90,
+   "original": "Title already set",
+   "context": "com.google.common.base.Preconditions.checkState(this.title == null, \"Title already set\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 129,
+   "original": "Unable to construct this menu by type",
+   "context": "throw new UnsupportedOperationException(\"Unable to construct this menu by type\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 138,
+   "original": "Container size ",
+   "context": "throw new IllegalArgumentException(\"Container size \" + actual + \" is smaller than expected \" + expected);",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 138,
+   "original": " is smaller than expected ",
+   "context": "throw new IllegalArgumentException(\"Container size \" + actual + \" is smaller than expected \" + expected);",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 145,
+   "original": "Container data count ",
+   "context": "throw new IllegalArgumentException(\"Container data count \" + actual + \" is smaller than expected \" + expected);",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 145,
+   "original": " is smaller than expected ",
+   "context": "throw new IllegalArgumentException(\"Container data count \" + actual + \" is smaller than expected \" + expected);",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 358,
+   "original": "Incorrect slot index: {} available slots: {}",
+   "context": "LOGGER.debug(\"Incorrect slot index: {} available slots: {}\", slot, this.remoteSlots.size());",
+   "is_tb": false
+  },
+  {
+   "idx": 7,
+   "line": 387,
+   "original": "Container click",
+   "context": "CrashReport report = CrashReport.forThrowable(e, \"Container click\");",
+   "is_tb": false
+  },
+  {
+   "idx": 8,
+   "line": 388,
+   "original": "Click info",
+   "context": "CrashReportCategory category = report.addCategory(\"Click info\");",
+   "is_tb": false
+  },
+  {
+   "idx": 9,
+   "line": 389,
+   "original": "Menu Type",
+   "context": "category.setDetail(\"Menu Type\", () -> this.menuType != null ? BuiltInRegistries.MENU.getKey(this.menuType).toString() : \"<no type>\");",
+   "is_tb": false
+  },
+  {
+   "idx": 10,
+   "line": 389,
+   "original": "<no type>",
+   "context": "category.setDetail(\"Menu Type\", () -> this.menuType != null ? BuiltInRegistries.MENU.getKey(this.menuType).toString() : \"<no type>\");",
+   "is_tb": false
+  },
+  {
+   "idx": 11,
+   "line": 390,
+   "original": "Menu Class",
+   "context": "category.setDetail(\"Menu Class\", () -> this.getClass().getCanonicalName());",
+   "is_tb": false
+  },
+  {
+   "idx": 12,
+   "line": 391,
+   "original": "Slot Count",
+   "context": "category.setDetail(\"Slot Count\", this.slots.size());",
+   "is_tb": false
+  },
+  {
+   "idx": 16,
+   "line": 977,
+   "original": "context was null",
+   "context": "com.google.common.base.Preconditions.checkArgument(context != null, \"context was null\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/inventory/ContainerLevelAccess.java": [
+  {
+   "idx": 0,
+   "line": 63,
+   "original": "Not supported yet.",
+   "context": "throw new UnsupportedOperationException(\"Not supported yet.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 67,
+   "original": "Not supported yet.",
+   "context": "throw new UnsupportedOperationException(\"Not supported yet.\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/inventory/EnchantmentMenu.java": [
+  {
+   "idx": 1,
+   "line": 266,
+   "original": " pressed invalid button id: ",
+   "context": "Util.logAndPauseIfInIde(player.getPlainTextName() + \" pressed invalid button id: \" + buttonId);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/inventory/ItemCombinerMenuSlotDefinition.java": [
+  {
+   "idx": 0,
+   "line": 19,
+   "original": "Need to define both inputSlots and resultSlot",
+   "context": "throw new IllegalArgumentException(\"Need to define both inputSlots and resultSlot\");",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 69,
+   "original": "Expected input slots to have continous indexes",
+   "context": "throw new IllegalArgumentException(\"Expected input slots to have continous indexes\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 74,
+   "original": "Expected result slot index to follow last input slot",
+   "context": "throw new IllegalArgumentException(\"Expected result slot index to follow last input slot\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/inventory/LoomMenu.java": [
+  {
+   "idx": 0,
+   "line": 184,
+   "original": "selectedPattern was null, this is unexpected",
+   "context": "this.setupResultSlot(java.util.Objects.requireNonNull(selectedPattern, \"selectedPattern was null, this is unexpected\"));",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/AABB.java": [
+  {
+   "idx": 7,
+   "line": 483,
+   "original": "Cannot build an undefined AABB. Include at least one point.",
+   "context": "throw new IllegalStateException(\"Cannot build an undefined AABB. Include at least one point.\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/shapes/ArrayVoxelShape.java": [
+  {
+   "idx": 0,
+   "line": 34,
+   "original": "Lengths of point arrays must be consistent with the size of the VoxelShape.",
+   "context": "new IllegalArgumentException(\"Lengths of point arrays must be consistent with the size of the VoxelShape.\")",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/shapes/CubePointRange.java": [
+  {
+   "idx": 0,
+   "line": 10,
+   "original": "Need at least 1 part",
+   "context": "throw new IllegalArgumentException(\"Need at least 1 part\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/shapes/DiscreteVoxelShape.java": [
+  {
+   "idx": 0,
+   "line": 87,
+   "original": "Need all positive sizes: x: ",
+   "context": "throw new IllegalArgumentException(\"Need all positive sizes: x: \" + xSize + \", y: \" + ySize + \", z: \" + zSize);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/shapes/Shapes.java": [
+  {
+   "idx": 0,
+   "line": 104,
+   "original": "The min values need to be smaller or equals to the max values",
+   "context": "throw new IllegalArgumentException(\"The min values need to be smaller or equals to the max values\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/phys/shapes/VoxelShape.java": [
+  {
+   "idx": 0,
+   "line": 494,
+   "original": "No bounds for empty shape.",
+   "context": "throw Util.pauseInIde(new UnsupportedOperationException(\"No bounds for empty shape.\"));",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 550,
+   "original": "Unknown axis: ",
+   "context": "throw new IllegalStateException(\"Unknown axis: \" + axis);",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 758,
+   "original": "Unknown axis: ",
+   "context": "throw new IllegalStateException(\"Unknown axis: \" + axis);",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 856,
+   "original": "Unknown axis: ",
+   "context": "throw new IllegalStateException(\"Unknown axis: \" + axis);",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 896,
+   "original": "Unknown axis: ",
+   "context": "throw new RuntimeException(\"Unknown axis: \" + axis);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/scores/PlayerTeam.java": [
+  {
+   "idx": 0,
+   "line": 87,
+   "original": "Name cannot be null",
+   "context": "throw new IllegalArgumentException(\"Name cannot be null\");",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/scores/Scoreboard.java": [
+  {
+   "idx": 1,
+   "line": 53,
+   "original": "An objective with the name '",
+   "context": "throw new IllegalArgumentException(\"An objective with the name '\" + name + \"' already exists!\");",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 53,
+   "original": "' already exists!",
+   "context": "throw new IllegalArgumentException(\"An objective with the name '\" + name + \"' already exists!\");",
+   "is_tb": false
+  },
+  {
+   "idx": 3,
+   "line": 89,
+   "original": "Cannot modify read-only score",
+   "context": "throw new IllegalStateException(\"Cannot modify read-only score\");",
+   "is_tb": false
+  },
+  {
+   "idx": 4,
+   "line": 252,
+   "original": "Requested creation of existing team '{}'",
+   "context": "LOGGER.warn(\"Requested creation of existing team '{}'\", name);",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 293,
+   "original": "Player is either on another team or not on any team. Cannot remove from team '",
+   "context": "throw new IllegalStateException(\"Player is either on another team or not on any team. Cannot remove from team '\" + team.getName() + \"'.\");",
+   "is_tb": false
+  },
+  {
+   "idx": 7,
+   "line": 369,
+   "original": "Unknown objective {} for name {}, ignoring",
+   "context": "LOGGER.error(\"Unknown objective {} for name {}, ignoring\", score.objective, score.owner);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/scores/criteria/ObjectiveCriteria.java": [
+  {
+   "idx": 0,
+   "line": 23,
+   "original": "No scoreboard criteria with name: ",
+   "context": "name -> byName(name).map(DataResult::success).orElse(DataResult.error(() -> \"No scoreboard criteria with name: \" + name)),",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/ticks/LevelTicks.java": [
+  {
+   "idx": 0,
+   "line": 75,
+   "original": "Trying to schedule tick in not loaded position ",
+   "context": "Util.logAndPauseIfInIde(\"Trying to schedule tick in not loaded position \" + tick.pos());",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/timeline/Timeline.java": [
+  {
+   "idx": 4,
+   "line": 79,
+   "original": " was defined multiple times in ",
+   "context": "loadingErrors.put(timeline.key(), new IllegalStateException(timeMarker + \" was defined multiple times in \" + clock.getRegisteredName()));",
+   "is_tb": false
+  },
+  {
+   "idx": 5,
+   "line": 95,
+   "original": "Time Marker ",
+   "context": "return DataResult.error(() -> \"Time Marker \" + entry.getKey() + \" must be in range [0; \" + periodTicks + \")\");",
+   "is_tb": false
+  },
+  {
+   "idx": 6,
+   "line": 95,
+   "original": " must be in range [0; ",
+   "context": "return DataResult.error(() -> \"Time Marker \" + entry.getKey() + \" must be in range [0; \" + periodTicks + \")\");",
+   "is_tb": false
+  },
+  {
+   "idx": 8,
+   "line": 152,
+   "original": "Timeline has no track for ",
+   "context": "throw new IllegalStateException(\"Timeline has no track for \" + attribute);",
+   "is_tb": false
+  }
+ ],
+ "net/minecraft/world/waypoints/TrackedWaypoint.java": [
+  {
+   "idx": 0,
+   "line": 103,
+   "original": "Unsupported Waypoint update operation: {}",
+   "context": "TrackedWaypoint.LOGGER.warn(\"Unsupported Waypoint update operation: {}\", other.getClass());",
+   "is_tb": false
+  },
+  {
+   "idx": 1,
+   "line": 159,
+   "original": "Unsupported Waypoint update operation: {}",
+   "context": "TrackedWaypoint.LOGGER.warn(\"Unsupported Waypoint update operation: {}\", other.getClass());",
+   "is_tb": false
+  },
+  {
+   "idx": 2,
+   "line": 277,
+   "original": "Unsupported Waypoint update operation: {}",
+   "context": "TrackedWaypoint.LOGGER.warn(\"Unsupported Waypoint update operation: {}\", other.getClass());",
+   "is_tb": false
+  }
+ ]
+}

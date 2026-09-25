@@ -1,0 +1,2233 @@
+### FILE: net/minecraft/data/BlockFamilies.java  (1)
+  L547: 'Duplicate family definition for '
+      ctx: throw new IllegalStateException("Duplicate family definition for " + BuiltInRegistries.BLOCK.getKey(base));
+
+### FILE: net/minecraft/data/DataGenerator.java  (8)
+  L60: 'Generator {} already run for version {}'
+      ctx: DataGenerator.LOGGER.debug("Generator {} already run for version {}", providerId, this.version.name());
+  L62: 'Starting provider: {}'
+      ctx: DataGenerator.LOGGER.info("Starting provider: {}", providerId);
+  L66: '{} finished after {} ms'
+      ctx: DataGenerator.LOGGER.info("{} finished after {} ms", providerId, stopwatch.elapsed(TimeUnit.MILLISECONDS));
+  L70: 'All providers took: {} ms'
+      ctx: DataGenerator.LOGGER.info("All providers took: {} ms", totalTime.elapsed(TimeUnit.MILLISECONDS));
+  L90: 'Duplicate provider: '
+      ctx: throw new IllegalStateException("Duplicate provider: " + providerId);
+  L111: 'Starting uncached provider: {}'
+      ctx: DataGenerator.LOGGER.info("Starting uncached provider: {}", providerId);
+  L115: '{} finished after {} ms'
+      ctx: DataGenerator.LOGGER.info("{} finished after {} ms", providerId, stopwatch.elapsed(TimeUnit.MILLISECONDS));
+  L118: 'All providers took: {} ms'
+      ctx: DataGenerator.LOGGER.info("All providers took: {} ms", totalTime.elapsed(TimeUnit.MILLISECONDS));
+
+### FILE: net/minecraft/data/DataProvider.java  (1)
+  L94: 'Failed to save file to {}'
+      ctx: LOGGER.error("Failed to save file to {}", path, e);
+
+### FILE: net/minecraft/data/HashCache.java  (7)
+  L76: 'Failed to parse cache {}, discarding'
+      ctx: LOGGER.warn("Failed to parse cache {}, discarding", providerCachePath, e);
+  L91: 'Provider not registered: '
+      ctx: throw new IllegalStateException("Provider not registered: " + providerId);
+  L131: 'Failed to delete file {}'
+      ctx: HashCache.LOGGER.warn("Failed to delete file {}", file, e);
+  L139: 'Caching: total files: {}, old count: {}, new count: {}, removed stale: {}, written: {}'
+      ctx: "Caching: total files: {}, old count: {}, new count: {}, removed stale: {}, written: {}",
+  L168: 'Cannot write to cache as it has already been closed'
+      ctx: throw new IllegalStateException("Cannot write to cache as it has already been closed");
+  L199: 'Missing cache file header'
+      ctx: throw new IllegalStateException("Missing cache file header");
+  L228: 'Unable write cachefile {}: {}'
+      ctx: HashCache.LOGGER.warn("Unable write cachefile {}: {}", cacheFile, e);
+
+### FILE: net/minecraft/data/Main.java  (9)
+  L69: 'System.out needed before bootstrap'
+      ctx: @SuppressForbidden(reason = "System.out needed before bootstrap")
+  L73: 'Show the help menu'
+      ctx: OptionSpec<Void> helpOption = parser.accepts("help", "Show the help menu").forHelp();
+  L74: 'Include server generators'
+      ctx: OptionSpec<Void> serverOption = parser.accepts("server", "Include server generators");
+  L75: 'Include development tools'
+      ctx: OptionSpec<Void> devOption = parser.accepts("dev", "Include development tools");
+  L76: 'Include data reports'
+      ctx: OptionSpec<Void> reportsOption = parser.accepts("reports", "Include data reports");
+  L77: 'Validate inputs'
+      ctx: parser.accepts("validate", "Validate inputs");
+  L78: 'Include all generators'
+      ctx: OptionSpec<Void> allOption = parser.accepts("all", "Include all generators");
+  L79: 'Output folder'
+      ctx: OptionSpec<String> outputOption = parser.accepts("output", "Output folder").withRequiredArg().defaultsTo("generated");
+  L80: 'Input folder'
+      ctx: OptionSpec<String> inputOption = parser.accepts("input", "Input folder").withRequiredArg();
+
+### FILE: net/minecraft/data/advancements/AdvancementProvider.java  (1)
+  L39: 'Duplicate advancement '
+      ctx: throw new IllegalStateException("Duplicate advancement " + holder.id());
+
+### FILE: net/minecraft/data/advancements/packs/VanillaAdventureAdvancements.java  (4)
+  L1245: 'Found EntityType with MobCategory only in either expected exceptions or kill_all_mobs advancement: '
+      ctx: "Found EntityType with MobCategory only in either expected exceptions or kill_all_mobs advancement: "
+  L1255: 'Found EntityType in both expected exceptions and kill_all_mobs advancement: '
+      ctx: "Found EntityType in both expected exceptions and kill_all_mobs advancement: "
+  L1271: 'Found (new?) EntityType with MobCategory %s which are in neither expected exceptions nor kill_all_mobs advancement: %s'
+      ctx: "Found (new?) EntityType with MobCategory %s which are in neither expected exceptions nor kill_all_mobs advancement: %s",
+  L1281: 'Found inconsistencies with kill_all_mobs advancement'
+      ctx: throw new IllegalStateException("Found inconsistencies with kill_all_mobs advancement");
+
+### FILE: net/minecraft/data/info/BiomeParametersDumpReport.java  (2)
+  L60: "Couldn't serialize element {}: {}"
+      ctx: Optional<JsonElement> result = codec.encodeStart(ops, value).resultOrPartial(e -> LOGGER.error("Couldn't serialize element {}: {}", path, e));
+  L70: 'Biome Parameters'
+      ctx: return "Biome Parameters";
+
+### FILE: net/minecraft/data/info/BlockListReport.java  (3)
+  L88: 'Failed to serialize block '
+      ctx: .getOrThrow(msg -> new AssertionError("Failed to serialize block " + id + " (is type registered in BlockTypes?): " + msg));
+  L88: ' (is type registered in BlockTypes?): '
+      ctx: .getOrThrow(msg -> new AssertionError("Failed to serialize block " + id + " (is type registered in BlockTypes?): " + msg));
+  L100: 'Block List'
+      ctx: return "Block List";
+
+### FILE: net/minecraft/data/info/CommandsReport.java  (1)
+  L38: 'Command Syntax'
+      ctx: return "Command Syntax";
+
+### FILE: net/minecraft/data/info/DatapackStructureReport.java  (2)
+  L62: 'Datapack Structure'
+      ctx: return "Datapack Structure";
+  L72: 'Duplicate entry for key '
+      ctx: throw new IllegalStateException("Duplicate entry for key " + key.identifier());
+
+### FILE: net/minecraft/data/info/PacketReport.java  (1)
+  L65: 'Packet Report'
+      ctx: return "Packet Report";
+
+### FILE: net/minecraft/data/info/RegistryComponentsReport.java  (2)
+  L52: 'Failed to encode components for item '
+      ctx: err -> new IllegalStateException("Failed to encode components for item " + elementId + ": " + err)
+  L68: 'Default Components'
+      ctx: return "Default Components";
+
+### FILE: net/minecraft/data/info/RegistryDumpReport.java  (1)
+  L53: 'Registry Dump'
+      ctx: return "Registry Dump";
+
+### FILE: net/minecraft/data/loot/BlockLootSubProvider.java  (3)
+  L739: "Missing loottable '%s' for '%s'"
+      ctx: Locale.ROOT, "Missing loottable '%s' for '%s'", lootTable.identifier(), BuiltInRegistries.BLOCK.getKey(block)
+  L752: 'Created block loot tables for non-blocks: '
+      ctx: throw new IllegalStateException("Created block loot tables for non-blocks: " + this.map.keySet());
+  L796: ' does not have loot table'
+      ctx: this.map.put(block.getLootTable().orElseThrow(() -> new IllegalStateException("Block " + block + " does not have loot table")), builder);
+
+### FILE: net/minecraft/data/loot/EntityLootSubProvider.java  (5)
+  L135: "Missing loottable '%s' for '%s'"
+      ctx: String.format(Locale.ROOT, "Missing loottable '%s' for '%s'", defaultLootTable.get(), holder.key().identifier())
+  L144: "Duplicate loottable '%s' for '%s'"
+      ctx: String.format(Locale.ROOT, "Duplicate loottable '%s' for '%s'", id, holder.key().identifier())
+  L158: "Weird loottables '%s' for '%s', not a LivingEntity so should not have loot"
+      ctx: "Weird loottables '%s' for '%s', not a LivingEntity so should not have loot",
+  L169: 'Created loot tables for entities not supported by datapack: '
+      ctx: throw new IllegalStateException("Created loot tables for entities not supported by datapack: " + this.map.keySet());
+  L193: ' has no loot table'
+      ctx: this.add(type, type.getDefaultLootTable().orElseThrow(() -> new IllegalStateException("Entity " + type + " has no loot table")), builder);
+
+### FILE: net/minecraft/data/loot/LootTableProvider.java  (5)
+  L66: 'Loot table random sequence seed collision on '
+      ctx: Util.logAndPauseIfInIde("Loot table random sequence seed collision on " + previous + " and " + id.identifier());
+  L84: 'Found validation problem in {}: {}'
+      ctx: problems.forEach((id, problem) -> LOGGER.warn("Found validation problem in {}: {}", id, problem.description()));
+  L85: 'Failed to validate loot tables, see logs'
+      ctx: throw new IllegalStateException("Failed to validate loot tables, see logs");
+  L102: 'Loot Tables'
+      ctx: return "Loot Tables";
+  L108: 'Missing built-in table: '
+      ctx: return "Missing built-in table: " + this.id.identifier();
+
+### FILE: net/minecraft/data/metadata/PackMetadataGenerator.java  (1)
+  L43: 'Pack Metadata'
+      ctx: return "Pack Metadata";
+
+### FILE: net/minecraft/data/recipes/RecipeBuilder.java  (1)
+  L33: " should remove its 'save' argument as it is equal to default one"
+      ctx: throw new IllegalStateException("Recipe " + id + " should remove its 'save' argument as it is equal to default one");
+
+### FILE: net/minecraft/data/recipes/RecipeProvider.java  (2)
+  L785: ' is not defined for the family.'
+      ctx: throw new IllegalStateException(baseVariant.name() + " is not defined for the family.");
+  L913: 'Duplicate recipe '
+      ctx: throw new IllegalStateException("Duplicate recipe " + id.identifier());
+
+### FILE: net/minecraft/data/recipes/RecipeUnlockAdvancementBuilder.java  (1)
+  L23: 'No way of obtaining recipe '
+      ctx: throw new IllegalStateException("No way of obtaining recipe " + id.identifier());
+
+### FILE: net/minecraft/data/recipes/ShapedRecipeBuilder.java  (4)
+  L58: "Symbol '"
+      ctx: throw new IllegalArgumentException("Symbol '" + symbol + "' is already defined!");
+  L58: "' is already defined!"
+      ctx: throw new IllegalArgumentException("Symbol '" + symbol + "' is already defined!");
+  L62: "Symbol ' ' (whitespace) is reserved and cannot be defined"
+      ctx: throw new IllegalArgumentException("Symbol ' ' (whitespace) is reserved and cannot be defined");
+  L71: 'Pattern must be the same width on every line!'
+      ctx: throw new IllegalArgumentException("Pattern must be the same width on every line!");
+
+### FILE: net/minecraft/data/recipes/packs/VanillaRecipeProvider.java  (1)
+  L2663: 'Vanilla Recipes'
+      ctx: return "Vanilla Recipes";
+
+### FILE: net/minecraft/data/registries/RegistriesDatapackGenerator.java  (1)
+  L66: "Couldn't generate file '"
+      ctx: error -> CompletableFuture.failedFuture(new IllegalStateException("Couldn't generate file '" + path + "': " + error.message()))
+
+### FILE: net/minecraft/data/registries/VanillaRegistries.java  (5)
+  L125: 'Placed feature '
+      ctx: Util.logAndPauseIfInIde("Placed feature " + key.identifier() + " in biome " + biomeKey + " is missing BiomeFilter.biome()");
+  L125: ' in biome '
+      ctx: Util.logAndPauseIfInIde("Placed feature " + key.identifier() + " in biome " + biomeKey + " is missing BiomeFilter.biome()");
+  L125: ' is missing BiomeFilter.biome()'
+      ctx: Util.logAndPauseIfInIde("Placed feature " + key.identifier() + " in biome " + biomeKey + " is missing BiomeFilter.biome()");
+  L129: 'Placed inline feature in biome '
+      ctx: Util.logAndPauseIfInIde("Placed inline feature in biome " + biome + " is missing BiomeFilter.biome()");
+  L129: ' is missing BiomeFilter.biome()'
+      ctx: Util.logAndPauseIfInIde("Placed inline feature in biome " + biome + " is missing BiomeFilter.biome()");
+
+### FILE: net/minecraft/data/structures/NbtToSnbt.java  (4)
+  L57: 'Failed to read structure input directory'
+      ctx: LOGGER.error("Failed to read structure input directory", e);
+  L72: 'NBT -> SNBT'
+      ctx: return "NBT -> SNBT";
+  L87: 'Converted {} from NBT to SNBT'
+      ctx: LOGGER.info("Converted {} from NBT to SNBT", name);
+  L90: "Couldn't convert {} from NBT to SNBT at {}"
+      ctx: LOGGER.error("Couldn't convert {} from NBT to SNBT at {}", name, path, e);
+
+### FILE: net/minecraft/data/structures/SnbtToNbt.java  (3)
+  L70: 'Failed to read structure input directory, aborting'
+      ctx: throw new RuntimeException("Failed to read structure input directory, aborting", e);
+  L80: 'SNBT -> NBT'
+      ctx: return "SNBT -> NBT";
+  L109: "Couldn't write structure {} at {}"
+      ctx: LOGGER.error("Couldn't write structure {} at {}", task.name, destination, e);
+
+### FILE: net/minecraft/data/structures/StructureUpdater.java  (1)
+  L27: 'SNBT Too old, do not forget to update: {} < {}: {}'
+      ctx: LOGGER.warn("SNBT Too old, do not forget to update: {} < {}: {}", fromVersion, 4882, name);
+
+### FILE: net/minecraft/data/tags/EnchantmentTagsProvider.java  (1)
+  L29: 'Not all enchantments were registered for tooltip ordering. Missing: '
+      ctx: throw new IllegalStateException("Not all enchantments were registered for tooltip ordering. Missing: " + String.join(", ", unlisted));
+
+### FILE: net/minecraft/data/tags/TagsProvider.java  (2)
+  L55: 'Tags for '
+      ctx: return "Tags for " + this.registryKey.identifier();
+  L90: "Couldn't define tag %s as it is missing following references: %s"
+      ctx: "Couldn't define tag %s as it is missing following references: %s",
+
+### FILE: net/minecraft/data/worldgen/placement/PlacementUtils.java  (1)
+  L80: 'Chance data cannot be represented as list weight'
+      ctx: throw new IllegalStateException("Chance data cannot be represented as list weight");
+
+### FILE: net/minecraft/util/BlockUtil.java  (1)
+  L160: ', max='
+      ctx: return "IntBounds{min=" + this.min + ", max=" + this.max + "}";
+
+### FILE: net/minecraft/util/ByIdMap.java  (11)
+  L13: 'Empty value list'
+      ctx: throw new IllegalArgumentException("Empty value list");
+  L22: 'Duplicate entry on id '
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L22: ': current='
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L22: ', previous='
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L37: 'Empty value list'
+      ctx: throw new IllegalArgumentException("Empty value list");
+  L46: 'Values are not continous, found index '
+      ctx: throw new IllegalArgumentException("Values are not continous, found index " + id + " for value " + value);
+  L46: ' for value '
+      ctx: throw new IllegalArgumentException("Values are not continous, found index " + id + " for value " + value);
+  L51: 'Duplicate entry on id '
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L51: ': current='
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L51: ', previous='
+      ctx: throw new IllegalArgumentException("Duplicate entry on id " + id + ": current=" + value + ", previous=" + previous);
+  L59: 'Missing value at index: '
+      ctx: throw new IllegalArgumentException("Missing value at index: " + i);
+
+### FILE: net/minecraft/util/ClassInstanceMultiMap.java  (1)
+  L59: "Don't know how to search for "
+      ctx: throw new IllegalArgumentException("Don't know how to search for " + index);
+
+### FILE: net/minecraft/util/CrudeIncrementalIntIdentityHashBiMap.java  (1)
+  L171: 'Overflowed :('
+      ctx: throw new RuntimeException("Overflowed :(");
+
+### FILE: net/minecraft/util/Crypt.java  (12)
+  L37: '-----BEGIN RSA PRIVATE KEY-----'
+      ctx: private static final String PEM_RSA_PRIVATE_KEY_HEADER = "-----BEGIN RSA PRIVATE KEY-----";
+  L38: '-----END RSA PRIVATE KEY-----'
+      ctx: private static final String PEM_RSA_PRIVATE_KEY_FOOTER = "-----END RSA PRIVATE KEY-----";
+  L39: '-----BEGIN RSA PUBLIC KEY-----'
+      ctx: public static final String RSA_PUBLIC_KEY_HEADER = "-----BEGIN RSA PUBLIC KEY-----";
+  L40: '-----END RSA PUBLIC KEY-----'
+      ctx: private static final String RSA_PUBLIC_KEY_FOOTER = "-----END RSA PUBLIC KEY-----";
+  L114: '-----BEGIN RSA PRIVATE KEY-----'
+      ctx: return rsaStringToKey(rsaString, "-----BEGIN RSA PRIVATE KEY-----", "-----END RSA PRIVATE KEY-----", Crypt::byteToPrivateKey);
+  L114: '-----END RSA PRIVATE KEY-----'
+      ctx: return rsaStringToKey(rsaString, "-----BEGIN RSA PRIVATE KEY-----", "-----END RSA PRIVATE KEY-----", Crypt::byteToPrivateKey);
+  L118: '-----BEGIN RSA PUBLIC KEY-----'
+      ctx: return rsaStringToKey(rsaString, "-----BEGIN RSA PUBLIC KEY-----", "-----END RSA PUBLIC KEY-----", Crypt::byteToPublicKey);
+  L118: '-----END RSA PUBLIC KEY-----'
+      ctx: return rsaStringToKey(rsaString, "-----BEGIN RSA PUBLIC KEY-----", "-----END RSA PUBLIC KEY-----", Crypt::byteToPublicKey);
+  L123: 'Public key must be RSA'
+      ctx: throw new IllegalArgumentException("Public key must be RSA");
+  L125: '-----BEGIN RSA PUBLIC KEY-----\\n'
+      ctx: return "-----BEGIN RSA PUBLIC KEY-----\n" + MIME_ENCODER.encodeToString(publicKey.getEncoded()) + "\n-----END RSA PUBLIC KEY-----\n";
+  L131: 'Private key must be RSA'
+      ctx: throw new IllegalArgumentException("Private key must be RSA");
+  L133: '-----BEGIN RSA PRIVATE KEY-----\\n'
+      ctx: return "-----BEGIN RSA PRIVATE KEY-----\n" + MIME_ENCODER.encodeToString(privateKey.getEncoded()) + "\n-----END RSA PRIVATE KEY-----\n";
+
+### FILE: net/minecraft/util/CsvOutput.java  (2)
+  L30: 'Invalid number of columns, expected '
+      ctx: throw new IllegalArgumentException("Invalid number of columns, expected " + this.columnCount + ", but got " + values.length);
+  L30: ', but got '
+      ctx: throw new IllegalArgumentException("Invalid number of columns, expected " + this.columnCount + ", but got " + values.length);
+
+### FILE: net/minecraft/util/CubicSpline.java  (7)
+  L120: 'Please register points in ascending order'
+      ctx: throw new IllegalArgumentException("Please register points in ascending order");
+  L131: 'No elements added'
+      ctx: throw new IllegalStateException("No elements added");
+  L232: 'All lengths must be equal, got: '
+      ctx: throw new IllegalArgumentException("All lengths must be equal, got: " + locations.length + " " + values.size() + " " + derivatives.length);
+  L236: 'Cannot create a multipoint spline with no points'
+      ctx: throw new IllegalArgumentException("Cannot create a multipoint spline with no points");
+  L281: ', locations='
+      ctx: + ", locations="
+  L283: ', derivatives='
+      ctx: + ", derivatives="
+  L285: ', values='
+      ctx: + ", values="
+
+### FILE: net/minecraft/util/DelegateDataOutput.java  (1)
+  L69: 'Delegation is not use'
+      ctx: @SuppressForbidden(reason = "Delegation is not use")
+
+### FILE: net/minecraft/util/DirectoryLock.java  (1)
+  L94: 'already locked (possibly by other Minecraft instance?)'
+      ctx: return new DirectoryLock.LockException(path, "already locked (possibly by other Minecraft instance?)");
+
+### FILE: net/minecraft/util/EasingType.java  (2)
+  L164: 'x1 must be in range [0; 1]'
+      ctx: return DataResult.error(() -> "x1 must be in range [0; 1]");
+  L166: 'x2 must be in range [0; 1]'
+      ctx: return !(this.x2 < 0.0F) && !(this.x2 > 1.0F) ? DataResult.success(this) : DataResult.error(() -> "x2 must be in range [0; 1]");
+
+### FILE: net/minecraft/util/ExtraCodecs.java  (45)
+  L146: 'Unsigned byte was too large: '
+      ctx: integer -> integer > 255 ? DataResult.error(() -> "Unsigned byte was too large: " + integer + " > 255") : DataResult.success(integer.byteValue())
+  L148: 'Value must be non-negative: '
+      ctx: public static final Codec<Integer> NON_NEGATIVE_INT = intRangeWithMessage(0, Integer.MAX_VALUE, n -> "Value must be non-negative: " + n);
+  L149: 'Value must be positive: '
+      ctx: public static final Codec<Integer> POSITIVE_INT = intRangeWithMessage(1, Integer.MAX_VALUE, n -> "Value must be positive: " + n);
+  L150: 'Value must be non-negative: '
+      ctx: public static final Codec<Long> NON_NEGATIVE_LONG = longRangeWithMessage(0L, Long.MAX_VALUE, n -> "Value must be non-negative: " + n);
+  L151: 'Value must be positive: '
+      ctx: public static final Codec<Long> POSITIVE_LONG = longRangeWithMessage(1L, Long.MAX_VALUE, n -> "Value must be positive: " + n);
+  L152: 'Value must be non-negative: '
+      ctx: public static final Codec<Float> NON_NEGATIVE_FLOAT = floatRangeMinInclusiveWithMessage(0.0F, Float.MAX_VALUE, n -> "Value must be non-negative: " + n);
+  L153: 'Value must be positive: '
+      ctx: public static final Codec<Float> POSITIVE_FLOAT = floatRangeMinExclusiveWithMessage(0.0F, Float.MAX_VALUE, n -> "Value must be positive: " + n);
+  L158: "Invalid regex pattern '"
+      ctx: return DataResult.error(() -> "Invalid regex pattern '" + pattern + "': " + e.getMessage());
+  L166: 'Malformed base64 string'
+      ctx: return DataResult.error(() -> "Malformed base64 string");
+  L197: 'Cannot have more than 16 properties, but was '
+      ctx: map -> map.size() > 16 ? DataResult.error(() -> "Cannot have more than 16 properties, but was " + map.size()) : DataResult.success(map)
+  L218: "Player name contained disallowed characters: '"
+      ctx: : DataResult.error(() -> "Player name contained disallowed characters: '" + name + "'")
+  L223: 'Expected non-empty string'
+      ctx: .validate(value -> value.isEmpty() ? DataResult.error(() -> "Expected non-empty string") : DataResult.success(value));
+  L226: 'Expected one codepoint, got: '
+      ctx: return codepoint.length != 1 ? DataResult.error(() -> "Expected one codepoint, got: " + s) : DataResult.success(codepoint[0]);
+  L229: 'Invalid string to use as a resource path element: '
+      ctx: .validate(s -> !Identifier.isValidPath(s) ? DataResult.error(() -> "Invalid string to use as a resource path element: " + s) : DataResult.success(s));
+  L241: "Disallowed chat character: '"
+      ctx: return DataResult.error(() -> "Disallowed chat character: '" + c + "'");
+  L256: 'Hex color must begin with #'
+      ctx: return DataResult.error(() -> "Hex color must begin with #");
+  L261: 'Hex color is wrong size, expected '
+      ctx: return DataResult.error(() -> "Hex color is wrong size, expected " + expectedDigits + " digits but got " + digits);
+  L261: ' digits but got '
+      ctx: return DataResult.error(() -> "Hex color is wrong size, expected " + expectedDigits + " digits but got " + digits);
+  L266: 'Color value out of range: '
+      ctx: return value >= 0L && value <= maxValue ? DataResult.success((int)value) : DataResult.error(() -> "Color value out of range: " + string);
+  L268: 'Invalid color value: '
+      ctx: return DataResult.error(() -> "Invalid color value: " + string);
+  L306: ' -> using default)'
+      ctx: return result.isPresent() ? a : DataResult.error(() -> "(" + message.get() + " -> using default)", Pair.of(value, input));
+  L324: 'Unknown element id: '
+      ctx: id -> Optional.ofNullable(fromInt.apply(id)).map(DataResult::success).orElseGet(() -> DataResult.error(() -> "Unknown element id: " + id)),
+  L327: 'Element with unknown id: '
+      ctx: return id == unknownId ? DataResult.error(() -> "Element with unknown id: " + e) : DataResult.success(id);
+  L335: 'Unknown element id: '
+      ctx: return element == null ? DataResult.error(() -> "Unknown element id: " + id) : DataResult.success(element);
+  L338: 'Element with unknown id: '
+      ctx: return id == null ? DataResult.error(() -> "Element with unknown id: " + e) : DataResult.success(id);
+  L433: 'Value must be within range ['
+      ctx: return intRangeWithMessage(minInclusive, maxInclusive, n -> "Value must be within range [" + minInclusive + ";" + maxInclusive + "]: " + n);
+  L446: 'Value must be within range ['
+      ctx: return longRangeWithMessage(minInclusive, maxInclusive, n -> "Value must be within range [" + minInclusive + ";" + maxInclusive + "]: " + n);
+  L469: 'Value must be within range ['
+      ctx: minInclusive, maxInclusive, n -> "Value must be within range [" + minInclusive + ";" + maxInclusive + "]: " + n
+  L474: 'List must have contents'
+      ctx: return listCodec.validate(list -> list.isEmpty() ? DataResult.error(() -> "List must have contents") : DataResult.success(list));
+  L479: 'List must have contents'
+      ctx: list -> list.unwrap().right().filter(List::isEmpty).isPresent() ? DataResult.error(() -> "List must have contents") : DataResult.success(list)
+  L484: 'Map must have contents'
+      ctx: return mapCodec.validate(map -> map.isEmpty() ? DataResult.error(() -> "Map must have contents") : DataResult.success(map));
+  L523: 'Mixed type list: element '
+      ctx: return DataResult.error(() -> "Mixed type list: element " + next + " had type " + nextType + ", but list is of type " + firstType);
+  L523: ' had type '
+      ctx: return DataResult.error(() -> "Mixed type list: element " + next + " had type " + nextType + ", but list is of type " + firstType);
+  L523: ', but list is of type '
+      ctx: return DataResult.error(() -> "Mixed type list: element " + next + " had type " + nextType + ", but list is of type " + firstType);
+  L539: 'Caught exception decoding '
+      ctx: return DataResult.error(() -> "Caught exception decoding " + input + ": " + e.getMessage());
+  L573: 'Map is too long: '
+      ctx: ? DataResult.error(() -> "Map is too long: " + map.size() + ", expected range [0-" + maxSizeInclusive + "]")
+  L573: ', expected range [0-'
+      ctx: ? DataResult.error(() -> "Map is too long: " + map.size() + ", expected range [0-" + maxSizeInclusive + "]")
+  L600: 'Missing \\"'
+      ctx: ? DataResult.error(() -> "Missing \"" + typeKey + "\" in: " + input)
+  L652: 'No value with id: '
+      ctx: return DataResult.error(() -> "No value with id: " + key);
+  L667: 'Illegal absolute path: '
+      ctx: return DataResult.error(() -> "Illegal absolute path: " + path);
+  L671: 'Illegal path traversal: '
+      ctx: : DataResult.error(() -> "Illegal path traversal: " + path);
+  L699: 'Value for '
+      ctx: Objects.requireNonNull(value, () -> "Value for " + id + " is null");
+  L699: ' is null'
+      ctx: Objects.requireNonNull(value, () -> "Value for " + id + " is null");
+  L721: "Map entry '"
+      ctx: return DataResult.error(() -> k.result().isPresent() ? "Map entry '" + k.result().get() + "' : " + errorMessage : errorMessage);
+  L725: 'Empty or invalid map contents are not allowed'
+      ctx: return DataResult.error(() -> "Empty or invalid map contents are not allowed");
+
+### FILE: net/minecraft/util/FileSystemUtil.java  (1)
+  L22: 'Unable to get path for: {}'
+      ctx: LOGGER.warn("Unable to get path for: {}", probeUri, t);
+
+### FILE: net/minecraft/util/FileUtil.java  (10)
+  L18: '(<name>.*) \\\\((<count>\\\\d*)\\\\)'
+      ctx: private static final Pattern COPY_COUNTER_PATTERN = Pattern.compile("(<name>.*) \\((<count>\\d*)\\)", Pattern.UNICODE_CASE | Pattern.CASE_INSENSITIVE);
+  L101: "Invalid path '"
+      ctx: case "", ".", ".." -> DataResult.error(() -> "Invalid path '" + path + "'");
+  L102: "Invalid path '"
+      ctx: default -> !containsAllowedCharactersOnly(path) ? DataResult.error(() -> "Invalid path '" + path + "'") : DataResult.success(List.of(path));
+  L115: "Invalid segment '"
+      ctx: return DataResult.error(() -> "Invalid segment '" + segment + "' in path '" + path + "'");
+  L115: "' in path '"
+      ctx: return DataResult.error(() -> "Invalid segment '" + segment + "' in path '" + path + "'");
+  L119: "Invalid segment '"
+      ctx: return DataResult.error(() -> "Invalid segment '" + segment + "' in path '" + path + "'");
+  L119: "' in path '"
+      ctx: return DataResult.error(() -> "Invalid segment '" + segment + "' in path '" + path + "'");
+  L165: 'Path must have at least one element'
+      ctx: throw new IllegalArgumentException("Path must have at least one element");
+  L170: 'Illegal segment '
+      ctx: throw new IllegalArgumentException("Illegal segment " + segment + " in path " + Arrays.toString(path));
+  L170: ' in path '
+      ctx: throw new IllegalArgumentException("Illegal segment " + segment + " in path " + Arrays.toString(path));
+
+### FILE: net/minecraft/util/FileZipper.java  (1)
+  L81: 'Compressed to {}'
+      ctx: LOGGER.info("Compressed to {}", this.outputFile);
+
+### FILE: net/minecraft/util/FutureChain.java  (1)
+  L35: 'Chain link failed, continuing to next one'
+      ctx: LOGGER.error("Chain link failed, continuing to next one", t);
+
+### FILE: net/minecraft/util/GsonHelper.java  (40)
+  L85: 'Missing field '
+      ctx: throw new JsonSyntaxException("Missing field " + name);
+  L93: ' to be a string, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a string, was " + getType(element));
+  L101: ', expected to find a string'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a string");
+  L115: " to be an item, was unknown string '"
+      ctx: .orElseThrow(() -> new JsonSyntaxException("Expected " + name + " to be an item, was unknown string '" + itemName + "'"));
+  L117: ' to be an item, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be an item, was " + getType(element));
+  L125: ', expected to find an item'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find an item");
+  L138: ' to be a Boolean, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Boolean, was " + getType(element));
+  L146: ', expected to find a Boolean'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Boolean");
+  L158: ' to be a Double, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Double, was " + getType(element));
+  L166: ', expected to find a Double'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Double");
+  L178: ' to be a Float, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Float, was " + getType(element));
+  L186: ', expected to find a Float'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Float");
+  L198: ' to be a Long, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Long, was " + getType(element));
+  L206: ', expected to find a Long'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Long");
+  L218: ' to be a Int, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Int, was " + getType(element));
+  L226: ', expected to find a Int'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Int");
+  L238: ' to be a Byte, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Byte, was " + getType(element));
+  L246: ', expected to find a Byte'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Byte");
+  L258: ' to be a Character, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Character, was " + getType(element));
+  L266: ', expected to find a Character'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Character");
+  L278: ' to be a BigDecimal, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a BigDecimal, was " + getType(element));
+  L286: ', expected to find a BigDecimal'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a BigDecimal");
+  L298: ' to be a BigInteger, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a BigInteger, was " + getType(element));
+  L306: ', expected to find a BigInteger'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a BigInteger");
+  L318: ' to be a Short, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a Short, was " + getType(element));
+  L326: ', expected to find a Short'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a Short");
+  L338: ' to be a JsonObject, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a JsonObject, was " + getType(element));
+  L346: ', expected to find a JsonObject'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a JsonObject");
+  L359: ' to be a JsonArray, was '
+      ctx: throw new JsonSyntaxException("Expected " + name + " to be a JsonArray, was " + getType(element));
+  L367: ', expected to find a JsonArray'
+      ctx: throw new JsonSyntaxException("Missing " + name + ", expected to find a JsonArray");
+  L404: 'null (missing)'
+      ctx: return "null (missing)";
+  L408: 'null (json)'
+      ctx: return "null (json)";
+  L412: 'an array ('
+      ctx: return "an array (" + value + ")";
+  L416: 'an object ('
+      ctx: return "an object (" + value + ")";
+  L422: 'a number ('
+      ctx: return "a number (" + value + ")";
+  L426: 'a boolean ('
+      ctx: return "a boolean (" + value + ")";
+  L439: 'JSON data was null or empty'
+      ctx: throw new JsonParseException("JSON data was null or empty");
+  L461: 'JSON data was null or empty'
+      ctx: throw new JsonParseException("JSON data was null or empty");
+  L526: "Couldn't write "
+      ctx: throw new IllegalArgumentException("Couldn't write " + value.getClass());
+  L574: 'Character count over limit: '
+      ctx: throw new IllegalStateException("Character count over limit: " + this.totalCount + " > " + this.limit);
+
+### FILE: net/minecraft/util/HashOps.java  (2)
+  L52: 'Unsupported operation'
+      ctx: private static final DataResult<Object> UNSUPPORTED_OPERATION_ERROR = DataResult.error(() -> "Unsupported operation");
+  L225: "Can't convert from this type"
+      ctx: throw new UnsupportedOperationException("Can't convert from this type");
+
+### FILE: net/minecraft/util/HttpUtil.java  (16)
+  L54: 'Returning cached file since actual hash matches requested'
+      ctx: LOGGER.info("Returning cached file since actual hash matches requested");
+  L60: 'Failed to check cached file {}'
+      ctx: LOGGER.warn("Failed to check cached file {}", targetFile, e);
+  L64: 'Existing file {} not found or had mismatched hash'
+      ctx: LOGGER.warn("Existing file {} not found or had mismatched hash", targetFile);
+  L68: 'Failed to remove existing file '
+      ctx: throw new UncheckedIOException("Failed to remove existing file " + targetFile, e);
+  L84: 'Filesize is bigger than maximum allowed (file is '
+      ctx: throw new IOException("Filesize is bigger than maximum allowed (file is " + size + ", limit is " + maxSize + ")");
+  L84: ', limit is '
+      ctx: throw new IOException("Filesize is bigger than maximum allowed (file is " + size + ", limit is " + maxSize + ")");
+  L90: 'Hash of downloaded file ('
+      ctx: throw new IOException("Hash of downloaded file (" + actualHash + ") did not match requested (" + requestedHash + ")");
+  L90: ') did not match requested ('
+      ctx: throw new IOException("Hash of downloaded file (" + actualHash + ") did not match requested (" + requestedHash + ")");
+  L118: 'HTTP response error: {}'
+      ctx: LOGGER.error("HTTP response error: {}", IOUtils.toString(error, StandardCharsets.UTF_8));
+  L120: 'Failed to read response from server'
+      ctx: LOGGER.error("Failed to read response from server");
+  L126: 'Failed to download file '
+      ctx: throw new IllegalStateException("Failed to download file " + url, t);
+  L136: 'Failed to update modification time of {}'
+      ctx: LOGGER.warn("Failed to update modification time of {}", targetFile, e);
+  L160: 'Mismatched hash of file {}, expected {} but found {}'
+      ctx: LOGGER.warn("Mismatched hash of file {}, expected {} but found {}", file, expectedHash, actualHash);
+  L183: 'Filesize was bigger than maximum allowed (got >= '
+      ctx: throw new IOException("Filesize was bigger than maximum allowed (got >= " + readSoFar + ", limit was " + maxSize + ")");
+  L183: ', limit was '
+      ctx: throw new IOException("Filesize was bigger than maximum allowed (got >= " + readSoFar + ", limit was " + maxSize + ")");
+  L188: 'Download interrupted'
+      ctx: throw new IOException("Download interrupted");
+
+### FILE: net/minecraft/util/InclusiveRange.java  (4)
+  L12: 'min_inclusive must be less than or equal to max_inclusive'
+      ctx: throw new IllegalArgumentException("min_inclusive must be less than or equal to max_inclusive");
+  L34: 'Range limit too low, expected at least '
+      ctx: () -> "Range limit too low, expected at least "
+  L45: 'Range limit too high, expected at most '
+      ctx: () -> "Range limit too high, expected at most "
+  L62: 'min_inclusive must be less than or equal to max_inclusive'
+      ctx: : DataResult.error(() -> "min_inclusive must be less than or equal to max_inclusive");
+
+### FILE: net/minecraft/util/KeyframeTrack.java  (6)
+  L17: 'Track has no keyframes'
+      ctx: throw new IllegalArgumentException("Track has no keyframes");
+  L34: 'Keyframes must not be empty'
+      ctx: return DataResult.error(() -> "Keyframes must not be empty");
+  L38: 'Keyframes must be ordered by ticks field'
+      ctx: return DataResult.error(() -> "Keyframes must be ordered by ticks field");
+  L48: 'More than 2 keyframes on same tick: '
+      ctx: return DataResult.error(() -> "More than 2 keyframes on same tick: " + keyframe.ticks());
+  L65: 'Keyframe at tick '
+      ctx: return DataResult.error(() -> "Keyframe at tick " + keyframe.ticks() + " must be in range [0; " + periodTicks + "]");
+  L65: ' must be in range [0; '
+      ctx: return DataResult.error(() -> "Keyframe at tick " + keyframe.ticks() + " must be in range [0; " + periodTicks + "]");
+
+### FILE: net/minecraft/util/ModCheck.java  (5)
+  L10: " brand changed to '"
+      ctx: return new ModCheck(ModCheck.Confidence.DEFINITELY, component + " brand changed to '" + mod + "'");
+  L13: ' jar signature invalidated'
+      ctx: ? new ModCheck(ModCheck.Confidence.VERY_LIKELY, component + " jar signature invalidated")
+  L14: ' jar signature and brand is untouched'
+      ctx: : new ModCheck(ModCheck.Confidence.PROBABLY_NOT, component + " jar signature and brand is untouched");
+  L31: 'Probably not.'
+      ctx: PROBABLY_NOT("Probably not.", false),
+  L32: 'Very likely;'
+      ctx: VERY_LIKELY("Very likely;", true),
+
+### FILE: net/minecraft/util/Mth.java  (4)
+  L295: 'itemCount must be greater than or equal to zero'
+      ctx: throw new IllegalArgumentException("itemCount must be greater than or equal to zero");
+  L510: 'Something went wrong when converting from HSV to RGB. Input was '
+      ctx: throw new RuntimeException("Something went wrong when converting from HSV to RGB. Input was " + hue + ", " + saturation + ", " + value);
+  L736: 'upperBound %d expected to be > lowerBound %d'
+      ctx: throw new IllegalArgumentException(String.format(Locale.ROOT, "upperBound %d expected to be > lowerBound %d", upperBound, lowerBound));
+  L740: 'step size expected to be >= 1, was %d'
+      ctx: throw new IllegalArgumentException(String.format(Locale.ROOT, "step size expected to be >= 1, was %d", stepSize));
+
+### FILE: net/minecraft/util/NativeModuleLister.java  (2)
+  L89: 'Failed to find module info for {}'
+      ctx: LOGGER.info("Failed to find module info for {}", path, e);
+  L115: "Can't get version value "
+      ctx: throw new UnsupportedOperationException("Can't get version value " + key);
+
+### FILE: net/minecraft/util/PngInfo.java  (7)
+  L21: 'Bad PNG Signature: '
+      ctx: throw new IOException("Bad PNG Signature: " + FORMAT.toHexDigits(magic));
+  L26: 'Bad length for IHDR chunk: '
+      ctx: throw new IOException("Bad length for IHDR chunk: " + headerSize);
+  L31: 'Bad type for IHDR chunk: '
+      ctx: throw new IOException("Bad type for IHDR chunk: " + FORMAT.toHexDigits(headerType));
+  L47: 'PNG header missing'
+      ctx: throw new IOException("PNG header missing");
+  L51: 'Bad PNG Signature'
+      ctx: throw new IOException("Bad PNG Signature");
+  L55: 'Bad length for IHDR chunk!'
+      ctx: throw new IOException("Bad length for IHDR chunk!");
+  L59: 'Bad type for IHDR chunk!'
+      ctx: throw new IOException("Bad type for IHDR chunk!");
+
+### FILE: net/minecraft/util/ProblemReporter.java  (1)
+  L246: '[{}] Serialization errors:\\n{}'
+      ctx: this.logger.warn("[{}] Serialization errors:\n{}", this.logger.getName(), this.getTreeReport());
+
+### FILE: net/minecraft/util/RandomSource.java  (1)
+  L75: 'bound - origin is non positive'
+      ctx: throw new IllegalArgumentException("bound - origin is non positive");
+
+### FILE: net/minecraft/util/SegmentedAnglePrecision.java  (2)
+  L13: 'Precision cannot be less than 2 bits'
+      ctx: throw new IllegalArgumentException("Precision cannot be less than 2 bits");
+  L17: 'Precision cannot be greater than 30 bits'
+      ctx: throw new IllegalArgumentException("Precision cannot be greater than 30 bits");
+
+### FILE: net/minecraft/util/SignatureValidator.java  (2)
+  L36: 'Failed to verify signature'
+      ctx: LOGGER.error("Failed to verify signature", e);
+  L50: 'Failed to verify Services signature'
+      ctx: LOGGER.error("Failed to verify Services signature", e);
+
+### FILE: net/minecraft/util/Signer.java  (1)
+  L25: 'Failed to sign message'
+      ctx: throw new IllegalStateException("Failed to sign message", e);
+
+### FILE: net/minecraft/util/SimpleBitStorage.java  (3)
+  L271: 'Invalid length given for storage, got: '
+      ctx: throw new SimpleBitStorage.InitializationException("Invalid length given for storage, got: " + data.length + " but expected: " + requiredLength);
+  L271: ' but expected: '
+      ctx: throw new SimpleBitStorage.InitializationException("Invalid length given for storage, got: " + data.length + " but expected: " + requiredLength);
+  L282: 'Size > 4096 not supported'
+      ctx: throw new IllegalStateException("Size > 4096 not supported");
+
+### FILE: net/minecraft/util/SortedArraySet.java  (2)
+  L96: 'Initial capacity ('
+      ctx: throw new IllegalArgumentException("Initial capacity (" + initialCapacity + ") is negative");
+  L96: ') is negative'
+      ctx: throw new IllegalArgumentException("Initial capacity (" + initialCapacity + ") is negative");
+
+### FILE: net/minecraft/util/StaticCache2D.java  (3)
+  L42: 'Requested out of range value ('
+      ctx: throw new IllegalArgumentException("Requested out of range value (" + x + "," + z + ") from " + this);
+  L42: ') from '
+      ctx: throw new IllegalArgumentException("Requested out of range value (" + x + "," + z + ") from " + this);
+  L56: 'StaticCache2D[%d, %d, %d, %d]'
+      ctx: return String.format(Locale.ROOT, "StaticCache2D[%d, %d, %d, %d]", this.minX, this.minZ, this.minX + this.sizeX, this.minZ + this.sizeZ);
+
+### FILE: net/minecraft/util/StrictJsonParser.java  (1)
+  L22: 'Did not consume the entire document.'
+      ctx: throw new JsonSyntaxException("Did not consume the entire document.");
+
+### FILE: net/minecraft/util/TaskChainer.java  (1)
+  L18: 'Task failed'
+      ctx: LOGGER.error("Task failed", e);
+
+### FILE: net/minecraft/util/ThreadingDetector.java  (5)
+  L76: ' from multiple threads'
+      ctx: String error = "Accessing " + name + " from multiple threads";
+  L78: 'Thread dumps'
+      ctx: CrashReportCategory category = report.addCategory("Thread dumps");
+  L79: 'Thread dumps'
+      ctx: category.setDetail("Thread dumps", threads);
+  L80: 'Thread dumps: \\n{}'
+      ctx: LOGGER.error("Thread dumps: \n{}", threads);
+  L85: ': \\n\\tat '
+      ctx: return thread.getName() + ": \n\tat " + Arrays.stream(thread.getStackTrace()).map(Object::toString).collect(Collectors.joining("\n\tat "));
+
+### FILE: net/minecraft/util/Util.java  (39)
+  L119: 'Uncaught exception in thread '
+      ctx: LOGGER.error("Uncaught exception in thread " + thread.getName(), throwable);
+  L142: 'No jar file system provider found'
+      ctx: .orElseThrow(() -> new IllegalStateException("No jar file system provider found"));
+  L232: '{} died'
+      ctx: Util.LOGGER.warn("{} died", this.getName(), exception);
+  L234: '{} shutdown'
+      ctx: Util.LOGGER.debug("{} shutdown", this.getName());
+  L275: "Wrong {} property value '{}'. Should be an integer value between 1 and {}."
+      ctx: LOGGER.error("Wrong {} property value '{}'. Should be an integer value between 1 and {}.", "max.bg.threads", maxThreadsString, 255);
+  L277: "Could not parse {} property value '{}'. Should be an integer value between 1 and {}."
+      ctx: LOGGER.error("Could not parse {} property value '{}'. Should be an integer value between 1 and {}.", "max.bg.threads", maxThreadsString, 255);
+  L338: 'Caught exception in thread {}'
+      ctx: LOGGER.error("Caught exception in thread {}", thread, throwable);
+  L343: 'Exception on worker thread'
+      ctx: report = CrashReport.forThrowable(throwable, "Exception on worker thread");
+  L363: 'No data fixer registered for {}'
+      ctx: LOGGER.error("No data fixer registered for {}", name);
+  L576: 'Intentional use of default locale for user-visible date'
+      ctx: @SuppressForbidden(reason = "Intentional use of default locale for user-visible date")
+  L612: 'Missing protocol in URI: '
+      ctx: throw new URISyntaxException(uri, "Missing protocol in URI: " + uri);
+  L616: 'Unsupported protocol in URI: '
+      ctx: throw new URISyntaxException(uri, "Unsupported protocol in URI: " + uri);
+  L807: 'Trying to throw a fatal exception, pausing in IDE'
+      ctx: LOGGER.error("Trying to throw a fatal exception, pausing in IDE", t);
+  L820: 'Did you remember to set a breakpoint here?'
+      ctx: LOGGER.warn("Did you remember to set a breakpoint here?");
+  L859: 'Failed to rename'
+      ctx: Util.LOGGER.error("Failed to rename", e);
+  L879: 'Failed to delete'
+      ctx: Util.LOGGER.warn("Failed to delete", e);
+  L886: 'delete old '
+      ctx: return "delete old " + target;
+  L900: 'verify that '
+      ctx: return "verify that " + target + " is deleted";
+  L900: ' is deleted'
+      ctx: return "verify that " + target + " is deleted";
+  L914: 'verify that '
+      ctx: return "verify that " + target + " is present";
+  L914: ' is present'
+      ctx: return "verify that " + target + " is present";
+  L922: 'Failed to execute {}'
+      ctx: LOGGER.warn("Failed to execute {}", operation);
+  L936: 'Failed to {}, retrying {}/{}'
+      ctx: LOGGER.error("Failed to {}, retrying {}/{}", description, retry, numberOfRetries);
+  L939: 'Failed to {}, aborting, progress might be lost'
+      ctx: LOGGER.error("Failed to {}, aborting, progress might be lost", description);
+  L944: 'move from  '
+      ctx: return runWithRetries(10, "move from  " + fromPath + " to " + toPath, createRenamer(fromPath, toPath, options), createFileCreatedCheck(toPath));
+  L954: 'create backup '
+      ctx: 10, "create backup " + backupPath, createDeleter(backupPath), createRenamer(targetPath, backupPath), createFileCreatedCheck(backupPath)
+  L957: 'remove old '
+      ctx: } else if (!runWithRetries(10, "remove old " + targetPath, createDeleter(targetPath), createFileDeletedCheck(targetPath))) {
+  L995: 'Input is not a list of '
+      ctx: Supplier<String> message = () -> "Input is not a list of " + size + " ints";
+  L1005: 'Input is not a list of '
+      ctx: Supplier<String> message = () -> "Input is not a list of " + size + " longs";
+  L1014: 'Input is not a list of '
+      ctx: Supplier<String> message = () -> "Input is not a list of " + size + " elements";
+  L1022: 'Timer hack thread'
+      ctx: Thread timerThread = new Thread("Timer hack thread") {
+  L1029: 'Timer hack thread interrupted, that really should not happen'
+      ctx: Util.LOGGER.warn("Timer hack thread interrupted, that really should not happen");
+  L1068: ', size='
+      ctx: return "memoize/1[function=" + function + ", size=" + this.cache.size() + "]";
+  L1084: ', size='
+      ctx: return "memoize/2[function=" + function + ", size=" + this.cache.size() + "]";
+  L1143: 'Interrupted wait'
+      ctx: LOGGER.warn("Interrupted wait");
+  L1150: 'Tasks left in queue: {}'
+      ctx: LOGGER.warn("Tasks left in queue: {}", remainingSize);
+  L1204: 'Reading type'
+      ctx: CrashReport report = CrashReport.forThrowable(e, "Reading type");
+  L1281: "Couldn't open location '{}'"
+      ctx: Util.LOGGER.error("Couldn't open location '{}'", uri, e);
+  L1306: "Couldn't open uri '{}'"
+      ctx: Util.LOGGER.error("Couldn't open uri '{}'", uri, e);
+
+### FILE: net/minecraft/util/context/ContextKeySet.java  (2)
+  L35: ' is already optional'
+      ctx: throw new IllegalArgumentException("Parameter " + param.name() + " is already optional");
+  L44: ' is already required'
+      ctx: throw new IllegalArgumentException("Parameter " + param.name() + " is already required");
+
+### FILE: net/minecraft/util/context/ContextMap.java  (3)
+  L35: '_,!null->!null; _,_->_'
+      ctx: @Contract("_,!null->!null; _,_->_")
+  L74: 'Parameters not allowed in this parameter set: '
+      ctx: throw new IllegalArgumentException("Parameters not allowed in this parameter set: " + notAllowed);
+  L78: 'Missing required parameters: '
+      ctx: throw new IllegalArgumentException("Missing required parameters: " + missingRequired);
+
+### FILE: net/minecraft/util/datafix/DataFixers.java  (167)
+  L441: 'Datafixer Bootstrap #%d'
+      ctx: new ThreadFactoryBuilder().setNameFormat("Datafixer Bootstrap #%d").setDaemon(true).setPriority(1).build()
+  L481: 'Add 1.10 entities fix'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v501, "Add 1.10 entities fix", References.ENTITY));
+  L486: 'cooked_fished item renamer'
+      ctx: "cooked_fished item renamer",
+  L510: 'added shulker box'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v808, "added shulker box", References.BLOCK_ENTITY));
+  L519: 'totem item renamer'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v820, "totem item renamer", createRenamer("minecraft:totem", "minecraft:totem_of_undying")));
+  L521: 'added shoulder entities to players'
+      ctx: fixerUpper.addFixer(new WriteAndReadFix(v1022, "added shoulder entities to players", References.PLAYER));
+  L563: 'Player CustomName'
+      ctx: return this.fixTypeEverywhereTyped("Player CustomName", this.getInputSchema().getType(References.PLAYER), typed -> {
+  L581: 'Add DUMMY block entity'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1466, "Add DUMMY block entity", References.BLOCK_ENTITY));
+  L584: 'Add 1.13 entities fix'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1470, "Add 1.13 entities fix", References.ENTITY));
+  L590: 'Colorless shulker block fixer'
+      ctx: "Colorless shulker block fixer",
+  L597: 'Colorless shulker item fixer'
+      ctx: "Colorless shulker item fixer",
+  L605: 'Flowing fixer'
+      ctx: "Flowing fixer",
+  L610: 'Rename coral blocks'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v1480, "Rename coral blocks", createRenamer(RenamedCoralFix.RENAMED_IDS)));
+  L611: 'Rename coral items'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1480, "Rename coral items", createRenamer(RenamedCoralFix.RENAMED_IDS)));
+  L613: 'Add conduit'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1481, "Add conduit", References.BLOCK_ENTITY));
+  L616: 'Rename pufferfish egg item'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1483, "Rename pufferfish egg item", createRenamer(EntityPufferfishRenameFix.RENAMED_IDS)));
+  L621: 'Rename seagrass items'
+      ctx: "Rename seagrass items",
+  L628: 'Rename seagrass blocks'
+      ctx: "Rename seagrass blocks",
+  L635: 'Rename cod/salmon egg items'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1486, "Rename cod/salmon egg items", createRenamer(EntityCodSalmonFix.RENAMED_EGG_IDS)));
+  L640: 'Rename prismarine_brick(s)_* blocks'
+      ctx: "Rename prismarine_brick(s)_* blocks",
+  L654: 'Rename prismarine_brick(s)_* items'
+      ctx: "Rename prismarine_brick(s)_* items",
+  L668: 'Rename kelp/kelptop'
+      ctx: v1488, "Rename kelp/kelptop", createRenamer(ImmutableMap.of("minecraft:kelp_top", "minecraft:kelp", "minecraft:kelp", "minecraft:kelp_plant"))
+  L671: 'Rename kelptop'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1488, "Rename kelptop", createRenamer("minecraft:kelp_top", "minecraft:kelp")));
+  L673: 'Command block block entity custom name fix'
+      ctx: new NamedEntityWriteReadFix(v1488, true, "Command block block entity custom name fix", References.BLOCK_ENTITY, "minecraft:command_block") {
+  L691: 'Command block minecart custom name fix'
+      ctx: "Command block minecart custom name fix",
+  L710: 'Rename melon_block'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v1490, "Rename melon_block", createRenamer("minecraft:melon_block", "minecraft:melon")));
+  L714: 'Rename melon_block/melon/speckled_melon'
+      ctx: "Rename melon_block/melon/speckled_melon",
+  L740: 'Recipes fix'
+      ctx: fixerUpper.addFixer(new NamespacedTypeRenameFix(v1502, "Recipes fix", References.RECIPE, createRenamer(RecipesFix.RECIPES)));
+  L744: 'Block renamening fix'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v1510, "Block renamening fix", createRenamer(EntityTheRenameningFix.RENAMED_BLOCKS)));
+  L745: 'Item renamening fix'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1510, "Item renamening fix", createRenamer(EntityTheRenameningFix.RENAMED_ITEMS)));
+  L746: 'Recipes renamening fix'
+      ctx: fixerUpper.addFixer(new NamespacedTypeRenameFix(v1510, "Recipes renamening fix", References.RECIPE, createRenamer(RecipesRenameningFix.RECIPES)));
+  L760: 'Rename coral fan blocks'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v1515, "Rename coral fan blocks", createRenamer(RenamedCoralFansFix.RENAMED_IDS)));
+  L764: 'Added 1.14 mobs fix'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1800, "Added 1.14 mobs fix", References.ENTITY));
+  L765: 'Rename dye items'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1800, "Rename dye items", createRenamer(DyeItemRenameFix.RENAMED_IDS)));
+  L767: 'Added Illager Beast'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1801, "Added Illager Beast", References.ENTITY));
+  L772: 'Rename sign blocks & stone slabs'
+      ctx: "Rename sign blocks & stone slabs",
+  L788: 'Rename sign item & stone slabs'
+      ctx: "Rename sign item & stone slabs",
+  L795: 'Added Cats'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1904, "Added Cats", References.ENTITY));
+  L800: 'Add POI Blocks'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1906, "Add POI Blocks", References.BLOCK_ENTITY));
+  L802: 'Add jigsaw'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1909, "Add jigsaw", References.BLOCK_ENTITY));
+  L814: 'Add campfire'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1920, "Add campfire", References.BLOCK_ENTITY));
+  L819: 'Rename ravager egg item'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v1928, "Rename ravager egg item", createRenamer(EntityRavagerRenameFix.RENAMED_IDS)));
+  L821: 'Add Wandering Trader and Trader Llama'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1929, "Add Wandering Trader and Trader Llama", References.ENTITY));
+  L823: 'Added Fox'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v1931, "Added Fox", References.ENTITY));
+  L840: 'Added Bee and Bee Stinger'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2100, "Added Bee and Bee Stinger", References.ENTITY));
+  L841: 'Add beehive'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2100, "Add beehive", References.BLOCK_ENTITY));
+  L843: 'Rename sugar recipe'
+      ctx: new NamespacedTypeRenameFix(v2100, "Rename sugar recipe", References.RECIPE, createRenamer("minecraft:sugar", "minecraft:sugar_from_sugar_cane"))
+  L847: 'Rename sugar recipe advancement'
+      ctx: v2100, false, "Rename sugar recipe advancement", createRenamer("minecraft:recipes/misc/sugar", "minecraft:recipes/misc/sugar_from_sugar_cane")
+  L854: 'Rename bee_hive item to beehive'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2209, "Rename bee_hive item to beehive", beehiveRenamer));
+  L855: 'Rename bee_hive poi to beehive'
+      ctx: fixerUpper.addFixer(new PoiTypeRenameFix(v2209, "Rename bee_hive poi to beehive", beehiveRenamer));
+  L856: 'Rename bee_hive block to beehive'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v2209, "Rename bee_hive block to beehive", beehiveRenamer));
+  L864: 'Added Hoglin'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2502, "Added Hoglin", References.ENTITY));
+  L869: 'Composter category change'
+      ctx: v2503, false, "Composter category change", createRenamer("minecraft:recipes/misc/composter", "minecraft:recipes/decorations/composter")
+  L873: 'Added Piglin'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2505, "Added Piglin", References.ENTITY));
+  L879: 'Renamed fungi items to fungus'
+      ctx: "Renamed fungi items to fungus",
+  L886: 'Renamed fungi blocks to fungus'
+      ctx: "Renamed fungi blocks to fungus",
+  L892: 'Rename zombie pigman egg item'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2509, "Rename zombie pigman egg item", createRenamer(EntityZombifiedPiglinRenameFix.RENAMED_IDS)));
+  L911: 'Added Strider'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2519, "Added Strider", References.ENTITY));
+  L913: 'Added Zoglin'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2522, "Added Zoglin", References.ENTITY));
+  L918: 'Attribute renames'
+      ctx: "Attribute renames",
+  L922: 'Max Health'
+      ctx: .put("Max Health", "minecraft:generic.max_health")
+  L924: 'Spawn Reinforcements Chance'
+      ctx: .put("Spawn Reinforcements Chance", "minecraft:zombie.spawn_reinforcements")
+  L926: 'Jump Strength'
+      ctx: .put("Jump Strength", "minecraft:horse.jump_strength")
+  L928: 'Follow Range'
+      ctx: .put("Follow Range", "minecraft:generic.follow_range")
+  L930: 'Knockback Resistance'
+      ctx: .put("Knockback Resistance", "minecraft:generic.knockback_resistance")
+  L932: 'Movement Speed'
+      ctx: .put("Movement Speed", "minecraft:generic.movement_speed")
+  L934: 'Flying Speed'
+      ctx: .put("Flying Speed", "minecraft:generic.flying_speed")
+  L949: 'Rename soul fire torch and soul fire lantern'
+      ctx: "Rename soul fire torch and soul fire lantern",
+  L956: 'Rename soul fire torch and soul fire lantern'
+      ctx: "Rename soul fire torch and soul fire lantern",
+  L984: 'add types to WorldGenData'
+      ctx: fixerUpper.addFixer(new WriteAndReadFix(v2551, "add types to WorldGenData", References.WORLD_GEN_SETTINGS));
+  L987: 'Nether biome rename'
+      ctx: new NamespacedTypeRenameFix(v2552, "Nether biome rename", References.BIOME, createRenamer("minecraft:nether", "minecraft:nether_wastes"))
+  L990: 'Biomes fix'
+      ctx: fixerUpper.addFixer(new NamespacedTypeRenameFix(v2553, "Biomes fix", References.BIOME, createRenamer(BiomeFix.BIOMES)));
+  L995: 'Rename swapHands setting'
+      ctx: fixerUpper.addFixer(new OptionsRenameFieldFix(v2558, false, "Rename swapHands setting", "key_key.swapHands", "key_key.swapOffhand"));
+  L997: 'Added Piglin Brute'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2568, "Added Piglin Brute", References.ENTITY));
+  L999: 'Added Goat'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2571, "Added Goat", References.ENTITY));
+  L1003: 'Renamed grass path item to dirt path'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2680, "Renamed grass path item to dirt path", createRenamer("minecraft:grass_path", "minecraft:dirt_path")));
+  L1004: 'Renamed grass path block to dirt path'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v2680, "Renamed grass path block to dirt path", createRenamer("minecraft:grass_path", "minecraft:dirt_path")));
+  L1006: 'Added Sculk Sensor'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2684, "Added Sculk Sensor", References.BLOCK_ENTITY));
+  L1008: 'Added Axolotl'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2686, "Added Axolotl", References.ENTITY));
+  L1010: 'Added Glow Squid'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2688, "Added Glow Squid", References.ENTITY));
+  L1011: 'Added Glow Item Frame'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2688, "Added Glow Item Frame", References.ENTITY));
+  L1035: 'Renamed copper block items to new oxidized terms'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2690, "Renamed copper block items to new oxidized terms", createRenamer(copperBlocksToRename)));
+  L1036: 'Renamed copper blocks to new oxidized terms'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v2690, "Renamed copper blocks to new oxidized terms", createRenamer(copperBlocksToRename)));
+  L1044: 'Rename copper item suffixes'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2691, "Rename copper item suffixes", createRenamer(waxedCopperRename)));
+  L1045: 'Rename copper blocks suffixes'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v2691, "Rename copper blocks suffixes", createRenamer(waxedCopperRename)));
+  L1068: 'Renamed grimstone block items to deepslate'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v2696, "Renamed grimstone block items to deepslate", createRenamer(grimstoneBlocksToRename)));
+  L1069: 'Renamed grimstone blocks to deepslate'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v2696, "Renamed grimstone blocks to deepslate", createRenamer(grimstoneBlocksToRename)));
+  L1074: 'Renamed cave vines blocks'
+      ctx: "Renamed cave vines blocks",
+  L1083: 'Added Goat'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2704, "Added Goat", References.ENTITY));
+  L1085: 'Added Marker'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v2707, "Added Marker", References.ENTITY));
+  L1089: 'Renamed play_one_minute stat to play_time'
+      ctx: new StatsRenameFix(v2710, "Renamed play_one_minute stat to play_time", ImmutableMap.of("minecraft:play_one_minute", "minecraft:play_time"))
+  L1094: 'Rename azalea_leaves_flowers'
+      ctx: v2717, "Rename azalea_leaves_flowers", createRenamer(ImmutableMap.of("minecraft:azalea_leaves_flowers", "minecraft:flowering_azalea_leaves"))
+  L1100: 'Rename azalea_leaves_flowers items'
+      ctx: "Rename azalea_leaves_flowers items",
+  L1115: 'Caves and Cliffs biome renames'
+      ctx: new NamespacedTypeRenameFix(v2838, "Caves and Cliffs biome renames", References.BIOME, createRenamer(CavesAndCliffsRenames.RENAMES))
+  L1124: 'Remove Deep Warm Ocean'
+      ctx: new NamespacedTypeRenameFix(v2843, "Remove Deep Warm Ocean", References.BIOME, createRenamer("minecraft:deep_warm_ocean", "minecraft:warm_ocean"))
+  L1131: 'Rename some C&C part 2 advancements'
+      ctx: "Rename some C&C part 2 advancements",
+  L1151: 'Added Sculk Catalyst'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3076, "Added Sculk Catalyst", References.BLOCK_ENTITY));
+  L1155: 'Added Frog'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3078, "Added Frog", References.ENTITY));
+  L1156: 'Added Tadpole'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3078, "Added Tadpole", References.ENTITY));
+  L1157: 'Added Sculk Shrieker'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3078, "Added Sculk Shrieker", References.BLOCK_ENTITY));
+  L1159: 'Added Warden'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3081, "Added Warden", References.ENTITY));
+  L1161: 'Added Chest Boat'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3082, "Added Chest Boat", References.ENTITY));
+  L1163: 'Added Allay'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3083, "Added Allay", References.ENTITY));
+  L1193: 'Change cat variant type'
+      ctx: new EntityVariantFix(v3086, "Change cat variant type", References.ENTITY, "minecraft:cat", "CatType", Util.make(new Int2ObjectOpenHashMap<String>(), m -> {
+  L1223: 'Migrate cat variant advancement'
+      ctx: v3086, "Migrate cat variant advancement", "minecraft:husbandry/complete_catalogue", s -> catAdvancementMigrationMap.getOrDefault(s, s)
+  L1229: 'Change frog variant type'
+      ctx: v3087, "Change frog variant type", References.ENTITY, "minecraft:frog", "Variant", Util.make(new Int2ObjectOpenHashMap<String>(), m -> {
+  L1248: 'Rename british shorthair'
+      ctx: fixerUpper.addFixer(new VariantRenameFix(v3097, "Rename british shorthair", References.ENTITY, "minecraft:cat", renamedCatCriteria));
+  L1252: 'Migrate cat variant advancement for british shorthair'
+      ctx: "Migrate cat variant advancement for british shorthair",
+  L1257: 'Remove unpopulated villager PoI types'
+      ctx: fixerUpper.addFixer(new PoiTypeRemoveFix(v3097, "Remove unpopulated villager PoI types", Set.of("minecraft:unemployed", "minecraft:nitwit")::contains));
+  L1263: 'Added Hanging Sign'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3202, "Added Hanging Sign", References.BLOCK_ENTITY));
+  L1265: 'Added Camel'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3203, "Added Camel", References.ENTITY));
+  L1267: 'Added Chiseled Bookshelf'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3204, "Added Chiseled Bookshelf", References.BLOCK_ENTITY));
+  L1277: 'Added displays'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3325, "Added displays", References.ENTITY));
+  L1279: 'Added Sniffer'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3326, "Added Sniffer", References.ENTITY));
+  L1283: 'Added interaction'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3328, "Added interaction", References.ENTITY));
+  L1287: 'Rename Suspicious Sand to Brushable Block'
+      ctx: v3438, "Rename Suspicious Sand to Brushable Block", createRenamer("minecraft:suspicious_sand", "minecraft:brushable_block")
+  L1294: 'Pottery shard renaming'
+      ctx: "Pottery shard renaming",
+  L1309: 'Added calibrated sculk sensor'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3438, "Added calibrated sculk sensor", References.BLOCK_ENTITY));
+  L1311: 'Updated sign text format for Signs'
+      ctx: fixerUpper.addFixer(new BlockEntitySignDoubleSidedEditableTextFix(v3439, "Updated sign text format for Signs", "minecraft:sign"));
+  L1313: 'Updated sign text format for Hanging Signs'
+      ctx: fixerUpper.addFixer(new BlockEntitySignDoubleSidedEditableTextFix(v3439_1, "Updated sign text format for Hanging Signs", "minecraft:hanging_sign"));
+  L1318: 'Replace experimental 1.20 overworld'
+      ctx: "Replace experimental 1.20 overworld",
+  L1323: 'Remove 1.20 feature toggle'
+      ctx: fixerUpper.addFixer(new FeatureFlagRemoveFix(v3440, "Remove 1.20 feature toggle", Set.of("minecraft:update_1_20")));
+  L1328: 'Pottery shard item renaming to Pottery sherd'
+      ctx: "Pottery shard item renaming to Pottery sherd",
+  L1362: 'Remove liquid_carvers and heightmap chunk statuses'
+      ctx: "Remove liquid_carvers and heightmap chunk statuses",
+  L1381: 'Added Crafter'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3682, "Added Crafter", References.BLOCK_ENTITY));
+  L1387: 'Added Breeze'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3689, "Added Breeze", References.ENTITY));
+  L1388: 'Added Trial Spawner'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3689, "Added Trial Spawner", References.BLOCK_ENTITY));
+  L1391: 'Rename grass block to short_grass'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v3692, "Rename grass block to short_grass", grassRenamer));
+  L1392: 'Rename grass item to short_grass'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v3692, "Rename grass item to short_grass", grassRenamer));
+  L1394: 'Added Armadillo'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3799, "Added Armadillo", References.ENTITY));
+  L1397: 'Rename scute item to turtle_scute'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v3800, "Rename scute item to turtle_scute", scuteRenamer));
+  L1400: 'Rename sweeping enchant to sweeping_edge'
+      ctx: new RenameEnchantmentsFix(v3803, "Rename sweeping enchant to sweeping_edge", Map.of("minecraft:sweeping", "minecraft:sweeping_edge"))
+  L1403: 'Added Vault'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3807, "Added Vault", References.BLOCK_ENTITY));
+  L1421: 'Rename jump strength attribute'
+      ctx: v3814, "Rename jump strength attribute", createRenamer("minecraft:horse.jump_strength", "minecraft:generic.jump_strength")
+  L1425: 'Added Bogged'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3816, "Added Bogged", References.ENTITY));
+  L1434: 'Inject data component types'
+      ctx: fixerUpper.addFixer(new WriteAndReadFix(v3818_3, "Inject data component types", References.DATA_COMPONENTS));
+  L1448: 'Added Ominous Item Spawner'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v3825, "Added Ominous Item Spawner", References.ENTITY));
+  L1456: 'Remove 1.21 feature toggle'
+      ctx: fixerUpper.addFixer(new FeatureFlagRemoveFix(v3939, "Remove 1.21 feature toggle", Set.of("minecraft:update_1_21")));
+  L1476: 'Remove Bundle experimental feature flag'
+      ctx: fixerUpper.addFixer(new FeatureFlagRemoveFix(v4067, "Remove Bundle experimental feature flag", Set.of("minecraft:bundle")));
+  L1481: 'Added Pale Oak Boat and Pale Oak Chest Boat'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4070, "Added Pale Oak Boat and Pale Oak Chest Boat", References.ENTITY));
+  L1483: 'Added Creaking'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4071, "Added Creaking", References.ENTITY));
+  L1484: 'Added Creaking Heart'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4071, "Added Creaking Heart", References.BLOCK_ENTITY));
+  L1488: 'Rename TNT Minecart fuse'
+      ctx: fixerUpper.addFixer(new EntityFieldsRenameFix(v4173, "Rename TNT Minecart fuse", "minecraft:tnt_minecart", Map.of("TNTFuse", "fuse")));
+  L1496: 'Remove Winter Drop toggle'
+      ctx: fixerUpper.addFixer(new FeatureFlagRemoveFix(v4180, "Remove Winter Drop toggle", Set.of("minecraft:winter_drop")));
+  L1504: 'Villager follow range fix undo'
+      ctx: v4187, "Villager follow range fix undo", "minecraft:villager", "minecraft:follow_range", value -> value == 48.0 ? 16.0 : value
+  L1508: 'Bee follow range fix'
+      ctx: new EntityAttributeBaseValueFix(v4187, "Bee follow range fix", "minecraft:bee", "minecraft:follow_range", value -> value == 48.0 ? 16.0 : value)
+  L1511: 'Allay follow range fix'
+      ctx: new EntityAttributeBaseValueFix(v4187, "Allay follow range fix", "minecraft:allay", "minecraft:follow_range", value -> value == 48.0 ? 16.0 : value)
+  L1514: 'Llama follow range fix'
+      ctx: new EntityAttributeBaseValueFix(v4187, "Llama follow range fix", "minecraft:llama", "minecraft:follow_range", value -> value == 40.0 ? 16.0 : value)
+  L1518: 'Piglin Brute follow range fix'
+      ctx: v4187, "Piglin Brute follow range fix", "minecraft:piglin_brute", "minecraft:follow_range", value -> value == 16.0 ? 12.0 : value
+  L1523: 'Warden follow range fix'
+      ctx: v4187, "Warden follow range fix", "minecraft:warden", "minecraft:follow_range", value -> value == 16.0 ? 24.0 : value
+  L1557: 'Added Test and Test Instance Block Entities'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4302, "Added Test and Test Instance Block Entities", References.BLOCK_ENTITY));
+  L1562: 'rename test block mode'
+      ctx: fixerUpper.addFixer(new BlockPropertyRenameAndFix(v4305, "rename test block mode", "minecraft:test_block", "test_block_mode", "mode", a -> a));
+  L1573: 'Use lodestone category change'
+      ctx: v4311, false, "Use lodestone category change", createRenamer("minecraft:nether/use_lodestone", "minecraft:adventure/use_lodestone")
+  L1583: 'Added Happy Ghast'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4421, "Added Happy Ghast", References.ENTITY));
+  L1585: 'Remove Locator Bar experimental feature flag'
+      ctx: fixerUpper.addFixer(new FeatureFlagRemoveFix(v4424, "Remove Locator Bar experimental feature flag", Set.of("minecraft:locator_bar")));
+  L1589: 'Added Copper Golem'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4531, "Added Copper Golem", References.ENTITY));
+  L1591: 'Added Copper Golem Statue Block Entity'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4532, "Added Copper Golem Statue Block Entity", References.BLOCK_ENTITY));
+  L1593: 'Added Shelf'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4533, "Added Shelf", References.BLOCK_ENTITY));
+  L1599: 'Rename chain to iron_chain'
+      ctx: fixerUpper.addFixer(BlockRenameFix.create(v4541, "Rename chain to iron_chain", createRenamer("minecraft:chain", "minecraft:iron_chain")));
+  L1600: 'Rename chain to iron_chain'
+      ctx: fixerUpper.addFixer(ItemRenameFix.create(v4541, "Rename chain to iron_chain", createRenamer("minecraft:chain", "minecraft:iron_chain")));
+  L1602: 'Added Mannequin'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4543, "Added Mannequin", References.ENTITY));
+  L1609: 'Added Nautilus and Zombie Nautilus'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4648, "Added Nautilus and Zombie Nautilus", References.ENTITY));
+  L1621: 'Added Parched and Camel Husk'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4656, "Added Parched and Camel Husk", References.ENTITY));
+  L1636: 'Rename stonecutter recipes'
+      ctx: new NamespacedTypeRenameFix(v4769, "Rename stonecutter recipes", References.RECIPE, createRenamer(StonecutterRecipeRenameFix.RECIPE_RENAMES))
+  L1639: 'Rename stonecutter recipe advancements'
+      ctx: new AdvancementsRenameFix(v4769, false, "Rename stonecutter recipe advancements", createRenamer(StonecutterRecipeRenameFix.ADVANCEMENT_RENAMES))
+  L1653: 'Added Sulfur Cube'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4881, "Added Sulfur Cube", References.ENTITY));
+  L1654: 'Added Potent Sulfur'
+      ctx: fixerUpper.addFixer(new AddNewChoices(v4881, "Added Potent Sulfur", References.BLOCK_ENTITY));
+
+### FILE: net/minecraft/util/datafix/PackedBitStorage.java  (2)
+  L25: 'Invalid length given for storage, got: '
+      ctx: throw new IllegalArgumentException("Invalid length given for storage, got: " + data.length + " but expected: " + requiredLength);
+  L25: ' but expected: '
+      ctx: throw new IllegalArgumentException("Invalid length given for storage, got: " + data.length + " but expected: " + requiredLength);
+
+### FILE: net/minecraft/util/datafix/fixes/AbstractPoiSectionFix.java  (1)
+  L26: 'Poi type is not what was expected.'
+      ctx: throw new IllegalStateException("Poi type is not what was expected.");
+
+### FILE: net/minecraft/util/datafix/fixes/AddFieldFix.java  (2)
+  L28: 'Adding field `'
+      ctx: this.name = "Adding field `" + fieldName + "` to type `" + type.typeName().toLowerCase(Locale.ROOT) + "`";
+  L28: '` to type `'
+      ctx: this.name = "Adding field `" + fieldName + "` to type `" + type.typeName().toLowerCase(Locale.ROOT) + "`";
+
+### FILE: net/minecraft/util/datafix/fixes/AddNewChoices.java  (2)
+  L29: 'Could not inject: key type is not the same'
+      ctx: throw new IllegalStateException("Could not inject: key type is not the same");
+  L40: "%s: Unknown type %s in '%s'"
+      ctx: String.format(Locale.ROOT, "%s: Unknown type %s in '%s'", this.name, input.getFirst(), this.type.typeName())
+
+### FILE: net/minecraft/util/datafix/fixes/AttributeModifierIdFix.java  (8)
+  L64: 'Random spawn bonus'
+      ctx: "Random spawn bonus",
+  L66: 'Random zombie-spawn bonus'
+      ctx: "Random zombie-spawn bonus",
+  L68: 'Leader zombie bonus'
+      ctx: "Leader zombie bonus",
+  L70: 'Zombie reinforcement callee charge'
+      ctx: "Zombie reinforcement callee charge",
+  L72: 'Zombie reinforcement caller charge'
+      ctx: "Zombie reinforcement caller charge",
+  L86: 'AttributeIdFix (ItemStack)'
+      ctx: "AttributeIdFix (ItemStack)",
+  L92: 'AttributeIdFix (Entity)'
+      ctx: this.fixTypeEverywhereTyped("AttributeIdFix (Entity)", this.getInputSchema().getType(References.ENTITY), AttributeModifierIdFix::fixEntity),
+  L93: 'AttributeIdFix (Player)'
+      ctx: this.fixTypeEverywhereTyped("AttributeIdFix (Player)", this.getInputSchema().getType(References.PLAYER), AttributeModifierIdFix::fixEntity)
+
+### FILE: net/minecraft/util/datafix/fixes/BannerEntityCustomNameToOverrideComponentFix.java  (1)
+  L31: 'Banner entity custom_name to item_name component fix'
+      ctx: return this.fixTypeEverywhereTyped("Banner entity custom_name to item_name component fix", blockEntityType, input -> {
+
+### FILE: net/minecraft/util/datafix/fixes/BlendingDataFix.java  (1)
+  L24: 'Blending Data Fix v'
+      ctx: this.name = "Blending Data Fix v" + outputSchema.getVersionKey();
+
+### FILE: net/minecraft/util/datafix/fixes/BlockEntityBlockStateFix.java  (2)
+  L26: 'Could not create new piston block entity.'
+      ctx: Typed<?> output = newType.pointTyped(entity.getOps()).orElseThrow(() -> new IllegalStateException("Could not create new piston block entity."));
+  L32: 'Could not parse newly created block state tag.'
+      ctx: .orElseThrow(() -> new IllegalStateException("Could not parse newly created block state tag."))
+
+### FILE: net/minecraft/util/datafix/fixes/BlockEntityIdFix.java  (1)
+  L50: 'item stack block entity name hook converter'
+      ctx: this.convertUnchecked("item stack block entity name hook converter", oldItemStackType, newItemStackType),
+
+### FILE: net/minecraft/util/datafix/fixes/BlockEntityJukeboxFix.java  (1)
+  L33: 'Could not create record item stack.'
+      ctx: .orElseThrow(() -> new IllegalStateException("Could not create record item stack."))
+
+### FILE: net/minecraft/util/datafix/fixes/BlockNameFlatteningFix.java  (1)
+  L36: "Expected and actual types don't match."
+      ctx: throw new IllegalStateException("Expected and actual types don't match.");
+
+### FILE: net/minecraft/util/datafix/fixes/BlockPosFormatAndRenamesFix.java  (4)
+  L56: 'BlockPos format for map frames'
+      ctx: "BlockPos format for map frames",
+  L65: 'BlockPos format for compass target'
+      ctx: "BlockPos format for compass target",
+  L88: 'BlockPos format in Leash for mobs'
+      ctx: "BlockPos format in Leash for mobs",
+  L101: 'BlockPos format in '
+      ctx: String name = "BlockPos format in " + fields.keySet() + " for " + entityName + " (" + type.typeName() + ")";
+
+### FILE: net/minecraft/util/datafix/fixes/BlockRenameFix.java  (4)
+  L29: 'block type is not what was expected.'
+      ctx: throw new IllegalStateException("block type is not what was expected.");
+  L32: ' for block'
+      ctx: TypeRewriteRule blockRule = this.fixTypeEverywhere(this.name + " for block", expectedType, ops -> input -> input.mapSecond(this::renameBlock));
+  L34: ' for block_state'
+      ctx: this.name + " for block_state",
+  L39: ' for flat_block_state'
+      ctx: this.name + " for flat_block_state",
+
+### FILE: net/minecraft/util/datafix/fixes/ChestedHorsesInventoryZeroIndexingFix.java  (1)
+  L43: 'Fix non-zero indexing in chest horse type '
+      ctx: "Fix non-zero indexing in chest horse type " + horseId,
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkBedBlockEntityInjecterFix.java  (2)
+  L30: 'Tile entity type is not a list type.'
+      ctx: throw new IllegalStateException("Tile entity type is not a list type.");
+  L83: 'Could not parse newly created bed block entity.'
+      ctx: .orElseThrow(() -> new IllegalStateException("Could not parse newly created bed block entity."))
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkBiomeFix.java  (1)
+  L23: 'Leaves fix'
+      ctx: "Leaves fix", chunkType, chunk -> chunk.updateTyped(levelFinder, level -> level.update(DSL.remainderFinder(), tag -> {
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkDeleteLightFix.java  (1)
+  L19: 'ChunkDeleteLightFix for '
+      ctx: return this.fixTypeEverywhereTyped("ChunkDeleteLightFix for " + this.getOutputSchema().getVersionKey(), chunkType, chunk -> {
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkHeightAndBiomeFix.java  (1)
+  L142: 'Malformed Chunk.Level.Sections'
+      ctx: .orElseThrow(() -> new IllegalStateException("Malformed Chunk.Level.Sections"));
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkPalettedStorageFix.java  (2)
+  L119: 'ChunkNibbleArrays should be 2048 bytes not: '
+      ctx: throw new IllegalArgumentException("ChunkNibbleArrays should be 2048 bytes not: " + data.length);
+  L805: 'In chunk: {}x{} found a duplicate block entity at position: [{}, {}, {}]'
+      ctx: ChunkPalettedStorageFix.LOGGER.warn("In chunk: {}x{} found a duplicate block entity at position: [{}, {}, {}]", this.x, this.z, x, y, z);
+
+### FILE: net/minecraft/util/datafix/fixes/ChunkRenamesFix.java  (1)
+  L31: 'Chunk Renames; purge Level-tag'
+      ctx: return this.fixTypeEverywhereTyped("Chunk Renames; purge Level-tag", chunkType, newChunkType, chunk -> {
+
+### FILE: net/minecraft/util/datafix/fixes/ColorlessShulkerEntityFix.java  (1)
+  L9: 'Colorless shulker entity fix'
+      ctx: super(outputSchema, changesType, "Colorless shulker entity fix", References.ENTITY, "minecraft:shulker");
+
+### FILE: net/minecraft/util/datafix/fixes/CustomModelDataExpandFix.java  (1)
+  L20: 'Custom Model Data expansion'
+      ctx: "Custom Model Data expansion",
+
+### FILE: net/minecraft/util/datafix/fixes/DropInvalidSignDataFix.java  (1)
+  L57: 'DropInvalidSignDataFix for '
+      ctx: "DropInvalidSignDataFix for " + this.entityName,
+
+### FILE: net/minecraft/util/datafix/fixes/EntityEquipmentToArmorAndHandFix.java  (5)
+  L43: 'Input entity_equipment type does not match expected'
+      ctx: throw new IllegalStateException("Input entity_equipment type does not match expected");
+  L45: 'Output entity_equipment type does not match expected'
+      ctx: throw new IllegalStateException("Output entity_equipment type does not match expected");
+  L49: 'EntityEquipmentToArmorAndHandFix - drop chances'
+      ctx: "EntityEquipmentToArmorAndHandFix - drop chances",
+  L54: 'EntityEquipmentToArmorAndHandFix - equipment'
+      ctx: "EntityEquipmentToArmorAndHandFix - equipment",
+  L60: 'Could not parse newly created empty itemstack.'
+      ctx: .orElseThrow(() -> new IllegalStateException("Could not parse newly created empty itemstack."))
+
+### FILE: net/minecraft/util/datafix/fixes/EntityIdFix.java  (1)
+  L102: 'item stack entity name hook converter'
+      ctx: this.convertUnchecked("item stack entity name hook converter", oldItemStackType, newItemStackType),
+
+### FILE: net/minecraft/util/datafix/fixes/EntityRenameFix.java  (1)
+  L43: 'Dynamic type check failed: %s not equal to %s'
+      ctx: String.format(Locale.ROOT, "Dynamic type check failed: %s not equal to %s", expectedType, newEntity.getSecond().getType())
+
+### FILE: net/minecraft/util/datafix/fixes/EntityRidingToPassengersFix.java  (3)
+  L50: 'Old entity type is not what was expected.'
+      ctx: throw new IllegalStateException("Old entity type is not what was expected.");
+  L54: 'New entity type is not what was expected.'
+      ctx: throw new IllegalStateException("New entity type is not what was expected.");
+  L81: 'player RootVehicle injecter'
+      ctx: this.writeAndRead("player RootVehicle injecter", oldPlayerType, newPlayerType)
+
+### FILE: net/minecraft/util/datafix/fixes/EntitySpawnerItemVariantComponentFix.java  (1)
+  L29: 'ItemStack bucket_entity_data variants to separate components'
+      ctx: "ItemStack bucket_entity_data variants to separate components",
+
+### FILE: net/minecraft/util/datafix/fixes/EntityUUIDFix.java  (2)
+  L73: 'angry_at has no value.'
+      ctx: LOGGER.warn("angry_at has no value.");
+  L106: 'Trusted contained invalid data.'
+      ctx: LOGGER.warn("Trusted contained invalid data.");
+
+### FILE: net/minecraft/util/datafix/fixes/EquipmentFormatFix.java  (2)
+  L63: 'Input entity_equipment type does not match expected'
+      ctx: throw new IllegalStateException("Input entity_equipment type does not match expected");
+  L65: 'Output entity_equipment type does not match expected'
+      ctx: throw new IllegalStateException("Output entity_equipment type does not match expected");
+
+### FILE: net/minecraft/util/datafix/fixes/EquippableAssetRenameFix.java  (1)
+  L20: 'equippable asset rename fix'
+      ctx: "equippable asset rename fix",
+
+### FILE: net/minecraft/util/datafix/fixes/FilteredBooksFix.java  (1)
+  L9: 'Remove filtered text from books'
+      ctx: super(outputSchema, "Remove filtered text from books", id -> id.equals("minecraft:writable_book") || id.equals("minecraft:written_book"));
+
+### FILE: net/minecraft/util/datafix/fixes/FilteredSignsFix.java  (1)
+  L8: 'Remove filtered text from signs'
+      ctx: super(outputSchema, false, "Remove filtered text from signs", References.BLOCK_ENTITY, "minecraft:sign");
+
+### FILE: net/minecraft/util/datafix/fixes/FixProjectileStoredItem.java  (1)
+  L28: 'Fix AbstractArrow item type'
+      ctx: "Fix AbstractArrow item type",
+
+### FILE: net/minecraft/util/datafix/fixes/FoodToConsumableFix.java  (1)
+  L18: 'Food to consumable fix'
+      ctx: "Food to consumable fix",
+
+### FILE: net/minecraft/util/datafix/fixes/ForcePoiRebuild.java  (2)
+  L21: 'Poi type is not what was expected.'
+      ctx: throw new IllegalStateException("Poi type is not what was expected.");
+  L23: 'POI rebuild'
+      ctx: return this.fixTypeEverywhere("POI rebuild", poiChunkType, ops -> input -> input.mapSecond(ForcePoiRebuild::cap));
+
+### FILE: net/minecraft/util/datafix/fixes/GossipUUIDFix.java  (1)
+  L11: 'Gossip for for '
+      ctx: super(outputSchema, false, "Gossip for for " + entityName, References.ENTITY, entityName);
+
+### FILE: net/minecraft/util/datafix/fixes/HorseBodyArmorItemFix.java  (1)
+  L13: 'Horse armor fix for '
+      ctx: super(outputSchema, true, "Horse armor fix for " + entityName, References.ENTITY, entityName);
+
+### FILE: net/minecraft/util/datafix/fixes/InlineBlockPosFormatFix.java  (2)
+  L33: 'InlineBlockPosFormatFix - player'
+      ctx: "InlineBlockPosFormatFix - player",
+  L38: 'InlineBlockPosFormatFix - entity'
+      ctx: "InlineBlockPosFormatFix - entity",
+
+### FILE: net/minecraft/util/datafix/fixes/ItemLoreFix.java  (1)
+  L26: 'Item Lore componentize'
+      ctx: "Item Lore componentize",
+
+### FILE: net/minecraft/util/datafix/fixes/ItemRenameFix.java  (1)
+  L25: 'item name type is not what was expected.'
+      ctx: throw new IllegalStateException("item name type is not what was expected.");
+
+### FILE: net/minecraft/util/datafix/fixes/ItemStackComponentizationFix.java  (1)
+  L704: 'ItemStack componentization'
+      ctx: "ItemStack componentization",
+
+### FILE: net/minecraft/util/datafix/fixes/ItemStackCustomNameToOverrideComponentFix.java  (1)
+  L44: 'ItemStack custom_name to item_name component fix'
+      ctx: "ItemStack custom_name to item_name component fix",
+
+### FILE: net/minecraft/util/datafix/fixes/LeavesFix.java  (3)
+  L88: 'Expecting sections to be a list.'
+      ctx: throw new IllegalStateException("Expecting sections to be a list.");
+  L94: 'Leaves fix'
+      ctx: "Leaves fix",
+  L324: 'Block state type is not what was expected.'
+      ctx: throw new IllegalStateException("Block state type is not what was expected.");
+
+### FILE: net/minecraft/util/datafix/fixes/LegacyHoverEventFix.java  (3)
+  L49: 'Text component type did not match, expected '
+      ctx: "Text component type did not match, expected " + textComponentType + " but got " + this.getInputSchema().getType(References.TEXT_COMPONENT)
+  L49: ' but got '
+      ctx: "Text component type did not match, expected " + textComponentType + " but got " + this.getInputSchema().getType(References.TEXT_COMPONENT)
+  L92: 'Legacy hoverEvent: '
+      ctx: Map.of("action", "show_text", "contents", Map.<String, String>of("text", "Legacy hoverEvent: " + GsonHelper.toStableString(oldJson)))
+
+### FILE: net/minecraft/util/datafix/fixes/LevelUUIDFix.java  (1)
+  L61: 'CustomBossEvents contains invalid UUIDs.'
+      ctx: LOGGER.warn("CustomBossEvents contains invalid UUIDs.");
+
+### FILE: net/minecraft/util/datafix/fixes/MapIdFix.java  (1)
+  L17: 'Map id fix'
+      ctx: "Map id fix",
+
+### FILE: net/minecraft/util/datafix/fixes/MemoryExpiryDataFix.java  (1)
+  L12: 'Memory expiry data fix ('
+      ctx: super(schema, false, "Memory expiry data fix (" + entityType + ")", References.ENTITY, entityType);
+
+### FILE: net/minecraft/util/datafix/fixes/MissingDimensionFix.java  (1)
+  L91: 'List exptected'
+      ctx: throw new IllegalStateException("List exptected");
+
+### FILE: net/minecraft/util/datafix/fixes/OminousBannerRarityFix.java  (2)
+  L34: 'Ominous Banner block entity common rarity to uncommon rarity fix'
+      ctx: return TypeRewriteRule.seq(this.fixTypeEverywhereTyped("Ominous Banner block entity common rarity to uncommon rarity fix", blockEntityType, input -> {
+  L37: 'Ominous Banner item stack common rarity to uncommon rarity fix'
+      ctx: }), this.fixTypeEverywhereTyped("Ominous Banner item stack common rarity to uncommon rarity fix", itemStackType, input -> {
+
+### FILE: net/minecraft/util/datafix/fixes/OptionsFancyGraphicsToGraphicsModeFix.java  (1)
+  L17: 'fancyGraphics to graphicsMode'
+      ctx: "fancyGraphics to graphicsMode",
+
+### FILE: net/minecraft/util/datafix/fixes/OptionsGraphicsModeSplitFix.java  (1)
+  L28: 'graphicsMode split to '
+      ctx: "graphicsMode split to " + this.newFieldName,
+
+### FILE: net/minecraft/util/datafix/fixes/OptionsSetGraphicsPresetToCustomFix.java  (1)
+  L16: 'graphicsPreset set to \\"custom\\"'
+      ctx: "graphicsPreset set to \"custom\"",
+
+### FILE: net/minecraft/util/datafix/fixes/OverreachingTickFix.java  (1)
+  L23: 'Handle ticks saved in the wrong chunk'
+      ctx: return this.fixTypeEverywhereTyped("Handle ticks saved in the wrong chunk", chunkType, chunk -> {
+
+### FILE: net/minecraft/util/datafix/fixes/ParticleUnflatteningFix.java  (7)
+  L82: 'Failed to parse tag: {}'
+      ctx: LOGGER.warn("Failed to parse tag: {}", contents, e);
+  L131: 'Failed to parse block properties: {}'
+      ctx: LOGGER.warn("Failed to parse block properties: {}", contents, e);
+  L153: 'Failed to parse particle options: {}'
+      ctx: LOGGER.warn("Failed to parse particle options: {}", contents, e);
+  L168: 'Failed to parse particle options: {}'
+      ctx: LOGGER.warn("Failed to parse particle options: {}", contents, e);
+  L179: 'Failed to parse particle options: {}'
+      ctx: LOGGER.warn("Failed to parse particle options: {}", contents, e);
+  L200: 'Failed to parse particle options: {}'
+      ctx: LOGGER.warn("Failed to parse particle options: {}", contents, e);
+  L211: 'Failed to parse particle options: {}'
+      ctx: LOGGER.warn("Failed to parse particle options: {}", contents, e);
+
+### FILE: net/minecraft/util/datafix/fixes/PlayerEquipmentFix.java  (1)
+  L22: 'Player Equipment Fix'
+      ctx: return this.writeFixAndRead("Player Equipment Fix", oldPlayerType, newPlayerType, tag -> {
+
+### FILE: net/minecraft/util/datafix/fixes/PrimedTntBlockStateFixer.java  (1)
+  L10: 'PrimedTnt BlockState fixer'
+      ctx: super(outputSchema, true, "PrimedTnt BlockState fixer", References.ENTITY, "minecraft:tnt");
+
+### FILE: net/minecraft/util/datafix/fixes/ProjectileStoredWeaponFix.java  (1)
+  L25: 'Fix Arrow stored weapon'
+      ctx: "Fix Arrow stored weapon",
+
+### FILE: net/minecraft/util/datafix/fixes/RemoveBlockEntityTagFix.java  (1)
+  L154: 'ItemRemoveBlockEntityTagFix - update block entity type'
+      ctx: "ItemRemoveBlockEntityTagFix - update block entity type" + this.getOutputSchema().getVersionKey(),
+
+### FILE: net/minecraft/util/datafix/fixes/RemoveGolemGossipFix.java  (1)
+  L10: 'Remove Golem Gossip Fix'
+      ctx: super(outputSchema, changesType, "Remove Golem Gossip Fix", References.ENTITY, "minecraft:villager");
+
+### FILE: net/minecraft/util/datafix/fixes/ReorganizePoi.java  (2)
+  L25: 'Poi type is not what was expected.'
+      ctx: throw new IllegalStateException("Poi type is not what was expected.");
+  L27: 'POI reorganization'
+      ctx: return this.fixTypeEverywhere("POI reorganization", poiChunkType, ops -> input -> input.mapSecond(ReorganizePoi::cap));
+
+### FILE: net/minecraft/util/datafix/fixes/SavedDataFeaturePoolElementFix.java  (2)
+  L66: 'Missing path'
+      ctx: throw new IllegalArgumentException("Missing path");
+  L80: 'Missing id:'
+      ctx: output = new OptionalDynamic<>(input.getOps(), DataResult.error(() -> "Missing id:" + id));
+
+### FILE: net/minecraft/util/datafix/fixes/SavedDataUUIDFix.java  (1)
+  L35: 'HeroesOfTheVillage contained invalid UUIDs.'
+      ctx: LOGGER.warn("HeroesOfTheVillage contained invalid UUIDs.");
+
+### FILE: net/minecraft/util/datafix/fixes/ScoreboardDisplaySlotFix.java  (1)
+  L50: 'Scoreboard DisplaySlot rename'
+      ctx: "Scoreboard DisplaySlot rename",
+
+### FILE: net/minecraft/util/datafix/fixes/SimplestEntityRenameFix.java  (3)
+  L28: 'Entity name type is not what was expected.'
+      ctx: throw new IllegalStateException("Entity name type is not what was expected.");
+  L35: 'Dynamic type check failed: %s not equal to %s'
+      ctx: throw new IllegalStateException(String.format(Locale.ROOT, "Dynamic type check failed: %s not equal to %s", newEntityType, oldEntityType));
+  L39: ' for entity name'
+      ctx: })), this.fixTypeEverywhere(this.name + " for entity name", entityNameType, ops -> input -> input.mapSecond(this::rename)));
+
+### FILE: net/minecraft/util/datafix/fixes/SpawnerDataFix.java  (1)
+  L28: 'Fix mob spawner data structure'
+      ctx: "Fix mob spawner data structure",
+
+### FILE: net/minecraft/util/datafix/fixes/StatsRenameFix.java  (2)
+  L34: "Can't find choice type for criteria"
+      ctx: .orElseThrow(() -> new IllegalStateException("Can't find choice type for criteria"));
+  L37: 'Failed to find custom criterion type variant'
+      ctx: throw new IllegalStateException("Failed to find custom criterion type variant");
+
+### FILE: net/minecraft/util/datafix/fixes/StructureReferenceCountFix.java  (1)
+  L19: 'Structure Reference Fix'
+      ctx: "Structure Reference Fix", structureInfo, input -> input.update(DSL.remainderFinder(), StructureReferenceCountFix::setCountToAtLeastOne)
+
+### FILE: net/minecraft/util/datafix/fixes/StructuresBecomeConfiguredFix.java  (4)
+  L145: 'Encountered unknown structure in datafixer: {}'
+      ctx: LOGGER.warn("Encountered unknown structure in datafixer: {}", key.asString("<missing key>"));
+  L145: '<missing key>'
+      ctx: LOGGER.warn("Encountered unknown structure in datafixer: {}", key.asString("<missing key>"));
+  L162: 'Encountered unknown structure in datafixer: {}'
+      ctx: LOGGER.warn("Encountered unknown structure in datafixer: {}", key.asString("<missing key>"));
+  L162: '<missing key>'
+      ctx: LOGGER.warn("Encountered unknown structure in datafixer: {}", key.asString("<missing key>"));
+
+### FILE: net/minecraft/util/datafix/fixes/TextComponentHoverAndClickEventFix.java  (2)
+  L53: 'Text component type did not match, expected '
+      ctx: "Text component type did not match, expected " + oldTextComponentType + " but got " + this.getInputSchema().getType(References.TEXT_COMPONENT)
+  L53: ' but got '
+      ctx: "Text component type did not match, expected " + oldTextComponentType + " but got " + this.getInputSchema().getType(References.TEXT_COMPONENT)
+
+### FILE: net/minecraft/util/datafix/fixes/TrappedChestBlockEntityFix.java  (4)
+  L36: 'Tile entity type is not a list type.'
+      ctx: throw new IllegalStateException("Tile entity type is not a list type.");
+  L44: 'Expecting sections to be a list.'
+      ctx: throw new IllegalStateException("Expecting sections to be a list.");
+  L52: 'Trapped Chest fix'
+      ctx: "Trapped Chest fix",
+  L96: 'Block Entity was expected to be a chest'
+      ctx: LOGGER.warn("Block Entity was expected to be a chest");
+
+### FILE: net/minecraft/util/datafix/fixes/TrialSpawnerConfigFix.java  (1)
+  L12: 'Trial Spawner config tag fixer'
+      ctx: super(outputSchema, true, "Trial Spawner config tag fixer", References.BLOCK_ENTITY, "minecraft:trial_spawner");
+
+### FILE: net/minecraft/util/datafix/fixes/TrialSpawnerConfigInRegistryFix.java  (30)
+  L69: 'Failed to parse NBT for '
+      ctx: throw new IllegalStateException("Failed to parse NBT for " + location, e);
+  L81: 'Failed to parse Trial Spawner NBT config: '
+      ctx: throw new IllegalArgumentException("Failed to parse Trial Spawner NBT config: " + nbt, e);
+  L116: '{simultaneous_mobs: 1.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:breeze\\"}}, weight: 1}], ticks_between_spawn: 20, total_mobs: 2.0f, total_mobs_added_per_player: 1.0f}'
+      ctx: "{simultaneous_mobs: 1.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:breeze\"}}, weight: 1}], ticks_between_
+  L117: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 2.0f, total_mobs: 4.0f}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L121: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:husk\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:husk\"}}, weight: 1}], ticks_between_sp
+  L122: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:husk\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L126: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:spider\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:spider\"}}, weight: 1}], ticks_between_
+  L127: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L131: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:zombie\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:zombie\"}}, weight: 1}], ticks_between_
+  L132: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:zombie\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L136: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:bogged\"}}, weight: 1}], ticks_between_
+  L137: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L141: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleton\"}}, weight: 1}], ticks_betwee
+  L142: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L146: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}}, weight: 1}], ticks_between_s
+  L147: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L151: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:bogged\"}}, weight: 1}], ticks_between_
+  L152: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:bogged\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L156: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:skeleton\"}}, weight: 1}], ticks_betwee
+  L157: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {id: \\"minecraft:skeleton\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L161: '{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}}, weight: 1}], ticks_between_spawn: 160}'
+      ctx: "{simultaneous_mobs: 4.0f, simultaneous_mobs_added_per_player: 2.0f, spawn_potentials: [{data: {entity: {id: \"minecraft:stray\"}}, weight: 1}], ticks_between_s
+  L162: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}],spawn_potentials: [{data: {entity: {id: \\"minecraft:stray\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_ranged\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L166: '{simultaneous_mobs: 2.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \\"minecraft:zombie\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 2.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \"minecraft:zombie\"}}, weight: 1}], ti
+  L167: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], spawn_potentials: [{data: {entity: {IsBaby: 1b, id: \\"minecraft:zombie\\"}, equipment: {loot_table: \\"minecraft:equipment/trial_chamber_melee\\", slot_drop_chances: 0.0f}}, weight: 1}]}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L171: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:cave_spider\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:cave_spider\"}}, weight: 1}], ticks_bet
+  L172: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L176: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \\"minecraft:silverfish\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {id: \"minecraft:silverfish\"}}, weight: 1}], ticks_betw
+  L177: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+  L181: '{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {Size: 1, id: \\"minecraft:slime\\"}}, weight: 3}, {data: {entity: {Size: 2, id: \\"minecraft:slime\\"}}, weight: 1}], ticks_between_spawn: 20}'
+      ctx: "{simultaneous_mobs: 3.0f, simultaneous_mobs_added_per_player: 0.5f, spawn_potentials: [{data: {entity: {Size: 1, id: \"minecraft:slime\"}}, weight: 3}, {data: 
+  L182: '{loot_tables_to_eject: [{data: \\"minecraft:spawners/ominous/trial_chamber/key\\", weight: 3}, {data: \\"minecraft:spawners/ominous/trial_chamber/consumables\\", weight: 7}], simultaneous_mobs: 4.0f, total_mobs: 12.0f}'
+      ctx: "{loot_tables_to_eject: [{data: \"minecraft:spawners/ominous/trial_chamber/key\", weight: 3}, {data: \"minecraft:spawners/ominous/trial_chamber/consumables\", w
+
+### FILE: net/minecraft/util/datafix/fixes/UnflattenTextComponentFix.java  (1)
+  L47: 'Failed to unflatten text component json: {}'
+      ctx: LOGGER.error("Failed to unflatten text component json: {}", jsonString, e);
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerDataFix.java  (1)
+  L12: 'Villager profession data fix ('
+      ctx: super(schema, false, "Villager profession data fix (" + entityType + ")", References.ENTITY, entityType);
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerFollowRangeFix.java  (1)
+  L13: 'Villager Follow Range Fix'
+      ctx: super(outputSchema, false, "Villager Follow Range Fix", References.ENTITY, "minecraft:villager");
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerRebuildLevelAndXpFix.java  (1)
+  L37: 'Villager level and xp rebuild'
+      ctx: "Villager level and xp rebuild",
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerSetCanPickUpLootFix.java  (1)
+  L12: 'Villager CanPickUpLoot default value'
+      ctx: super(outputSchema, true, "Villager CanPickUpLoot default value", References.ENTITY, "Villager");
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerSetVillagerDataFinalized.java  (1)
+  L12: 'Villager VillagerDataFinalized default value'
+      ctx: super(outputSchema, true, "Villager VillagerDataFinalized default value", References.ENTITY, "minecraft:villager");
+
+### FILE: net/minecraft/util/datafix/fixes/VillagerTradeFix.java  (1)
+  L29: 'Villager trade fix'
+      ctx: "Villager trade fix",
+
+### FILE: net/minecraft/util/datafix/fixes/WorldGenSettingsDisallowOldCustomWorldsFix.java  (1)
+  L26: 'Unable load old custom worlds.'
+      ctx: throw new NbtFormatException("Unable load old custom worlds.");
+
+### FILE: net/minecraft/util/datafix/fixes/WorldGenSettingsFix.java  (1)
+  L55: 'WorldGenSettings building'
+      ctx: "WorldGenSettings building",
+
+### FILE: net/minecraft/util/datafix/fixes/ZombieVillagerRebuildXpFix.java  (1)
+  L10: 'Zombie Villager XP rebuild'
+      ctx: super(outputSchema, changesType, "Zombie Villager XP rebuild", References.ENTITY, "minecraft:zombie_villager");
+
+### FILE: net/minecraft/util/datafix/fixes/ZombieVillagerSetVillagerDataFinalized.java  (1)
+  L12: 'Zombie Villager VillagerDataFinalized default value'
+      ctx: super(outputSchema, true, "Zombie Villager VillagerDataFinalized default value", References.ENTITY, "minecraft:zombie_villager");
+
+### FILE: net/minecraft/util/datafix/schemas/V704.java  (2)
+  L164: "Didn't find "
+      ctx: .forEach((oldId, newId) -> map.put(newId, Objects.requireNonNull(map.remove(oldId), () -> "Didn't find " + oldId + " in schema")));
+  L164: ' in schema'
+      ctx: .forEach((oldId, newId) -> map.put(newId, Objects.requireNonNull(map.remove(oldId), () -> "Didn't find " + oldId + " in schema")));
+
+### FILE: net/minecraft/util/datafix/schemas/V99.java  (1)
+  L406: 'Unable to resolve BlockEntity for ItemStack: {}'
+      ctx: LOGGER.warn("Unable to resolve BlockEntity for ItemStack: {}", itemId);
+
+### FILE: net/minecraft/util/debug/DebugBrainDump.java  (1)
+  L184: ' ticks ago'
+      ctx: description = timeSince + " ticks ago";
+
+### FILE: net/minecraft/util/debugchart/AbstractSampleLogger.java  (2)
+  L9: 'defaults have incorrect length of '
+      ctx: throw new IllegalArgumentException("defaults have incorrect length of " + defaults.length);
+  L35: ' out of bounds for dimensions '
+      ctx: throw new IndexOutOfBoundsException(dimension + " out of bounds for dimensions " + this.sample.length);
+
+### FILE: net/minecraft/util/debugchart/LocalSampleLogger.java  (2)
+  L51: ' out of bounds for dimensions '
+      ctx: throw new IndexOutOfBoundsException(dimension + " out of bounds for dimensions " + sampleArray.length);
+  L54: ' out of bounds for length '
+      ctx: throw new IndexOutOfBoundsException(index + " out of bounds for length " + this.size);
+
+### FILE: net/minecraft/util/eventlog/EventLogDirectory.java  (4)
+  L80: 'Compressed target file already exists: '
+      ctx: throw new IOException("Compressed target file already exists: " + compressed);
+  L86: 'Raw log file is already locked, cannot compress: '
+      ctx: throw new IOException("Raw log file is already locked, cannot compress: " + raw);
+  L192: 'Failed to delete expired event log file: {}'
+      ctx: EventLogDirectory.LOGGER.warn("Failed to delete expired event log file: {}", file.path(), e);
+  L210: 'Failed to compress event log file: {}'
+      ctx: EventLogDirectory.LOGGER.warn("Failed to compress event log file: {}", file.path(), e);
+
+### FILE: net/minecraft/util/eventlog/JsonEventLog.java  (1)
+  L45: 'Event log has already been closed'
+      ctx: throw new IOException("Event log has already been closed");
+
+### FILE: net/minecraft/util/filefix/AbortedFileFixException.java  (1)
+  L28: 'Moves that failed to revert'
+      ctx: CrashReportCategory failedReverts = crashReport.addCategory("Moves that failed to revert");
+
+### FILE: net/minecraft/util/filefix/FailedCleanupFileFixException.java  (2)
+  L17: 'World upgrade'
+      ctx: CrashReportCategory worldUpgrade = crashReport.addCategory("World upgrade");
+  L18: 'New Name'
+      ctx: worldUpgrade.setDetail("New Name", this.newWorldFolderName);
+
+### FILE: net/minecraft/util/filefix/FileFixException.java  (4)
+  L17: 'Upgrading world failed with errors'
+      ctx: CrashReport crashReport = CrashReport.forThrowable(this, "Upgrading world failed with errors");
+  L18: 'File system capabilities'
+      ctx: CrashReportCategory fsCapabilities = crashReport.addCategory("File system capabilities");
+  L19: 'Hard Links'
+      ctx: fsCapabilities.setDetail("Hard Links", this.fileSystemCapabilities == null ? "null" : this.fileSystemCapabilities.hardLinks());
+  L20: 'Atomic Move'
+      ctx: fsCapabilities.setDetail("Atomic Move", this.fileSystemCapabilities == null ? "null" : this.fileSystemCapabilities.atomicMove());
+
+### FILE: net/minecraft/util/filefix/FileFixUtil.java  (5)
+  L22: 'Target already exists, skipping move from {} to {}'
+      ctx: LOGGER.warn("Target already exists, skipping move from {} to {}", from, to);
+  L38: "Attempting to delete DS_Store at '{}'"
+      ctx: LOGGER.debug("Attempting to delete DS_Store at '{}'", toDelete);
+  L40: "Failed to delete file '{}' at '{}'"
+      ctx: LOGGER.warn("Failed to delete file '{}' at '{}'", files.getFirst(), toDelete);
+  L51: "Failed to delete directory '{}', as it's not empty. Content: {}"
+      ctx: LOGGER.warn("Failed to delete directory '{}', as it's not empty. Content: {}", toDelete, var12);
+  L55: "Failed to delete directory '{}' because {}"
+      ctx: LOGGER.warn("Failed to delete directory '{}' because {}", toDelete, e.toString());
+
+### FILE: net/minecraft/util/filefix/FileFixerUpper.java  (26)
+  L86: 'Starting upgrade for world \\"{}\\"'
+      ctx: LOGGER.info("Starting upgrade for world \"{}\"", worldAccess.getLevelId());
+  L132: 'Found previously interrupted world upgrade, attempting to continue it'
+      ctx: LOGGER.warn("Found previously interrupted world upgrade, attempting to continue it");
+  L182: 'Failed to clean up'
+      ctx: LOGGER.error("Failed to clean up", ex);
+  L281: 'File system capabilities: {}'
+      ctx: LOGGER.info("File system capabilities: {}", fileSystemCapabilities);
+  L294: 'Applying file structure changes for world \\"{}\\"'
+      ctx: LOGGER.info("Applying file structure changes for world \"{}\"", worldAccess.getLevelId());
+  L297: 'Moving new hardlinked world to top level'
+      ctx: LOGGER.info("Moving new hardlinked world to top level");
+  L300: 'Encountered error trying to move world folder:'
+      ctx: LOGGER.error("Encountered error trying to move world folder:", e);
+  L305: 'Moving files into new file structure'
+      ctx: LOGGER.info("Moving files into new file structure");
+  L307: 'Moving new world to top level'
+      ctx: LOGGER.info("Moving new world to top level");
+  L310: 'Encountered error while trying to create new world folder:'
+      ctx: LOGGER.error("Encountered error while trying to create new world folder:", e);
+  L316: 'Failed to delete {}'
+      ctx: LOGGER.warn("Failed to delete {}", movesFile, e2); // Paper - print correct stacktrace (MC-308790)
+  L323: 'Complete move'
+      ctx: LOGGER.info("Complete move");
+  L328: 'Failed to delete {}'
+      ctx: LOGGER.warn("Failed to delete {}", movesFile, e);
+  L332: 'Start cleanup'
+      ctx: LOGGER.info("Start cleanup");
+  L338: 'Failed to delete outdated level.dat files: '
+      ctx: LOGGER.warn("Failed to delete outdated level.dat files: ", e);
+  L345: 'Moving out old world folder'
+      ctx: LOGGER.info("Moving out old world folder");
+  L350: 'Failed to move outdated world folder out of the way; will try to delete instead: '
+      ctx: LOGGER.warn("Failed to move outdated world folder out of the way; will try to delete instead: ", e);
+  L355: 'Failed to delete outdated world folder: '
+      ctx: LOGGER.warn("Failed to delete outdated world folder: ", e2); // Paper - print correct stacktrace (MC-308790)
+  L360: 'Moving in new world folder'
+      ctx: LOGGER.info("Moving in new world folder");
+  L365: 'Failed to move in new world folder: '
+      ctx: LOGGER.warn("Failed to move in new world folder: ", e);
+  L376: 'Done applying file structure changes for world \\"{}\\". Cleaning up outdated data...'
+      ctx: LOGGER.info("Done applying file structure changes for world \"{}\". Cleaning up outdated data...", worldAccess.getLevelId());
+  L383: 'Failed to clean up old world folder'
+      ctx: LOGGER.warn("Failed to clean up old world folder", e);
+  L386: 'Upgrade done for world \\"{}\\"'
+      ctx: LOGGER.info("Upgrade done for world \"{}\"", worldAccess.getLevelId());
+  L455: 'Tried to add file fixer with unknown schema. Add it through FileFixerUpper#addSchema instead'
+      ctx: throw new IllegalArgumentException("Tried to add file fixer with unknown schema. Add it through FileFixerUpper#addSchema instead");
+  L463: 'Tried to add too recent file fix for version: %s. The data version of the game is: %s'
+      ctx: "Tried to add too recent file fix for version: %s. The data version of the game is: %s",
+  L476: 'Tried to add too recent file fix for version: %s. The most recent file fix version is %s'
+      ctx: "Tried to add too recent file fix for version: %s. The most recent file fix version is %s",
+
+### FILE: net/minecraft/util/filefix/access/CompressedNbt.java  (2)
+  L34: 'Missing file: {}'
+      ctx: this.missingSeverity.log("Missing file: {}", this.path);
+  L48: 'Failed to write to {}: {}'
+      ctx: LOGGER.error("Failed to write to {}: {}", this.path, e);
+
+### FILE: net/minecraft/util/filefix/access/FileAccess.java  (3)
+  L26: 'Cannot access world files'
+      ctx: throw new IllegalStateException("Cannot access world files");
+  L38: 'Trying to get only file, but there are '
+      ctx: throw new IllegalStateException("Trying to get only file, but there are " + files.size() + " files");
+  L51: 'Failed to close file: '
+      ctx: LOGGER.error("Failed to close file: ", e);
+
+### FILE: net/minecraft/util/filefix/access/FileAccessProvider.java  (1)
+  L19: 'Cannot request new file access here.'
+      ctx: throw new IllegalStateException("Cannot request new file access here.");
+
+### FILE: net/minecraft/util/filefix/access/FileRelation.java  (1)
+  L63: 'Failed to discover dimensions, assuming default: {}'
+      ctx: LOGGER.warn("Failed to discover dimensions, assuming default: {}", e.toString());
+
+### FILE: net/minecraft/util/filefix/virtualfilesystem/CopyOnWriteFSPath.java  (2)
+  L142: "'other' is different type of Path"
+      ctx: throw new IllegalArgumentException("'other' is different type of Path");
+  L203: 'Other path is of mismatching file system'
+      ctx: throw new CowFSIllegalArgumentException("Other path is of mismatching file system");
+
+### FILE: net/minecraft/util/filefix/virtualfilesystem/CopyOnWriteFSProvider.java  (5)
+  L97: 'DELETE_ON_CLOSE is not supported by CowFS'
+      ctx: throw new UnsupportedOperationException("DELETE_ON_CLOSE is not supported by CowFS");
+  L120: ': not a regular file'
+      ctx: case DirectoryNode var14 -> throw new CowFSFileSystemException(cowPath + ": not a regular file");
+  L176: "Can't remove root"
+      ctx: throw new CowFSFileSystemException("Can't remove root");
+  L201: ": can't move root directory"
+      ctx: throw new CowFSFileSystemException(sourceCow + ": can't move root directory");
+  L208: 'CowFs does not support atomic move'
+      ctx: throw new AtomicMoveNotSupportedException(sourceCow.toString(), targetCow.toString(), "CowFs does not support atomic move");
+
+### FILE: net/minecraft/util/filefix/virtualfilesystem/CopyOnWriteFileSystem.java  (10)
+  L52: 'Temporary directory already exists: '
+      ctx: throw new CowFSCreationException("Temporary directory already exists: " + tmpDirectory);
+  L95: 'Cannot build copy-on-write file system when symlink is present: '
+      ctx: throw new CowFSSymlinkException("Cannot build copy-on-write file system when symlink is present: " + realPath);
+  L99: 'Cannot build copy-on-write file system, missing write access for file: '
+      ctx: throw new CowFSCreationException("Cannot build copy-on-write file system, missing write access for file: " + realPath);
+  L243: 'Not a regular file: '
+      ctx: throw new IllegalStateException("Not a regular file: " + move.from());
+  L261: 'Not a regular file: '
+      ctx: throw new IOException("Not a regular file: " + move.from());
+  L277: 'Reverted move from {} to {}'
+      ctx: LOGGER.info("Reverted move from {} to {}", move.from(), move.to());
+  L279: 'Failed to revert move from {} to {}'
+      ctx: LOGGER.error("Failed to revert move from {} to {}", move.from(), move.to());
+  L283: "Skipping reverting move from {} to {} as it's not a file"
+      ctx: LOGGER.error("Skipping reverting move from {} to {} as it's not a file", move.from(), move.to());
+  L290: 'Successfully reverted back to previous world state'
+      ctx: LOGGER.info("Successfully reverted back to previous world state");
+  L292: 'Completed reverting with errors'
+      ctx: LOGGER.error("Completed reverting with errors");
+
+### FILE: net/minecraft/util/filefix/virtualfilesystem/DirectoryNode.java  (1)
+  L41: ' was a file, expected directory'
+      ctx: throw new CowFSNotDirectoryException(path + " was a file, expected directory");
+
+### FILE: net/minecraft/util/monitoring/jmx/MinecraftServerStatistics.java  (4)
+  L33: 'Historical tick times (ms)'
+      ctx: new MinecraftServerStatistics.AttributeDescription("tickTimes", this::getTickTimes, "Historical tick times (ms)", long[].class),
+  L34: 'Current average tick time (ms)'
+      ctx: new MinecraftServerStatistics.AttributeDescription("averageTickTime", this::getAverageTickTime, "Current average tick time (ms)", long.class)
+  L46: 'metrics for dedicated server'
+      ctx: MinecraftServerStatistics.class.getSimpleName(), "metrics for dedicated server", mBeanAttributeInfos, null, null, new MBeanNotificationInfo[0]
+  L54: 'Failed to initialise server as JMX bean'
+      ctx: LOGGER.warn("Failed to initialise server as JMX bean", e);
+
+### FILE: net/minecraft/util/parsing/packrat/Dictionary.java  (4)
+  L16: 'Trying to override rule: '
+      ctx: throw new IllegalArgumentException("Trying to override rule: " + name);
+  L34: 'Unbound names: '
+      ctx: throw new IllegalStateException("Unbound names: " + unboundNames);
+  L39: 'No rule called '
+      ctx: return (NamedRule<S, T>)Objects.requireNonNull(this.terms.get(name), () -> "No rule called " + name);
+  L78: 'Unbound rule '
+      ctx: return "Unbound rule " + this.name;
+
+### FILE: net/minecraft/util/parsing/packrat/ParseState.java  (1)
+  L18: 'Malformed scope: '
+      ctx: throw new IllegalStateException("Malformed scope: " + this.scope());
+
+### FILE: net/minecraft/util/parsing/packrat/Scope.java  (4)
+  L170: 'No value for atom '
+      ctx: throw new IllegalArgumentException("No value for atom " + name);
+  L191: 'No value for atoms '
+      ctx: throw new IllegalArgumentException("No value for atoms " + Arrays.toString(names));
+  L242: 'Corrupted stack'
+      ctx: throw new IllegalStateException("Corrupted stack");
+  L274: 'Too deep'
+      ctx: parseState.errorCollector().store(parseState.mark(), new IllegalStateException("Too deep"));
+
+### FILE: net/minecraft/util/parsing/packrat/commands/Grammar.java  (1)
+  L55: 'Failed to parse: '
+      ctx: throw new IllegalStateException("Failed to parse: " + errorEntries.stream().map(ErrorEntry::toString).collect(Collectors.joining(", ")));
+
+### FILE: net/minecraft/util/profiling/ActiveProfiler.java  (7)
+  L53: 'Profiler tick already started - missing endTick()?'
+      ctx: LOGGER.error("Profiler tick already started - missing endTick()?");
+  L65: 'Profiler tick already ended - missing startTick()?'
+      ctx: LOGGER.error("Profiler tick already ended - missing startTick()?");
+  L71: "Profiler tick ended before path was fully popped (remainder: '{}'). Mismatched push/pop?"
+      ctx: "Profiler tick ended before path was fully popped (remainder: '{}'). Mismatched push/pop?",
+  L81: "Cannot push '{}' to profiler if profiler tick hasn't started - missing startTick()?"
+      ctx: LOGGER.error("Cannot push '{}' to profiler if profiler tick hasn't started - missing startTick()?", name);
+  L107: "Cannot pop from profiler if profiler tick hasn't started - missing startTick()?"
+      ctx: LOGGER.error("Cannot pop from profiler if profiler tick hasn't started - missing startTick()?");
+  L109: 'Tried to pop one too many times! Mismatched push() and pop()?'
+      ctx: LOGGER.error("Tried to pop one too many times! Mismatched push() and pop()?");
+  L122: "Something's taking too long! '{}' took aprox {} ms"
+      ctx: "Something's taking too long! '{}' took aprox {} ms",
+
+### FILE: net/minecraft/util/profiling/FilledProfileResults.java  (11)
+  L185: 'Could not save profiler results to {}'
+      ctx: LOGGER.error("Could not save profiler results to {}", file, t);
+  L196: 'Time span: '
+      ctx: builder.append("Time span: ").append(timespan / 1000000L).append(" ms\n");
+  L197: 'Tick span: '
+      ctx: builder.append("Tick span: ").append(tickspan).append(" ticks\n");
+  L200: ' ticks per second. It should be '
+      ctx: .append(" ticks per second. It should be ")
+  L202: ' ticks per second\\n\\n'
+      ctx: .append(" ticks per second\n\n");
+  L203: '--- BEGIN PROFILE DUMP ---\\n\\n'
+      ctx: builder.append("--- BEGIN PROFILE DUMP ---\n\n");
+  L205: '--- END PROFILE DUMP ---\\n\\n'
+      ctx: builder.append("--- END PROFILE DUMP ---\n\n");
+  L208: '--- BEGIN COUNTER DUMP ---\\n\\n'
+      ctx: builder.append("--- BEGIN COUNTER DUMP ---\n\n");
+  L210: '--- END COUNTER DUMP ---\\n\\n'
+      ctx: builder.append("--- END COUNTER DUMP ---\n\n");
+  L265: '[[ EXCEPTION '
+      ctx: builder.append("[[ EXCEPTION ").append(e).append(" ]]");
+  L295: '-- Counter: '
+      ctx: builder.append("-- Counter: ").append(counter).append(" --\n");
+
+### FILE: net/minecraft/util/profiling/Profiler.java  (2)
+  L23: 'Profiler is already active'
+      ctx: throw new IllegalStateException("Profiler is already active");
+  L35: 'Profiler was not active'
+      ctx: throw new IllegalStateException("Profiler was not active");
+
+### FILE: net/minecraft/util/profiling/SingleTickProfiler.java  (1)
+  L38: 'Recorded long tick -- wrote info to: {}'
+      ctx: LOGGER.info("Recorded long tick -- wrote info to: {}", file.getAbsolutePath());
+
+### FILE: net/minecraft/util/profiling/TracyZoneFiller.java  (1)
+  L70: 'Tried to pop one too many times! Mismatched push() and pop()?'
+      ctx: LOGGER.error("Tried to pop one too many times! Mismatched push() and pop()?");
+
+### FILE: net/minecraft/util/profiling/jfr/JfrProfiler.java  (7)
+  L57: 'World Generation'
+      ctx: public static final String WORLD_GEN_CATEGORY = "World Generation";
+  L131: 'Could not find default flight recorder config at {}'
+      ctx: LOGGER.warn("Could not find default flight recorder config at {}", "/flightrecorder-config.jfc");
+  L138: 'Failed to start flight recorder using configuration at {}'
+      ctx: LOGGER.warn("Failed to start flight recorder using configuration at {}", resource, e);
+  L146: 'Not currently profiling'
+      ctx: throw new IllegalStateException("Not currently profiling");
+  L167: 'Profiling already in progress'
+      ctx: LOGGER.warn("Profiling already in progress");
+  L186: 'Failed to start jfr profiling'
+      ctx: LOGGER.warn("Failed to start jfr profiling", exception);
+  L191: 'Started flight recorder profiling id({}):name({}) - will dump to {} on exit or stop command'
+      ctx: "Started flight recorder profiling id({}):name({}) - will dump to {} on exit or stop command",
+
+### FILE: net/minecraft/util/profiling/jfr/JvmProfiler.java  (2)
+  L57: "Attempted to start Flight Recorder, but it's not supported on this JVM"
+      ctx: LOGGER.warn("Attempted to start Flight Recorder, but it's not supported on this JVM");
+  L63: "Attempted to stop Flight Recorder, but it's not supported on this JVM"
+      ctx: throw new IllegalStateException("Attempted to stop Flight Recorder, but it's not supported on this JVM");
+
+### FILE: net/minecraft/util/profiling/jfr/SummaryReporter.java  (4)
+  L26: 'Dumped flight recorder profiling to '
+      ctx: infoWithFallback(() -> "Dumped flight recorder profiling to " + result);
+  L32: 'Failed to parse JFR recording'
+      ctx: warnWithFallback(() -> "Failed to parse JFR recording", t);
+  L40: 'Dumped recording summary to '
+      ctx: infoWithFallback(() -> "Dumped recording summary to " + jsonReport);
+  L42: 'Failed to output JFR report'
+      ctx: warnWithFallback(() -> "Failed to output JFR report", t);
+
+### FILE: net/minecraft/util/profiling/jfr/event/ChunkGenerationEvent.java  (6)
+  L15: 'Chunk Generation'
+      ctx: @Label("Chunk Generation")
+  L16: 'World Generation'
+      ctx: @Category({"Minecraft", "World Generation"})
+  L23: 'First Block X World Position'
+      ctx: @Label("First Block X World Position")
+  L26: 'First Block Z World Position'
+      ctx: @Label("First Block Z World Position")
+  L29: 'Chunk X Position'
+      ctx: @Label("Chunk X Position")
+  L32: 'Chunk Z Position'
+      ctx: @Label("Chunk Z Position")
+
+### FILE: net/minecraft/util/profiling/jfr/event/ChunkRegionIoEvent.java  (7)
+  L18: 'Region X Position'
+      ctx: @Label("Region X Position")
+  L21: 'Region Z Position'
+      ctx: @Label("Region Z Position")
+  L24: 'Local X Position'
+      ctx: @Label("Local X Position")
+  L27: 'Local Z Position'
+      ctx: @Label("Local Z Position")
+  L30: 'Chunk X Position'
+      ctx: @Label("Chunk X Position")
+  L33: 'Chunk Z Position'
+      ctx: @Label("Chunk Z Position")
+  L36: 'Level Id'
+      ctx: @Label("Level Id")
+
+### FILE: net/minecraft/util/profiling/jfr/event/ChunkRegionReadEvent.java  (1)
+  L11: 'Region File Read'
+      ctx: @Label("Region File Read")
+
+### FILE: net/minecraft/util/profiling/jfr/event/ChunkRegionWriteEvent.java  (1)
+  L11: 'Region File Write'
+      ctx: @Label("Region File Write")
+
+### FILE: net/minecraft/util/profiling/jfr/event/ClientFpsEvent.java  (2)
+  L12: 'Client fps'
+      ctx: @Label("Client fps")
+  L20: 'Client fps'
+      ctx: @Label("Client fps")
+
+### FILE: net/minecraft/util/profiling/jfr/event/NetworkSummaryEvent.java  (6)
+  L15: 'Network Summary'
+      ctx: @Label("Network Summary")
+  L23: 'Remote Address'
+      ctx: @Label("Remote Address")
+  L26: 'Sent Bytes'
+      ctx: @Label("Sent Bytes")
+  L30: 'Sent Packets'
+      ctx: @Label("Sent Packets")
+  L33: 'Received Bytes'
+      ctx: @Label("Received Bytes")
+  L37: 'Received Packets'
+      ctx: @Label("Received Packets")
+
+### FILE: net/minecraft/util/profiling/jfr/event/PacketEvent.java  (4)
+  L17: 'Protocol Id'
+      ctx: @Label("Protocol Id")
+  L20: 'Packet Direction'
+      ctx: @Label("Packet Direction")
+  L23: 'Packet Id'
+      ctx: @Label("Packet Id")
+  L26: 'Remote Address'
+      ctx: @Label("Remote Address")
+
+### FILE: net/minecraft/util/profiling/jfr/event/PacketReceivedEvent.java  (1)
+  L9: 'Network Packet Received'
+      ctx: @Label("Network Packet Received")
+
+### FILE: net/minecraft/util/profiling/jfr/event/PacketSentEvent.java  (1)
+  L9: 'Network Packet Sent'
+      ctx: @Label("Network Packet Sent")
+
+### FILE: net/minecraft/util/profiling/jfr/event/ServerTickTimeEvent.java  (2)
+  L13: 'Server Tick Time'
+      ctx: @Label("Server Tick Time")
+  L21: 'Average Server Tick Duration'
+      ctx: @Label("Average Server Tick Duration")
+
+### FILE: net/minecraft/util/profiling/jfr/event/StructureGenerationEvent.java  (4)
+  L17: 'Structure Generation'
+      ctx: @Label("Structure Generation")
+  L18: 'World Generation'
+      ctx: @Category({"Minecraft", "World Generation"})
+  L25: 'Chunk X Position'
+      ctx: @Label("Chunk X Position")
+  L28: 'Chunk Z Position'
+      ctx: @Label("Chunk Z Position")
+
+### FILE: net/minecraft/util/profiling/jfr/event/WorldLoadFinishedEvent.java  (2)
+  L11: 'Create/Load World'
+      ctx: @Label("Create/Load World")
+  L12: 'World Generation'
+      ctx: @Category({"Minecraft", "World Generation"})
+
+### FILE: net/minecraft/util/profiling/jfr/stats/GcHeapStat.java  (1)
+  L15: 'before gc'
+      ctx: event.getString("when").equalsIgnoreCase("before gc") ? GcHeapStat.Timing.BEFORE_GC : GcHeapStat.Timing.AFTER_GC
+
+### FILE: net/minecraft/util/profiling/jfr/stats/ThreadAllocationStat.java  (1)
+  L34: 'Thread allocation stat timestamps are not in chronological order for thread {}, skipping it'
+      ctx: LOGGER.warn("Thread allocation stat timestamps are not in chronological order for thread {}, skipping it", thread);
+
+### FILE: net/minecraft/util/profiling/metrics/MetricCategory.java  (2)
+  L9: 'chunk rendering'
+      ctx: CHUNK_RENDERING("chunk rendering"),
+  L10: 'chunk rendering dispatching'
+      ctx: CHUNK_RENDERING_DISPATCHING("chunk rendering dispatching"),
+
+### FILE: net/minecraft/util/profiling/metrics/MetricSampler.java  (2)
+  L64: 'Not running'
+      ctx: throw new IllegalStateException("Not running");
+  L88: 'Sampler for metric %s not started!'
+      ctx: throw new IllegalStateException(String.format(Locale.ROOT, "Sampler for metric %s not started!", this.name));
+
+### FILE: net/minecraft/util/profiling/metrics/profiling/ActiveMetricsRecorder.java  (1)
+  L152: 'Not started!'
+      ctx: throw new IllegalStateException("Not started!");
+
+### FILE: net/minecraft/util/profiling/metrics/profiling/ServerMetricsSamplersProvider.java  (2)
+  L46: 'Failed to query cpu, no cpu stats will be recorded'
+      ctx: LOGGER.warn("Failed to query cpu, no cpu stats will be recorded", t);
+  L51: 'heap MiB'
+      ctx: "heap MiB", MetricCategory.JVM, () -> SystemReport.sizeInMiB(Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory())
+
+### FILE: net/minecraft/util/profiling/metrics/storage/MetricsPersister.java  (3)
+  L69: 'Expected at least one sampler to persist'
+      ctx: throw new IllegalArgumentException("Expected at least one sampler to persist");
+  L102: 'Flushed metrics to {}'
+      ctx: LOGGER.info("Flushed metrics to {}", file);
+  L104: 'Could not save profiler results to {}'
+      ctx: LOGGER.error("Could not save profiler results to {}", file, e);
+
+### FILE: net/minecraft/util/random/Weighted.java  (2)
+  L22: 'Weight should be >= 0'
+      ctx: throw (IllegalArgumentException)Util.pauseInIde(new IllegalArgumentException("Weight should be >= 0"));
+  L26: 'Found 0 weight, make sure this is intentional!'
+      ctx: LOGGER.warn("Found 0 weight, make sure this is intentional!");
+
+### FILE: net/minecraft/util/random/WeightedList.java  (3)
+  L87: 'Weighted list has no elements'
+      ctx: throw new IllegalStateException("Weighted list has no elements");
+  L114: 'Weighted list must contain at least one entry with non-zero weight'
+      ctx: ? DataResult.error(() -> "Weighted list must contain at least one entry with non-zero weight")
+  L185: ' exceeded total weight'
+      ctx: throw new IllegalStateException(selection + " exceeded total weight");
+
+### FILE: net/minecraft/util/random/WeightedRandom.java  (2)
+  L21: 'Sum of weights must be <= 2147483647'
+      ctx: throw new IllegalArgumentException("Sum of weights must be <= 2147483647");
+  L29: 'Negative total weight in getRandomItem'
+      ctx: throw (IllegalArgumentException)Util.pauseInIde(new IllegalArgumentException("Negative total weight in getRandomItem"));
+
+### FILE: net/minecraft/util/thread/AbstractConsecutiveExecutor.java  (1)
+  L87: 'Could not schedule ConsecutiveExecutor'
+      ctx: LOGGER.error("Could not schedule ConsecutiveExecutor", e2);
+
+### FILE: net/minecraft/util/thread/BlockableEventLoop.java  (2)
+  L202: 'waiting for tasks'
+      ctx: LockSupport.parkNanos("waiting for tasks", 100000L);
+  L209: 'Error executing task on {}'
+      ctx: LOGGER.error(LogUtils.FATAL_MARKER, "Error executing task on {}", this.name(), e);
+
+### FILE: net/minecraft/util/thread/StrictQueue.java  (1)
+  L52: 'Priority %d not supported. Expected range [0-%d]'
+      ctx: String.format(Locale.ROOT, "Priority %d not supported. Expected range [0-%d]", priority, this.queues.length - 1)
+
+### FILE: net/minecraft/util/valueproviders/BiasedToBottomInt.java  (2)
+  L19: 'Max must be at least min, min_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+  L19: ', max_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+
+### FILE: net/minecraft/util/valueproviders/ClampedInt.java  (2)
+  L21: 'Max must be at least min, min_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+  L21: ', max_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+
+### FILE: net/minecraft/util/valueproviders/ClampedNormalFloat.java  (2)
+  L20: 'Max must be larger than min: ['
+      ctx: .validate(c -> c.max < c.min ? DataResult.error(() -> "Max must be larger than min: [" + c.min + ", " + c.max + "]") : DataResult.success(c));
+  L42: ') in ['
+      ctx: return "normal(" + this.mean + ", " + this.deviation + ") in [" + this.min + "-" + this.max + "]";
+
+### FILE: net/minecraft/util/valueproviders/ClampedNormalInt.java  (2)
+  L22: 'Max must be larger than min: ['
+      ctx: ? DataResult.error(() -> "Max must be larger than min: [" + c.minInclusive + ", " + c.maxInclusive + "]")
+  L46: ') in ['
+      ctx: return "normal(" + this.mean + ", " + this.deviation + ") in [" + this.minInclusive + "-" + this.maxInclusive + "]";
+
+### FILE: net/minecraft/util/valueproviders/FloatProviders.java  (3)
+  L23: 'Value provider too low: '
+      ctx: return DataResult.error(() -> "Value provider too low: " + minValue + " [" + value.min() + "-" + value.max() + "]");
+  L26: 'Value provider too high: '
+      ctx: ? DataResult.error(() -> "Value provider too high: " + maxValue + " [" + value.min() + "-" + value.max() + "]")
+  L36: 'Value provider too low: '
+      ctx: ? DataResult.error(() -> "Value provider too low: " + minValue + " [" + value.min() + "-" + value.max() + "]")
+
+### FILE: net/minecraft/util/valueproviders/IntProviders.java  (2)
+  L31: 'Value provider too low: '
+      ctx: return DataResult.error(() -> "Value provider too low: " + minValue + " [" + value.minInclusive() + "-" + value.maxInclusive() + "]");
+  L34: 'Value provider too high: '
+      ctx: ? DataResult.error(() -> "Value provider too high: " + maxValue + " [" + value.minInclusive() + "-" + value.maxInclusive() + "]")
+
+### FILE: net/minecraft/util/valueproviders/TrapezoidFloat.java  (3)
+  L21: 'Max must be larger than min: ['
+      ctx: return DataResult.error(() -> "Max must be larger than min: [" + c.min + ", " + c.max + "]");
+  L24: 'Plateau can at most be the full span: ['
+      ctx: ? DataResult.error(() -> "Plateau can at most be the full span: [" + c.min + ", " + c.max + "]")
+  L49: ') in ['
+      ctx: return "trapezoid(" + this.plateau + ") in [" + this.min + "-" + this.max + "]";
+
+### FILE: net/minecraft/util/valueproviders/TrapezoidInt.java  (3)
+  L22: 'Max must be larger than min: ['
+      ctx: return DataResult.error(() -> "Max must be larger than min: [" + c.minInclusive + ", " + c.maxInclusive + "]");
+  L25: 'Plateau can at most be the full span: ['
+      ctx: ? DataResult.error(() -> "Plateau can at most be the full span: [" + c.minInclusive + ", " + c.maxInclusive + "]")
+  L62: ') in ['
+      ctx: return "trapezoid(" + this.plateau + ") in [" + this.minInclusive + "-" + this.maxInclusive + "]";
+
+### FILE: net/minecraft/util/valueproviders/UniformFloat.java  (3)
+  L15: 'Max must be larger than min, min: '
+      ctx: .validate(u -> u.max <= u.min ? DataResult.error(() -> "Max must be larger than min, min: " + u.min + ", max: " + u.max) : DataResult.success(u));
+  L15: ', max: '
+      ctx: .validate(u -> u.max <= u.min ? DataResult.error(() -> "Max must be larger than min, min: " + u.min + ", max: " + u.max) : DataResult.success(u));
+  L19: 'Max must exceed min'
+      ctx: throw new IllegalArgumentException("Max must exceed min");
+
+### FILE: net/minecraft/util/valueproviders/UniformInt.java  (2)
+  L20: 'Max must be at least min, min_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+  L20: ', max_inclusive: '
+      ctx: ? DataResult.error(() -> "Max must be at least min, min_inclusive: " + u.minInclusive + ", max_inclusive: " + u.maxInclusive)
+
+### FILE: net/minecraft/util/worldupdate/RegionStorageUpgrader.java  (8)
+  L89: 'RegionStorageUpgrader has not been initialized'
+      ctx: throw new IllegalStateException("RegionStorageUpgrader has not been initialized");
+  L113: 'Failed to convert region file {}'
+      ctx: LOGGER.error("Failed to convert region file {}", fileToUpgrade.file().getPath());
+  L134: 'Error upgrading chunk'
+      ctx: LOGGER.error("Error upgrading chunk", e);
+  L193: 'Failed to read chunks from region file {}'
+      ctx: LOGGER.error("Failed to read chunks from region file {}", regionFile.toPath(), t);
+  L212: 'Error upgrading chunk {}'
+      ctx: LOGGER.error("Error upgrading chunk {}", pos, cause);
+  L271: 'Failed to replace an old region file. New file {} does not exist.'
+      ctx: LOGGER.error("Failed to replace an old region file. New file {} does not exist.", newFilePath);
+  L274: 'Failed to replace an old region file'
+      ctx: LOGGER.error("Failed to replace an old region file", e);
+  L339: "Can't add two fixers for the same data version"
+      ctx: throw new IllegalStateException("Can't add two fixers for the same data version");
+
+### FILE: net/minecraft/util/worldupdate/UpgradeProgress.java  (1)
+  L162: 'Upgrading progress: {}%'
+      ctx: LOGGER.info("Upgrading progress: {}%", (int)(progress * 100.0F));
+
+### FILE: net/minecraft/util/worldupdate/UpgradeStatusTranslator.java  (1)
+  L49: 'Invalid Status received: '
+      ctx: default -> throw new IllegalStateException("Invalid Status received: " + status);
+
+### FILE: net/minecraft/util/worldupdate/WorldUpgrader.java  (7)
+  L34: 'World Upgrader #%d'
+      ctx: private static final ThreadFactory THREAD_FACTORY = new ThreadFactoryBuilder().setNameFormat("World Upgrader #%d").setDaemon(true).build();
+  L62: 'Error upgrading world'
+      ctx: LOGGER.error("Error upgrading world", e);
+  L99: 'Chunk {} has invalid position {}'
+      ctx: LOGGER.warn("Chunk {} has invalid position {}", pos, storedPos);
+  L117: 'Upgrading entities'
+      ctx: LOGGER.info("Upgrading entities");
+  L125: 'Upgrading POIs'
+      ctx: LOGGER.info("Upgrading POIs");
+  L134: 'Upgrading blocks'
+      ctx: LOGGER.info("Upgrading blocks");
+  L147: 'World optimization finished after {} seconds'
+      ctx: LOGGER.info("World optimization finished after {} seconds", conversionTime / 1000L);
