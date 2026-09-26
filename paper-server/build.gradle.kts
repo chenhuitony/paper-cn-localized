@@ -342,3 +342,6 @@ fill {
         }
     }
 }
+tasks.processResources {
+    duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+}
