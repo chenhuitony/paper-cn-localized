@@ -70,7 +70,7 @@ public final class MCUtil {
         }
     };
     public static final ExecutorService ASYNC_EXECUTOR = Executors.newFixedThreadPool(2, new ThreadFactoryBuilder()
-        .setNameFormat("Paper Async Task Handler Thread - %1$d")
+        .setNameFormat("Paper 异步任务处理线程 - %1$d")
         .setUncaughtExceptionHandler(new net.minecraft.DefaultUncaughtExceptionHandlerWithName(MinecraftServer.LOGGER))
         .build()
     );
