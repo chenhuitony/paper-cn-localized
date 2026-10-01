@@ -1,0 +1,2441 @@
+﻿=== FILES WITH STRINGS ===
+
+### net/minecraft/advancements/Advancement.java (1 strings)
+  L39: [Advancement criteria cannot be empty]
+    ctx: .validate(criteria -> criteria.isEmpty() ? DataResult.error(() -> "Advancement criteria cannot be empty") : DataResult.s
+
+### net/minecraft/advancements/AdvancementProgress.java (2 strings)
+  L26: [yyyy-MM-dd HH:mm:ss Z]
+    ctx: private static final DateTimeFormatter OBTAINED_TIME_FORMAT = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss Z", Local
+  L102: [, requirements=]
+    ctx: return "AdvancementProgress{criteria=" + this.criteria + ", requirements=" + this.requirements + "}";
+
+### net/minecraft/advancements/AdvancementRequirements.java (3 strings)
+  L81: [Requirement entry cannot be empty]
+    ctx: return DataResult.error(() -> "Requirement entry cannot be empty");
+  L91: [Advancement completion requirements did not exactly match specified criteria. Missing: ]
+    ctx: () -> "Advancement completion requirements did not exactly match specified criteria. Missing: "
+  L93: [. Unknown: ]
+    ctx: + ". Unknown: "
+
+### net/minecraft/advancements/AdvancementTree.java (3 strings)
+  L28: [Forgot about advancement {}]
+    ctx: LOGGER.debug("Forgot about advancement {}", node.holder()); // Paper - Improve logging and errors
+  L47: [Told to remove advancement {} but I don't know what that is]
+    ctx: LOGGER.warn("Told to remove advancement {} but I don't know what that is", id);
+  L59: [Couldn't load advancements: {}]
+    ctx: LOGGER.error("Couldn't load advancements: {}", advancementsToAdd);
+
+### net/minecraft/advancements/TreeNodePosition.java (2 strings)
+  L29: [Can't position an invisible advancement!]
+    ctx: throw new IllegalArgumentException("Can't position an invisible advancement!");
+  L211: [Can't position children of an invisible root!]
+    ctx: throw new IllegalArgumentException("Can't position children of an invisible root!");
+
+### net/minecraft/advancements/predicates/MinMaxBounds.java (4 strings)
+  L44: [Range must be within ]
+    ctx: ? DataResult.error(() -> "Range must be within " + allowedRange + ", but was " + selfAsRange)
+  L44: [, but was ]
+    ctx: ? DataResult.error(() -> "Range must be within " + allowedRange + ", but was " + selfAsRange)
+  L56: [Swapped bounds in range: ]
+    ctx: ? DataResult.error(() -> "Swapped bounds in range: " + this.min() + " is higher than " + this.max())
+  L56: [ is higher than ]
+    ctx: ? DataResult.error(() -> "Swapped bounds in range: " + this.min() + " is higher than " + this.max())
+
+### net/minecraft/advancements/triggers/EnterBlockTrigger.java (1 strings)
+  L43: [ has no property ]
+    ctx: .map(property -> DataResult.error(() -> "Block" + block + " has no property " + property))
+
+### net/minecraft/advancements/triggers/SlideDownBlockTrigger.java (1 strings)
+  L43: [ has no property ]
+    ctx: .map(property -> DataResult.error(() -> "Block" + block + " has no property " + property))
+
+### net/minecraft/server/Bootstrap.java (6 strings)
+  L36: [System.out setup]
+    ctx: @SuppressForbidden(reason = "System.out setup")
+  L49: [Unable to load registries]
+    ctx: throw new IllegalStateException("Unable to load registries");
+  L55: [Failed loading EntityTypes]
+    ctx: throw new IllegalStateException("Failed loading EntityTypes");
+  L186: [Not bootstrapped (called from ]
+    ctx: return new IllegalArgumentException("Not bootstrapped (called from " + resolvedLocation + ")");
+  L188: [Not bootstrapped (failed to resolve location)]
+    ctx: RuntimeException result = new IllegalArgumentException("Not bootstrapped (failed to resolve location)");
+  L197: [Missing translations: {}]
+    ctx: getMissingTranslations(Language.DEFAULT_INSTANCE).forEach(key -> LOGGER.error("Missing translations: {}", key));
+
+### net/minecraft/server/ChainedJsonException.java (3 strings)
+  L45: [File not found]
+    ctx: message = "File not found";
+  L76: [(Unknown file)]
+    ctx: return this.jsonKeys.isEmpty() ? "(Unknown file)" : "(Unknown file) " + this.getJsonKeys();
+  L76: [(Unknown file) ]
+    ctx: return this.jsonKeys.isEmpty() ? "(Unknown file)" : "(Unknown file) " + this.getJsonKeys();
+
+### net/minecraft/server/Eula.java (3 strings)
+  L29: [Failed to load {}]
+    ctx: LOGGER.warn("Failed to load {}", this.file);
+  L44: [By changing the setting below to TRUE you are indicating your agreement to our EULA (]
+    ctx: properties.store(output, "By changing the setting below to TRUE you are indicating your agreement to our EULA (" + Commo
+  L46: [Failed to save {}]
+    ctx: LOGGER.warn("Failed to save {}", this.file, e);
+
+### net/minecraft/server/Main.java (22 strings)
+  L68: [System.out needed before bootstrap]
+    ctx: @SuppressForbidden(reason = "System.out needed before bootstrap")
+  L107: [CrashReport preload thread]
+    ctx: Thread.ofPlatform().daemon().name("CrashReport preload thread").start(CrashReport::preload);
+  L119: [DataConverter MCTypeRegistry init thread]
+    ctx: Thread.ofPlatform().daemon().name("DataConverter MCTypeRegistry init thread").start(ca.spottedleaf.dataconverter.minecra
+  L120: [DataFixers init thread]
+    ctx: Thread.ofPlatform().daemon().name("DataFixers init thread").start(DataFixers::getDataFixer);
+  L128: [World upgrade and region file recreation are not yet implemented in Paper 26.1.]
+    ctx: LOGGER.error("World upgrade and region file recreation are not yet implemented in Paper 26.1.");
+  L153: [Initialized '{}' and '{}']
+    ctx: LOGGER.info("Initialized '{}' and '{}'", settingsFile.toAbsolutePath(), eulaFile.toAbsolutePath());
+  L160: [You have used the Paper command line EULA agreement flag.]
+    ctx: LOGGER.warn("You have used the Paper command line EULA agreement flag.");
+  L161: [By using this setting you are indicating your agreement to Mojang's EULA (https://aka.ms/MinecraftEULA).]
+    ctx: LOGGER.warn("By using this setting you are indicating your agreement to Mojang's EULA (https://aka.ms/MinecraftEULA).");
+  L162: [If you do not agree to the above EULA please stop your server and remove this flag immediately.]
+    ctx: LOGGER.warn("If you do not agree to the above EULA please stop your server and remove this flag immediately.");
+  L165: [You need to agree to the EULA in order to run the server. Go to eula.txt for more info.]
+    ctx: LOGGER.info("You need to agree to the EULA in order to run the server. Go to eula.txt for more info.");
+  L172: [You are using a headless JRE distribution.]
+    ctx: LOGGER.error("You are using a headless JRE distribution.");
+  L173: [This distribution is missing certain graphic libraries that the Minecraft server needs to function.]
+    ctx: LOGGER.error("This distribution is missing certain graphic libraries that the Minecraft server needs to function.");
+  L174: [For instructions on how to install the non-headless JRE, see https://docs.papermc.io/misc/java-install]
+    ctx: LOGGER.error("For instructions on how to install the non-headless JRE, see https://docs.papermc.io/misc/java-install");
+  L205: [Failed to load world data. World files may be corrupted. Shutting down.]
+    ctx: LOGGER.error("Failed to load world data. World files may be corrupted. Shutting down.", ex);
+  L211: [This world must be opened in an older version (like 1.6.4) to be safely converted]
+    ctx: LOGGER.info("This world must be opened in an older version (like 1.6.4) to be safely converted");
+  L216: [This world was created by an incompatible version.]
+    ctx: LOGGER.info("This world was created by an incompatible version.");
+  L228: [Safe mode active, only vanilla datapack will be loaded]
+    ctx: LOGGER.warn("Safe mode active, only vanilla datapack will be loaded");
+  L259: [Failed to migrate world storage for ]
+    ctx: throw new UncheckedIOException("Failed to migrate world storage for " + LevelStem.OVERWORLD.identifier(), ex);
+  L269: [No existing world data, creating new world]
+    ctx: LOGGER.info("No existing world data, creating new world");
+  L281: [Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --safeMode]
+    ctx: "Failed to load datapacks, can't proceed with server load. You can either fix your datapacks or reset to vanilla with --
+  L352: [Failed to start the minecraft server]
+    ctx: LOGGER.error(LogUtils.FATAL_MARKER, "Failed to start the minecraft server", t);
+  L428: [World upgrade and region file recreation are not yet implemented in Paper 26.1.]
+    ctx: "World upgrade and region file recreation are not yet implemented in Paper 26.1."
+
+### net/minecraft/server/MinecraftServer.java (100 strings)
+  L214: [Demo World]
+    ctx: "Demo World", GameType.SURVIVAL, LevelSettings.DifficultySettings.DEFAULT, false, WorldDataConfiguration.DEFAULT
+  L217: [Anonymous Player]
+    ctx: public static final NameAndId ANONYMOUS_PLAYER_PROFILE = new NameAndId(Util.NIL_UUID, "Anonymous Player");
+  L218: [Server thread]
+    ctx: public static final String SERVER_THREAD_NAME = "Server thread";
+  L303: [Server thread]
+    ctx: Thread thread = new ca.spottedleaf.moonrise.common.util.TickThread(() -> serverReference.get().runServer(), "Server thre
+  L304: [Uncaught exception in server thread]
+    ctx: thread.setUncaughtExceptionHandler((t, e) -> LOGGER.error("Uncaught exception in server thread", e));
+  L500: [Performing emergency save...]
+    ctx: LOGGER.warn("Performing emergency save...");
+  L501: [Saving all players...]
+    ctx: LOGGER.info("Saving all players...");
+  L503: [Saved all players]
+    ctx: LOGGER.info("Saved all players");
+  L504: [Saving all worlds...]
+    ctx: LOGGER.info("Saving all worlds...");
+  L506: [Saving chunks in world ']
+    ctx: LOGGER.info("Saving chunks in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.getWorldName(world) + "'...");
+  L508: [Saved chunks in world ']
+    ctx: LOGGER.info("Saved chunks in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.getWorldName(world) + "'...");
+  L510: [Saved all worlds]
+    ctx: LOGGER.info("Saved all worlds");
+  L511: [Performed emergency save]
+    ctx: LOGGER.warn("Performed emergency save");
+  L536: [Missing Overworld dimension data]
+    ctx: throw new IllegalStateException("Missing Overworld dimension data");
+  L564: [Server Tick]
+    ctx: this.tickFrame = TracyClient.createDiscontinuousFrame("Server Tick");
+  L628: [Failed to stop JFR profiling]
+    ctx: LOGGER.warn("Failed to stop JFR profiling", t);
+  L779: [Exception initializing level]
+    ctx: CrashReport report = CrashReport.forThrowable(t, "Exception initializing level");
+  L816: [Cannot set spawn point for ]
+    ctx: throw new IllegalStateException("Cannot set spawn point for " + levelData.getLevelName() + " to be in another world (" +
+  L816: [ to be in another world (]
+    ctx: throw new IllegalStateException("Cannot set spawn point for " + levelData.getLevelName() + " to be in another world (" +
+  L944: [Saving chunks for level '{}'/{}]
+    ctx: LOGGER.info("Saving chunks for level '{}'/{}", level, level.dimension().identifier());
+  L956: [ThreadedAnvilChunkStorage ({}): All chunks are saved]
+    ctx: LOGGER.info("ThreadedAnvilChunkStorage ({}): All chunks are saved", LEGACY_WORLD_NAMES_FOR_REALMS_LOG.getOrDefault(stora
+  L959: [ThreadedAnvilChunkStorage: All dimensions are saved]
+    ctx: LOGGER.info("ThreadedAnvilChunkStorage: All dimensions are saved");
+  L1014: [Server stopped]
+    ctx: if (!this.hasLoggedStop && this.isDebugging()) io.papermc.paper.util.TraceUtil.dumpTraceForThread("Server stopped"); // 
+  L1023: [Stopping server]
+    ctx: LOGGER.info("Stopping server");
+  L1035: [Saving players]
+    ctx: LOGGER.info("Saving players");
+  L1041: [Saving worlds]
+    ctx: LOGGER.info("Saving worlds");
+  L1076: [Failed to unlock level {}]
+    ctx: LOGGER.error("Failed to unlock level {}", this.storageSource.getLevelId(), e);
+  L1084: [Saving usercache.json]
+    ctx: LOGGER.info("Saving usercache.json");
+  L1089: [Waiting for all RegionFile I/O tasks to complete...]
+    ctx: LOGGER.info("Waiting for all RegionFile I/O tasks to complete...");
+  L1091: [All RegionFile I/O tasks to complete]
+    ctx: LOGGER.info("All RegionFile I/O tasks to complete");
+  L1121: [Server stopped]
+    ctx: if (this.isDebugging()) io.papermc.paper.util.TraceUtil.dumpTraceForThread("Server stopped"); // Paper - Debugging
+  L1128: [Error while shutting down]
+    ctx: LOGGER.error("Error while shutting down", e);
+  L1248: [waiting for tick or tasks]
+    ctx: LockSupport.parkNanos("waiting for tick or tasks", toWait);
+  L1267: [Failed to initialize server]
+    ctx: throw new IllegalStateException("Failed to initialize server");
+  L1278: [Running delayed init tasks]
+    ctx: LOGGER.info("Running delayed init tasks");
+  L1286: [Done ({})! For help, type \"help\"]
+    ctx: LOGGER.info("Done ({})! For help, type \"help\"", String.format(java.util.Locale.ROOT, "%.3fs", actualDoneTimeMs / 1000.
+  L1293: [This is the first time you're starting this server.]
+    ctx: LOGGER.info("This is the first time you're starting this server.");
+  L1294: [It's recommended you read our 'Getting Started' documentation for guidance.]
+    ctx: LOGGER.info("It's recommended you read our 'Getting Started' documentation for guidance.");
+  L1295: [View this and more helpful information here: https://docs.papermc.io/paper/next-steps]
+    ctx: LOGGER.info("View this and more helpful information here: https://docs.papermc.io/paper/next-steps");
+  L1370: [Encountered an unexpected exception]
+    ctx: LOGGER.error("Encountered an unexpected exception", t);
+  L1375: [This crash report has been saved to: {}]
+    ctx: LOGGER.error("This crash report has been saved to: {}", file.toAbsolutePath());
+  L1377: [We were unable to save this crash report to disk.]
+    ctx: LOGGER.error("We were unable to save this crash report to disk.");
+  L1386: [Exception stopping the server]
+    ctx: LOGGER.error("Exception stopping the server", t);
+  L1430: [Wrapped in]
+    ctx: report.addCategory("Wrapped in").setDetailError("Wrapping exception", t);
+  L1430: [Wrapping exception]
+    ctx: report.addCategory("Wrapped in").setDetailError("Wrapping exception", t);
+  L1433: [Exception in server tick loop]
+    ctx: report = new CrashReport("Exception in server tick loop", t);
+  L1446: [executing tasks]
+    ctx: java.util.concurrent.locks.LockSupport.parkNanos("executing tasks", 1000L);
+  L1470: [waiting for tasks]
+    ctx: LockSupport.parkNanos("waiting for tasks", waitNanos);
+  L1548: [Invalid world icon size []
+    ctx: throw new IllegalArgumentException("Invalid world icon size [" + pngInfo.width() + ", " + pngInfo.height() + "], but exp
+  L1548: [], but expected [64, 64]]
+    ctx: throw new IllegalArgumentException("Invalid world icon size [" + pngInfo.width() + ", " + pngInfo.height() + "], but exp
+  L1551: [Couldn't load server icon]
+    ctx: LOGGER.error("Couldn't load server icon", e);
+  L1594: [Server empty for {} seconds, pausing]
+    ctx: LOGGER.info("Server empty for {} seconds, pausing", this.pauseWhenEmptySeconds());
+  L1683: [Chunk system crash propagated to tick()]
+    ctx: throw new RuntimeException("Chunk system crash propagated to tick()", crash);
+  L1693: [Autosave started]
+    ctx: LOGGER.debug("Autosave started");
+  L1698: [Autosave finished]
+    ctx: LOGGER.debug("Autosave finished");
+  L1825: [Exception ticking world]
+    ctx: CrashReport report = CrashReport.forThrowable(t, "Exception ticking world");
+  L1847: [server gui refresh]
+    ctx: profiler.popPush("server gui refresh");
+  L1853: [send chunks]
+    ctx: profiler.popPush("send chunks");
+  L1959: [Server Running]
+    ctx: systemReport.setDetail("Server Running", () -> Boolean.toString(this.running));
+  L1962: [Player Count]
+    ctx: "Player Count", () -> this.playerList.getPlayerCount() + " / " + this.playerList.getMaxPlayers() + "; " + this.playerLis
+  L1966: [Active Data Packs]
+    ctx: systemReport.setDetail("Active Data Packs", () -> PackRepository.displayPackList(this.packRepository.getSelectedPacks())
+  L1967: [Available Data Packs]
+    ctx: systemReport.setDetail("Available Data Packs", () -> PackRepository.displayPackList(this.packRepository.getAvailablePack
+  L1969: [Enabled Feature Flags]
+    ctx: "Enabled Feature Flags",
+  L1972: [World Generation]
+    ctx: systemReport.setDetail("World Generation", () -> this.worldData.worldGenSettingsLifecycle().toString());
+  L1973: [World Seed]
+    ctx: systemReport.setDetail("World Seed", () -> String.valueOf(this.worldGenSettings.options().seed()));
+  L1974: [Suppressed Exceptions]
+    ctx: systemReport.setDetail("Suppressed Exceptions", this.suppressedExceptions::dump);
+  L1976: [Server Id]
+    ctx: systemReport.setDetail("Server Id", () -> this.serverId);
+  L2018: [Generating keypair]
+    ctx: LOGGER.info("Generating keypair");
+  L2023: [Failed to generate key pair]
+    ctx: throw new IllegalStateException("Failed to generate key pair", e);
+  L2241: [Server already shutting down]
+    ctx: throw new io.papermc.paper.util.ServerStopRejectedExecutionException("Server already shutting down"); // Paper - do not 
+  L2373: [Missing data pack {}]
+    ctx: LOGGER.warn("Missing data pack {}", id);
+  L2384: [Found new data pack {}, loading it automatically]
+    ctx: LOGGER.info("Found new data pack {}, loading it automatically", packId);
+  L2388: [Found new data pack {}, but can't load it due to missing features {}]
+    ctx: "Found new data pack {}, but can't load it due to missing features {}",
+  L2397: [Pack {} requires features {} that are not enabled for this world, disabling pack.]
+    ctx: "Pack {} requires features {} that are not enabled for this world, disabling pack.",
+  L2407: [No datapacks selected, forcing vanilla]
+    ctx: LOGGER.info("No datapacks selected, forcing vanilla");
+  L2440: [Tried to force ']
+    ctx: throw new IllegalStateException("Tried to force '" + packId + "', but it was already enabled");
+  L2440: [', but it was already enabled]
+    ctx: throw new IllegalStateException("Tried to force '" + packId + "', but it was already enabled");
+  L2443: [Found feature pack ('{}') for requested feature, forcing to enabled]
+    ctx: LOGGER.info("Found feature pack ('{}') for requested feature, forcing to enabled", packId);
+  L2544: [Called before server init]
+    ctx: throw new NullPointerException("Called before server init");
+  L2552: [Called before server init]
+    ctx: throw new NullPointerException("Called before server init");
+  L2583: [Use ServerLevel.getWeatherData() instead]
+    ctx: throw new UnsupportedOperationException("Use ServerLevel.getWeatherData() instead"); // Paper
+  L2658: [Failed to save debug report]
+    ctx: LOGGER.warn("Failed to save debug report", e);
+  L2664: [pending_tasks: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "pending_tasks: %d\n", this.getPendingTasksCount()));
+  L2665: [average_tick_time: %f\n]
+    ctx: output.write(String.format(Locale.ROOT, "average_tick_time: %f\n", this.getCurrentSmoothedTickTime()));
+  L2666: [tick_times: %s\n]
+    ctx: output.write(String.format(Locale.ROOT, "tick_times: %s\n", Arrays.toString(this.tickTimesNanos)));
+  L2667: [queue: %s\n]
+    ctx: output.write(String.format(Locale.ROOT, "queue: %s\n", Util.backgroundExecutor()));
+  L2718: [Failed to list native modules]
+    ctx: LOGGER.warn("Failed to list native modules", t);
+  L2879: [Async Chat Thread - #%d]
+    ctx: new com.google.common.util.concurrent.ThreadFactoryBuilder().setDaemon(true).setNameFormat("Async Chat Thread - #%d").se
+  L2891: [Received custom click action {} with payload {}]
+    ctx: LOGGER.debug("Received custom click action {} with payload {}", id, payload.orElse(null));
+  L2966: [Use ServerLevel.getScheduledEvents() instead]
+    ctx: throw new UnsupportedOperationException("Use ServerLevel.getScheduledEvents() instead"); // Paper
+  L2971: [Use ServerLevel.getGameRules() instead]
+    ctx: throw new UnsupportedOperationException("Use ServerLevel.getGameRules() instead"); // Paper
+  L2988: [Not storing chunk IO report due to low space on drive {}]
+    ctx: LOGGER.warn("Not storing chunk IO report due to low space on drive {}", fileStore.name());
+  L2992: [Chunk Info]
+    ctx: CrashReportCategory category = report.addCategory("Chunk Info");
+  L2998: [Saved details to {}]
+    ctx: LOGGER.info("Saved details to {}", report.getSaveFile());
+  L3000: [Failed to store chunk IO exception]
+    ctx: LOGGER.warn("Failed to store chunk IO exception", e);
+  L3007: [Failed to load chunk {},{}]
+    ctx: LOGGER.error("Failed to load chunk {},{}", pos.x(), pos.z(), throwable);
+  L3009: [Chunk load failure]
+    ctx: this.storeChunkIoError(CrashReport.forThrowable(throwable, "Chunk load failure"), pos, storageInfo);
+  L3015: [Failed to save chunk {},{}]
+    ctx: LOGGER.error("Failed to save chunk {},{}", pos.x(), pos.z(), throwable);
+  L3017: [Chunk save failure]
+    ctx: this.storeChunkIoError(CrashReport.forThrowable(throwable, "Chunk save failure"), pos, storageInfo);
+  L3028: [Low disk space! Might not be able to save the world.]
+    ctx: LOGGER.warn("Low disk space! Might not be able to save the world.");
+
+### net/minecraft/server/PlayerAdvancements.java (4 strings)
+  L119: [Couldn't access player advancements in {}]
+    ctx: LOGGER.error("Couldn't access player advancements in {}", this.playerSavePath, e);
+  L121: [Couldn't parse player advancements in {}]
+    ctx: LOGGER.error("Couldn't parse player advancements in {}", this.playerSavePath, e);
+  L140: [Couldn't save player advancements to {}]
+    ctx: LOGGER.error("Couldn't save player advancements to {}", this.playerSavePath, e);
+  L149: [Ignored advancement '{}' in progress file {} - it doesn't exist anymore?]
+    ctx: LOGGER.warn("Ignored advancement '{}' in progress file {} - it doesn't exist anymore?", id, this.playerSavePath);
+
+### net/minecraft/server/ReloadableServerRegistries.java (1 strings)
+  L99: [Found loot table element validation problem in {}: {}]
+    ctx: problems.forEach((id, problem) -> LOGGER.warn("Found loot table element validation problem in {}: {}", id, problem.descr
+
+### net/minecraft/server/ServerAdvancementManager.java (2 strings)
+  L49: [Loaded {} advancements]
+    ctx: LOGGER.info("Loaded {} advancements", tree.nodes().size()); // Paper - Improve logging and errors; moved from Advancemen
+  L64: [Found validation problems in advancement {}: \n{}]
+    ctx: LOGGER.warn("Found validation problems in advancement {}: \n{}", id, problemCollector.getReport());
+
+### net/minecraft/server/ServerFunctionLibrary.java (1 strings)
+  L106: [Failed to load function {}]
+    ctx: LOGGER.error("Failed to load function {}", id, throwable);
+
+### net/minecraft/server/ServerFunctionManager.java (1 strings)
+  L74: [Failed to execute function {}]
+    ctx: LOGGER.warn("Failed to execute function {}", functionIn.id(), e);
+
+### net/minecraft/server/SuppressedExceptionCollector.java (1 strings)
+  L47: [ms ago)]
+    ctx: .append("ms ago)")
+
+### net/minecraft/server/chase/ChaseClient.java (9 strings)
+  L49: [Remote control client was asked to start, but it is already running. Will ignore.]
+    ctx: LOGGER.warn("Remote control client was asked to start, but it is already running. Will ignore.");
+  L70: [Connecting to remote control server {}]
+    ctx: LOGGER.info("Connecting to remote control server {}", serverAddress);
+  L72: [Connected to remote control server! Will continuously execute the command broadcasted by that server.]
+    ctx: LOGGER.info("Connected to remote control server! Will continuously execute the command broadcasted by that server.");
+  L78: [Lost connection to remote control server {}. Will retry in {}s.]
+    ctx: LOGGER.warn("Lost connection to remote control server {}. Will retry in {}s.", serverAddress, 5);
+  L85: [Lost connection to remote control server {}. Will retry in {}s.]
+    ctx: LOGGER.warn("Lost connection to remote control server {}. Will retry in {}s.", serverAddress, 5);
+  L88: [Failed to connect to remote control server {}. Will retry in {}s.]
+    ctx: LOGGER.warn("Failed to connect to remote control server {}. Will retry in {}s.", serverAddress, 5);
+  L107: [Unknown message type '{}']
+    ctx: LOGGER.warn("Unknown message type '{}'", head);
+  L110: [Could not parse message '{}', ignoring]
+    ctx: LOGGER.warn("Could not parse message '{}', ignoring", message);
+  L120: [execute in %s run tp @s %.3f %.3f %.3f %.3f %.3f]
+    ctx: "execute in %s run tp @s %.3f %.3f %.3f %.3f %.3f",
+
+### net/minecraft/server/chase/ChaseServer.java (7 strings)
+  L42: [Remote control server was asked to start, but it is already running. Will ignore.]
+    ctx: LOGGER.warn("Remote control server was asked to start, but it is already running. Will ignore.");
+  L73: [Remote control client socket got an IO exception and will be closed]
+    ctx: LOGGER.info("Remote control client socket got an IO exception and will be closed", e);
+  L104: [Remote control server is listening for connections on port {}]
+    ctx: LOGGER.info("Remote control server is listening for connections on port {}", this.serverPort);
+  L106: [Remote control server received client connection on port {}]
+    ctx: LOGGER.info("Remote control server received client connection on port {}", clientSocket.getPort());
+  L112: [Remote control server closed by interrupt]
+    ctx: LOGGER.info("Remote control server closed by interrupt");
+  L116: [Remote control server closed because of an IO exception]
+    ctx: LOGGER.error("Remote control server closed because of an IO exception", e);
+  L122: [Remote control server is now stopped]
+    ctx: LOGGER.info("Remote control server is now stopped");
+
+### net/minecraft/server/commands/ChaseCommand.java (10 strings)
+  L69: [You have now stopped chasing]
+    ctx: source.sendSuccess(() -> Component.literal("You have now stopped chasing"), false);
+  L75: [You are no longer being chased]
+    ctx: source.sendSuccess(() -> Component.literal("You are no longer being chased"), false);
+  L84: [Chase server is already running. Stop it using /chase stop]
+    ctx: source.sendFailure(Component.literal("Chase server is already running. Stop it using /chase stop"));
+  L87: [You are already chasing someone. Stop it using /chase stop]
+    ctx: source.sendFailure(Component.literal("You are already chasing someone. Stop it using /chase stop"));
+  L104: [Chase server is now running on port ]
+    ctx: () -> Component.literal("Chase server is now running on port " + port + ". Clients can follow you using /chase follow <i
+  L104: [. Clients can follow you using /chase follow <ip> <port>]
+    ctx: () -> Component.literal("Chase server is now running on port " + port + ". Clients can follow you using /chase follow <i
+  L107: [Failed to start chase server]
+    ctx: LOGGER.error("Failed to start chase server", e);
+  L108: [Failed to start chase server on port ]
+    ctx: source.sendFailure(Component.literal("Failed to start chase server on port " + port));
+  L124: [You are now chasing ]
+    ctx: "You are now chasing "
+  L128: [. If that server does '/chase lead' then you will automatically go to the same position. Use '/chase stop' to stop chasing.]
+    ctx: + ". If that server does '/chase lead' then you will automatically go to the same position. Use '/chase stop' to stop ch
+
+### net/minecraft/server/commands/DataPackCommand.java (1 strings)
+  L214: [Failed to create pack at {}]
+    ctx: LOGGER.warn("Failed to create pack at {}", datapackDir.toAbsolutePath(), e);
+
+### net/minecraft/server/commands/DebugCommand.java (1 strings)
+  L151: [Tracing failed]
+    ctx: DebugCommand.LOGGER.warn("Tracing failed", e);
+
+### net/minecraft/server/commands/DebugConfigCommand.java (4 strings)
+  L78: [Switched player ]
+    ctx: source.sendSuccess(() -> Component.literal("Switched player " + gameProfile.name() + "(" + gameProfile.id() + ") to conf
+  L78: [) to config mode]
+    ctx: source.sendSuccess(() -> Component.literal("Switched player " + gameProfile.name() + "(" + gameProfile.id() + ") to conf
+  L100: [Can't find player to unconfig]
+    ctx: source.sendFailure(Component.literal("Can't find player to unconfig"));
+  L111: [Can't find player to talk to]
+    ctx: source.sendFailure(Component.literal("Can't find player to talk to"));
+
+### net/minecraft/server/commands/DebugPathCommand.java (4 strings)
+  L18: [Source is not a mob]
+    ctx: private static final SimpleCommandExceptionType ERROR_NOT_MOB = new SimpleCommandExceptionType(Component.literal("Source
+  L19: [Path not found]
+    ctx: private static final SimpleCommandExceptionType ERROR_NO_PATH = new SimpleCommandExceptionType(Component.literal("Path n
+  L20: [Target not reached]
+    ctx: private static final SimpleCommandExceptionType ERROR_NOT_COMPLETE = new SimpleCommandExceptionType(Component.literal("T
+  L44: [Made path]
+    ctx: source.sendSuccess(() -> Component.literal("Made path"), true);
+
+### net/minecraft/server/commands/FetchProfileCommand.java (2 strings)
+  L89: [give @s minecraft:player_head[profile=]
+    ctx: new ClickEvent.RunCommand("give @s minecraft:player_head[profile=" + encodedProfileAsString + "]")
+  L96: [summon minecraft:mannequin ~ ~ ~ {profile:]
+    ctx: "summon minecraft:mannequin ~ ~ ~ {profile:" + encodedProfileAsString + "}"
+
+### net/minecraft/server/commands/LocateCommand.java (1 strings)
+  L187: [Locating element {} took {} ms]
+    ctx: LOGGER.info("Locating element {} took {} ms", foundName, taskDuration.toMillis());
+
+### net/minecraft/server/commands/PerfCommand.java (2 strings)
+  L77: [Failed to create report name]
+    ctx: LOGGER.error("Failed to create report name", e);
+  L89: [Failed to delete temporary profiling file {}]
+    ctx: LOGGER.warn("Failed to delete temporary profiling file {}", report, e);
+
+### net/minecraft/server/commands/RaidCommand.java (16 strings)
+  L78: [Sorry, the max raid omen level you can set is ]
+    ctx: source.sendFailure(Component.literal("Sorry, the max raid omen level you can set is " + max));
+  L82: [Changed village's raid omen level from ]
+    ctx: source.sendSuccess(() -> Component.literal("Changed village's raid omen level from " + before + " to " + level), false);
+  L85: [No raid found here]
+    ctx: source.sendFailure(Component.literal("No raid found here"));
+  L92: [Spawned a raid captain]
+    ctx: source.sendSuccess(() -> Component.literal("Spawned a raid captain"), false);
+  L95: [Pillager failed to spawn]
+    ctx: source.sendFailure(Component.literal("Pillager failed to spawn"));
+  L123: [Raid already started close by]
+    ctx: source.sendFailure(Component.literal("Raid already started close by"));
+  L132: [Created a raid in your local village]
+    ctx: source.sendSuccess(() -> Component.literal("Created a raid in your local village"), false);
+  L134: [Failed to create a raid in your local village]
+    ctx: source.sendFailure(Component.literal("Failed to create a raid in your local village"));
+  L146: [Stopped raid]
+    ctx: source.sendSuccess(() -> Component.literal("Stopped raid"), false);
+  L149: [No raid here]
+    ctx: source.sendFailure(Component.literal("No raid here"));
+  L158: [Found a started raid! ]
+    ctx: status.append("Found a started raid! ");
+  L161: [Num groups spawned: ]
+    ctx: status2.append("Num groups spawned: ");
+  L163: [ Raid omen level: ]
+    ctx: status2.append(" Raid omen level: ");
+  L165: [ Num mobs: ]
+    ctx: status2.append(" Num mobs: ");
+  L167: [ Raid health: ]
+    ctx: status2.append(" Raid health: ");
+  L174: [Found no started raids]
+    ctx: source.sendFailure(Component.literal("Found no started raids"));
+
+### net/minecraft/server/commands/ReloadCommand.java (1 strings)
+  L20: [Failed to execute reload]
+    ctx: LOGGER.warn("Failed to execute reload", throwable);
+
+### net/minecraft/server/commands/SpawnArmorTrimsCommand.java (2 strings)
+  L73: [Invalid pattern]
+    ctx: value -> Component.translatableEscape("Invalid pattern", value)
+  L147: [Armorstands with trimmed armor spawned around you]
+    ctx: source.sendSuccess(() -> Component.literal("Armorstands with trimmed armor spawned around you"), true);
+
+### net/minecraft/server/commands/WaypointCommand.java (1 strings)
+  L149: [ run tp @s ]
+    ctx: "/execute in " + dimension + " run tp @s " + pos.getX() + " " + pos.getY() + " " + pos.getZ()
+
+### net/minecraft/server/dedicated/DedicatedPlayerList.java (8 strings)
+  L45: [Failed to save ip banlist: ]
+    ctx: LOGGER.warn("Failed to save ip banlist: ", e);
+  L53: [Failed to save user banlist: ]
+    ctx: LOGGER.warn("Failed to save user banlist: ", e);
+  L61: [Failed to load ip banlist: ]
+    ctx: LOGGER.warn("Failed to load ip banlist: ", e);
+  L69: [Failed to load user banlist: ]
+    ctx: LOGGER.warn("Failed to load user banlist: ", e);
+  L77: [Failed to load operators list: ]
+    ctx: LOGGER.warn("Failed to load operators list: ", e);
+  L85: [Failed to save operators list: ]
+    ctx: LOGGER.warn("Failed to save operators list: ", e);
+  L93: [Failed to load white-list: ]
+    ctx: LOGGER.warn("Failed to load white-list: ", e);
+  L101: [Failed to save white-list: ]
+    ctx: LOGGER.warn("Failed to save white-list: ", e);
+
+### net/minecraft/server/dedicated/DedicatedServer.java (52 strings)
+  L135: [Code of Conduct folder does not exist: ]
+    ctx: throw new IllegalArgumentException("Code of Conduct folder does not exist: " + path);
+  L148: [Failed to read Code of Conduct file \"]
+    ctx: "Failed to read Code of Conduct file \"" + filename + "\" because it links to a file outside the allowed directory"
+  L156: [Failed to read Code of Conduct file ]
+    ctx: throw new IllegalArgumentException("Failed to read Code of Conduct file " + filename, e);
+  L164: [Failed to read Code of Conduct folder]
+    ctx: throw new IllegalArgumentException("Failed to read Code of Conduct folder", e);
+  L170: [Server console handler]
+    ctx: Thread consoleThread = new Thread("Server console handler") {
+  L207: [Starting minecraft server version {}]
+    ctx: LOGGER.info("Starting minecraft server version {}", SharedConstants.getCurrentVersion().name());
+  L209: [To start the server with more ram, launch it as \"java -Xmx1024M -Xms1024M -jar minecraft_server.jar\"]
+    ctx: LOGGER.warn("To start the server with more ram, launch it as \"java -Xmx1024M -Xms1024M -jar minecraft_server.jar\"");
+  L215: [YOU ARE RUNNING THIS SERVER AS AN ADMINISTRATIVE OR ROOT USER. THIS IS NOT ADVISED.]
+    ctx: LOGGER.warn("YOU ARE RUNNING THIS SERVER AS AN ADMINISTRATIVE OR ROOT USER. THIS IS NOT ADVISED.");
+  L216: [YOU ARE OPENING YOURSELF UP TO POTENTIAL RISKS WHEN DOING THIS.]
+    ctx: LOGGER.warn("YOU ARE OPENING YOURSELF UP TO POTENTIAL RISKS WHEN DOING THIS.");
+  L217: [FOR MORE INFORMATION, SEE https://madelinemiller.dev/blog/root-minecraft-server/]
+    ctx: LOGGER.warn("FOR MORE INFORMATION, SEE https://madelinemiller.dev/blog/root-minecraft-server/");
+  L222: [Loading properties]
+    ctx: LOGGER.info("Loading properties");
+  L256: [Default game type: {}]
+    ctx: LOGGER.info("Default game type: {}", properties.gameMode.get());
+  L261: [**** INVALID CONFIGURATION!]
+    ctx: LOGGER.error("**** INVALID CONFIGURATION!");
+  L262: [You are trying to use a Unix domain socket but you're not on a supported OS.]
+    ctx: LOGGER.error("You are trying to use a Unix domain socket but you're not on a supported OS.");
+  L265: [**** INVALID CONFIGURATION!]
+    ctx: LOGGER.error("**** INVALID CONFIGURATION!");
+  L266: [Unix domain sockets require IPs to be forwarded from a proxy.]
+    ctx: LOGGER.error("Unix domain sockets require IPs to be forwarded from a proxy.");
+  L284: [Starting Minecraft server on {}:{}]
+    ctx: LOGGER.info("Starting Minecraft server on {}:{}", this.getLocalIp().isEmpty() ? "*" : this.getLocalIp(), this.getPort())
+  L289: [**** FAILED TO BIND TO PORT!]
+    ctx: LOGGER.warn("**** FAILED TO BIND TO PORT!");
+  L290: [The exception was: {}]
+    ctx: LOGGER.warn("The exception was: {}", e.toString());
+  L291: [Perhaps a server is already running on that port?]
+    ctx: LOGGER.warn("Perhaps a server is already running on that port?");
+  L292: [Failed to bind to port]
+    ctx: if (true) throw new IllegalStateException("Failed to bind to port", e); // Paper - Propagate failed to bind to port erro
+  L307: [**** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!]
+    ctx: LOGGER.warn("**** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!");
+  L308: [The server will make no attempt to authenticate usernames. Beware.]
+    ctx: LOGGER.warn("The server will make no attempt to authenticate usernames. Beware.");
+  L312: [Whilst this makes it possible to use {}, unless access to your server is properly restricted, it also opens up the ability for hackers to connect with any username they choose.]
+    ctx: LOGGER.warn("Whilst this makes it possible to use {}, unless access to your server is properly restricted, it also opens
+  L313: [Please see {} for further information.]
+    ctx: LOGGER.warn("Please see {} for further information.", proxyLink);
+  L316: [While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.]
+    ctx: LOGGER.warn("While this makes the game possible to play without internet access, it also opens up the ability for hacker
+  L319: [To change this, set \"online-mode\" to \"true\" in the server.properties file.]
+    ctx: LOGGER.warn("To change this, set \"online-mode\" to \"true\" in the server.properties file.");
+  L338: [Preparing level \"{}\"]
+    ctx: LOGGER.info("Preparing level \"{}\"", this.getLevelIdName());
+  L342: [Done preparing level \"{}\" ({})]
+    ctx: LOGGER.info("Done preparing level \"{}\" ({})", this.getLevelIdName(), time); // Paper - Improve startup message, add to
+  L349: [Starting GS4 status listener]
+    ctx: LOGGER.info("Starting GS4 status listener");
+  L354: [Starting remote control listener]
+    ctx: LOGGER.info("Starting remote control listener");
+  L359: [Server Watchdog]
+    ctx: Thread watchdog = new Thread(new ServerWatchdog(this), "Server Watchdog");
+  L367: [JMX monitoring enabled]
+    ctx: LOGGER.info("JMX monitoring enabled");
+  L473: [Is Modded]
+    ctx: systemReport.setDetail("Is Modded", () -> this.getModdedStatus().fullDescription());
+  L474: [Dedicated Server]
+    ctx: systemReport.setDetail("Type", () -> "Dedicated Server");
+  L519: [Interrupted while stopping the management server]
+    ctx: LOGGER.error("Interrupted while stopping the management server", e);
+  L537: [paper debug chunks --async]
+    ctx: if (msg.equalsIgnoreCase("paper debug chunks --async")) {
+  L538: [Scheduling async debug chunks]
+    ctx: LOGGER.info("Scheduling async debug chunks");
+  L540: [Async debug chunks executing]
+    ctx: LOGGER.info("Async debug chunks executing");
+  L544: [Writing chunk information dump to ]
+    ctx: sender.sendMessage(net.kyori.adventure.text.Component.text("Writing chunk information dump to " + file, net.kyori.advent
+  L547: [Successfully written chunk information!]
+    ctx: sender.sendMessage(net.kyori.adventure.text.Component.text("Successfully written chunk information!", net.kyori.adventur
+  L549: [Failed to dump chunk information to file ]
+    ctx: MinecraftServer.LOGGER.warn("Failed to dump chunk information to file " + file.toString(), thr);
+  L550: [Failed to dump chunk information, see console]
+    ctx: sender.sendMessage(net.kyori.adventure.text.Component.text("Failed to dump chunk information, see console", net.kyori.ad
+  L554: [Async debug thread #]
+    ctx: t.setName("Async debug thread #" + ASYNC_DEBUG_CHUNKS_COUNT.getAndIncrement());
+  L785: [Encountered a problem while converting the user banlist, retrying in a few seconds]
+    ctx: LOGGER.warn("Encountered a problem while converting the user banlist, retrying in a few seconds");
+  L796: [Encountered a problem while converting the ip banlist, retrying in a few seconds]
+    ctx: LOGGER.warn("Encountered a problem while converting the ip banlist, retrying in a few seconds");
+  L807: [Encountered a problem while converting the op list, retrying in a few seconds]
+    ctx: LOGGER.warn("Encountered a problem while converting the op list, retrying in a few seconds");
+  L818: [Encountered a problem while converting the whitelist, retrying in a few seconds]
+    ctx: LOGGER.warn("Encountered a problem while converting the whitelist, retrying in a few seconds");
+  L829: [Encountered a problem while converting the player save files, retrying in a few seconds]
+    ctx: LOGGER.warn("Encountered a problem while converting the player save files, retrying in a few seconds");
+  L862: [ on Bukkit ]
+    ctx: result.append(" on Bukkit ");
+  L886: [Not supported - remote source required.]
+    ctx: throw new UnsupportedOperationException("Not supported - remote source required.");
+  L1029: [Failed to parse bug link {}]
+    ctx: LOGGER.warn("Failed to parse bug link {}", bugReportLink, e);
+
+### net/minecraft/server/dedicated/DedicatedServerProperties.java (11 strings)
+  L61: [A Minecraft Server]
+    ctx: public final Settings<DedicatedServerProperties>.MutableValue<String> motd = this.getMutable("motd", "A Minecraft Server
+  L184: [Failed to parse resource pack prompt '{}': {}]
+    ctx: .resultOrPartial(msg -> LOGGER.warn("Failed to parse resource pack prompt '{}': {}", prompt, msg))
+  L187: [Failed to parse resource pack prompt '{}']
+    ctx: LOGGER.warn("Failed to parse resource pack prompt '{}'", prompt, e);
+  L210: [resource-pack-hash is deprecated and found along side resource-pack-sha1. resource-pack-hash will be ignored.]
+    ctx: LOGGER.warn("resource-pack-hash is deprecated and found along side resource-pack-sha1. resource-pack-hash will be ignore
+  L213: [resource-pack-hash is deprecated. Please use resource-pack-sha1 instead.]
+    ctx: LOGGER.warn("resource-pack-hash is deprecated. Please use resource-pack-sha1 instead.");
+  L221: [You specified a resource pack without providing a sha1 hash. Pack will be updated on the client only if you change the name of the pack.]
+    ctx: "You specified a resource pack without providing a sha1 hash. Pack will be updated on the client only if you change the 
+  L224: [Invalid sha1 for resource-pack-sha1]
+    ctx: LOGGER.warn("Invalid sha1 for resource-pack-sha1");
+  L231: [resource-pack-id missing, using default of {}]
+    ctx: LOGGER.warn("resource-pack-id missing, using default of {}", parsedId);
+  L236: [Failed to parse '{}' into UUID]
+    ctx: LOGGER.warn("Failed to parse '{}' into UUID", id);
+  L276: [Invalid datapack contents: can't find default preset]
+    ctx: .orElseThrow(() -> new IllegalStateException("Invalid datapack contents: can't find default preset"));
+  L282: [Failed to parse level-type {}, defaulting to {}]
+    ctx: DedicatedServerProperties.LOGGER.warn("Failed to parse level-type {}, defaulting to {}", this.levelType, defaultHolder.k
+
+### net/minecraft/server/dedicated/ServerWatchdog.java (11 strings)
+  L46: [A single server tick took {} seconds (should be max {})]
+    ctx: "A single server tick took {} seconds (should be max {})",
+  L50: [Considering it to be crashed, server will forcibly shutdown.]
+    ctx: LOGGER.error(LogUtils.FATAL_MARKER, "Considering it to be crashed, server will forcibly shutdown.");
+  L51: [Watching Server]
+    ctx: CrashReport report = createWatchdogCrashReport("Watching Server", this.server.getRunningThread().threadId());
+  L53: [Performance stats]
+    ctx: CrashReportCategory serverStats = report.addCategory("Performance stats");
+  L54: [Overworld random tick rate]
+    ctx: serverStats.setDetail("Overworld random tick rate", () -> this.server.overworld().getGameRules().getAsString(GameRules.R
+  L56: [Level stats]
+    ctx: "Level stats",
+  L61: [Crash report:\n]
+    ctx: Bootstrap.realStdoutPrintln("Crash report:\n" + report.getFriendlyReport(ReportType.CRASH));
+  L64: [This crash report has been saved to: {}]
+    ctx: LOGGER.error("This crash report has been saved to: {}", file.toAbsolutePath());
+  L66: [We were unable to save this crash report to disk.]
+    ctx: LOGGER.error("We were unable to save this crash report to disk.");
+  L83: [Watchdog (]
+    ctx: Error exception = new Error("Watchdog (" + message + ")");
+  L95: [Thread Dump]
+    ctx: CrashReportCategory threadDump = report.addCategory("Thread Dump");
+
+### net/minecraft/server/dedicated/Settings.java (6 strings)
+  L59: [Failed to load properties as UTF-8 from file {}, trying ISO_8859_1]
+    ctx: LOGGER.info("Failed to load properties as UTF-8 from file {}, trying ISO_8859_1", file);
+  L68: [Failed to load properties from file: {}]
+    ctx: LOGGER.error("Failed to load properties from file: {}", file, e);
+  L77: [Can not write to file {}, skipping.]
+    ctx: Settings.LOGGER.warn("Can not write to file {}, skipping.", output); // Paper - log message file is read-only
+  L121: [Minecraft server properties]
+    ctx: this.properties.store(os, "Minecraft server properties");
+  L123: [Failed to store properties to file: {}]
+    ctx: LOGGER.error("Failed to store properties to file: {}", output);
+  L168: [Could not load invalidly configured property ']
+    ctx: throw new RuntimeException("Could not load invalidly configured property '" + key + "'", ex);
+
+### net/minecraft/server/dialog/CommonDialogData.java (1 strings)
+  L36: [Dialogs that pause the game must use after_action values that unpause it after user action!]
+    ctx: ? DataResult.error(() -> "Dialogs that pause the game must use after_action values that unpause it after user action!")
+
+### net/minecraft/server/dialog/action/ParsedTemplate.java (2 strings)
+  L12: [ is not a valid input name]
+    ctx: .validate(s -> StringTemplate.isValidVariableName(s) ? DataResult.success(s) : DataResult.error(() -> s + " is not a val
+  L26: [Failed to parse template ]
+    ctx: return DataResult.error(() -> "Failed to parse template " + value + ": " + e.getMessage());
+
+### net/minecraft/server/dialog/input/NumberRangeInput.java (2 strings)
+  L50: [Initial value ]
+    ctx: return DataResult.error(() -> "Initial value " + initial + " is outside of range [" + min + ", " + max + "]");
+  L50: [ is outside of range []
+    ctx: return DataResult.error(() -> "Initial value " + initial + " is outside of range [" + min + ", " + max + "]");
+
+### net/minecraft/server/dialog/input/SingleOptionInput.java (1 strings)
+  L26: [Multiple initial values]
+    ctx: return initialCount > 1L ? DataResult.error(() -> "Multiple initial values") : DataResult.success(o);
+
+### net/minecraft/server/dialog/input/TextInput.java (1 strings)
+  L26: [Default text length exceeds allowed size]
+    ctx: .validate(o -> o.initial.length() > o.maxLength() ? DataResult.error(() -> "Default text length exceeds allowed size") :
+
+### net/minecraft/server/gui/MinecraftServerGui.java (12 strings)
+  L38: [Minecraft server]
+    ctx: private static final String TITLE = "Minecraft server";
+  L39: [Minecraft server - shutting down!]
+    ctx: private static final String SHUTDOWN_TITLE = "Minecraft server - shutting down!";
+  L51: [Minecraft server]
+    ctx: final JFrame frame = new JFrame("Minecraft server");
+  L59: [Minecraft server]
+    ctx: frame.setName("Minecraft server");
+  L69: [Minecraft server - shutting down!]
+    ctx: frame.setTitle("Minecraft server - shutting down!");
+  L90: [Couldn't build server GUI]
+    ctx: LOGGER.error("Couldn't build server GUI", e);
+  L137: [Log and chat]
+    ctx: panel.setBorder(new TitledBorder(new EtchedBorder(), "Log and chat"));
+  L143: [Server log monitor]
+    ctx: }, "Server log monitor");
+  L191: [If you need help setting up your server you can visit:]
+    ctx: javax.swing.JLabel jLabel = new javax.swing.JLabel("If you need help setting up your server you can visit:");
+  L203: [Unable to find a default browser. Please manually visit the website: ]
+    ctx: LOGGER.error("Unable to find a default browser. Please manually visit the website: " + onboardingLink, exception);
+  L205: [This platform does not support the BROWSE action. Please manually visit the website: ]
+    ctx: LOGGER.error("This platform does not support the BROWSE action. Please manually visit the website: " + onboardingLink, e
+  L207: [This action has been denied by the security manager. Please manually visit the website: ]
+    ctx: LOGGER.error("This action has been denied by the security manager. Please manually visit the website: " + onboardingLink
+
+### net/minecraft/server/gui/StatsComponent.java (5 strings)
+  L42: [Memory use: ]
+    ctx: this.msgs[0] = "Memory use: "
+  L44: [ mb (]
+    ctx: + " mb ("
+  L46: [% free)]
+    ctx: + "% free)";
+  L47: [Avg tick: ]
+    ctx: this.msgs[1] = "Avg tick: " + DECIMAL_FORMAT.format((double)this.server.getAverageTickTimeNanos() / TimeUtil.NANOSECONDS
+  L48: [TPS from last 1m, 5m, 15m: ]
+    ctx: this.msgs[2] = "TPS from last 1m, 5m, 15m: " + String.join(", ", tpsAvg);
+
+### net/minecraft/server/jsonrpc/Connection.java (17 strings)
+  L70: [RPC method ]
+    ctx: new ReadTimeoutException("RPC method " + entry.getValue().method().key().identifier() + " timed out waiting for response
+  L70: [ timed out waiting for response]
+    ctx: new ReadTimeoutException("RPC method " + entry.getValue().method().key().identifier() + " timed out waiting for response
+  L81: [Management connection opened for {}]
+    ctx: this.jsonRpcLogger.log(this.clientInfo, "Management connection opened for {}", this.channel.remoteAddress());
+  L88: [Management connection closed for {}]
+    ctx: this.jsonRpcLogger.log(this.clientInfo, "Management connection closed for {}", this.channel.remoteAddress());
+  L147: [Method cannot be dispatched pre server initialization: ]
+    ctx: return CompletableFuture.failedFuture(new InvalidRequestJsonRpcException("Method cannot be dispatched pre server initial
+  L174: [Invalid request id - only String, Number and NULL supported]
+    ctx: ? JsonRPCErrors.INVALID_REQUEST.createWithUnknownId("Invalid request id - only String, Number and NULL supported")
+  L182: [Received respose {} with id {} we did not request]
+    ctx: LOGGER.warn("Received respose {} with id {} we did not request", result, id);
+  L192: [Error while handling rpc request]
+    ctx: LOGGER.error("Error while handling rpc request", e);
+  L193: [Unknown error handling request - check server logs for stack trace]
+    ctx: return JsonRPCErrors.INTERNAL_ERROR.createWithUnknownId("Unknown error handling request - check server logs for stack tr
+  L212: [Invalid parameter invocation {}: {}, {}]
+    ctx: LOGGER.debug("Invalid parameter invocation {}: {}, {}", method, params, e.getMessage());
+  L215: [Failed to encode json rpc response {}: {}]
+    ctx: LOGGER.error("Failed to encode json rpc response {}: {}", method, e.getMessage());
+  L222: [Error while dispatching rpc method {}]
+    ctx: LOGGER.error("Error while dispatching rpc method {}", method, e);
+  L230: [Failed to parse method value: ]
+    ctx: throw new InvalidRequestJsonRpcException("Failed to parse method value: " + method);
+  L235: [Method not found: ]
+    ctx: throw new MethodNotFoundJsonRpcException("Method not found: " + method);
+  L241: [Method cannot be dispatched pre server initialization: ]
+    ctx: throw new InvalidRequestJsonRpcException("Method cannot be dispatched pre server initialization: " + method);
+  L262: [Received unknown response (id: {}): {}]
+    ctx: LOGGER.warn("Received unknown response (id: {}): {}", id, result);
+  L276: [Received error (id: {}): {}]
+    ctx: LOGGER.error("Received error (id: {}): {}", id, error);
+
+### net/minecraft/server/jsonrpc/IncomingRpcMethod.java (11 strings)
+  L98: [No response defined]
+    ctx: throw new IllegalStateException("No response defined");
+  L109: [No param schema defined]
+    ctx: throw new IllegalStateException("No param schema defined");
+  L114: [No method defined]
+    ctx: throw new IllegalStateException("No method defined");
+  L136: [Method defined as having parameters without describing them]
+    ctx: throw new IllegalArgumentException("Method defined as having parameters without describing them");
+  L145: [Params passed by-name, but expected param [%s] does not exist]
+    ctx: String.format(Locale.ROOT, "Params passed by-name, but expected param [%s] does not exist", parameterName)
+  L153: [Expected exactly one element in the params array]
+    ctx: throw new InvalidParameterJsonRpcException("Expected exactly one element in the params array");
+  L168: [No result codec defined]
+    ctx: throw new IllegalStateException("No result codec defined");
+  L173: [Expected params as array or named]
+    ctx: throw new InvalidParameterJsonRpcException("Expected params as array or named");
+  L187: [Parameterless method unexpectedly has parameter description]
+    ctx: throw new IllegalArgumentException("Parameterless method unexpectedly has parameter description");
+  L191: [No result codec defined]
+    ctx: throw new IllegalStateException("No result codec defined");
+  L203: [Expected no params, or an empty array]
+    ctx: throw new InvalidParameterJsonRpcException("Expected no params, or an empty array");
+
+### net/minecraft/server/jsonrpc/IncomingRpcMethods.java (68 strings)
+  L35: [Get the allowlist]
+    ctx: .description("Get the allowlist")
+  L39: [Set the allowlist]
+    ctx: .description("Set the allowlist")
+  L44: [Add players to allowlist]
+    ctx: .description("Add players to allowlist")
+  L49: [Remove players from allowlist]
+    ctx: .description("Remove players from allowlist")
+  L54: [Clear all players in allowlist]
+    ctx: .description("Clear all players in allowlist")
+  L61: [Get the ban list]
+    ctx: .description("Get the ban list")
+  L65: [Set the banlist]
+    ctx: .description("Set the banlist")
+  L70: [Add players to ban list]
+    ctx: .description("Add players to ban list")
+  L75: [Remove players from ban list]
+    ctx: .description("Remove players from ban list")
+  L80: [Clear all players in ban list]
+    ctx: .description("Clear all players in ban list")
+  L87: [Get the ip ban list]
+    ctx: .description("Get the ip ban list")
+  L91: [Set the ip banlist]
+    ctx: .description("Set the ip banlist")
+  L96: [Add ip to ban list]
+    ctx: .description("Add ip to ban list")
+  L101: [Remove ip from ban list]
+    ctx: .description("Remove ip from ban list")
+  L106: [Clear all ips in ban list]
+    ctx: .description("Clear all ips in ban list")
+  L113: [Get all connected players]
+    ctx: .description("Get all connected players")
+  L117: [Kick players]
+    ctx: .description("Kick players")
+  L125: [Get all oped players]
+    ctx: .description("Get all oped players")
+  L129: [Set all oped players]
+    ctx: .description("Set all oped players")
+  L134: [Op players]
+    ctx: .description("Op players")
+  L139: [Deop players]
+    ctx: .description("Deop players")
+  L144: [Deop all players]
+    ctx: .description("Deop all players")
+  L151: [Get server status]
+    ctx: .description("Get server status")
+  L155: [Save server state]
+    ctx: .description("Save server state")
+  L160: [Stop server]
+    ctx: .description("Stop server")
+  L164: [Send a system message]
+    ctx: .description("Send a system message")
+  L172: [Get whether automatic world saving is enabled on the server]
+    ctx: .description("Get whether automatic world saving is enabled on the server")
+  L176: [Enable or disable automatic world saving on the server]
+    ctx: .description("Enable or disable automatic world saving on the server")
+  L181: [Get the current difficulty level of the server]
+    ctx: .description("Get the current difficulty level of the server")
+  L185: [Set the difficulty level of the server]
+    ctx: .description("Set the difficulty level of the server")
+  L190: [Get whether allowlist enforcement is enabled (kicks players immediately when removed from allowlist)]
+    ctx: .description("Get whether allowlist enforcement is enabled (kicks players immediately when removed from allowlist)")
+  L194: [Enable or disable allowlist enforcement (when enabled, players are kicked immediately upon removal from allowlist)]
+    ctx: .description("Enable or disable allowlist enforcement (when enabled, players are kicked immediately upon removal from al
+  L199: [Get whether the allowlist is enabled on the server]
+    ctx: .description("Get whether the allowlist is enabled on the server")
+  L203: [Enable or disable the allowlist on the server (controls whether only allowlisted players can join)]
+    ctx: .description("Enable or disable the allowlist on the server (controls whether only allowlisted players can join)")
+  L208: [Get the maximum number of players allowed to connect to the server]
+    ctx: .description("Get the maximum number of players allowed to connect to the server")
+  L212: [Set the maximum number of players allowed to connect to the server]
+    ctx: .description("Set the maximum number of players allowed to connect to the server")
+  L217: [Get the number of seconds before the game is automatically paused when no players are online]
+    ctx: .description("Get the number of seconds before the game is automatically paused when no players are online")
+  L221: [Set the number of seconds before the game is automatically paused when no players are online]
+    ctx: .description("Set the number of seconds before the game is automatically paused when no players are online")
+  L226: [Get the number of seconds before idle players are automatically kicked from the server]
+    ctx: .description("Get the number of seconds before idle players are automatically kicked from the server")
+  L230: [Set the number of seconds before idle players are automatically kicked from the server]
+    ctx: .description("Set the number of seconds before idle players are automatically kicked from the server")
+  L235: [Get whether flight is allowed for players in Survival mode]
+    ctx: .description("Get whether flight is allowed for players in Survival mode")
+  L239: [Allow or disallow flight for players in Survival mode]
+    ctx: .description("Allow or disallow flight for players in Survival mode")
+  L244: [Get the server's message of the day displayed to players]
+    ctx: .description("Get the server's message of the day displayed to players")
+  L248: [Set the server's message of the day displayed to players]
+    ctx: .description("Set the server's message of the day displayed to players")
+  L253: [Get the spawn protection radius in blocks (only operators can edit within this area)]
+    ctx: .description("Get the spawn protection radius in blocks (only operators can edit within this area)")
+  L257: [Set the spawn protection radius in blocks (only operators can edit within this area)]
+    ctx: .description("Set the spawn protection radius in blocks (only operators can edit within this area)")
+  L262: [Get whether players are forced to use the server's default game mode]
+    ctx: .description("Get whether players are forced to use the server's default game mode")
+  L266: [Enable or disable forcing players to use the server's default game mode]
+    ctx: .description("Enable or disable forcing players to use the server's default game mode")
+  L271: [Get the server's default game mode]
+    ctx: .description("Get the server's default game mode")
+  L275: [Set the server's default game mode]
+    ctx: .description("Set the server's default game mode")
+  L280: [Get the server's view distance in chunks]
+    ctx: .description("Get the server's view distance in chunks")
+  L284: [Set the server's view distance in chunks]
+    ctx: .description("Set the server's view distance in chunks")
+  L289: [Get the server's simulation distance in chunks]
+    ctx: .description("Get the server's simulation distance in chunks")
+  L293: [Set the server's simulation distance in chunks]
+    ctx: .description("Set the server's simulation distance in chunks")
+  L298: [Get whether the server accepts player transfers from other servers]
+    ctx: .description("Get whether the server accepts player transfers from other servers")
+  L302: [Enable or disable accepting player transfers from other servers]
+    ctx: .description("Enable or disable accepting player transfers from other servers")
+  L307: [Get the interval in seconds between server status heartbeats]
+    ctx: .description("Get the interval in seconds between server status heartbeats")
+  L311: [Set the interval in seconds between server status heartbeats]
+    ctx: .description("Set the interval in seconds between server status heartbeats")
+  L316: [Get default operator permission level]
+    ctx: .description("Get default operator permission level")
+  L320: [Set default operator permission level]
+    ctx: .description("Set default operator permission level")
+  L325: [Get whether the server hides online player information from status queries]
+    ctx: .description("Get whether the server hides online player information from status queries")
+  L329: [Enable or disable hiding online player information from status queries]
+    ctx: .description("Enable or disable hiding online player information from status queries")
+  L334: [Get whether the server responds to connection status requests]
+    ctx: .description("Get whether the server responds to connection status requests")
+  L338: [Enable or disable the server responding to connection status requests]
+    ctx: .description("Enable or disable the server responding to connection status requests")
+  L343: [Get the entity broadcast range as a percentage]
+    ctx: .description("Get the entity broadcast range as a percentage")
+  L347: [Set the entity broadcast range as a percentage]
+    ctx: .description("Set the entity broadcast range as a percentage")
+  L355: [Get the available game rule keys and their current values]
+    ctx: .description("Get the available game rule keys and their current values")
+  L359: [Update game rule value]
+    ctx: .description("Update game rule value")
+
+### net/minecraft/server/jsonrpc/JsonRPCErrors.java (5 strings)
+  L9: [Parse error]
+    ctx: PARSE_ERROR(-32700, "Parse error"),
+  L10: [Invalid Request]
+    ctx: INVALID_REQUEST(-32600, "Invalid Request"),
+  L11: [Method not found]
+    ctx: METHOD_NOT_FOUND(-32601, "Method not found"),
+  L12: [Invalid params]
+    ctx: INVALID_PARAMS(-32602, "Invalid params"),
+  L13: [Internal error]
+    ctx: INTERNAL_ERROR(-32603, "Internal error");
+
+### net/minecraft/server/jsonrpc/JsonRpc.java (3 strings)
+  L24: [Invalid management server secret, must be 40 alphanumeric characters]
+    ctx: throw new IllegalStateException("Invalid management server secret, must be 40 alphanumeric characters");
+  L33: [Starting json RPC server on {}]
+    ctx: LOGGER.info("Starting json RPC server on {}", hostAndPort);
+  L56: [Failed to configure TLS for the server management protocol]
+    ctx: throw new IllegalStateException("Failed to configure TLS for the server management protocol", e);
+
+### net/minecraft/server/jsonrpc/JsonRpcLogger.java (3 strings)
+  L12: [RPC Connection #{}: ]
+    ctx: private static final String PREFIX = "RPC Connection #{}: ";
+  L16: [RPC Connection #{}: ]
+    ctx: LOGGER.info("RPC Connection #{}: " + message, clientInfo.connectionId());
+  L20: [RPC Connection #{}: ]
+    ctx: LOGGER.info("RPC Connection #{}: " + message, list.toArray());
+
+### net/minecraft/server/jsonrpc/ManagementServer.java (3 strings)
+  L51: [Management server IO #%d]
+    ctx: 0, new ThreadFactoryBuilder().setNameFormat("Management server IO #%d").setDaemon(true).build(), NioIoHandler.newFactory
+  L63: [The existing heartbeat was not canceled and the new heartbeat of {} seconds has not been applied.]
+    ctx: LOGGER.warn("The existing heartbeat was not canceled and the new heartbeat of {} seconds has not been applied.", period)
+  L129: [Json-RPC Management connection listening on {}:{}]
+    ctx: LOGGER.info("Json-RPC Management connection listening on {}:{}", this.hostAndPort.getHost(), this.getPort());
+
+### net/minecraft/server/jsonrpc/OutgoingRpcMethod.java (4 strings)
+  L59: [Method defined as having no parameters]
+    ctx: throw new IllegalStateException("Method defined as having no parameters");
+  L68: [Method defined as having no result]
+    ctx: throw new IllegalStateException("Method defined as having no result");
+  L80: [Method defined as having no parameters]
+    ctx: throw new IllegalStateException("Method defined as having no parameters");
+  L145: [Method defined as having no result]
+    ctx: throw new IllegalStateException("Method defined as having no result");
+
+### net/minecraft/server/jsonrpc/OutgoingRpcMethods.java (17 strings)
+  L14: [Server started]
+    ctx: .description("Server started")
+  L17: [Server shutting down]
+    ctx: .description("Server shutting down")
+  L20: [Server save started]
+    ctx: .description("Server save started")
+  L23: [Server save completed]
+    ctx: .description("Server save completed")
+  L26: [Server activity occurred. Rate limited to 1 notification per 30 seconds]
+    ctx: .description("Server activity occurred. Rate limited to 1 notification per 30 seconds")
+  L30: [Player joined]
+    ctx: .description("Player joined")
+  L34: [Player left]
+    ctx: .description("Player left")
+  L38: [Player was oped]
+    ctx: .description("Player was oped")
+  L42: [Player was deoped]
+    ctx: .description("Player was deoped")
+  L46: [Player was added to allowlist]
+    ctx: .description("Player was added to allowlist")
+  L50: [Player was removed from allowlist]
+    ctx: .description("Player was removed from allowlist")
+  L54: [Ip was added to ip ban list]
+    ctx: .description("Ip was added to ip ban list")
+  L58: [Ip was removed from ip ban list]
+    ctx: .description("Ip was removed from ip ban list")
+  L62: [Player was added to ban list]
+    ctx: .description("Player was added to ban list")
+  L66: [Player was removed from ban list]
+    ctx: .description("Player was removed from ban list")
+  L70: [Gamerule was changed]
+    ctx: .description("Gamerule was changed")
+  L75: [Server status heartbeat, including before the server has spun up]
+    ctx: .description("Server status heartbeat, including before the server has spun up")
+
+### net/minecraft/server/jsonrpc/api/Schema.java (1 strings)
+  L56: [Should not deserialize schema]
+    ctx: .validate(schema -> schema == null ? DataResult.error(() -> "Should not deserialize schema") : DataResult.success(schema
+
+### net/minecraft/server/jsonrpc/dataprovider/JsonRpcApiSchema.java (1 strings)
+  L27: [Json RPC API schema]
+    ctx: return "Json RPC API schema";
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftAllowListServiceImpl.java (4 strings)
+  L32: [Add player '{}' to allowlist]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Add player '{}' to allowlist", infos.getUser());
+  L38: [Clear allowlist]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Clear allowlist");
+  L44: [Remove player '{}' from allowlist]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Remove player '{}' from allowlist", nameAndId);
+  L50: [Kick unlisted players]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Kick unlisted players");
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftBanListServiceImpl.java (5 strings)
+  L28: [Add player '{}' to banlist. Reason: '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Add player '{}' to banlist. Reason: '{}'", ban.getDisplayName(), ban.getReasonMessag
+  L34: [Remove player '{}' from banlist]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Remove player '{}' from banlist", nameAndId);
+  L55: [Add ip '{}' to ban list]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Add ip '{}' to ban list", ipBanEntry.getUser());
+  L61: [Clear ip ban list]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Clear ip ban list");
+  L67: [Remove ip '{}' from ban list]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Remove ip '{}' from ban list", ip);
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftGameRuleServiceImpl.java (1 strings)
+  L47: [Game rule '{}' updated from '{}' to '{}']
+    ctx: .log(clientInfo, "Game rule '{}' updated from '{}' to '{}'", gameRule.id(), gameRule.serialize(oldValue), gameRule.seria
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftOperatorListServiceImpl.java (4 strings)
+  L37: [Op '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Op '{}'", nameAndId);
+  L43: [Op '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Op '{}'", nameAndId);
+  L49: [Deop '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Deop '{}'", nameAndId);
+  L55: [Clear operator list]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Clear operator list");
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftPlayerListServiceImpl.java (1 strings)
+  L70: [Remove player '{}']
+    ctx: this.jsonRpcLogger.log(clientInfo, "Remove player '{}'", serverPlayer.getPlainTextName());
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftServerSettingsServiceImpl.java (21 strings)
+  L32: [Update autosave from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update autosave from {} to {}", this.isAutoSave(), enabled);
+  L44: [Update difficulty from '{}' to '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update difficulty from '{}' to '{}'", this.getDifficulty(), difficulty);
+  L56: [Update enforce allowlist from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update enforce allowlist from {} to {}", this.isEnforceWhitelist(), enforce);
+  L69: [Update using allowlist from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update using allowlist from {} to {}", this.isUsingWhitelist(), use);
+  L82: [Update max players from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update max players from {} to {}", this.getMaxPlayers(), maxPlayers);
+  L94: [Update pause when empty from {} seconds to {} seconds]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update pause when empty from {} seconds to {} seconds", this.getPauseWhenEmptySecond
+  L106: [Update player idle timeout from {} minutes to {} minutes]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update player idle timeout from {} minutes to {} minutes", this.getPlayerIdleTimeout
+  L118: [Update allow flight from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update allow flight from {} to {}", this.allowFlight(), allow);
+  L130: [Update spawn protection radius from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update spawn protection radius from {} to {}", this.getSpawnProtectionRadius(), spaw
+  L142: [Update MOTD from '{}' to '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update MOTD from '{}' to '{}'", this.getMotd(), motd);
+  L154: [Update force game mode from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update force game mode from {} to {}", this.forceGameMode(), force);
+  L166: [Update game mode from '{}' to '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update game mode from '{}' to '{}'", this.getGameMode(), gameMode);
+  L178: [Update view distance from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update view distance from {} to {}", this.getViewDistance(), viewDistance);
+  L190: [Update simulation distance from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update simulation distance from {} to {}", this.getSimulationDistance(), simulationD
+  L202: [Update accepts transfers from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update accepts transfers from {} to {}", this.acceptsTransfers(), accept);
+  L215: [Updated status heartbeat interval from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Updated status heartbeat interval from {} to {}", this.getStatusHeartbeatInterval(),
+  L220: [The heartbeat interval was not updated to the new value of {} seconds as the json rpc server is null or a pre-existing heartbeat failed to get canceled]
+    ctx: "The heartbeat interval was not updated to the new value of {} seconds as the json rpc server is null or a pre-existing 
+  L235: [Update operator user permission level from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update operator user permission level from {} to {}", this.getOperatorUserPermission
+  L247: [Update hides online players from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update hides online players from {} to {}", this.hidesOnlinePlayers(), hide);
+  L259: [Update replies to status from {} to {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update replies to status from {} to {}", this.repliesToStatus(), enable);
+  L271: [Update entity broadcast range percentage from {}% to {}%]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Update entity broadcast range percentage from {}% to {}%", this.getEntityBroadcastRa
+
+### net/minecraft/server/jsonrpc/internalapi/MinecraftServerStateServiceImpl.java (5 strings)
+  L36: [Save everything. SuppressLogs: {}, flush: {}, force: {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Save everything. SuppressLogs: {}, flush: {}, force: {}", suppressLogs, flush, force
+  L42: [Halt server. WaitForShutdown: {}]
+    ctx: this.jsonrpcLogger.log(clientInfo, "Halt server. WaitForShutdown: {}", waitForShutdown);
+  L48: [Send system message: '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Send system message: '{}'", message.getString());
+  L55: [Send system message to '{}' players (overlay: {}): '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Send system message to '{}' players (overlay: {}): '{}'", playerNames.size(), overla
+  L68: [Broadcast system message (overlay: {}): '{}']
+    ctx: this.jsonrpcLogger.log(clientInfo, "Broadcast system message (overlay: {}): '{}'", overlay, message.getString());
+
+### net/minecraft/server/jsonrpc/methods/BanlistService.java (2 strings)
+  L25: [Management server]
+    ctx: private static final String BAN_SOURCE = "Management server";
+  L133: [Management server]
+    ctx: return new BanlistService.UserBan(nameAndId, this.reason().orElse(null), this.source().orElse("Management server"), this
+
+### net/minecraft/server/jsonrpc/methods/DiscoveryService.java (1 strings)
+  L34: [Minecraft Server JSON-RPC]
+    ctx: DiscoveryService.DiscoverInfo discoverInfo = new DiscoveryService.DiscoverInfo("Minecraft Server JSON-RPC", "3.0.0");
+
+### net/minecraft/server/jsonrpc/methods/GameRulesService.java (1 strings)
+  L69: [Stated type \"]
+    ctx: "Stated type \"" + readType + "\" mismatches with actual type \"" + gameRule.gameRuleType() + "\" of gamerule \"" + game
+
+### net/minecraft/server/jsonrpc/methods/IpBanlistService.java (4 strings)
+  L24: [Management server]
+    ctx: private static final String BAN_SOURCE = "Management server";
+  L103: [Management server]
+    ctx: return new IpBanlistService.IpBan(player.getIpAddress(), this.reason().orElse(null), this.source().orElse("Management se
+  L108: [Management server]
+    ctx: ? new IpBanlistService.IpBan(this.ip().get(), this.reason().orElse(null), this.source().orElse("Management server"), thi
+  L145: [Management server]
+    ctx: return new IpBanlistService.IpBan(this.ip(), this.reason().orElse(null), this.source().orElse("Management server"), this
+
+### net/minecraft/server/jsonrpc/security/AuthenticationHandler.java (6 strings)
+  L46: [Authentication rejected for connection with ip {}: {}]
+    ctx: this.LOGGER.debug("Authentication rejected for connection with ip {}: {}", clientIp, result.getReason());
+  L62: [Dropping unauthenticated connection with ip {}]
+    ctx: this.LOGGER.debug("Dropping unauthenticated connection with ip {}", clientIp);
+  L84: [Invalid API key]
+    ctx: : AuthenticationHandler.SecurityCheckResult.denied("Invalid API key");
+  L90: [Origin Not Allowed]
+    ctx: return AuthenticationHandler.SecurityCheckResult.denied("Origin Not Allowed");
+  L94: [Invalid API key]
+    ctx: : AuthenticationHandler.SecurityCheckResult.denied("Invalid API key");
+  L97: [Missing API key]
+    ctx: return AuthenticationHandler.SecurityCheckResult.denied("Missing API key");
+
+### net/minecraft/server/jsonrpc/security/JsonRpcSslContextProvider.java (3 strings)
+  L21: [TLS is enabled but keystore is not configured]
+    ctx: throw new IllegalArgumentException("TLS is enabled but keystore is not configured");
+  L28: [Supplied keystore is not a file or does not exist: ']
+    ctx: throw new IllegalArgumentException("Supplied keystore is not a file or does not exist: '" + keystorePath + "'");
+  L58: [To use TLS for the management server, please follow these steps:]
+    ctx: log.info("To use TLS for the management server, please follow these steps:");
+
+### net/minecraft/server/level/ChunkGenerationTask.java (1 strings)
+  L141: [Can't load chunk, but didn't expect to need to generate]
+    ctx: throw new IllegalStateException("Can't load chunk, but didn't expect to need to generate");
+
+### net/minecraft/server/level/ChunkHolder.java (7 strings)
+  L33: [Unloaded level chunk]
+    ctx: public static final ChunkResult<LevelChunk> UNLOADED_LEVEL_CHUNK = ChunkResult.error("Unloaded level chunk");
+  L69: [Already sent chunk ]
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+  L69: [ in world ']
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+  L69: [' to player ]
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+  L76: [Already sent chunk ]
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+  L76: [ in world ']
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+  L76: [' to player ]
+    ctx: throw new IllegalStateException("Already sent chunk " + this.pos + " in world '" + ca.spottedleaf.moonrise.common.util.W
+
+### net/minecraft/server/level/ChunkMap.java (18 strings)
+  L112: [Unloaded chunks found in range]
+    ctx: private static final ChunkResult<List<ChunkAccess>> UNLOADED_CHUNK_LIST_RESULT = ChunkResult.error("Unloaded chunks foun
+  L339: [St: §]
+    ctx: result = result + "St: §" + status.getIndex() + status + "§r\n";
+  L343: [Ch: §]
+    ctx: result = result + "Ch: §" + chunk.getPersistedStatus().getIndex() + chunk.getPersistedStatus() + "§r\n";
+  L363: [ - status: ]
+    ctx: sb.append(holder.getPos()).append(" - status: ").append(status).append(" future: ").append(future).append(System.lineSep
+  L370: [Chunk loading]
+    ctx: CrashReport report = CrashReport.forThrowable(exception, "Chunk loading");
+  L371: [Chunk loading]
+    ctx: CrashReportCategory category = report.addCategory("Chunk loading");
+  L391: [Use ServerChunkCache#close]
+    ctx: throw new UnsupportedOperationException("Use ServerChunkCache#close"); // Paper - rewrite chunk system
+  L451: [Exception loading chunk]
+    ctx: CrashReport report = CrashReport.forThrowable(throwable, "Exception loading chunk");
+  L452: [Chunk being loaded]
+    ctx: CrashReportCategory chunkBeingLoaded = report.addCategory("Chunk being loaded");
+  L675: [not completed]
+    ctx: return "not completed";
+  L985: [entity track]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("entity track"); // Spigot
+  L988: [Illegal ChunkMap::addEntity for world ]
+    ctx: LOGGER.error("Illegal ChunkMap::addEntity for world " + io.papermc.paper.util.MCUtil.getLevelName(this.level)
+  L989: [ ALREADY CONTAINED (This would have crashed your server)]
+    ctx: + ": " + entity  + (this.entityMap.containsKey(entity.getId()) ? " ALREADY CONTAINED (This would have crashed your serve
+  L1001: [Entity is already tracked!]
+    ctx: throw (IllegalStateException)Util.pauseInIde(new IllegalStateException("Entity is already tracked!"));
+  L1008: [Entity is already tracked]
+    ctx: throw new IllegalStateException("Entity is already tracked");
+  L1029: [entity untrack]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("entity untrack"); // Spigot
+  L1370: [player tracker clear]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("player tracker clear"); // Spigot
+  L1380: [player tracker update]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("player tracker update"); // Spigot
+
+### net/minecraft/server/level/ChunkTaskDispatcher.java (2 strings)
+  L41: [RES {} {} -> {}]
+    ctx: LOGGER.debug("RES {} {} -> {}", pos, oldTicketLevel, newLevel);
+  L66: [SUB {} {} {} {}]
+    ctx: LOGGER.debug("SUB {} {} {} {}", ChunkPos.unpack(pos), ticketLevel, this.executor, this.queue);
+
+### net/minecraft/server/level/DistanceManager.java (1 strings)
+  L46: [player ticket throttler]
+    ctx: TaskScheduler<Runnable> mainThreadTaskScheduler = TaskScheduler.wrapExecutor("player ticket throttler", mainThreadExecut
+
+### net/minecraft/server/level/GenerationChunkHolder.java (3 strings)
+  L25: [Not done yet]
+    ctx: private static final ChunkResult<ChunkAccess> NOT_DONE_YET = ChunkResult.error("Not done yet");
+  L26: [Unloaded chunk]
+    ctx: public static final ChunkResult<ChunkAccess> UNLOADED_CHUNK = ChunkResult.error("Unloaded chunk");
+  L34: [Trying to create chunk out of reasonable bounds: ]
+    ctx: throw new IllegalStateException("Trying to create chunk out of reasonable bounds: " + pos);
+
+### net/minecraft/server/level/PlayerSpawnFinder.java (3 strings)
+  L136: [Searching for spawn]
+    ctx: CrashReport report = CrashReport.forThrowable(throwable, "Searching for spawn");
+  L137: [Spawn Lookup]
+    ctx: CrashReportCategory details = report.addCategory("Spawn Lookup");
+  L141: [ out of ]
+    ctx: details.setDetail("Progress", () -> candidateIndex + " out of " + this.candidateCount);
+
+### net/minecraft/server/level/ServerChunkCache.java (7 strings)
+  L112: [Chunk system has shut down, cannot process chunk requests in world ']
+    ctx: "Chunk system has shut down, cannot process chunk requests in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.g
+  L112: [' at ]
+    ctx: "Chunk system has shut down, cannot process chunk requests in world '" + ca.spottedleaf.moonrise.common.util.WorldUtil.g
+  L113: [) status: ]
+    ctx: + "(" + chunkX + "," + chunkZ + ") status: " + toStatus
+  L125: [Chunk not loaded when requested]
+    ctx: throw new IllegalStateException("Chunk not loaded when requested");
+  L207: [Failed to create dimension data storage directory]
+    ctx: LOGGER.error("Failed to create dimension data storage directory", e);
+  L371: [Scheduling chunk load off-main]
+    ctx: ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread(this.level, x, z, "Scheduling chunk load off-main");
+  L801: [Chunk source main thread executor for ]
+    ctx: super("Chunk source main thread executor for " + level.dimension().identifier(), false);
+
+### net/minecraft/server/level/ServerLevel.java (33 strings)
+  L564: [Cannot add ticking request async]
+    ctx: ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread((ServerLevel)(Object)this, chunkX, chunkZ, "Cannot add t
+  L585: [Cannot remove ticking request async]
+    ctx: ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread((ServerLevel)(Object)this, chunkX, chunkZ, "Cannot remov
+  L591: [Negative counter]
+    ctx: throw new IllegalStateException("Negative counter");
+  L805: [world border]
+    ctx: profiler.push("world border");
+  L1391: [Cannot tick an entity off-main]
+    ctx: ca.spottedleaf.moonrise.common.util.TickThread.ensureTickThread("Cannot tick an entity off-main");
+  L1624: [Force-added player with duplicate UUID {}]
+    ctx: LOGGER.warn("Force-added player with duplicate UUID {}", player.getUUID());
+  L1634: [entity add]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("entity add"); // Spigot
+  L1638: [Attempted Double World add on {}]
+    ctx: MinecraftServer.LOGGER.error("Attempted Double World add on {}", entity, new Throwable());
+  L1857: [recursive call to sendBlockUpdated]
+    ctx: String message = "recursive call to sendBlockUpdated";
+  L1858: [recursive call to sendBlockUpdated]
+    ctx: Util.logAndPauseIfInIde("recursive call to sendBlockUpdated", new IllegalStateException("recursive call to sendBlockUpda
+  L1858: [recursive call to sendBlockUpdated]
+    ctx: Util.logAndPauseIfInIde("recursive call to sendBlockUpdated", new IllegalStateException("recursive call to sendBlockUpda
+  L2452: [spawning_chunks: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "spawning_chunks: %d\n", chunkMap.getDistanceManager().getNaturalSpawnChunkCount
+  L2456: [spawn_count.%s: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "spawn_count.%s: %d\n", entry.getKey().getName(), entry.getIntValue()));
+  L2460: [entities: %s\n]
+    ctx: output.write(String.format(Locale.ROOT, "entities: %s\n", this.moonrise$getEntityLookup().getDebugInfo())); // Paper - r
+  L2461: [block_entity_tickers: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "block_entity_tickers: %d\n", this.blockEntityTickers.size()));
+  L2462: [block_ticks: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "block_ticks: %d\n", this.getBlockTicks().count()));
+  L2463: [fluid_ticks: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "fluid_ticks: %d\n", this.getFluidTicks().count()));
+  L2465: [pending_tasks: %d\n]
+    ctx: output.write(String.format(Locale.ROOT, "pending_tasks: %d\n", this.getChunkSource().getPendingTasksCount()));
+  L2468: [Level dump]
+    ctx: CrashReport test = new CrashReport("Level dump", new Exception("dummy"));
+  L2577: [players: %s, entities: %s [%s], block_entities: %d [%s], block_ticks: %d, fluid_ticks: %d, chunk_source: %s]
+    ctx: "players: %s, entities: %s [%s], block_entities: %d [%s], block_ticks: %d, fluid_ticks: %d, chunk_source: %s",
+  L2612: [Chunk getEntities call]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("Chunk getEntities call"); // Spigot
+  L2673: [Chunks[S] W: ]
+    ctx: return "Chunks[S] W: " + this.chunkSource.gatherStats() + " E: " + this.moonrise$getEntityLookup().getDebugInfo(); // Pa
+  L2767: [Loaded entity count]
+    ctx: category.setDetail("Loaded entity count", () -> String.valueOf(this.moonrise$getEntityLookup().getEntityCount())); // Pa
+  L2769: [Server weather]
+    ctx: "Server weather",
+  L2772: [Rain time: %d (now: %b), thunder time: %d (now: %b)]
+    ctx: "Rain time: %d (now: %b), thunder time: %d (now: %b)",
+  L2856: [entity register]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("entity register"); // Spigot
+  L2873: [onTrackingStart called during navigation iteration]
+    ctx: String message = "onTrackingStart called during navigation iteration";
+  L2875: [onTrackingStart called during navigation iteration]
+    ctx: "onTrackingStart called during navigation iteration", new IllegalStateException("onTrackingStart called during navigatio
+  L2875: [onTrackingStart called during navigation iteration]
+    ctx: "onTrackingStart called during navigation iteration", new IllegalStateException("onTrackingStart called during navigatio
+  L2906: [entity unregister]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("entity unregister"); // Spigot
+  L2944: [onTrackingStart called during navigation iteration]
+    ctx: String message = "onTrackingStart called during navigation iteration";
+  L2946: [onTrackingStart called during navigation iteration]
+    ctx: "onTrackingStart called during navigation iteration", new IllegalStateException("onTrackingStart called during navigatio
+  L2946: [onTrackingStart called during navigation iteration]
+    ctx: "onTrackingStart called during navigation iteration", new IllegalStateException("onTrackingStart called during navigatio
+
+### net/minecraft/server/level/ServerPlayer.java (7 strings)
+  L292: [Failed to hash ]
+    ctx: .getOrThrow(msg -> new IllegalArgumentException("Failed to hash " + component + ": " + msg))
+  L605: [Couldn't reattach entity to player]
+    ctx: LOGGER.warn("Couldn't reattach entity to player");
+  L623: [Trying to save removed ender pearl, skipping]
+    ctx: LOGGER.warn("Trying to save removed ender pearl, skipping");
+  L648: [Failed to spawn player ender pearl in level ({}), skipping]
+    ctx: LOGGER.warn("Failed to spawn player ender pearl in level ({}), skipping", pearlLevelKey.get());
+  L651: [Trying to load ender pearl without level ({}) being loaded, skipping]
+    ctx: LOGGER.warn("Trying to load ender pearl without level ({}) being loaded, skipping", pearlLevelKey.get());
+  L900: [Ticking player]
+    ctx: CrashReport report = CrashReport.forThrowable(t, "Ticking player");
+  L901: [Player being ticked]
+    ctx: CrashReportCategory category = report.addCategory("Player being ticked");
+
+### net/minecraft/server/level/ServerPlayerGameMode.java (15 strings)
+  L173: [Server ACK {} {} {} {}]
+    ctx: LOGGER.debug("Server ACK {} {} {} {}", sequence, pos, allGood, message);
+  L182: [too far]
+    ctx: this.debugLogging(pos, false, sequence, "too far");
+  L185: [too high]
+    ctx: this.debugLogging(pos, false, sequence, "too high");
+  L190: [spawn protection]
+    ctx: this.debugLogging(pos, false, sequence, "spawn protection");
+  L198: [may not interact]
+    ctx: this.debugLogging(pos, false, sequence, "may not interact");
+  L213: [creative destroy]
+    ctx: this.destroyAndAck(pos, sequence, "creative destroy");
+  L226: [block action restricted]
+    ctx: this.debugLogging(pos, false, sequence, "block action restricted");
+  L266: [insta mine]
+    ctx: this.destroyAndAck(pos, sequence, "insta mine");
+  L270: [abort destroying since another started (client insta mine, server disagreed)]
+    ctx: this.debugLogging(pos, false, sequence, "abort destroying since another started (client insta mine, server disagreed)");
+  L277: [actual start of destroying]
+    ctx: this.debugLogging(pos, true, sequence, "actual start of destroying");
+  L302: [stopped destroying]
+    ctx: this.debugLogging(pos, true, sequence, "stopped destroying");
+  L307: [Mismatch in destroy block pos: {} {}]
+    ctx: ServerPlayerGameMode.LOGGER.debug("Mismatch in destroy block pos: {} {}", this.destroyPos, pos); // CraftBukkit - SPIGOT
+  L311: [aborted mismatched destroying]
+    ctx: this.debugLogging(pos, true, sequence, "aborted mismatched destroying");
+  L318: [aborted destroying]
+    ctx: this.debugLogging(pos, true, sequence, "aborted destroying");
+  L399: [server broke {} {} -> {}]
+    ctx: LOGGER.info("server broke {} {} -> {}", pos, adjustedState, this.level.getBlockState(pos));
+
+### net/minecraft/server/level/ThreadedLevelLightEngine.java (1 strings)
+  L183: [Ran automatically on a different thread!]
+    ctx: throw (UnsupportedOperationException)Util.pauseInIde(new UnsupportedOperationException("Ran automatically on a different
+
+### net/minecraft/server/level/Ticket.java (2 strings)
+  L48: [Nullability of identifier should match nullability of comparator]
+    ctx: throw new IllegalStateException("Nullability of identifier should match nullability of comparator");
+  L96: [)] to die in ]
+    ctx: return "Ticket[" + this.type + " " + this.ticketLevel + " (" + this.identifier + ")] to die in " + this.ticksLeft; // Pa
+
+### net/minecraft/server/level/WorldGenRegion.java (24 strings)
+  L166: [Requested chunk unavailable during world generation]
+    ctx: new IllegalStateException("Requested chunk unavailable during world generation"), "Exception generating new chunk"
+  L166: [Exception generating new chunk]
+    ctx: new IllegalStateException("Requested chunk unavailable during world generation"), "Exception generating new chunk"
+  L168: [Chunk request details]
+    ctx: CrashReportCategory category = report.addCategory("Chunk request details");
+  L169: [Requested chunk]
+    ctx: category.setDetail("Requested chunk", String.format(Locale.ROOT, "%d, %d", chunkX, chunkZ));
+  L170: [Generating status]
+    ctx: category.setDetail("Generating status", () -> this.generatingStep.targetStatus().getName());
+  L171: [Requested status]
+    ctx: category.setDetail("Requested status", targetStatus::getName);
+  L172: [Actual status]
+    ctx: category.setDetail("Actual status", () -> chunkHolder == null ? "[out of cache bounds]" : chunkHolder.getPersistedStatus
+  L172: [[out of cache bounds]]
+    ctx: category.setDetail("Actual status", () -> chunkHolder == null ? "[out of cache bounds]" : chunkHolder.getPersistedStatus
+  L173: [Maximum allowed status]
+    ctx: category.setDetail("Maximum allowed status", () -> maxAllowedStatus == null ? "null" : maxAllowedStatus.getName());
+  L175: [Requested distance]
+    ctx: category.setDetail("Requested distance", distance);
+  L176: [Generating chunk]
+    ctx: category.setDetail("Generating chunk", this.center.getPos()::toString);
+  L283: [Tried to access a block entity before it was created. {}]
+    ctx: LOGGER.warn("Tried to access a block entity before it was created. {}", pos);
+  L293: [Detected unsafe terrain read during worldgen: reading from chunk []
+    ctx: String warning = "Detected unsafe terrain read during worldgen: reading from chunk ["
+  L297: [] while generating chunk []
+    ctx: + "] while generating chunk ["
+  L301: [] (distance: ]
+    ctx: + "] (distance: "
+  L303: [, write radius: ]
+    ctx: + ", write radius: "
+  L305: [), step: ]
+    ctx: + "), step: "
+  L307: [, currently generating: ]
+    ctx: + (this.currentlyGenerating == null ? "" : ", currently generating: " + this.currentlyGenerating.get());
+  L332: [Detected setBlock in a far chunk []
+    ctx: "Detected setBlock in a far chunk ["
+  L336: [], pos: ]
+    ctx: + "], pos: "
+  L338: [, status: ]
+    ctx: + ", status: "
+  L340: [, currently generating: ]
+    ctx: + (this.currentlyGenerating == null ? "" : ", currently generating: " + this.currentlyGenerating.get())
+  L344: [far setBlock call]
+    ctx: io.papermc.paper.util.TraceUtil.dumpTraceForThread("far setBlock call");
+  L468: [We are asking a region for a chunk out of bound]
+    ctx: throw new RuntimeException("We are asking a region for a chunk out of bound");
+
+### net/minecraft/server/level/progress/LoggingLevelLoadListener.java (6 strings)
+  L51: [Selecting spawn point for level '{}'...]
+    ctx: LOGGER.info("Selecting spawn point for level '{}'...", this.level.dimension().identifier());
+  L53: [Selecting global world spawn...]
+    ctx: LOGGER.info("Selecting global world spawn...");
+  L58: [Loading {} persistent chunks for level '{}'...]
+    ctx: LOGGER.info("Loading {} persistent chunks for level '{}'...", totalChunks, this.level.dimension().identifier());
+  L60: [Loading {} persistent chunks...]
+    ctx: LOGGER.info("Loading {} persistent chunks...", totalChunks);
+  L65: [Loading {} chunks for player spawn...]
+    ctx: LOGGER.info("Loading {} chunks for player spawn...", totalChunks);
+  L90: [Prepared spawn area in {} ms]
+    ctx: LOGGER.info("Prepared spawn area in {} ms", Util.getMillis() - this.startTime); // Paper
+
+### net/minecraft/server/network/EventLoopGroupHolder.java (2 strings)
+  L52: [Unix Domain Socket]
+    ctx: private static final EventLoopGroupHolder EPOLL_UNIX_DOMAIN = new EventLoopGroupHolder("Unix Domain Socket", io.netty.ch
+  L101: [ IO #%d]
+    ctx: return new ThreadFactoryBuilder().setNameFormat("Netty " + this.type + " IO #%d").setDaemon(true).setUncaughtExceptionHa
+
+### net/minecraft/server/network/LegacyQueryHandler.java (6 strings)
+  L50: [Ping: (<1.3.x) from {}]
+    ctx: LOGGER.debug("Ping: (<1.3.x) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? socket : "<ip address
+  L50: [<ip address withheld>]
+    ctx: LOGGER.debug("Ping: (<1.3.x) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? socket : "<ip address
+  L77: [Ping: (1.4-1.5.x) from {}]
+    ctx: LOGGER.debug("Ping: (1.4-1.5.x) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? socket : "<ip addr
+  L77: [<ip address withheld>]
+    ctx: LOGGER.debug("Ping: (1.4-1.5.x) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? socket : "<ip addr
+  L217: [Ping: (1.6) from {}]
+    ctx: LOGGER.debug("Ping: (1.6) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? ctx.channel().remoteAddr
+  L217: [<ip address withheld>]
+    ctx: LOGGER.debug("Ping: (1.6) from {}", net.minecraft.server.MinecraftServer.getServer().logIPs() ? ctx.channel().remoteAddr
+
+### net/minecraft/server/network/LegacyTextFilter.java (3 strings)
+  L52: [Missing API key]
+    ctx: throw new IllegalArgumentException("Missing API key");
+  L117: [Failed to parse chat filter config {}]
+    ctx: LOGGER.warn("Failed to parse chat filter config {}", config, e);
+  L148: [Failed to send join/leave packet to {} for player {}]
+    ctx: LOGGER.warn("Failed to send join/leave packet to {} for player {}", endpoint, user, e);
+
+### net/minecraft/server/network/MemoryServerHandshakePacketListenerImpl.java (1 strings)
+  L23: [Invalid intention ]
+    ctx: throw new UnsupportedOperationException("Invalid intention " + packet.intention());
+
+### net/minecraft/server/network/PlayerChunkSender.java (1 strings)
+  L93: [SEN {}]
+    ctx: LOGGER.debug("SEN {}", pos);
+
+### net/minecraft/server/network/PlayerSafetyServiceTextFilter.java (2 strings)
+  L91: [Failed to open certificate file]
+    ctx: LOGGER.warn("Failed to open certificate file");
+  L103: [Failed to create confidential client application]
+    ctx: LOGGER.warn("Failed to create confidential client application");
+
+### net/minecraft/server/network/ServerCommonPacketListenerImpl.java (13 strings)
+  L91: [Stopping singleplayer server as player logged out]
+    ctx: LOGGER.info("Stopping singleplayer server as player logged out");
+  L124: [Disconnecting {} for sending keepalive response ({}) out-of-order!]
+    ctx: LOGGER.info("Disconnecting {} for sending keepalive response ({}) out-of-order!", this.playerProfile().name(), packet.ge
+  L130: [Disconnecting {} for sending keepalive response ({}) without matching challenge!]
+    ctx: LOGGER.info("Disconnecting {} for sending keepalive response ({}) without matching challenge!", this.playerProfile().nam
+  L181: [Couldn't handle custom payload on channel {}]
+    ctx: LOGGER.error("Couldn't handle custom payload on channel {}", identifier, e);
+  L182: [Invalid custom payload payload!]
+    ctx: this.disconnect(Component.literal("Invalid custom payload payload!"), io.papermc.paper.connection.DisconnectionReason.IN
+  L227: [Disconnecting {} due to resource pack {} rejection]
+    ctx: LOGGER.info("Disconnecting {} due to resource pack {} rejection", this.playerProfile().name(), packet.id());
+  L242: [Unexpected value: ]
+    ctx: default -> throw new IllegalStateException("Unexpected value: " + this);
+  L273: [{} was kicked due to keepalive timeout!]
+    ctx: LOGGER.info("{} was kicked due to keepalive timeout!", this.playerProfile().name());
+  L324: [Sending packet]
+    ctx: CrashReport report = CrashReport.forThrowable(t, "Sending packet");
+  L325: [Packet being sent]
+    ctx: CrashReportCategory category = report.addCategory("Packet being sent");
+  L326: [Packet class]
+    ctx: category.setDetail("Packet class", () -> packet.getClass().getCanonicalName());
+  L396: [{} was kicked for floating too long!]
+    ctx: case FLYING_PLAYER -> LOGGER.warn("{} was kicked for floating too long!", player.getPlainTextName());
+  L397: [{} was kicked for floating a vehicle too long!]
+    ctx: case FLYING_VEHICLE -> LOGGER.warn("{} was kicked for floating a vehicle too long!", player.getPlainTextName());
+
+### net/minecraft/server/network/ServerConfigurationPacketListenerImpl.java (9 strings)
+  L85: [{} ({}) lost connection: {}, while in configuration phase {}]
+    ctx: ServerConfigurationPacketListenerImpl.LOGGER.info("{} ({}) lost connection: {}, while in configuration phase {}", this.g
+  L88: [{} ({}) lost connection: {}]
+    ctx: LOGGER.info("{} ({}) lost connection: {}", this.gameProfile.name(), this.gameProfile.id(), details.reason().getString())
+  L183: [Unexpected response from client: received pack selection, but no negotiation ongoing]
+    ctx: throw new IllegalStateException("Unexpected response from client: received pack selection, but no negotiation ongoing");
+  L216: [Couldn't place player in world]
+    ctx: LOGGER.error("Couldn't place player in world", e);
+  L231: [Failed to tick configuration task {}]
+    ctx: LOGGER.error("Failed to tick configuration task {}", task.type(), e);
+  L243: [ has not finished yet]
+    ctx: throw new IllegalStateException("Task " + this.currentTask.type().id() + " has not finished yet");
+  L254: [Failed to start configuration task {}]
+    ctx: LOGGER.error("Failed to start configuration task {}", task.type(), e);
+  L264: [Unexpected request for task finish, current task: ]
+    ctx: throw new IllegalStateException("Unexpected request for task finish, current task: " + currentTaskType + ", requested: "
+  L264: [, requested: ]
+    ctx: throw new IllegalStateException("Unexpected request for task finish, current task: " + currentTaskType + ", requested: "
+
+### net/minecraft/server/network/ServerConnectionListener.java (13 strings)
+  L80: [Using HAProxy, please ensure the server port is adequately firewalled.]
+    ctx: LOGGER.warn("Using HAProxy, please ensure the server port is adequately firewalled.");
+  L84: [Paper: Using ]
+    ctx: ServerConnectionListener.LOGGER.info("Paper: Using " + com.velocitypowered.natives.util.Natives.compress.getLoadedVarian
+  L84: [ compression from Velocity.]
+    ctx: ServerConnectionListener.LOGGER.info("Paper: Using " + com.velocitypowered.natives.util.Natives.compress.getLoadedVarian
+  L85: [Paper: Using ]
+    ctx: ServerConnectionListener.LOGGER.info("Paper: Using " + com.velocitypowered.natives.util.Natives.cipher.getLoadedVariant(
+  L85: [ cipher from Velocity.]
+    ctx: ServerConnectionListener.LOGGER.info("Paper: Using " + com.velocitypowered.natives.util.Natives.cipher.getLoadedVariant(
+  L243: [Timed out whilst waiting for channel to close]
+    ctx: LOGGER.error("Timed out whilst waiting for channel to close");
+  L252: [Interrupted whilst closing channel]
+    ctx: LOGGER.error("Interrupted whilst closing channel");
+  L267: [Interrupted whilst closing TCP listener]
+    ctx: LOGGER.error("Interrupted whilst closing TCP listener");
+  L302: [Ticking memory connection]
+    ctx: throw new ReportedException(CrashReport.forThrowable(e, "Ticking memory connection"));
+  L305: [Failed to handle packet for {}]
+    ctx: LOGGER.warn("Failed to handle packet for {}", connection.getLoggableAddress(this.server.logIPs()), e);
+  L306: [Internal server error]
+    ctx: Component component = Component.literal("Internal server error");
+  L340: [Timed out whilst waiting for player connection channel to close]
+    ctx: LOGGER.error("Timed out whilst waiting for player connection channel to close");
+  L374: [Latency Simulator #%d]
+    ctx: private static final Timer TIMER = new HashedWheelTimer(new ThreadFactoryBuilder().setNameFormat("Latency Simulator #%d"
+
+### net/minecraft/server/network/ServerGamePacketListenerImpl.java (55 strings)
+  L428: [Player profile key for {} has expired!]
+    ctx: LOGGER.info("Player profile key for {} has expired!", this.player.getPlainTextName());
+  L478: [Ignoring packet due to disconnection]
+    ctx: LOGGER.debug("Ignoring packet due to disconnection");
+  L594: [ is sending move packets too frequently (]
+    ctx: ServerGamePacketListenerImpl.LOGGER.debug(this.player.getScoreboardName() + " is sending move packets too frequently (" 
+  L594: [ packets since last tick)]
+    ctx: ServerGamePacketListenerImpl.LOGGER.debug(this.player.getScoreboardName() + " is sending move packets too frequently (" 
+  L623: [{} (vehicle of {}) moved too quickly! {},{},{}]
+    ctx: "{} (vehicle of {}) moved too quickly! {},{},{}", vehicle.getPlainTextName(), this.player.getPlainTextName(), xDist, yDi
+  L652: [{} (vehicle of {}) moved wrongly! {}]
+    ctx: LOGGER.warn("{} (vehicle of {}) moved wrongly! {}", vehicle.getPlainTextName(), this.player.getPlainTextName(), Math.sqr
+  L840: [Async Tab Complete Thread - #%d]
+    ctx: new com.google.common.util.concurrent.ThreadFactoryBuilder().setDaemon(true).setNameFormat("Async Tab Complete Thread - 
+  L1118: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, menu);
+  L1131: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, this.player.containerMenu);
+  L1137: [Player {} tried to set invalid beacon effects]
+    ctx: LOGGER.warn("Player {} tried to set invalid beacon effects", this.player);
+  L1146: [Player {} tried to set game rule values without required permissions]
+    ctx: LOGGER.warn("Player {} tried to set game rule values without required permissions", this.player.getGameProfile().name())
+  L1155: [Received request to set unknown game rule: {}]
+    ctx: LOGGER.warn("Received request to set unknown game rule: {}", entry.gameRuleKey());
+  L1330: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, menu);
+  L1373: [{} tried to send a book too large. Book size: {} - Allowed: {} - Pages: {}]
+    ctx: ServerGamePacketListenerImpl.LOGGER.warn("{} tried to send a book too large. Book size: {} - Allowed: {} - Pages: {}", t
+  L1374: [Book too large!]
+    ctx: this.disconnectAsync(Component.literal("Book too large!"), org.bukkit.event.player.PlayerKickEvent.Cause.ILLEGAL_ACTION)
+  L1381: [Book edited too quickly!]
+    ctx: this.disconnectAsync(Component.literal("Book edited too quickly!"), org.bukkit.event.player.PlayerKickEvent.Cause.ILLEGA
+  L1530: [{} is sending move packets too frequently ({} packets since last tick)]
+    ctx: "{} is sending move packets too frequently ({} packets since last tick)",
+  L1570: [{} moved too quickly! {},{},{}]
+    ctx: LOGGER.warn("{} moved too quickly! {},{},{}", this.player.getPlainTextName(), xDist, yDist, zDist);
+  L1637: [{} moved wrongly!]
+    ctx: LOGGER.warn("{} moved wrongly!", this.player.getPlainTextName());
+  L1905: [Attempt to teleport removed player {} restricted]
+    ctx: LOGGER.info("Attempt to teleport removed player {} restricted", this.player.getScoreboardName());
+  L1906: [Attempt to teleport removed player]
+    ctx: if (this.server.isDebugging()) io.papermc.paper.util.TraceUtil.dumpTraceForThread("Attempt to teleport removed player");
+  L1999: [ dropped their items too quickly!]
+    ctx: ServerGamePacketListenerImpl.LOGGER.warn(this.player.getScoreboardName() + " dropped their items too quickly!");
+  L2000: [You dropped your items too quickly (Hacking?)]
+    ctx: this.disconnect(Component.literal("You dropped your items too quickly (Hacking?)"), org.bukkit.event.player.PlayerKickEv
+  L2055: [Invalid player action]
+    ctx: throw new IllegalArgumentException("Invalid player action");
+  L2271: [{} lost connection: {}]
+    ctx: LOGGER.info("{} lost connection: {}", this.player.getPlainTextName(), details.reason().getString());
+  L2307: [Expected packet sequence nr >= 0]
+    ctx: this.disconnect(Component.literal("Expected packet sequence nr >= 0"), org.bukkit.event.player.PlayerKickEvent.Cause.ILL
+  L2308: [Expected packet sequence nr >= 0]
+    ctx: throw new IllegalArgumentException("Expected packet sequence nr >= 0");
+  L2336: [{} tried to set an invalid carried item]
+    ctx: LOGGER.warn("{} tried to set an invalid carried item", this.player.getPlainTextName());
+  L2337: [Invalid hotbar selection (Hacking?)]
+    ctx: this.disconnect(Component.literal("Invalid hotbar selection (Hacking?)"), org.bukkit.event.player.PlayerKickEvent.Cause.
+  L2388: [{} issued server command: {}]
+    ctx: LOGGER.info("{} issued server command: {}", this.player.getScoreboardName(), prefixedCommand);
+  L2402: [Received unsigned command packet from {}, but the command requires signable arguments: {}]
+    ctx: "Received unsigned command packet from {}, but the command requires signable arguments: {}", this.player.getGameProfile(
+  L2430: [{} issued server command: {}]
+    ctx: LOGGER.info("{} issued server command: {}", this.player.getScoreboardName(), commandString);
+  L2467: [Failed to update secure chat state for {}: '{}']
+    ctx: LOGGER.warn("Failed to update secure chat state for {}: '{}'", this.player.getGameProfile().name(), e.getComponent().get
+  L2518: [Signed command mismatch between server and client ('{}'): got [{}] from client, but expected [{}]]
+    ctx: LOGGER.error("Signed command mismatch between server and client ('{}'): got [{}] from client, but expected [{}]", comman
+  L2551: [Failed to validate message acknowledgements from {}: {}]
+    ctx: LOGGER.error("Failed to validate message acknowledgements from {}: {}", this.player.getPlainTextName(), e.getMessage());
+  L2581: [Asynchronous player chat is not allowed here]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("Asynchronous player chat is not allowed here");
+  L2614: [{} tried to send an empty message]
+    ctx: LOGGER.warn("{} tried to send an empty message", this.player.getScoreboardName());
+  L2663: [Failed to validate message acknowledgement offset from {}: {}]
+    ctx: LOGGER.error("Failed to validate message acknowledgement offset from {}: {}", this.player.getPlainTextName(), e.getMessa
+  L2760: [Invalid client command!]
+    ctx: throw new IllegalArgumentException("Invalid client command!");
+  L2843: [Cannot interact with self!]
+    ctx: this.disconnect(Component.literal("Cannot interact with self!"), org.bukkit.event.player.PlayerKickEvent.Cause.SELF_INTE
+  L2858: [Player {} tried to attack an invalid entity]
+    ctx: LOGGER.warn("Player {} tried to attack an invalid entity", this.player.getPlainTextName());
+  L2885: [Cannot interact with self!]
+    ctx: this.disconnect(Component.literal("Cannot interact with self!"), org.bukkit.event.player.PlayerKickEvent.Cause.SELF_INTE
+  L3023: [Player {} tried to request game rule values without required permissions]
+    ctx: LOGGER.warn("Player {} tried to request game rule values without required permissions", this.player.getGameProfile().nam
+  L3061: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, this.player.containerMenu);
+  L3066: [Player {} clicked invalid slot index: {}, available slots: {}]
+    ctx: "Player {} clicked invalid slot index: {}, available slots: {}",
+  L3399: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, this.player.containerMenu);
+  L3407: [Player {} tried to place impossible recipe {}]
+    ctx: LOGGER.debug("Player {} tried to place impossible recipe {}", this.player, recipe.id().identifier());
+  L3466: [Player {} interacted with invalid menu {}]
+    ctx: LOGGER.debug("Player {} interacted with invalid menu {}", this.player, this.player.containerMenu);
+  L3536: [Player {} was dropping items too fast in creative mode, ignoring.]
+    ctx: LOGGER.warn("Player {} was dropping items too fast in creative mode, ignoring.", this.player.getPlainTextName());
+  L3605: [Disconnecting {} for invalid view distance: {}]
+    ctx: LOGGER.warn("Disconnecting {} for invalid view distance: {}", this.player.getScoreboardName(), packet.information().view
+  L3606: [Invalid client settings]
+    ctx: this.disconnect(Component.literal("Invalid client settings"), org.bukkit.event.player.PlayerKickEvent.Cause.ILLEGAL_ACTI
+  L3623: [Player {} tried to change difficulty to {} without required permissions]
+    ctx: "Player {} tried to change difficulty to {} without required permissions",
+  L3637: [Player {} tried to change game mode to {} without required permissions]
+    ctx: "Player {} tried to change game mode to {} without required permissions",
+  L3667: [Ignoring chat session from {} due to missing Services public key]
+    ctx: LOGGER.warn("Ignoring chat session from {} due to missing Services public key", this.player.getGameProfile().name());
+  L3683: [Client acknowledged config, but none was requested]
+    ctx: throw new IllegalStateException("Client acknowledged config, but none was requested");
+
+### net/minecraft/server/network/ServerHandshakePacketListenerImpl.java (4 strings)
+  L63: [Invalid intention ]
+    ctx: throw new UnsupportedOperationException("Invalid intention " + packet.intention());
+  L102: [Failed to check connection throttle]
+    ctx: org.apache.logging.log4j.LogManager.getLogger().debug("Failed to check connection throttle", t);
+  L164: [If you wish to use IP forwarding, please enable it in your BungeeCord config as well!]
+    ctx: Component message = Component.literal("If you wish to use IP forwarding, please enable it in your BungeeCord config as w
+  L173: [Unknown data in login hostname, did you forget to enable BungeeCord in spigot.yml?]
+    ctx: Component message = Component.literal("Unknown data in login hostname, did you forget to enable BungeeCord in spigot.yml
+
+### net/minecraft/server/network/ServerLoginPacketListenerImpl.java (32 strings)
+  L58: [User Authenticator #]
+    ctx: private static final java.util.concurrent.ExecutorService authenticatorPool = java.util.concurrent.Executors.newThreadPe
+  L128: [Disconnecting {}: {}]
+    ctx: LOGGER.info("Disconnecting {}: {}", this.getUserName(), reason.getString());
+  L132: [Error whilst disconnecting player]
+    ctx: LOGGER.error("Error whilst disconnecting player", (Throwable)var3);
+  L138: [Disconnecting {}: {}]
+    ctx: LOGGER.info("Disconnecting {}: {}", this.getUserName(), component.getString());
+  L142: [Error whilst disconnecting player]
+    ctx: LOGGER.error("Error whilst disconnecting player", e);
+  L152: [{} lost connection: {}]
+    ctx: LOGGER.info("{} lost connection: {}", this.getUserName(), details.reason().getString());
+  L162: [Unexpected hello packet]
+    ctx: Validate.validState(this.state == ServerLoginPacketListenerImpl.State.HELLO, "Unexpected hello packet");
+  L167: [Invalid characters in username]
+    ctx: Validate.validState(StringUtil.isReasonablePlayerName(packet.name()), "Invalid characters in username");
+  L196: [UUID of player {} is {}]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.info("UUID of player {} is {}", gameprofile.name(), gameprofile.id());
+  L199: [Failed to verify username!]
+    ctx: ServerLoginPacketListenerImpl.this.disconnect("Failed to verify username!");
+  L200: [Exception verifying ]
+    ctx: ServerLoginPacketListenerImpl.this.server.server.getLogger().log(java.util.logging.Level.WARNING, "Exception verifying "
+  L250: [Unexpected key packet]
+    ctx: Validate.validState(this.state == ServerLoginPacketListenerImpl.State.KEY, "Unexpected key packet");
+  L256: [Protocol error]
+    ctx: throw new IllegalStateException("Protocol error");
+  L264: [Protocol error]
+    ctx: throw new IllegalStateException("Protocol error", e);
+  L271: [Player name not initialized]
+    ctx: String name = Objects.requireNonNull(ServerLoginPacketListenerImpl.this.requestedUsername, "Player name not initialized"
+  L286: [UUID of player {} is {}]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.info("UUID of player {} is {}", profile.name(), profile.id());
+  L290: [Failed to verify username but will let them in anyway!]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.warn("Failed to verify username but will let them in anyway!");
+  L294: [Username '{}' tried to join with an invalid session]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.error("Username '{}' tried to join with an invalid session", name);
+  L298: [Authentication servers are down but will let them in anyway!]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.warn("Authentication servers are down but will let them in anyway!");
+  L302: [Couldn't verify username because servers are unavailable]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.error("Couldn't verify username because servers are unavailable");
+  L306: [Failed to verify username!]
+    ctx: ServerLoginPacketListenerImpl.this.disconnect("Failed to verify username!");
+  L307: [Exception verifying {}]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.warn("Exception verifying {}", name, ex);
+  L326: [This server requires you to connect with Velocity.]
+    ctx: this.disconnect("This server requires you to connect with Velocity.");
+  L389: [This server requires you to connect with Velocity.]
+    ctx: this.disconnect("This server requires you to connect with Velocity.");
+  L395: [Unable to verify player details]
+    ctx: this.disconnect("Unable to verify player details");
+  L401: [Unsupported forwarding version ]
+    ctx: throw new IllegalStateException("Unsupported forwarding version " + version + ", wanted upto " + com.destroystokyo.paper
+  L401: [, wanted upto ]
+    ctx: throw new IllegalStateException("Unsupported forwarding version " + version + ", wanted upto " + com.destroystokyo.paper
+  L419: [UUID of player {} is {}]
+    ctx: ServerLoginPacketListenerImpl.LOGGER.info("UUID of player {} is {}", gameprofile.name(), gameprofile.id());
+  L422: [Failed to verify username!]
+    ctx: disconnect("Failed to verify username!");
+  L423: [Exception verifying ]
+    ctx: server.server.getLogger().log(java.util.logging.Level.WARNING, "Exception verifying " + this.authenticatedProfile.name()
+  L435: [Unexpected login acknowledgement packet]
+    ctx: Validate.validState(this.state == ServerLoginPacketListenerImpl.State.PROTOCOL_SWITCHING, "Unexpected login acknowledgem
+  L446: [Login phase]
+    ctx: connectionDetails.setDetail("Login phase", () -> this.state.toString());
+
+### net/minecraft/server/network/ServerTextFilter.java (5 strings)
+  L81: [Could not create text filter - unsupported text filtering version used]
+    ctx: LOGGER.warn("Could not create text filter - unsupported text filtering version used");
+  L97: [Failed to validate message '{}']
+    ctx: LOGGER.warn("Failed to validate message '{}'", message, e);
+  L191: [application/json; charset=utf-8]
+    ctx: connection.setRequestProperty("Content-Type", "application/json; charset=utf-8");
+  L193: [Minecraft server]
+    ctx: connection.setRequestProperty("User-Agent", "Minecraft server" + SharedConstants.getCurrentVersion().name());
+  L232: [chat stream for ]
+    ctx: ConsecutiveExecutor streamProcessor = new ConsecutiveExecutor(ServerTextFilter.this.workerPool, "chat stream for " + pro
+
+### net/minecraft/server/network/config/PrepareSpawnTask.java (2 strings)
+  L103: [Unknown respawn dimension {}, defaulting to overworld]
+    ctx: LOGGER.warn("Unknown respawn dimension {}, defaulting to overworld", resourceKey);
+  L139: [Player spawn was not ready]
+    ctx: throw new IllegalStateException("Player spawn was not ready");
+
+### net/minecraft/server/notifications/NotificationManager.java (1 strings)
+  L24: [Server already set]
+    ctx: throw new IllegalStateException("Server already set");
+
+### net/minecraft/server/packs/DownloadCacheCleaner.java (3 strings)
+  L50: [Failed to delete cache file {}]
+    ctx: LOGGER.warn("Failed to delete cache file {}", pathToRemove, e);
+  L61: [Failed to delete empty(?) cache directory {}]
+    ctx: LOGGER.warn("Failed to delete empty(?) cache directory {}", dir, e);
+  L65: [Failed to vacuum cache dir {}]
+    ctx: LOGGER.error("Failed to vacuum cache dir {}", cacheDir, e);
+
+### net/minecraft/server/packs/DownloadQueue.java (3 strings)
+  L59: [Failed to download {}]
+    ctx: LOGGER.error("Failed to download {}", request.url, e);
+  L75: [Failed to log download of {}]
+    ctx: LOGGER.error("Failed to log download of {}", request.url, e);
+  L88: [Failed to get file size of {}]
+    ctx: LOGGER.error("Failed to get file size of {}", downloadedFile, e);
+
+### net/minecraft/server/packs/FilePackResources.java (3 strings)
+  L82: [Non {} character in namespace {} in pack {}, ignoring]
+    ctx: LOGGER.warn("Non {} character in namespace {} in pack {}, ignoring", "[a-z0-9_.-]", namespace, this.zipFileAccess.file);
+  L124: [Invalid path in datapack: {}:{}, ignoring]
+    ctx: LOGGER.warn("Invalid path in datapack: {}:{}, ignoring", namespace, path);
+  L186: [Failed to open pack {}]
+    ctx: FilePackResources.LOGGER.error("Failed to open pack {}", this.file, e);
+
+### net/minecraft/server/packs/OverlayMetadataSection.java (1 strings)
+  L21: [ is not accepted directory name]
+    ctx: return !DIR_VALIDATOR.matcher(path).matches() ? DataResult.error(() -> path + " is not accepted directory name") : DataR
+
+### net/minecraft/server/packs/PathPackResources.java (8 strings)
+  L59: [Failed to resolve real path for {}]
+    ctx: LOGGER.warn("Failed to resolve real path for {}", path, e);
+  L80: [Invalid path {}: {}]
+    ctx: LOGGER.error("Invalid path {}: {}", location, error.message());
+  L99: [Invalid path {}: {}]
+    ctx: }).ifError(error -> LOGGER.error("Invalid path {}: {}", directory, error.message()));
+  L110: [Invalid path in pack: %s:%s, ignoring]
+    ctx: Util.logAndPauseIfInIde(String.format(Locale.ROOT, "Invalid path in pack: %s:%s, ignoring", namespace, resourcePath));
+  L117: [Failed to list path {}]
+    ctx: LOGGER.error("Failed to list path {}", targetPath, e);
+  L139: [Non-directory entry {} found in namespace directory, rejecting]
+    ctx: LOGGER.warn("Non-directory entry {} found in namespace directory, rejecting", directDir);
+  L145: [Non {} character in namespace {} in pack directory {}, ignoring]
+    ctx: LOGGER.warn("Non {} character in namespace {} in pack directory {}, ignoring", "[a-z0-9_.-]", namespace, rootDir);
+  L151: [Failed to list path {}]
+    ctx: LOGGER.error("Failed to list path {}", rootDir, e);
+
+### net/minecraft/server/packs/VanillaPackResources.java (4 strings)
+  L69: [Invalid path {}: {}]
+    ctx: }).ifError(error -> LOGGER.error("Invalid path {}: {}", resource, error.message()));
+  L94: [Invalid path {}: {}]
+    ctx: }).ifError(error -> LOGGER.error("Invalid path {}: {}", directory, error.message()));
+  L116: [Invalid path {}: {}]
+    ctx: LOGGER.error("Invalid path {}: {}", location, error.message());
+  L138: [Failed to parse vanilla pack metadata]
+    ctx: LOGGER.warn("Failed to parse vanilla pack metadata", e);
+
+### net/minecraft/server/packs/VanillaPackResourcesBuilder.java (5 strings)
+  L40: [File {} does not exist in classpath]
+    ctx: LOGGER.error("File {} does not exist in classpath", probeName);
+  L46: [Assets URL '{}' uses unexpected schema]
+    ctx: LOGGER.warn("Assets URL '{}' uses unexpected schema", probeUri);
+  L52: [Couldn't resolve path to vanilla assets]
+    ctx: LOGGER.error("Couldn't resolve path to vanilla assets", e);
+  L69: [ is not directory]
+    ctx: throw new IllegalArgumentException("Path " + path.toAbsolutePath() + " is not directory");
+  L114: [Failed to extract path from {}]
+    ctx: LOGGER.error("Failed to extract path from {}", url, e);
+
+### net/minecraft/server/packs/linkfs/LinkFSPath.java (5 strings)
+  L63: [ does not represent file]
+    ctx: throw new UnsupportedOperationException("Path " + this.pathToString() + " does not represent file");
+  L111: [Invalid index: ]
+    ctx: throw new IllegalArgumentException("Invalid index: " + index);
+  L222: [All content types should be already handled]
+    ctx: throw new AssertionError("All content types should be already handled");
+  L234: [absolute mismatch]
+    ctx: throw new IllegalArgumentException("absolute mismatch");
+  L257: [Failed to create URI]
+    ctx: throw new AssertionError("Failed to create URI", e);
+
+### net/minecraft/server/packs/linkfs/LinkFSProvider.java (2 strings)
+  L172: [Attributes of type ]
+    ctx: throw new UnsupportedOperationException("Attributes of type " + type.getName() + " not supported");
+  L172: [ not supported]
+    ctx: throw new UnsupportedOperationException("Attributes of type " + type.getName() + " not supported");
+
+### net/minecraft/server/packs/linkfs/LinkFileSystem.java (4 strings)
+  L100: [Empty paths not allowed]
+    ctx: throw new IllegalArgumentException("Empty paths not allowed");
+  L112: [Empty paths not allowed]
+    ctx: throw new IllegalArgumentException("Empty paths not allowed");
+  L119: [Empty paths not allowed]
+    ctx: throw new IllegalArgumentException("Empty paths not allowed");
+  L169: [Path can't be empty]
+    ctx: throw new IllegalArgumentException("Path can't be empty");
+
+### net/minecraft/server/packs/metadata/pack/PackFormat.java (36 strings)
+  L46: [Unknown or broken overlay entry {}]
+    ctx: LOGGER.warn("Unknown or broken overlay entry {}", entry);
+  L49: [Overlay \"]
+    ctx: lastPreMinorVersion, false, minVersion <= lastPreMinorVersion, "Overlay \"" + entry + "\"", "formats"
+  L147: [ missing field, must declare both min_format and max_format]
+    ctx: return DataResult.error(() -> context + " missing field, must declare both min_format and max_format");
+  L151: [ missing required field ]
+    ctx: + " missing required field "
+  L153: [, must be present in all overlays for any overlays to work across game versions]
+    ctx: + ", must be present in all overlays for any overlays to work across game versions"
+  L164: [ declares support for version newer than ]
+    ctx: + " declares support for version newer than "
+  L166: [, but is missing mandatory fields min_format and max_format]
+    ctx: + ", but is missing mandatory fields min_format and max_format"
+  L170: [ could not be parsed, missing format version information]
+    ctx: return DataResult.error(() -> context + " could not be parsed, missing format version information");
+  L180: [ min_format (]
+    ctx: return DataResult.error(() -> context + " min_format (" + this.min.get() + ") is greater than max_format (" + this.max.g
+  L180: [) is greater than max_format (]
+    ctx: return DataResult.error(() -> context + " min_format (" + this.min.get() + ") is greater than max_format (" + this.max.g
+  L189: [ is deprecated starting from pack format ]
+    ctx: + " is deprecated starting from pack format "
+  L191: [. Remove ]
+    ctx: + ". Remove "
+  L193: [ from your pack.mcmeta.]
+    ctx: + " from your pack.mcmeta."
+  L207: [ declares support for format ]
+    ctx: + " declares support for format "
+  L209: [, but game versions supporting formats 17 to ]
+    ctx: + ", but game versions supporting formats 17 to "
+  L211: [ require a ]
+    ctx: + " require a "
+  L213: [ field. Add \"]
+    ctx: + " field. Add \""
+  L219: [] or require a version greater or equal to ]
+    ctx: + "] or require a version greater or equal to "
+  L229: [ version declaration mismatch between ]
+    ctx: + " version declaration mismatch between "
+  L233: [) and min_format (]
+    ctx: + ") and min_format ("
+  L242: [ version declaration mismatch between ]
+    ctx: + " version declaration mismatch between "
+  L244: [ (up to ]
+    ctx: + " (up to "
+  L246: [) and max_format (]
+    ctx: + ") and max_format ("
+  L256: [ declares support for formats up to ]
+    ctx: + " declares support for formats up to "
+  L258: [, but game versions supporting formats 17 to ]
+    ctx: + ", but game versions supporting formats 17 to "
+  L260: [ require a pack_format field. Add \"pack_format\": ]
+    ctx: + " require a pack_format field. Add \"pack_format\": "
+  L262: [ or require a version greater or equal to ]
+    ctx: + " or require a version greater or equal to "
+  L287: [ declares support for version newer than ]
+    ctx: + " declares support for version newer than "
+  L289: [, but is missing mandatory fields min_format and max_format]
+    ctx: + ", but is missing mandatory fields min_format and max_format"
+  L297: [ declares support for formats up to ]
+    ctx: + " declares support for formats up to "
+  L299: [, but game versions supporting formats 17 to ]
+    ctx: + ", but game versions supporting formats 17 to "
+  L301: [ require a pack_format field. Add \"pack_format\": ]
+    ctx: + " require a pack_format field. Add \"pack_format\": "
+  L303: [ or require a version greater or equal to ]
+    ctx: + " or require a version greater or equal to "
+  L321: [Pack declared support for versions ]
+    ctx: return "Pack declared support for versions " + min + " to " + max + " but declared main format is " + mainFormat;
+  L321: [ but declared main format is ]
+    ctx: return "Pack declared support for versions " + min + " to " + max + " but declared main format is " + mainFormat;
+  L324: [Multi-version packs cannot support minimum version of less than 15, since this will leave versions in range unable to load pack.]
+    ctx: ? "Multi-version packs cannot support minimum version of less than 15, since this will leave versions in range unable to
+
+### net/minecraft/server/packs/repository/BuiltInPackSource.java (1 strings)
+  L82: [Failed to discover packs in {}]
+    ctx: LOGGER.warn("Failed to discover packs in {}", targetDir, e);
+
+### net/minecraft/server/packs/repository/FolderRepositorySource.java (5 strings)
+  L60: [Failed to list packs in {}]
+    ctx: LOGGER.warn("Failed to list packs in {}", this.folder, e);
+  L78: [Ignoring potential pack entry: {}]
+    ctx: LOGGER.warn("Ignoring potential pack entry: {}", ContentValidationException.getMessage(content, validationIssues));
+  L82: [Found non-pack entry '{}', ignoring]
+    ctx: LOGGER.info("Found non-pack entry '{}', ignoring", content);
+  L85: [Failed to read properties of '{}', ignoring]
+    ctx: LOGGER.warn("Failed to read properties of '{}', ignoring", content, e);
+  L100: [Can't open pack archive at {}]
+    ctx: FolderRepositorySource.LOGGER.info("Can't open pack archive at {}", content);
+
+### net/minecraft/server/packs/repository/Pack.java (3 strings)
+  L53: [Error reading pack metadata, attempting fallback type]
+    ctx: LOGGER.warn("Error reading pack metadata, attempting fallback type", e);
+  L58: [Missing metadata in pack {}]
+    ctx: LOGGER.warn("Missing metadata in pack {}", location.id());
+  L69: [Failed to read pack {} metadata]
+    ctx: LOGGER.warn("Failed to read pack {} metadata", location.id(), e);
+
+### net/minecraft/server/packs/resources/FallbackResourceManager.java (4 strings)
+  L77: [Resource {} not found, but was filtered by pack {}]
+    ctx: LOGGER.warn("Resource {} not found, but was filtered by pack {}", location, entry.name);
+  L135: [Resource {} not found, but was filtered by pack {}]
+    ctx: LOGGER.warn("Resource {} not found, but was filtered by pack {}", location, lastFilterName);
+  L332: [Leaked resource: ']
+    ctx: return "Leaked resource: '" + location + "' loaded from pack: '" + name + "'\n" + data;
+  L332: [' loaded from pack: ']
+    ctx: return "Leaked resource: '" + location + "' loaded from pack: '" + name + "'\n" + data;
+
+### net/minecraft/server/packs/resources/MultiPackResourceManager.java (2 strings)
+  L61: [Failed to get filter section from pack {}]
+    ctx: LOGGER.error("Failed to get filter section from pack {}", pack.packId());
+  L109: [Trailing slash in path ]
+    ctx: throw new IllegalArgumentException("Trailing slash in path " + directory);
+
+### net/minecraft/server/packs/resources/ProfiledReloadInstance.java (4 strings)
+  L45: [Finished reloading {}]
+    ctx: LOGGER.debug("Finished reloading {}", listener.getName());
+  L87: [Resource reload finished after {} ms]
+    ctx: LOGGER.info("Resource reload finished after {} ms", this.total.elapsed(TimeUnit.MILLISECONDS));
+  L98: [{} took approximately {} tasks/{} ms ({} tasks/{} ms preparing, {} tasks/{} ms applying)]
+    ctx: "{} took approximately {} tasks/{} ms ({} tasks/{} ms preparing, {} tasks/{} ms applying)",
+  L110: [Total blocking time: {} ms]
+    ctx: LOGGER.info("Total blocking time: {} ms", blockingTime);
+
+### net/minecraft/server/packs/resources/ReloadableResourceManager.java (1 strings)
+  L46: [Reloading ResourceManager: {}]
+    ctx: LOGGER.info("Reloading ResourceManager: {}", LogUtils.defer(() -> resourcePacks.stream().map(PackResources::packId).coll
+
+### net/minecraft/server/packs/resources/SimpleJsonResourceReloadListener.java (3 strings)
+  L72: [Duplicate data file ignored with ID ]
+    ctx: throw new IllegalStateException("Duplicate data file ignored with ID " + id);
+  L74: [Couldn't parse data file '{}' from '{}': {}]
+    ctx: }).ifError(error -> LOGGER.error("Couldn't parse data file '{}' from '{}': {}", id, location, error));
+  L76: [Couldn't parse data file '{}' from '{}']
+    ctx: LOGGER.error("Couldn't parse data file '{}' from '{}'", id, location, e);
+
+### net/minecraft/server/packs/resources/SimpleReloadInstance.java (1 strings)
+  L115: [not started]
+    ctx: return Objects.requireNonNull(this.allDone, "not started");
+
+### net/minecraft/server/permissions/LevelBasedPermissionSet.java (1 strings)
+  L48: [permission level: ]
+    ctx: return "permission level: " + level.name();
+
+### net/minecraft/server/permissions/PermissionSetUnion.java (1 strings)
+  L54: [Cannot have PermissionSetUnion within another PermissionSetUnion]
+    ctx: throw new IllegalArgumentException("Cannot have PermissionSetUnion within another PermissionSetUnion");
+
+### net/minecraft/server/players/BanListEntry.java (1 strings)
+  L13: [yyyy-MM-dd HH:mm:ss Z]
+    ctx: public static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.ROOT);
+
+### net/minecraft/server/players/CachedUserNameToIdResolver.java (4 strings)
+  L177: [yyyy-MM-dd HH:mm:ss Z]
+    ctx: return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss Z", Locale.ROOT);
+  L194: [Usercache.json is corrupted or has bad formatting. Deleting it to prevent further issues.]
+    ctx: LOGGER.warn("Usercache.json is corrupted or has bad formatting. Deleting it to prevent further issues.");
+  L198: [Failed to load profile cache {}]
+    ctx: LOGGER.warn("Failed to load profile cache {}", this.file, e);
+  L272: [Failed to parse date {}]
+    ctx: LOGGER.warn("Failed to parse date {}", dateAsString, e);
+
+### net/minecraft/server/players/OldUsersConverter.java (35 strings)
+  L70: [Could not load existing file {}]
+    ctx: LOGGER.warn("Could not load existing file {}", bans.getFile().getName()); // CraftBukkit - don't print stacktrace
+  L84: [Could not convert user banlist entry for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not convert user banlist entry for {}", profile.name());
+  L85: [Profile not in the conversionlist]
+    ctx: throw new OldUsersConverter.ConversionError("Profile not in the conversionlist");
+  L97: [Could not lookup user banlist entry for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not lookup user banlist entry for {}", profileName, exception);
+  L99: [Could not request user ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L99: [ from backend systems]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L108: [Could not read old user banlist to convert it!]
+    ctx: LOGGER.warn("Could not read old user banlist to convert it!", e);
+  L111: [Conversion failed, please try again later]
+    ctx: LOGGER.error("Conversion failed, please try again later", e);
+  L126: [Could not load existing file {}]
+    ctx: LOGGER.warn("Could not load existing file {}", ipBans.getFile().getName()); // CraftBukkit - don't print stacktrace
+  L147: [Could not parse old ip banlist to convert it!]
+    ctx: LOGGER.warn("Could not parse old ip banlist to convert it!", e);
+  L162: [Could not load existing file {}]
+    ctx: LOGGER.warn("Could not load existing file {}", opsList.getFile().getName()); // CraftBukkit - don't print stacktrace
+  L178: [Could not lookup oplist entry for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not lookup oplist entry for {}", profileName, exception);
+  L180: [Could not request user ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L180: [ from backend systems]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L189: [Could not read old oplist to convert it!]
+    ctx: LOGGER.warn("Could not read old oplist to convert it!", e);
+  L192: [Conversion failed, please try again later]
+    ctx: LOGGER.error("Conversion failed, please try again later", e);
+  L207: [Could not load existing file {}]
+    ctx: LOGGER.warn("Could not load existing file {}", whitelist.getFile().getName()); // CraftBukkit - don't print stacktrace
+  L223: [Could not lookup user whitelist entry for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not lookup user whitelist entry for {}", profileName, exception);
+  L225: [Could not request user ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L225: [ from backend systems]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L234: [Could not read old whitelist to convert it!]
+    ctx: LOGGER.warn("Could not read old whitelist to convert it!", e);
+  L237: [Conversion failed, please try again later]
+    ctx: LOGGER.error("Conversion failed, please try again later", e);
+  L262: [Could not lookup user whitelist entry for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not lookup user whitelist entry for {}", profileName, exception);
+  L309: [Could not lookup user uuid for {}]
+    ctx: OldUsersConverter.LOGGER.warn("Could not lookup user uuid for {}", profileName, exception);
+  L314: [Could not request user ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L314: [ from backend systems]
+    ctx: throw new OldUsersConverter.ConversionError("Could not request user " + profileName + " from backend systems", exception
+  L352: [Could not convert file for ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not convert file for " + oldName);
+  L367: [Could not find the filename for ]
+    ctx: throw new OldUsersConverter.ConversionError("Could not find the filename for " + profileName + " anymore");
+  L376: [Conversion failed, please try again later]
+    ctx: LOGGER.error("Conversion failed, please try again later", e);
+  L387: [Can't create directory ]
+    ctx: throw new OldUsersConverter.ConversionError("Can't create directory " + directory.getName() + " in world save directory.
+  L387: [ in world save directory.]
+    ctx: throw new OldUsersConverter.ConversionError("Can't create directory " + directory.getName() + " in world save directory.
+  L390: [Can't create directory ]
+    ctx: throw new OldUsersConverter.ConversionError("Can't create directory " + directory.getName() + " in world save directory.
+  L390: [ in world save directory.]
+    ctx: throw new OldUsersConverter.ConversionError("Can't create directory " + directory.getName() + " in world save directory.
+  L419: [**** FAILED TO START THE SERVER AFTER ACCOUNT CONVERSION!]
+    ctx: LOGGER.warn("**** FAILED TO START THE SERVER AFTER ACCOUNT CONVERSION!");
+  L420: [** please remove the following files and restart the server:]
+    ctx: LOGGER.warn("** please remove the following files and restart the server:");
+
+### net/minecraft/server/players/PlayerList.java (8 strings)
+  L114: [yyyy-MM-dd 'at' HH:mm:ss z]
+    ctx: private static final SimpleDateFormat BAN_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd 'at' HH:mm:ss z", Locale.ROOT);
+  L318: [{}[{}] logged in with entity id {} at ([{}]{}, {}, {})]
+    ctx: "{}[{}] logged in with entity id {} at ([{}]{}, {}, {})", // Paper - add world identifier
+  L408: [loading single player]
+    ctx: LOGGER.debug("loading single player");
+  L409: [<singleplayer owner>]
+    ctx: return this.playerIo.load(new NameAndId(lastSingleplayerOwnerUUID, "<singleplayer owner>"));
+  L471: [Removing player mount]
+    ctx: LOGGER.debug("Removing player mount");
+  L959: [Save Players]
+    ctx: io.papermc.paper.util.MCUtil.ensureMain("Save Players" , () -> { // Paper - Ensure main
+  L1136: [Not Secure]
+    ctx: this.server.logChatMessage((unsignedFunction == null ? message.decoratedContent() : unsignedFunction.apply(this.server.c
+  L1194: [Failed to copy file {} to {}]
+    ctx: LOGGER.warn("Failed to copy file {} to {}", playerNameStatsFile, uuidStatsFile);
+
+### net/minecraft/server/players/StoredUserList.java (4 strings)
+  L55: [Could not save the list after adding a user.]
+    ctx: LOGGER.warn("Could not save the list after adding a user.", e);
+  L78: [Could not save the list after removing a user.]
+    ctx: LOGGER.warn("Could not save the list after removing a user.", e);
+  L94: [Could not save the list after removing a user.]
+    ctx: LOGGER.warn("Could not save the list after removing a user.", e);
+  L156: [Unable to read file {}, backing it up to {} and creating new copy.]
+    ctx: LOGGER.warn("Unable to read file {}, backing it up to {} and creating new copy.", this.file, backup, ex);
+
+### net/minecraft/server/rcon/thread/GenericThread.java (4 strings)
+  L30: [Thread {} started]
+    ctx: LOGGER.info("Thread {} started", this.name);
+  L43: [Waited {} seconds attempting force stop!]
+    ctx: LOGGER.warn("Waited {} seconds attempting force stop!", waited);
+  L45: [Thread {} ({}) failed to exit after {} second(s)]
+    ctx: LOGGER.warn("Thread {} ({}) failed to exit after {} second(s)", this, this.thread.getState(), waited, new Exception("Sta
+  L52: [Thread {} stopped]
+    ctx: LOGGER.info("Thread {} stopped", this.name);
+
+### net/minecraft/server/rcon/thread/QueryThreadGs4.java (15 strings)
+  L47: [Query Listener]
+    ctx: super("Query Listener");
+  L66: [Unable to determine local host IP, please set server-ip in server.properties]
+    ctx: LOGGER.warn("Unable to determine local host IP, please set server-ip in server.properties", e);
+  L80: [Invalid query port {} found in server.properties (queries disabled)]
+    ctx: LOGGER.warn("Invalid query port {} found in server.properties (queries disabled)", port);
+  L93: [Packet len {} [{}]]
+    ctx: LOGGER.debug("Packet len {} [{}]", len, socketAddress);
+  L95: [Packet '{}' [{}]]
+    ctx: LOGGER.debug("Packet '{}' [{}]", PktUtils.toHexString(buf[2]), socketAddress);
+  L99: [Invalid challenge [{}]]
+    ctx: LOGGER.debug("Invalid challenge [{}]", socketAddress);
+  L103: [Rules [{}]]
+    ctx: LOGGER.debug("Rules [{}]", socketAddress);
+  L135: [Status [{}]]
+    ctx: LOGGER.debug("Status [{}]", socketAddress);
+  L141: [Challenge [{}]]
+    ctx: LOGGER.debug("Challenge [{}]", socketAddress);
+  L145: [Invalid packet [{}]]
+    ctx: LOGGER.debug("Invalid packet [{}]", socketAddress);
+  L280: [Query running on {}:{}]
+    ctx: LOGGER.info("Query running on {}:{}", this.serverIp, this.port);
+  L298: [closeSocket: {}:{}]
+    ctx: LOGGER.debug("closeSocket: {}:{}", this.serverIp, this.port);
+  L310: [Unexpected exception]
+    ctx: LOGGER.warn("Unexpected exception", e);
+  L312: [Failed to recover from exception, shutting down!]
+    ctx: LOGGER.error("Failed to recover from exception, shutting down!");
+  L324: [Unable to initialise query system on {}:{}]
+    ctx: LOGGER.warn("Unable to initialise query system on {}:{}", this.serverIp, this.port, e);
+
+### net/minecraft/server/rcon/thread/RconClient.java (6 strings)
+  L32: [RCON Client ]
+    ctx: super("RCON Client " + socket.getInetAddress());
+  L76: [Error executing: ]
+    ctx: this.sendCmdResponse(requestid, "Error executing: " + command + " (" + e.getMessage() + ")");
+  L96: [Unknown request %s]
+    ctx: this.sendCmdResponse(requestid, String.format(Locale.ROOT, "Unknown request %s", Integer.toHexString(cmd)));
+  L103: [Exception whilst parsing RCON input]
+    ctx: LOGGER.error("Exception whilst parsing RCON input", e);
+  L107: [Thread {} shutting down]
+    ctx: LOGGER.info("Thread {} shutting down", this.name);
+  L151: [Failed to close socket]
+    ctx: LOGGER.warn("Failed to close socket", e);
+
+### net/minecraft/server/rcon/thread/RconThread.java (8 strings)
+  L24: [RCON Listener]
+    ctx: super("RCON Listener");
+  L48: [IO exception: ]
+    ctx: LOGGER.info("IO exception: ", e);
+  L68: [No rcon password set in server.properties, rcon disabled!]
+    ctx: LOGGER.warn("No rcon password set in server.properties, rcon disabled!");
+  L80: [RCON running on {}:{}]
+    ctx: LOGGER.info("RCON running on {}:{}", serverIp, port);
+  L83: [Unable to initialise RCON on {}:{}]
+    ctx: LOGGER.warn("Unable to initialise RCON on {}:{}", serverIp, port, e);
+  L87: [Invalid rcon port {} found in server.properties, rcon disabled!]
+    ctx: LOGGER.warn("Invalid rcon port {} found in server.properties, rcon disabled!", port);
+  L116: [closeSocket: {}]
+    ctx: LOGGER.debug("closeSocket: {}", socket);
+  L121: [Failed to close socket]
+    ctx: LOGGER.warn("Failed to close socket", e);
+
+### net/minecraft/world/item/BlockItem.java (2 strings)
+  L88: [Player {} tried placing invalid block]
+    ctx: net.minecraft.server.MinecraftServer.LOGGER.warn("Player {} tried placing invalid block", player.getScoreboardName(), ex
+  L89: [Packet processing error]
+    ctx: serverPlayer.connection.disconnect(net.minecraft.network.chat.Component.literal("Packet processing error"), org.bukkit.e
+
+### net/minecraft/world/item/CreativeModeTab.java (4 strings)
+  L180: [Special tabs can't have display items]
+    ctx: throw new IllegalStateException("Special tabs can't have display items");
+  L211: [Stack size must be exactly 1]
+    ctx: throw new IllegalArgumentException("Stack size must be exactly 1");
+  L217: [Accidentally adding the same item stack twice ]
+    ctx: "Accidentally adding the same item stack twice "
+  L219: [ to a Creative Mode Tab: ]
+    ctx: + " to a Creative Mode Tab: "
+
+### net/minecraft/world/item/CreativeModeTabs.java (1 strings)
+  L1664: [Duplicate position: ]
+    ctx: throw new IllegalArgumentException("Duplicate position: " + current + " vs. " + previous);
+
+### net/minecraft/world/item/Item.java (6 strings)
+  L102: [Item must not be minecraft:air]
+    ctx: .validate(item -> item.is(Items.AIR.builtInRegistryHolder()) ? DataResult.error(() -> "Item must not be minecraft:air") 
+  L106: [ does not have components yet]
+    ctx: ? DataResult.error(() -> "Item " + item.getRegisteredName() + " does not have components yet")
+  L146: [Item classes should end with Item and {} doesn't.]
+    ctx: LOGGER.error("Item classes should end with Item and {} doesn't.", className);
+  L626: [Mismatched flag sets]
+    ctx: throw new IllegalArgumentException("Mismatched flag sets");
+  L654: [Item id not set]
+    ctx: return Objects.requireNonNull(this.id, "Item id not set");
+  L688: [Item cannot have both durability and be stackable]
+    ctx: throw new IllegalStateException("Item cannot have both durability and be stackable");
+
+### net/minecraft/world/item/ItemStack.java (8 strings)
+  L133: [Empty ItemStack not allowed]
+    ctx: throw new DecoderException("Empty ItemStack not allowed");
+  L142: [Empty ItemStack not allowed]
+    ctx: throw new EncoderException("Empty ItemStack not allowed");
+  L166: [Item stack with stack size of ]
+    ctx: ? DataResult.error(() -> "Item stack with stack size of " + itemStack.getCount() + " was larger than maximum: " + itemSt
+  L166: [ was larger than maximum: ]
+    ctx: ? DataResult.error(() -> "Item stack with stack size of " + itemStack.getCount() + " was larger than maximum: " + itemSt
+  L286: [Item cannot be both damageable and stackable]
+    ctx: return DataResult.error(() -> "Item cannot be both damageable and stackable");
+  L326: [Item stack with count of ]
+    ctx: return DataResult.error(() -> "Item stack with count of " + itemCount + " was larger than maximum: " + maxStackSize);
+  L326: [ was larger than maximum: ]
+    ctx: return DataResult.error(() -> "Item stack with count of " + itemCount + " was larger than maximum: " + maxStackSize);
+  L996: [Failed to apply component patch '{}' to item: '{}']
+    ctx: LOGGER.error("Failed to apply component patch '{}' to item: '{}'", patch, validationError.get().message());
+
+### net/minecraft/world/item/ItemStackTemplate.java (3 strings)
+  L58: [Item must be non-empty]
+    ctx: throw new IllegalStateException("Item must be non-empty");
+  L64: [Stack must be non-empty]
+    ctx: throw new IllegalStateException("Stack must be non-empty");
+  L85: [Can't create item stack with properties {}, error: {}]
+    ctx: LOGGER.warn("Can't create item stack with properties {}, error: {}", this, error.get().message());
+
+### net/minecraft/world/item/KnowledgeBookItem.java (1 strings)
+  L42: [Invalid recipe: {}]
+    ctx: LOGGER.error("Invalid recipe: {}", recipeId);
+
+### net/minecraft/world/item/alchemy/PotionBrewing.java (2 strings)
+  L238: [Duplicate recipe ignored with ID ]
+    ctx: throw new IllegalArgumentException("Duplicate recipe ignored with ID " + mix.getKey());
+  L264: [Expected a potion, got: ]
+    ctx: throw new IllegalArgumentException("Expected a potion, got: " + BuiltInRegistries.ITEM.getKey(from));
+
+### net/minecraft/world/item/component/BundleContents.java (2 strings)
+  L44: [Too many items]
+    ctx: throw new IllegalArgumentException("Too many items");
+  L71: [Excessive total bundle weight]
+    ctx: return DataResult.error(() -> "Excessive total bundle weight");
+
+### net/minecraft/world/item/component/ChargedProjectiles.java (2 strings)
+  L35: [ items, but maximum is 1024]
+    ctx: throw new IllegalArgumentException("Got " + items.size() + " items, but maximum is 1024");
+  L46: [Tried to load invalid items as charged projectiles]
+    ctx: LOGGER.warn("Tried to load invalid items as charged projectiles");
+
+### net/minecraft/world/item/component/DebugStickState.java (2 strings)
+  L22: [No property on ]
+    ctx: : DataResult.error(() -> "No property on " + block.getRegisteredName() + " with name: " + name);
+  L22: [ with name: ]
+    ctx: : DataResult.error(() -> "No property on " + block.getRegisteredName() + " with name: " + name);
+
+### net/minecraft/world/item/component/Fireworks.java (1 strings)
+  L33: [ explosions, but maximum is 256]
+    ctx: throw new IllegalArgumentException("Got " + explosions.size() + " explosions, but maximum is 256");
+
+### net/minecraft/world/item/component/ItemContainerContents.java (1 strings)
+  L41: [ items, but maximum is 256]
+    ctx: throw new IllegalArgumentException("Got " + items.size() + " items, but maximum is 256");
+
+### net/minecraft/world/item/component/ItemLore.java (1 strings)
+  L35: [ lines, but maximum is 256]
+    ctx: throw new IllegalArgumentException("Got " + lines.size() + " lines, but maximum is 256");
+
+### net/minecraft/world/item/component/TypedEntityData.java (3 strings)
+  L50: [Expected 'id' field in ]
+    ctx: ? DataResult.error(() -> "Expected 'id' field in " + input)
+  L175: [Failed to apply custom data to block entity at {}]
+    ctx: LOGGER.warn("Failed to apply custom data to block entity at {}", blockEntity.getBlockPos(), e);
+  L180: [Failed to rollback block entity at {} after failure]
+    ctx: LOGGER.warn("Failed to rollback block entity at {} after failure", blockEntity.getBlockPos(), e2);
+
+### net/minecraft/world/item/component/WritableBookContent.java (1 strings)
+  L27: [ pages, but maximum is 100]
+    ctx: throw new IllegalArgumentException("Got " + pages.size() + " pages, but maximum is 100");
+
+### net/minecraft/world/item/component/WrittenBookContent.java (2 strings)
+  L76: [Generation was ]
+    ctx: throw new IllegalArgumentException("Generation was " + generation + ", but must be between 0 and 3");
+  L76: [, but must be between 0 and 3]
+    ctx: throw new IllegalArgumentException("Generation was " + generation + ", but must be between 0 and 3");
+
+### net/minecraft/world/item/crafting/Ingredient.java (2 strings)
+  L62: [Ingredients can't be empty]
+    ctx: throw new UnsupportedOperationException("Ingredients can't be empty");
+  L66: [Ingredient can't contain air]
+    ctx: throw new UnsupportedOperationException("Ingredient can't contain air");
+
+### net/minecraft/world/item/crafting/RecipeManager.java (3 strings)
+  L87: [Loaded {} recipes]
+    ctx: LOGGER.info("Loaded {} recipes", recipes.values().size());
+  L92: [Recipe Add]
+    ctx: org.spigotmc.AsyncCatcher.catchOp("Recipe Add"); // Spigot
+  L121: [Recipe {} can't be placed due to empty ingredients and will be ignored]
+    ctx: LOGGER.warn("Recipe {} can't be placed due to empty ingredients and will be ignored", recipeHolder.id().identifier());
+
+### net/minecraft/world/item/crafting/RecipeMap.java (1 strings)
+  L41: [Duplicate recipe ignored with ID ]
+    ctx: throw new IllegalStateException("Duplicate recipe ignored with ID " + holder.id());
+
+### net/minecraft/world/item/crafting/ShapedRecipePattern.java (11 strings)
+  L28: [Cannot encode unpacked recipe]
+    ctx: pattern -> pattern.data.map(DataResult::success).orElseGet(() -> DataResult.error(() -> "Cannot encode unpacked recipe")
+  L84: [Pattern references symbol ']
+    ctx: return DataResult.error(() -> "Pattern references symbol '" + symbol + "' but it's not defined in the key");
+  L84: [' but it's not defined in the key]
+    ctx: return DataResult.error(() -> "Pattern references symbol '" + symbol + "' but it's not defined in the key");
+  L96: [Key defines symbols that aren't used in pattern: ]
+    ctx: ? DataResult.error(() -> "Key defines symbols that aren't used in pattern: " + unusedSymbols)
+  L209: [Invalid pattern: too many rows, 3 is maximum]
+    ctx: return DataResult.error(() -> "Invalid pattern: too many rows, 3 is maximum");
+  L213: [Invalid pattern: empty pattern not allowed]
+    ctx: return DataResult.error(() -> "Invalid pattern: empty pattern not allowed");
+  L220: [Invalid pattern: too many columns, 3 is maximum]
+    ctx: return DataResult.error(() -> "Invalid pattern: too many columns, 3 is maximum");
+  L224: [Invalid pattern: each row must be the same width]
+    ctx: return DataResult.error(() -> "Invalid pattern: each row must be the same width");
+  L232: [Invalid key entry: ']
+    ctx: return DataResult.error(() -> "Invalid key entry: '" + symbol + "' is an invalid symbol (must be 1 character only).");
+  L232: [' is an invalid symbol (must be 1 character only).]
+    ctx: return DataResult.error(() -> "Invalid key entry: '" + symbol + "' is an invalid symbol (must be 1 character only).");
+  L234: [Invalid key entry: ' ' is a reserved symbol.]
+    ctx: return " ".equals(symbol) ? DataResult.error(() -> "Invalid key entry: ' ' is a reserved symbol.") : DataResult.success(
+
+### net/minecraft/world/item/crafting/SingleRecipeInput.java (1 strings)
+  L9: [No item for index ]
+    ctx: throw new IllegalArgumentException("No item for index " + index);
+
+### net/minecraft/world/item/crafting/SmithingRecipeInput.java (1 strings)
+  L12: [Recipe does not contain slot ]
+    ctx: default -> throw new IllegalArgumentException("Recipe does not contain slot " + index);
+
+### net/minecraft/world/item/crafting/display/ShapedCraftingRecipeDisplay.java (1 strings)
+  L42: [Invalid shaped recipe display contents]
+    ctx: throw new IllegalArgumentException("Invalid shaped recipe display contents");
+
+### net/minecraft/world/item/crafting/display/SlotDisplay.java (1 strings)
+  L130: [<any fuel>]
+    ctx: return "<any fuel>";
+
+### net/minecraft/world/item/enchantment/Enchantable.java (1 strings)
+  L18: [Enchantment value must be positive, but was ]
+    ctx: throw new IllegalArgumentException("Enchantment value must be positive, but was " + value);
+
+### net/minecraft/world/item/enchantment/ItemEnchantments.java (1 strings)
+  L52: [ has invalid level ]
+    ctx: throw new IllegalArgumentException("Enchantment " + entry.getKey() + " has invalid level " + level);
+
+### net/minecraft/world/item/enchantment/LevelBasedValue.java (2 strings)
+  L59: [Max must be larger than min, min: ]
+    ctx: .validate(u -> u.max <= u.min ? DataResult.error(() -> "Max must be larger than min, min: " + u.min + ", max: " + u.max)
+  L59: [, max: ]
+    ctx: .validate(u -> u.max <= u.min ? DataResult.error(() -> "Max must be larger than min, min: " + u.min + ", max: " + u.max)
+
+### net/minecraft/world/item/enchantment/effects/RunFunction.java (1 strings)
+  L40: [Enchantment run_function effect failed for non-existent function {}]
+    ctx: LOGGER.error("Enchantment run_function effect failed for non-existent function {}", this.function);
+
+### net/minecraft/world/item/enchantment/effects/SpawnParticlesEffect.java (1 strings)
+  L96: [Cannot scale an entity position coordinate source]
+    ctx: ? DataResult.error(() -> "Cannot scale an entity position coordinate source")
+
+### net/minecraft/world/item/equipment/trim/MaterialAssetGroup.java (1 strings)
+  L68: [Invalid string to use as a resource path element: ]
+    ctx: throw new IllegalArgumentException("Invalid string to use as a resource path element: " + suffix);

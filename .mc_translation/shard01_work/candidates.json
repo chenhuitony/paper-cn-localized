@@ -1,0 +1,1318 @@
+{
+ "net/minecraft/world/level/block/Block.java": [
+  {
+   "line": 266,
+   "is_tb": false,
+   "original": "Block classes should end with Block and {} doesn't.",
+   "context": "LOGGER.error(\"Block classes should end with Block and {} doesn't.\", className);"
+  }
+ ],
+ "net/minecraft/world/level/block/CandleCakeBlock.java": [
+  {
+   "line": 55,
+   "is_tb": false,
+   "original": "Expected block to be of ",
+   "context": "throw new IllegalArgumentException(\"Expected block to be of \" + CandleBlock.class + \" was \" + block.getClass());"
+  }
+ ],
+ "net/minecraft/world/level/block/CommandBlock.java": [
+  {
+   "line": 223,
+   "is_tb": false,
+   "original": "Command Block chain tried to execute more than {} steps!",
+   "context": "LOGGER.warn(\"Command Block chain tried to execute more than {} steps!\", limit);"
+  }
+ ],
+ "net/minecraft/world/level/block/DispenserBlock.java": [
+  {
+   "line": 90,
+   "is_tb": false,
+   "original": "Ignoring dispensing attempt for Dispenser without matching block entity at {}",
+   "context": "LOGGER.warn(\"Ignoring dispensing attempt for Dispenser without matching block entity at {}\", pos);"
+  }
+ ],
+ "net/minecraft/world/level/block/DropperBlock.java": [
+  {
+   "line": 51,
+   "is_tb": false,
+   "original": "Ignoring dispensing attempt for Dropper without matching block entity at {}",
+   "context": "LOGGER.warn(\"Ignoring dispensing attempt for Dropper without matching block entity at {}\", pos);"
+  }
+ ],
+ "net/minecraft/world/level/block/LiquidBlock.java": [
+  {
+   "line": 48,
+   "is_tb": false,
+   "original": "Not a flowing fluid: ",
+   "context": "fluid -> fluid instanceof FlowingFluid flowing ? DataResult.success(flowing) : DataResult.error(() -> \"Not a flowing fluid: \" + fluid),"
+  }
+ ],
+ "net/minecraft/world/level/block/SignBlock.java": [
+  {
+   "line": 147,
+   "is_tb": false,
+   "original": "Expected to only call this on server",
+   "context": "Util.pauseInIde(new IllegalStateException(\"Expected to only call this on server\"));"
+  }
+ ],
+ "net/minecraft/world/level/block/TorchBlock.java": [
+  {
+   "line": 20,
+   "is_tb": false,
+   "original": "Not a SimpleParticleType: ",
+   "context": "type -> type instanceof SimpleParticleType simple ? DataResult.success(simple) : DataResult.error(() -> \"Not a SimpleParticleType: \" + type),"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/BannerPatternLayers.java": [
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": "Unable to find banner pattern with id: '{}'",
+   "context": "BannerPatternLayers.LOGGER.warn(\"Unable to find banner pattern with id: '{}'\", patternKey.identifier());"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/BlockEntity.java": [
+  {
+   "line": 66,
+   "is_tb": false,
+   "original": "Invalid block entity ",
+   "context": "throw new IllegalStateException(\"Invalid block entity \" + this.getNameForReporting() + \" state at \" + this.worldPosition + \", got \" + blockState);"
+  },
+  {
+   "line": 66,
+   "is_tb": false,
+   "original": " state at ",
+   "context": "throw new IllegalStateException(\"Invalid block entity \" + this.getNameForReporting() + \" state at \" + this.worldPosition + \", got \" + blockState);"
+  },
+  {
+   "line": 66,
+   "is_tb": false,
+   "original": ", got ",
+   "context": "throw new IllegalStateException(\"Invalid block entity \" + this.getNameForReporting() + \" state at \" + this.worldPosition + \", got \" + blockState);"
+  },
+  {
+   "line": 82,
+   "is_tb": false,
+   "original": "Block entity {} found in a wrong chunk, expected position from chunk {}",
+   "context": "LOGGER.warn(\"Block entity {} found in a wrong chunk, expected position from chunk {}\", entityTag, base);"
+  },
+  {
+   "line": 190,
+   "is_tb": false,
+   "original": "Skipping block entity with invalid type: {}",
+   "context": "LOGGER.error(\"Skipping block entity with invalid type: {}\", tag.get(\"id\"));"
+  },
+  {
+   "line": 198,
+   "is_tb": false,
+   "original": "Failed to create block entity {} for block {} at position {} ",
+   "context": "LOGGER.error(\"Failed to create block entity {} for block {} at position {} \", type, pos, state, t);"
+  },
+  {
+   "line": 206,
+   "is_tb": false,
+   "original": "Failed to load data for block entity {} for block {} at position {}",
+   "context": "LOGGER.error(\"Failed to load data for block entity {} for block {} at position {}\", type, pos, state, t);"
+  },
+  {
+   "line": 265,
+   "is_tb": false,
+   "original": "Cached block",
+   "context": "category.setDetail(\"Cached block\", this.getBlockState()::toString);"
+  },
+  {
+   "line": 267,
+   "is_tb": false,
+   "original": "Block location",
+   "context": "category.setDetail(\"Block location\", () -> this.worldPosition + \" (world missing)\");"
+  },
+  {
+   "line": 267,
+   "is_tb": false,
+   "original": " (world missing)",
+   "context": "category.setDetail(\"Block location\", () -> this.worldPosition + \" (world missing)\");"
+  },
+  {
+   "line": 269,
+   "is_tb": false,
+   "original": "Actual block",
+   "context": "category.setDetail(\"Actual block\", this.level.getBlockState(this.worldPosition)::toString);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/BlockEntityTypes.java": [
+  {
+   "line": 220,
+   "is_tb": false,
+   "original": "Block entity type {} requires at least one valid block to be defined!",
+   "context": "LOGGER.warn(\"Block entity type {} requires at least one valid block to be defined!\", id);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/BrushableBlockEntity.java": [
+  {
+   "line": 125,
+   "is_tb": false,
+   "original": "Expected max 1 loot from loot table {}, but got {}",
+   "context": "LOGGER.warn(\"Expected max 1 loot from loot table {}, but got {}\", this.lootTable.identifier(), loot.size());"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/ChiseledBookShelfBlockEntity.java": [
+  {
+   "line": 86,
+   "is_tb": false,
+   "original": "Expected slot 0-5, got {}",
+   "context": "LOGGER.error(\"Expected slot 0-5, got {}\", interactedSlot);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/SignBlockEntity.java": [
+  {
+   "line": 142,
+   "is_tb": false,
+   "original": "Player {} just tried to change non-editable sign",
+   "context": "LOGGER.warn(\"Player {} just tried to change non-editable sign\", player.getPlainTextName());"
+  },
+  {
+   "line": 230,
+   "is_tb": false,
+   "original": "{} issued server command: {}",
+   "context": "LOGGER.info(\"{} issued server command: {}\", player.getScoreboardName(), commandLine);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/TestBlockEntity.java": [
+  {
+   "line": 115,
+   "is_tb": false,
+   "original": "Test {} (at {}): {}",
+   "context": "LOGGER.info(\"Test {} (at {}): {}\", this.mode.getSerializedName(), this.getBlockPos(), this.message);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/TestInstanceBlockEntity.java": [
+  {
+   "line": 267,
+   "is_tb": false,
+   "original": "Test structure exporting is disabled",
+   "context": "feedbackOutput.accept(Component.literal(\"Test structure exporting is disabled\").withStyle(ChatFormatting.RED));"
+  },
+  {
+   "line": 273,
+   "is_tb": false,
+   "original": "Could not find structure ",
+   "context": "feedbackOutput.accept(Component.literal(\"Could not find structure \" + structureId).withStyle(ChatFormatting.RED));"
+  },
+  {
+   "line": 282,
+   "is_tb": false,
+   "original": "Failed to save structure file {} to {}",
+   "context": "LOGGER.error(\"Failed to save structure file {} to {}\", structureId, outputFile, e);"
+  },
+  {
+   "line": 283,
+   "is_tb": false,
+   "original": "Failed to save structure file ",
+   "context": "feedbackOutput.accept(Component.literal(\"Failed to save structure file \" + structureId + \" to \" + outputFile).withStyle(ChatFormatting.RED));"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/TheEndGatewayBlockEntity.java": [
+  {
+   "line": 135,
+   "is_tb": false,
+   "original": "Creating portal at {}",
+   "context": "LOGGER.debug(\"Creating portal at {}\", exitPortalPos);"
+  },
+  {
+   "line": 150,
+   "is_tb": false,
+   "original": "Best exit position for portal at {} is {}",
+   "context": "LOGGER.debug(\"Best exit position for portal at {} is {}\", exitPortal, pos);"
+  },
+  {
+   "line": 160,
+   "is_tb": false,
+   "original": "Failed to find a suitable block to teleport to, spawning an island on {}",
+   "context": "LOGGER.debug(\"Failed to find a suitable block to teleport to, spawning an island on {}\", newExitPortalPos);"
+  },
+  {
+   "line": 170,
+   "is_tb": false,
+   "original": "Found suitable block to teleport to: {}",
+   "context": "LOGGER.debug(\"Found suitable block to teleport to: {}\", exitPortalPos);"
+  },
+  {
+   "line": 185,
+   "is_tb": false,
+   "original": "Skipping backwards past nonempty chunk at {}",
+   "context": "LOGGER.debug(\"Skipping backwards past nonempty chunk at {}\", exitPortalXZPosTentative);"
+  },
+  {
+   "line": 192,
+   "is_tb": false,
+   "original": "Skipping forward past empty chunk at {}",
+   "context": "LOGGER.debug(\"Skipping forward past empty chunk at {}\", exitPortalXZPosTentative);"
+  },
+  {
+   "line": 195,
+   "is_tb": false,
+   "original": "Found chunk at {}",
+   "context": "LOGGER.debug(\"Found chunk at {}\", exitPortalXZPosTentative);"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/TrialSpawnerBlockEntity.java": [
+  {
+   "line": 66,
+   "is_tb": false,
+   "original": "Expected non-null level",
+   "context": "Util.logAndPauseIfInIde(\"Expected non-null level\");"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/trialspawner/TrialSpawnerStateData.java": [
+  {
+   "line": 115,
+   "is_tb": false,
+   "original": "Trial Spawner at ",
+   "context": "Util.logAndPauseIfInIde(\"Trial Spawner at \" + pos + \" has no detected players\");"
+  },
+  {
+   "line": 115,
+   "is_tb": false,
+   "original": " has no detected players",
+   "context": "Util.logAndPauseIfInIde(\"Trial Spawner at \" + pos + \" has no detected players\");"
+  }
+ ],
+ "net/minecraft/world/level/block/entity/vault/VaultConfig.java": [
+  {
+   "line": 67,
+   "is_tb": false,
+   "original": "Activation range must (",
+   "context": "() -> \"Activation range must (\" + this.activationRange + \") be less or equal to deactivation range (\" + this.deactivationRange + \")\""
+  },
+  {
+   "line": 67,
+   "is_tb": false,
+   "original": ") be less or equal to deactivation range (",
+   "context": "() -> \"Activation range must (\" + this.activationRange + \") be less or equal to deactivation range (\" + this.deactivationRange + \")\""
+  }
+ ],
+ "net/minecraft/world/level/block/grower/TreeGrower.java": [
+  {
+   "line": 265,
+   "is_tb": false,
+   "original": "Unknown tree generator ",
+   "context": "throw new IllegalArgumentException(\"Unknown tree generator \" + feature);"
+  }
+ ],
+ "net/minecraft/world/level/block/state/BlockBehaviour.java": [
+  {
+   "line": 171,
+   "is_tb": false,
+   "original": "block onPlace",
+   "context": "org.spigotmc.AsyncCatcher.catchOp(\"block onPlace\"); // Spigot"
+  },
+  {
+   "line": 1076,
+   "is_tb": false,
+   "original": "%s has a collision shape and an offset type, but is not marked as dynamicShape in its properties.",
+   "context": "\"%s has a collision shape and an offset type, but is not marked as dynamicShape in its properties.\","
+  },
+  {
+   "line": 1308,
+   "is_tb": false,
+   "original": "Block id not set",
+   "context": "return this.drops.get(Objects.requireNonNull(this.id, \"Block id not set\"));"
+  },
+  {
+   "line": 1442,
+   "is_tb": false,
+   "original": "Block id not set",
+   "context": "return this.descriptionId.get(Objects.requireNonNull(this.id, \"Block id not set\"));"
+  }
+ ],
+ "net/minecraft/world/level/block/state/StateDefinition.java": [
+  {
+   "line": 205,
+   "is_tb": false,
+   "original": " has invalidly named property: ",
+   "context": "throw new IllegalArgumentException(this.owner + \" has invalidly named property: \" + name);"
+  },
+  {
+   "line": 210,
+   "is_tb": false,
+   "original": " attempted use property ",
+   "context": "throw new IllegalArgumentException(this.owner + \" attempted use property \" + name + \" with <= 1 possible values\");"
+  },
+  {
+   "line": 210,
+   "is_tb": false,
+   "original": " with <= 1 possible values",
+   "context": "throw new IllegalArgumentException(this.owner + \" attempted use property \" + name + \" with <= 1 possible values\");"
+  },
+  {
+   "line": 216,
+   "is_tb": false,
+   "original": " has property: ",
+   "context": "throw new IllegalArgumentException(this.owner + \" has property: \" + name + \" with invalidly named value: \" + valueName);"
+  },
+  {
+   "line": 216,
+   "is_tb": false,
+   "original": " with invalidly named value: ",
+   "context": "throw new IllegalArgumentException(this.owner + \" has property: \" + name + \" with invalidly named value: \" + valueName);"
+  },
+  {
+   "line": 221,
+   "is_tb": false,
+   "original": " has duplicate property: ",
+   "context": "throw new IllegalArgumentException(this.owner + \" has duplicate property: \" + name);"
+  }
+ ],
+ "net/minecraft/world/level/block/state/StateHolder.java": [
+  {
+   "line": 120,
+   "is_tb": false,
+   "original": "Cannot get property ",
+   "context": "throw new IllegalArgumentException(\"Cannot get property \" + property + \" as it does not exist in \" + this.owner);"
+  },
+  {
+   "line": 120,
+   "is_tb": false,
+   "original": " as it does not exist in ",
+   "context": "throw new IllegalArgumentException(\"Cannot get property \" + property + \" as it does not exist in \" + this.owner);"
+  },
+  {
+   "line": 138,
+   "is_tb": false,
+   "original": "Cannot set property ",
+   "context": "throw new IllegalArgumentException(\"Cannot set property \" + property + \" to \" + value + \" on \" + this.owner);"
+  },
+  {
+   "line": 151,
+   "is_tb": false,
+   "original": "Cannot set property ",
+   "context": "throw new IllegalArgumentException(\"Cannot set property \" + property + \" to \" + value + \" on \" + this.owner);"
+  },
+  {
+   "line": 158,
+   "is_tb": false,
+   "original": "Cannot set property ",
+   "context": "throw new IllegalArgumentException(\"Cannot set property \" + property + \" to \" + value + \" on \" + this.owner + \", it is not an allowed value\");"
+  },
+  {
+   "line": 158,
+   "is_tb": false,
+   "original": ", it is not an allowed value",
+   "context": "throw new IllegalArgumentException(\"Cannot set property \" + property + \" to \" + value + \" on \" + this.owner + \", it is not an allowed value\");"
+  }
+ ],
+ "net/minecraft/world/level/block/state/pattern/BlockPattern.java": [
+  {
+   "line": 113,
+   "is_tb": false,
+   "original": "Invalid forwards & up combination",
+   "context": "throw new IllegalArgumentException(\"Invalid forwards & up combination\");"
+  }
+ ],
+ "net/minecraft/world/level/block/state/pattern/BlockPatternBuilder.java": [
+  {
+   "line": 35,
+   "is_tb": false,
+   "original": "Expected aisle with height of ",
+   "context": "\"Expected aisle with height of \" + this.height + \", but was given one with a height of \" + aisle.length + \")\""
+  },
+  {
+   "line": 35,
+   "is_tb": false,
+   "original": ", but was given one with a height of ",
+   "context": "\"Expected aisle with height of \" + this.height + \", but was given one with a height of \" + aisle.length + \")\""
+  },
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": "Not all rows in the given aisle are the correct width (expected ",
+   "context": "\"Not all rows in the given aisle are the correct width (expected \" + this.width + \", found one with \" + row.length() + \")\""
+  },
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": ", found one with ",
+   "context": "\"Not all rows in the given aisle are the correct width (expected \" + this.width + \", found one with \" + row.length() + \")\""
+  },
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": "Empty pattern for aisle",
+   "context": "throw new IllegalArgumentException(\"Empty pattern for aisle\");"
+  },
+  {
+   "line": 76,
+   "is_tb": false,
+   "original": "Predicates for character(s) ",
+   "context": "throw new IllegalStateException(\"Predicates for character(s) \" + this.unknownCharacters + \" are missing\");"
+  },
+  {
+   "line": 76,
+   "is_tb": false,
+   "original": " are missing",
+   "context": "throw new IllegalStateException(\"Predicates for character(s) \" + this.unknownCharacters + \" are missing\");"
+  }
+ ],
+ "net/minecraft/world/level/block/state/predicate/BlockStatePredicate.java": [
+  {
+   "line": 52,
+   "is_tb": false,
+   "original": " cannot support property ",
+   "context": "throw new IllegalArgumentException(this.definition + \" cannot support property \" + property);"
+  }
+ ],
+ "net/minecraft/world/level/block/state/properties/EnumProperty.java": [
+  {
+   "line": 49,
+   "is_tb": false,
+   "original": "Trying to make empty EnumProperty '",
+   "context": "throw new IllegalArgumentException(\"Trying to make empty EnumProperty '\" + name + \"'\");"
+  }
+ ],
+ "net/minecraft/world/level/block/state/properties/IntegerProperty.java": [
+  {
+   "line": 38,
+   "is_tb": false,
+   "original": "Min value of ",
+   "context": "throw new IllegalArgumentException(\"Min value of \" + name + \" must be 0 or greater\");"
+  },
+  {
+   "line": 38,
+   "is_tb": false,
+   "original": " must be 0 or greater",
+   "context": "throw new IllegalArgumentException(\"Min value of \" + name + \" must be 0 or greater\");"
+  },
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": "Max value of ",
+   "context": "throw new IllegalArgumentException(\"Max value of \" + name + \" must be greater than min (\" + min + \")\");"
+  },
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": " must be greater than min (",
+   "context": "throw new IllegalArgumentException(\"Max value of \" + name + \" must be greater than min (\" + min + \")\");"
+  }
+ ],
+ "net/minecraft/world/level/block/state/properties/Property.java": [
+  {
+   "line": 21,
+   "is_tb": false,
+   "original": "Unable to read property: ",
+   "context": ".orElseGet(() -> DataResult.error(() -> \"Unable to read property: \" + this + \" with value: \" + namex)),"
+  },
+  {
+   "line": 21,
+   "is_tb": false,
+   "original": " with value: ",
+   "context": ".orElseGet(() -> DataResult.error(() -> \"Unable to read property: \" + this + \" with value: \" + namex)),"
+  },
+  {
+   "line": 127,
+   "is_tb": false,
+   "original": " does not belong to property ",
+   "context": "throw new IllegalArgumentException(\"Value \" + value + \" does not belong to property \" + property);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/BelowZeroRetrogen.java": [
+  {
+   "line": 32,
+   "is_tb": false,
+   "original": "target_status cannot be empty",
+   "context": "status -> status == ChunkStatus.EMPTY ? DataResult.error(() -> \"target_status cannot be empty\") : DataResult.success((ChunkStatus)status),"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/BitRandomSource.java": [
+  {
+   "line": 19,
+   "is_tb": false,
+   "original": "Bound must be positive",
+   "context": "throw new IllegalArgumentException(\"Bound must be positive\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/Column.java": [
+  {
+   "line": 135,
+   "is_tb": false,
+   "original": "Column of negative height: ",
+   "context": "throw new IllegalArgumentException(\"Column of negative height: \" + this);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/DensityFunctions.java": [
+  {
+   "line": 667,
+   "is_tb": false,
+   "original": "Calling .codec() on HolderHolder",
+   "context": "throw new UnsupportedOperationException(\"Calling .codec() on HolderHolder\");"
+  },
+  {
+   "line": 689,
+   "is_tb": false,
+   "original": " thresholds for ",
+   "context": "+ \" thresholds for \""
+  },
+  {
+   "line": 691,
+   "is_tb": false,
+   "original": " functions, but got ",
+   "context": "+ \" functions, but got \""
+  },
+  {
+   "line": 696,
+   "is_tb": false,
+   "original": "Threshold values must be ordered from smallest to largest",
+   "context": "? DataResult.error(() -> \"Threshold values must be ordered from smallest to largest\")"
+  },
+  {
+   "line": 1328,
+   "is_tb": false,
+   "original": "Creating a {} function between two non-overlapping inputs: {} and {}",
+   "context": "LOGGER.warn(\"Creating a {} function between two non-overlapping inputs: {} and {}\", type, argument1, argument2);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/Heightmap.java": [
+  {
+   "line": 131,
+   "is_tb": false,
+   "original": "Ignoring heightmap data for chunk {}, size does not match; expected: {}, got: {}",
+   "context": "LOGGER.warn(\"Ignoring heightmap data for chunk {}, size does not match; expected: {}, got: {}\", chunk.getPos(), rawData.length, data.length);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/NoiseBasedChunkGenerator.java": [
+  {
+   "line": 169,
+   "is_tb": false,
+   "original": "NoiseRouter N: ",
+   "context": "\"NoiseRouter N: \""
+  }
+ ],
+ "net/minecraft/world/level/levelgen/NoiseChunk.java": [
+  {
+   "line": 252,
+   "is_tb": false,
+   "original": "Staring interpolation twice",
+   "context": "throw new IllegalStateException(\"Staring interpolation twice\");"
+  },
+  {
+   "line": 341,
+   "is_tb": false,
+   "original": "Staring interpolation twice",
+   "context": "throw new IllegalStateException(\"Staring interpolation twice\");"
+  },
+  {
+   "line": 589,
+   "is_tb": false,
+   "original": "Trying to sample interpolator outside the interpolation loop",
+   "context": "throw new IllegalStateException(\"Trying to sample interpolator outside the interpolation loop\");"
+  },
+  {
+   "line": 807,
+   "is_tb": false,
+   "original": "Trying to sample interpolator outside the interpolation loop",
+   "context": "throw new IllegalStateException(\"Trying to sample interpolator outside the interpolation loop\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/NoiseSettings.java": [
+  {
+   "line": 30,
+   "is_tb": false,
+   "original": "min_y + height cannot be higher than: ",
+   "context": "return DataResult.error(() -> \"min_y + height cannot be higher than: \" + (DimensionType.MAX_Y + 1));"
+  },
+  {
+   "line": 32,
+   "is_tb": false,
+   "original": "height has to be a multiple of 16",
+   "context": "return DataResult.error(() -> \"height has to be a multiple of 16\");"
+  },
+  {
+   "line": 34,
+   "is_tb": false,
+   "original": "min_y has to be a multiple of 16",
+   "context": "return dimensionType.minY() % 16 != 0 ? DataResult.error(() -> \"min_y has to be a multiple of 16\") : DataResult.success(dimensionType);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/SurfaceRules.java": [
+  {
+   "line": 126,
+   "is_tb": false,
+   "original": "Need at least 1 rule for a sequence",
+   "context": "throw new IllegalArgumentException(\"Need at least 1 rule for a sequence\");"
+  },
+  {
+   "line": 559,
+   "is_tb": false,
+   "original": "Update triggered but the result is null",
+   "context": "throw new IllegalStateException(\"Update triggered but the result is null\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/VerticalAnchor.java": [
+  {
+   "line": 59,
+   "is_tb": false,
+   "original": " above bottom",
+   "context": "return this.offset + \" above bottom\";"
+  },
+  {
+   "line": 93,
+   "is_tb": false,
+   "original": " below top",
+   "context": "return this.offset + \" below top\";"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/WorldDimensions.java": [
+  {
+   "line": 47,
+   "is_tb": false,
+   "original": "Overworld settings missing",
+   "context": "throw new IllegalStateException(\"Overworld settings missing\");"
+  },
+  {
+   "line": 85,
+   "is_tb": false,
+   "original": "Overworld settings missing",
+   "context": "throw new IllegalStateException(\"Overworld settings missing\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/WorldGenSettings.java": [
+  {
+   "line": 52,
+   "is_tb": false,
+   "original": ", dimensions=",
+   "context": "return \"WorldGenSettings[options=\" + this.options + \", dimensions=\" + this.dimensions + \"]\";"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/WorldGenerationContext.java": [
+  {
+   "line": 33,
+   "is_tb": false,
+   "original": "WorldGenerationContext was initialized without a Level, but WorldGenerationContext#level was called",
+   "context": "throw new NullPointerException(\"WorldGenerationContext was initialized without a Level, but WorldGenerationContext#level was called\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/WorldOptions.java": [
+  {
+   "line": 22,
+   "is_tb": false,
+   "original": "North Carolina",
+   "context": "public static final WorldOptions DEMO_OPTIONS = new WorldOptions(\"North Carolina\".hashCode(), true, true);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/XoroshiroRandomSource.java": [
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": "Bound must be positive",
+   "context": "throw new IllegalArgumentException(\"Bound must be positive\");"
+  },
+  {
+   "line": 142,
+   "is_tb": false,
+   "original": ", seedHi: ",
+   "context": "sb.append(\"seedLo: \").append(this.seedLo).append(\", seedHi: \").append(this.seedHi);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/blending/BlendingData.java": [
+  {
+   "line": 412,
+   "is_tb": false,
+   "original": "heights has to be of length ",
+   "context": "? DataResult.error(() -> \"heights has to be of length \" + BlendingData.CELL_COLUMN_COUNT)"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/FeatureCountTracker.java": [
+  {
+   "line": 37,
+   "is_tb": false,
+   "original": "Failed to increment chunk count",
+   "context": "LOGGER.error(\"Failed to increment chunk count\", e);"
+  },
+  {
+   "line": 45,
+   "is_tb": false,
+   "original": "Failed to increment feature count",
+   "context": "LOGGER.error(\"Failed to increment feature count\", e);"
+  },
+  {
+   "line": 51,
+   "is_tb": false,
+   "original": "Cleared feature counts",
+   "context": "LOGGER.debug(\"Cleared feature counts\");"
+  },
+  {
+   "line": 55,
+   "is_tb": false,
+   "original": "Logging feature counts:",
+   "context": "LOGGER.debug(\"Logging feature counts:\");"
+  },
+  {
+   "line": 64,
+   "is_tb": false,
+   "original": "{} total_chunks: {}",
+   "context": "LOGGER.debug(\"{} total_chunks: {}\", prefix, chunks);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/FossilFeatureConfiguration.java": [
+  {
+   "line": 37,
+   "is_tb": false,
+   "original": "Fossil structure lists need at least one entry",
+   "context": "throw new IllegalArgumentException(\"Fossil structure lists need at least one entry\");"
+  },
+  {
+   "line": 41,
+   "is_tb": false,
+   "original": "Fossil structure lists must be equal lengths",
+   "context": "throw new IllegalArgumentException(\"Fossil structure lists must be equal lengths\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/MonsterRoomFeature.java": [
+  {
+   "line": 123,
+   "is_tb": false,
+   "original": "Failed to fetch mob spawner entity at ({}, {}, {})",
+   "context": "LOGGER.error(\"Failed to fetch mob spawner entity at ({}, {}, {})\", origin.getX(), origin.getY(), origin.getZ());"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/configurations/MultifaceGrowthConfiguration.java": [
+  {
+   "line": 43,
+   "is_tb": false,
+   "original": "Growth block should be a multiface spreadeable block",
+   "context": ": DataResult.error(() -> \"Growth block should be a multiface spreadeable block\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/stateproviders/RandomizedIntStateProvider.java": [
+  {
+   "line": 41,
+   "is_tb": false,
+   "original": "Property value out of range: ",
+   "context": "throw new IllegalArgumentException(\"Property value out of range: \" + property.getName() + \": \" + i);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/stateproviders/WeightedStateProvider.java": [
+  {
+   "line": 19,
+   "is_tb": false,
+   "original": "Weighted list must have at least one entry",
+   "context": "throw new IllegalArgumentException(\"Weighted list must have at least one entry\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/feature/trunkplacers/CherryTrunkPlacer.java": [
+  {
+   "line": 28,
+   "is_tb": false,
+   "original": "Need at least 2 blocks variation for the branch starts to fit both branches",
+   "context": "? DataResult.error(() -> \"Need at least 2 blocks variation for the branch starts to fit both branches\")"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/flat/FlatLevelGeneratorSettings.java": [
+  {
+   "line": 64,
+   "is_tb": false,
+   "original": "Sum of layer heights is > ",
+   "context": "? DataResult.error(() -> \"Sum of layer heights is > \" + DimensionType.Y_SIZE, settings)"
+  },
+  {
+   "line": 93,
+   "is_tb": false,
+   "original": "Unknown biome, defaulting to plains",
+   "context": "LOGGER.error(\"Unknown biome, defaulting to plains\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/heightproviders/BiasedToBottomHeight.java": [
+  {
+   "line": 41,
+   "is_tb": false,
+   "original": "Empty height range: {}",
+   "context": "LOGGER.warn(\"Empty height range: {}\", this);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/heightproviders/TrapezoidHeight.java": [
+  {
+   "line": 46,
+   "is_tb": false,
+   "original": "Empty height range: {}",
+   "context": "LOGGER.warn(\"Empty height range: {}\", this);"
+  },
+  {
+   "line": 68,
+   "is_tb": false,
+   "original": "triangle (",
+   "context": "? \"triangle (\" + this.minInclusive + \"-\" + this.maxInclusive + \")\""
+  },
+  {
+   "line": 69,
+   "is_tb": false,
+   "original": ") in [",
+   "context": ": \"trapezoid(\" + this.plateau + \") in [\" + this.minInclusive + \"-\" + this.maxInclusive + \"]\";"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/heightproviders/UniformHeight.java": [
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": "Empty height range: {}",
+   "context": "LOGGER.warn(\"Empty height range: {}\", this);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/heightproviders/VeryBiasedToBottomHeight.java": [
+  {
+   "line": 42,
+   "is_tb": false,
+   "original": "Empty height range: {}",
+   "context": "LOGGER.warn(\"Empty height range: {}\", this);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/placement/BiomeFilter.java": [
+  {
+   "line": 23,
+   "is_tb": false,
+   "original": "Tried to biome check an unregistered feature, or a feature that should not restrict the biome",
+   "context": ".orElseThrow(() -> new IllegalStateException(\"Tried to biome check an unregistered feature, or a feature that should not restrict the biome\"));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/presets/WorldPreset.java": [
+  {
+   "line": 51,
+   "is_tb": false,
+   "original": "Missing overworld dimension",
+   "context": "return preset.overworld().isEmpty() ? DataResult.error(() -> \"Missing overworld dimension\") : DataResult.success(preset, Lifecycle.stable());"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/BoundingBox.java": [
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": "Invalid bounding box data, inverted bounds for: ",
+   "context": "Util.logAndPauseIfInIde(\"Invalid bounding box data, inverted bounds for: \" + this);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/PoolElementStructurePiece.java": [
+  {
+   "line": 60,
+   "is_tb": false,
+   "original": "Invalid pool element found",
+   "context": "this.element = tag.read(\"pool_element\", StructurePoolElement.CODEC, ops).orElseThrow(() -> new IllegalStateException(\"Invalid pool element found\"));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/StructureCheck.java": [
+  {
+   "line": 157,
+   "is_tb": false,
+   "original": "Failed to read chunk {}",
+   "context": "LOGGER.warn(\"Failed to read chunk {}\", pos, e);"
+  },
+  {
+   "line": 171,
+   "is_tb": false,
+   "original": "Failed to partially datafix chunk {}",
+   "context": "LOGGER.warn(\"Failed to partially datafix chunk {}\", pos, e);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/StructurePiece.java": [
+  {
+   "line": 573,
+   "is_tb": false,
+   "original": "Unable to calculate boundingbox without pieces",
+   "context": ".orElseThrow(() -> new IllegalStateException(\"Unable to calculate boundingbox without pieces\"));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/StructureStart.java": [
+  {
+   "line": 54,
+   "is_tb": false,
+   "original": "Unknown stucture id: {}",
+   "context": "LOGGER.error(\"Unknown stucture id: {}\", id);"
+  },
+  {
+   "line": 70,
+   "is_tb": false,
+   "original": "Failed Start with id {}",
+   "context": "LOGGER.error(\"Failed Start with id {}\", id, e);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/TemplateStructurePiece.java": [
+  {
+   "line": 113,
+   "is_tb": false,
+   "original": "Error while parsing blockstate {} in jigsaw block @ {}",
+   "context": "LOGGER.error(\"Error while parsing blockstate {} in jigsaw block @ {}\", stateString, jigsawBlock.pos());"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pieces/PiecesContainer.java": [
+  {
+   "line": 67,
+   "is_tb": false,
+   "original": "Unknown structure piece id: {}",
+   "context": "LOGGER.error(\"Unknown structure piece id: {}\", pieceId);"
+  },
+  {
+   "line": 73,
+   "is_tb": false,
+   "original": "Exception loading structure piece with id {}",
+   "context": "LOGGER.error(\"Exception loading structure piece with id {}\", pieceId, e);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/placement/RandomSpreadStructurePlacement.java": [
+  {
+   "line": 32,
+   "is_tb": false,
+   "original": "Spacing has to be larger than separation",
+   "context": "return c.spacing <= c.separation ? DataResult.error(() -> \"Spacing has to be larger than separation\") : DataResult.success(c);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/EmptyPoolElement.java": [
+  {
+   "line": 40,
+   "is_tb": false,
+   "original": "Invalid call to EmptyPoolElement.getBoundingBox, filter me!",
+   "context": "throw new IllegalStateException(\"Invalid call to EmptyPoolElement.getBoundingBox, filter me!\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/JigsawJunction.java": [
+  {
+   "line": 90,
+   "is_tb": false,
+   "original": ", sourceGroundY=",
+   "context": "+ \", sourceGroundY=\""
+  },
+  {
+   "line": 92,
+   "is_tb": false,
+   "original": ", sourceZ=",
+   "context": "+ \", sourceZ=\""
+  },
+  {
+   "line": 94,
+   "is_tb": false,
+   "original": ", deltaY=",
+   "context": "+ \", deltaY=\""
+  },
+  {
+   "line": 96,
+   "is_tb": false,
+   "original": ", destProjection=",
+   "context": "+ \", destProjection=\""
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/JigsawPlacement.java": [
+  {
+   "line": 84,
+   "is_tb": false,
+   "original": "No starting jigsaw {} found in start pool {}",
+   "context": "\"No starting jigsaw {} found in start pool {}\","
+  },
+  {
+   "line": 117,
+   "is_tb": false,
+   "original": "Center piece {} with bounding box {} does not fit dimension padding {}",
+   "context": "\"Center piece {} with bounding box {} does not fit dimension padding {}\", centerElement, centerPiece.getBoundingBox(), dimensionPadding"
+  },
+  {
+   "line": 325,
+   "is_tb": false,
+   "original": "Empty or non-existent pool: {}",
+   "context": "JigsawPlacement.LOGGER.warn(\"Empty or non-existent pool: {}\", poolName.identifier());"
+  },
+  {
+   "line": 329,
+   "is_tb": false,
+   "original": "Empty or non-existent pool: {}",
+   "context": "JigsawPlacement.LOGGER.warn(\"Empty or non-existent pool: {}\", poolName.identifier());"
+  },
+  {
+   "line": 335,
+   "is_tb": false,
+   "original": "Empty or non-existent fallback pool: {}",
+   "context": "\"Empty or non-existent fallback pool: {}\","
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/ListPoolElement.java": [
+  {
+   "line": 30,
+   "is_tb": false,
+   "original": "Elements are empty",
+   "context": "throw new IllegalArgumentException(\"Elements are empty\");"
+  },
+  {
+   "line": 67,
+   "is_tb": false,
+   "original": "Unable to calculate boundingbox for ListPoolElement",
+   "context": ".orElseThrow(() -> new IllegalStateException(\"Unable to calculate boundingbox for ListPoolElement\"));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/SinglePoolElement.java": [
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": "Can not serialize a runtime pool element",
+   "context": "return location.isEmpty() ? DataResult.error(() -> \"Can not serialize a runtime pool element\") : Identifier.CODEC.encode(location.get(), ops, prefix);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/pools/alias/PoolAliasLookup.java": [
+  {
+   "line": 29,
+   "is_tb": false,
+   "original": " was mapped to null value",
+   "context": "aliasMappings.getOrDefault(resourceKey, resourceKey), () -> \"alias \" + resourceKey.identifier() + \" was mapped to null value\""
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/structures/JigsawStructure.java": [
+  {
+   "line": 70,
+   "is_tb": false,
+   "original": "Horizontal structure size including terrain adaptation must not exceed 128",
+   "context": "? DataResult.error(() -> \"Horizontal structure size including terrain adaptation must not exceed 128\")"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/structures/WoodlandMansionPieces.java": [
+  {
+   "line": 1309,
+   "is_tb": false,
+   "original": "Group of Allays",
+   "context": "case \"Group of Allays\":"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/AxisAlignedLinearPosTest.java": [
+  {
+   "line": 30,
+   "is_tb": false,
+   "original": "Invalid range: [",
+   "context": "throw new IllegalArgumentException(\"Invalid range: [\" + minDist + \",\" + maxDist + \"]\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/CappedProcessor.java": [
+  {
+   "line": 54,
+   "is_tb": false,
+   "original": "Original block info list not in sync with processed list, skipping processing. Original size: ",
+   "context": "\"Original block info list not in sync with processed list, skipping processing. Original size: \""
+  },
+  {
+   "line": 56,
+   "is_tb": false,
+   "original": ", Processed size: ",
+   "context": "+ \", Processed size: \""
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/JigsawReplacementProcessor.java": [
+  {
+   "line": 39,
+   "is_tb": false,
+   "original": "Jigsaw block at {} is missing nbt, will not replace",
+   "context": "LOGGER.warn(\"Jigsaw block at {} is missing nbt, will not replace\", targetPosition);"
+  },
+  {
+   "line": 50,
+   "is_tb": false,
+   "original": "Failed to parse jigsaw replacement state '{}' at {}: {}",
+   "context": "LOGGER.error(\"Failed to parse jigsaw replacement state '{}' at {}: {}\", stateString, targetPosition, e.getMessage());"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/LinearPosTest.java": [
+  {
+   "line": 27,
+   "is_tb": false,
+   "original": "Invalid range: [",
+   "context": "throw new IllegalArgumentException(\"Invalid range: [\" + minDist + \",\" + maxDist + \"]\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/StructurePlaceSettings.java": [
+  {
+   "line": 141,
+   "is_tb": false,
+   "original": "No palettes",
+   "context": "throw new IllegalStateException(\"No palettes\");"
+  },
+  {
+   "line": 145,
+   "is_tb": false,
+   "original": "Palette index out of bounds. Got ",
+   "context": "throw new IllegalArgumentException(\"Palette index out of bounds. Got \" + this.palette + \" where there are only \" + paletteSize + \" palettes available.\");"
+  },
+  {
+   "line": 145,
+   "is_tb": false,
+   "original": " where there are only ",
+   "context": "throw new IllegalArgumentException(\"Palette index out of bounds. Got \" + this.palette + \" where there are only \" + paletteSize + \" palettes available.\");"
+  },
+  {
+   "line": 145,
+   "is_tb": false,
+   "original": " palettes available.",
+   "context": "throw new IllegalArgumentException(\"Palette index out of bounds. Got \" + this.palette + \" where there are only \" + paletteSize + \" palettes available.\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplate.java": [
+  {
+   "line": 838,
+   "is_tb": false,
+   "original": " nbt was null",
+   "context": "CompoundTag nbt = Objects.requireNonNull(info.nbt(), () -> info + \" nbt was null\");"
+  },
+  {
+   "line": 854,
+   "is_tb": false,
+   "original": "<JigsawBlockInfo | %s | %s | name: %s | pool: %s | target: %s | placement: %d | selection: %d | %s>",
+   "context": "\"<JigsawBlockInfo | %s | %s | name: %s | pool: %s | target: %s | placement: %d | selection: %d | %s>\","
+  },
+  {
+   "line": 932,
+   "is_tb": false,
+   "original": "<StructureBlockInfo | %s | %s | %s>",
+   "context": "return String.format(Locale.ROOT, \"<StructureBlockInfo | %s | %s | %s>\", this.pos, this.state, this.nbt);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/StructureTemplateManager.java": [
+  {
+   "line": 140,
+   "is_tb": false,
+   "original": "Failed to save structure file {} to {}",
+   "context": "LOGGER.warn(\"Failed to save structure file {} to {}\", id, file, e);"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/loader/DirectoryTemplateSource.java": [
+  {
+   "line": 60,
+   "is_tb": false,
+   "original": "Couldn't load structure from {}:{}",
+   "context": ": this.load(resource, this.loadAsText, e -> LOGGER.error(\"Couldn't load structure from {}:{}\", this.sourceDir, id, e));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/loader/ResourceManagerTemplateSource.java": [
+  {
+   "line": 35,
+   "is_tb": false,
+   "original": "Couldn't load structure {}",
+   "context": "return this.load(() -> this.resourceManager.open(identifier), false, e -> LOGGER.error(\"Couldn't load structure {}\", id, e));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/structure/templatesystem/loader/TemplatePathFactory.java": [
+  {
+   "line": 29,
+   "is_tb": false,
+   "original": "Invalid file path '",
+   "context": ".getOrThrow(msg -> new IdentifierException(\"Invalid file path '\" + resourceLocation + \"': \" + msg));"
+  },
+  {
+   "line": 31,
+   "is_tb": false,
+   "original": "Resource path '",
+   "context": "throw new IdentifierException(\"Resource path '\" + resourceLocation + \"' is not portable\");"
+  },
+  {
+   "line": 31,
+   "is_tb": false,
+   "original": "' is not portable",
+   "context": "throw new IdentifierException(\"Resource path '\" + resourceLocation + \"' is not portable\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/synth/BlendedNoise.java": [
+  {
+   "line": 161,
+   "is_tb": false,
+   "original": ", maxLimitNoise=",
+   "context": "sb.append(\", maxLimitNoise=\");"
+  },
+  {
+   "line": 163,
+   "is_tb": false,
+   "original": ", mainNoise=",
+   "context": "sb.append(\", mainNoise=\");"
+  },
+  {
+   "line": 168,
+   "is_tb": false,
+   "original": ", xzScale=%.3f, yScale=%.3f, xzMainScale=%.3f, yMainScale=%.3f, cellWidth=4, cellHeight=8",
+   "context": "\", xzScale=%.3f, yScale=%.3f, xzMainScale=%.3f, yMainScale=%.3f, cellWidth=4, cellHeight=8\","
+  }
+ ],
+ "net/minecraft/world/level/levelgen/synth/NoiseUtils.java": [
+  {
+   "line": 11,
+   "is_tb": false,
+   "original": "xo=%.3f, yo=%.3f, zo=%.3f, p0=%d, p255=%d",
+   "context": "sb.append(String.format(Locale.ROOT, \"xo=%.3f, yo=%.3f, zo=%.3f, p0=%d, p255=%d\", (float)xo, (float)yo, (float)zo, p[0], p[255]));"
+  },
+  {
+   "line": 15,
+   "is_tb": false,
+   "original": "xo=%.3f, yo=%.3f, zo=%.3f, p0=%d, p255=%d",
+   "context": "sb.append(String.format(Locale.ROOT, \"xo=%.3f, yo=%.3f, zo=%.3f, p0=%d, p255=%d\", (float)xo, (float)yo, (float)zo, p[0], p[255]));"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/synth/NormalNoise.java": [
+  {
+   "line": 88,
+   "is_tb": false,
+   "original": "NormalNoise {",
+   "context": "sb.append(\"NormalNoise {\");"
+  },
+  {
+   "line": 91,
+   "is_tb": false,
+   "original": ", second: ",
+   "context": "sb.append(\", second: \");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/synth/PerlinNoise.java": [
+  {
+   "line": 60,
+   "is_tb": false,
+   "original": "Need some octaves!",
+   "context": "throw new IllegalArgumentException(\"Need some octaves!\");"
+  },
+  {
+   "line": 67,
+   "is_tb": false,
+   "original": "Total number of octaves needs to be >= 1",
+   "context": "throw new IllegalArgumentException(\"Total number of octaves needs to be >= 1\");"
+  },
+  {
+   "line": 119,
+   "is_tb": false,
+   "original": "Failed to create correct number of noise levels for given non-zero amplitudes",
+   "context": "throw new IllegalStateException(\"Failed to create correct number of noise levels for given non-zero amplitudes\");"
+  },
+  {
+   "line": 123,
+   "is_tb": false,
+   "original": "Positive octaves are temporarily disabled",
+   "context": "throw new IllegalArgumentException(\"Positive octaves are temporarily disabled\");"
+  },
+  {
+   "line": 204,
+   "is_tb": false,
+   "original": "first octave: ",
+   "context": "sb.append(\"first octave: \").append(this.firstOctave).append(\", amplitudes: \").append(amplitudeStrings).append(\", noise levels: [\");"
+  },
+  {
+   "line": 204,
+   "is_tb": false,
+   "original": ", amplitudes: ",
+   "context": "sb.append(\"first octave: \").append(this.firstOctave).append(\", amplitudes: \").append(amplitudeStrings).append(\", noise levels: [\");"
+  },
+  {
+   "line": 204,
+   "is_tb": false,
+   "original": ", noise levels: [",
+   "context": "sb.append(\"first octave: \").append(this.firstOctave).append(\", amplitudes: \").append(amplitudeStrings).append(\", noise levels: [\");"
+  }
+ ],
+ "net/minecraft/world/level/levelgen/synth/PerlinSimplexNoise.java": [
+  {
+   "line": 22,
+   "is_tb": false,
+   "original": "Need some octaves!",
+   "context": "throw new IllegalArgumentException(\"Need some octaves!\");"
+  },
+  {
+   "line": 29,
+   "is_tb": false,
+   "original": "Total number of octaves needs to be >= 1",
+   "context": "throw new IllegalArgumentException(\"Total number of octaves needs to be >= 1\");"
+  }
+ ]
+}
